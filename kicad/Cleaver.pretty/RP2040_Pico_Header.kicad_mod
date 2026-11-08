@@ -1,5 +1,5 @@
 (module RP2040_Pico_Header (layer F.Cu) (tedit 0)
-  (descr "Raspberry Pi Pico 2x20 header footprint, 2.54mm pitch")
+  (descr "Raspberry Pi Pico form-factor RP2040 module, 2x20 header footprint, 2.54mm pitch")
   (tags "Raspberry Pi Pico RP2040 module") (attr through_hole)
   (fp_text reference REF** (at 0 -27.5) (layer F.SilkS) (effects (font (size 1 1) (thickness 0.15))))
   (fp_text value RP2040_Pico (at 0 27.5) (layer F.Fab) (effects (font (size 1 1) (thickness 0.15))))
