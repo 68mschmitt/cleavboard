@@ -1,0 +1,172 @@
+{
+  "recorded": "2026-11-08",
+  "upstream_files": [
+    {
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a/Resistor_SMD.3dshapes/R_0805_2012Metric.step",
+      "path": "R_0805_2012Metric.step",
+      "license": "CC-BY-SA-4.0 WITH KiCad libraries exception",
+      "sha256": "ded342cdb394fb45395227beaaa75cc390613cf2581b29cd6d22c12abd6103b2",
+      "bytes": 40592
+    },
+    {
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a/Resistor_SMD.3dshapes/R_0805_2012Metric.wrl",
+      "path": "R_0805_2012Metric.wrl",
+      "license": "CC-BY-SA-4.0 WITH KiCad libraries exception",
+      "sha256": "8ba82403df18104f827f786ef794d9852912dc437e77b62258dc3e6ffe33c5f6",
+      "bytes": 14831
+    },
+    {
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+      "path": "C_0805_2012Metric.step",
+      "license": "CC-BY-SA-4.0 WITH KiCad libraries exception",
+      "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c",
+      "bytes": 43618
+    },
+    {
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a/Capacitor_SMD.3dshapes/C_0805_2012Metric.wrl",
+      "path": "C_0805_2012Metric.wrl",
+      "license": "CC-BY-SA-4.0 WITH KiCad libraries exception",
+      "sha256": "840481a5fd6d54a48d7a634404a9848de662816075c4569d2484b192c3fb2801",
+      "bytes": 18015
+    },
+    {
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a/Diode_SMD.3dshapes/D_SOD-123.step",
+      "path": "D_SOD-123.step",
+      "license": "CC-BY-SA-4.0 WITH KiCad libraries exception",
+      "sha256": "4413b86c5a559a63b29f1f53fd235ffe38dd235d3c16750a8a78e855c9a802ef",
+      "bytes": 105865
+    },
+    {
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a/Diode_SMD.3dshapes/D_SOD-123.wrl",
+      "path": "D_SOD-123.wrl",
+      "license": "CC-BY-SA-4.0 WITH KiCad libraries exception",
+      "sha256": "5fd4e8488bd75b6b0fad9ad82e75257cf19dc83750caac25b29b758def07b636",
+      "bytes": 29362
+    },
+    {
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a/Fuse.3dshapes/Fuse_1206_3216Metric.step",
+      "path": "Fuse_1206_3216Metric.step",
+      "license": "CC-BY-SA-4.0 WITH KiCad libraries exception",
+      "sha256": "5e6dcbe286696143d35a8ea37d91eef4b54ff3d1bd7c2c2b4dedda83d3f8e203",
+      "bytes": 40429
+    },
+    {
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a/Fuse.3dshapes/Fuse_1206_3216Metric.wrl",
+      "path": "Fuse_1206_3216Metric.wrl",
+      "license": "CC-BY-SA-4.0 WITH KiCad libraries exception",
+      "sha256": "778f45add1215d06ce7bf91860d47dfb35401b1875277c1346333d195a76a1b8",
+      "bytes": 14807
+    },
+    {
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a/Package_TO_SOT_SMD.3dshapes/SOT-23-5.step",
+      "path": "SOT-23-5.step",
+      "license": "CC-BY-SA-4.0 WITH KiCad libraries exception",
+      "sha256": "3b70f1b6dd947543fda90b947f91f2e2804766c39b78e56c87f1448dfd575ed8",
+      "bytes": 174941
+    },
+    {
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a/Package_TO_SOT_SMD.3dshapes/SOT-23-5.wrl",
+      "path": "SOT-23-5.wrl",
+      "license": "CC-BY-SA-4.0 WITH KiCad libraries exception",
+      "sha256": "948f0fac31be6678900268969b124c7b1083633da2cd0068604780e562484a86",
+      "bytes": 49877
+    },
+    {
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a/Package_TO_SOT_SMD.3dshapes/SOT-23-6.step",
+      "path": "SOT-23-6.step",
+      "license": "CC-BY-SA-4.0 WITH KiCad libraries exception",
+      "sha256": "9491de18305b16fe125ee3d603109a29edd837d50d22305b6f929886492ce755",
+      "bytes": 199168
+    },
+    {
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a/Package_TO_SOT_SMD.3dshapes/SOT-23-6.wrl",
+      "path": "SOT-23-6.wrl",
+      "license": "CC-BY-SA-4.0 WITH KiCad libraries exception",
+      "sha256": "01fe842f8ca8534456b365e2a38b77b8c61a07e4133d79187d0df9d46037051b",
+      "bytes": 56359
+    },
+    {
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/b8b3cfdfad88ba66f21002b3de51dc6f7d55ba5a/LICENSE.md",
+      "path": "licenses/KiCad-LICENSE.md",
+      "license": "License text",
+      "sha256": "285b027a721577d0bc0198f36e948c6c282ddaa4b58fef8ed826749576eb0aef",
+      "bytes": 2105
+    },
+    {
+      "url": "https://raw.githubusercontent.com/kiswitch/kiswitch/aefcf65038d48d2666ff14530d482be3c350fa6e/library/3dmodels/3d-library.3dshapes/SW_Cherry_MX_Plate.wrl",
+      "path": "SW_Cherry_MX_Plate.wrl",
+      "license": "MIT",
+      "sha256": "2018c4186dc45c11688b14aa6aa9d36629296b963d11bbee7b6fadf7e3f96a0c",
+      "bytes": 1979321
+    },
+    {
+      "url": "https://raw.githubusercontent.com/kiswitch/kiswitch/aefcf65038d48d2666ff14530d482be3c350fa6e/library/3dmodels/3d-library.3dshapes/SW_Hotswap_Kailh_MX.wrl",
+      "path": "SW_Hotswap_Kailh_MX.wrl",
+      "license": "MIT",
+      "sha256": "63374faf0aea8f18441cb1a35b3c3bc57c01b3dc38223eceaf09080dbae971d2",
+      "bytes": 1111582
+    },
+    {
+      "url": "https://raw.githubusercontent.com/kiswitch/kiswitch/aefcf65038d48d2666ff14530d482be3c350fa6e/LICENSE-MIT",
+      "path": "licenses/KiSwitch-LICENSE-MIT.txt",
+      "license": "License text",
+      "sha256": "51384b53028b4dde6a6599359a2b88cde4101c4afd873b9a55b155e35657a583",
+      "bytes": 1431
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ebastler/marbastlib/6b0a9a73f579e377816d60b58eac2b3252de7868/3dmodels/LED_SK6812MINI-E.step",
+      "path": "LED_SK6812MINI-E.step",
+      "license": "CERN-OHL-P-2.0",
+      "sha256": "e6182ec254c1977072b4bae45c3436c0204f36cdf44bb6f56e4e447d5e83c773",
+      "bytes": 156797
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ebastler/marbastlib/6b0a9a73f579e377816d60b58eac2b3252de7868/LICENSE",
+      "path": "licenses/Marbastlib-LICENSE.txt",
+      "license": "License text",
+      "sha256": "6e471d647db50527d0c75ee5f1a55a74012ab177c73282bef0bdc7f6562b7ded",
+      "bytes": 8852
+    }
+  ],
+  "optional_conversion_inputs": [
+    {
+      "filename": "SW_Cherry_MX_Plate.FCStd",
+      "url": "https://raw.githubusercontent.com/kiswitch/kiswitch/aefcf65038d48d2666ff14530d482be3c350fa6e/source_3d/Switch_Keyboard_Cherry_MX/SW_Cherry_MX_Plate.FCStd",
+      "sha256": "d0ab1aa08f7093aa49486ce9bd623fe1a22bd4903ddc3c554f8a7eeee2ddfe3c",
+      "license": "MIT"
+    },
+    {
+      "filename": "SW_Hotswap_Kailh_MX.FCStd",
+      "url": "https://raw.githubusercontent.com/kiswitch/kiswitch/aefcf65038d48d2666ff14530d482be3c350fa6e/source_3d/Switch_Keyboard_Kailh/SW_Hotswap_Kailh.FCStd",
+      "sha256": "8809672caa2106d95fd61e30f0a6b14830c6b6cd0aa117535a4565dd0b6969a9",
+      "license": "MIT"
+    }
+  ],
+  "generated_files": {
+    "SW_Cherry_MX_Plate.step": {
+      "source": "SW_Cherry_MX_Plate.FCStd",
+      "modification": "FreeCAD root assembly exported to STEP with original placements; geometry only."
+    },
+    "SW_Hotswap_Kailh_MX.step": {
+      "source": "SW_Hotswap_Kailh_MX.FCStd",
+      "modification": "FreeCAD root assembly exported to STEP with original placements; geometry only."
+    },
+    "LED_SK6812MINI-E_Reverse.step/.wrl": {
+      "source": "LED_SK6812MINI-E.step",
+      "modification": "2026-11-08: rotate X 180 degrees, translate (0,-5.08,-1.70) mm; tessellate colored VRML.",
+      "license": "CERN-OHL-P-2.0"
+    },
+    "YD_RP2040_Approx.step/.wrl": {
+      "source": "scripts/build_3d_models.py",
+      "dimensions_source": "https://github.com/initdc/YD-RP2040/blob/master/YD-RP2040-Metric-SIZE.jpg",
+      "modification": "Original simplified visualization with nominal module outline/header pitch; other details approximate.",
+      "license": "CC0-1.0"
+    },
+    "C_Radial_D8_H11.5_P3.5.step/.wrl": {
+      "source": "scripts/build_3d_models.py",
+      "dimensions_source": "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFR1A471",
+      "modification": "Original simplified nominal capacitor visualization; not a tolerance envelope.",
+      "license": "CC0-1.0"
+    }
+  }
+}

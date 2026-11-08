@@ -21,6 +21,7 @@ import pcbnew
 from design import (ROOT, INPUT, U, BOARD_W, BOARD_H, ROW_GPIOS, COL_GPIOS,
                     MODULE_PINS, RGB_GPIO, POWER_GPIO, read_keys, components,
                     default_keycodes)
+from models_3d import update_library_models
 
 OUT = ROOT / "kicad"
 PRETTY = OUT / "Cleaver.pretty"
@@ -154,6 +155,7 @@ def write_footprints():
           (effects (font (size 1 1) (thickness 0.15))))''', through=True)
     for kind, text in definitions.items():
         (PRETTY / f"{kind}.kicad_mod").write_text(text + "\n")
+    update_library_models(PRETTY)
 
 
 def symbol_definition(kind, qualified):

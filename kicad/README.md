@@ -146,6 +146,22 @@ holes, a case, and case-specific mounting holes are not defined. Confirm switch
 LED windows, stabilizers, controller/button access, cable plug clearance, capacitor
 height, and support against the real plate/case before ordering a production run.
 
+## Populated 3D view
+
+Open **Cleaver.kicad_pcb → View → 3D Viewer (Alt+3)**. The project includes local
+models for **all 480 component footprints**, including front-side MX switches,
+back-side sockets, LEDs/passives, and a simplified YD-RP2040 with headers/USB-C.
+No extra model-library installation is needed. Flip the view with **F** to see
+the underside. TP1 is intentionally a bare wire pad.
+
+- [Top-side preview](previews/Cleaver-top.png)
+- [Bottom-side preview](previews/Cleaver-bottom.png)
+- [Model coverage, approximations, licensing, and STEP export](Cleaver.3dshapes/README.md)
+
+The module/header stack and some package details are approximations; keycaps,
+plate, stabilizers, and case are not modeled. These views do not replace the
+physical fit checks above. Model assignments are preserved by the generator.
+
 ## Vial-QMK firmware
 
 Copy `firmware/` to `keyboards/cleaver/` in a **vial-qmk** checkout. From that

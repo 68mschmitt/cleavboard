@@ -15,7 +15,7 @@ prototype has been assembled or tested by this agent.
 | --- | --- |
 | KiCad version | 10.0.8 |
 | Schematic ERC, meaningful electrical pin types | 0 violations |
-| Shared-design/geometry/router-boundary unit tests | 11 passed |
+| Shared-design/geometry/router-boundary/model unit tests | 18 passed |
 | Schematic/PCB net assignments | Pass |
 | 8×16 matrix, 117 unique addresses | Pass |
 | QMK and Vial matrix/RGB-order parity | Pass |
@@ -26,6 +26,8 @@ prototype has been assembled or tested by this agent.
 | Schematic/PCB parity issues | **0** |
 | Same-net via holes outside exposed SMD solder lands | Pass |
 | Regeneration from archived `routing/Cleaver.ses` | Pass; fresh ERC/DRC/connectivity checks repeated |
+| Bundled 3D models | 597 placements / 480 populated footprints; TP1 intentionally bare |
+| KiCad populated top/bottom raytracing and STEP export | Pass; model-only update, electrical geometry unchanged |
 | `default` firmware build | Succeeded |
 | `vial` firmware build, including VialRGB | Succeeded |
 
@@ -42,10 +44,19 @@ GP28 power control. Build success does not establish hardware operation.
 - [`validation/validation.json`](validation/validation.json): checked PCB and
   schematic hashes and integration-check result.
 - [`validation/manifest.json`](validation/manifest.json): SHA-256 hashes of the
-  electrical files, active libraries, firmware source, routing archive, checker,
-  and tests; also the firmware build provenance and UF2 hashes.
+  electrical files, active libraries/models, previews, firmware source, routing
+  archive, checker, and tests; also firmware build provenance and UF2 hashes.
 - [`routing/Cleaver.ses`](routing/Cleaver.ses): the accepted routing, including
   the ten final completion connections. See `routing/README.md`.
+- [`Cleaver.3dshapes/README.md`](Cleaver.3dshapes/README.md): model sources,
+  licenses, and approximation limits; previews in [`previews/`](previews/).
+
+The populated-3D update added only model assignments to the PCB and footprint
+files. Removing those assignments reproduces the previous PCB byte-for-byte
+(SHA-256 `d4e82747e944aeb6163329050d4a07a9647fc5f56bee77ac42a1692ae5242a4d`).
+Fresh ERC/DRC and connectivity checks remain clean. This verifies preservation
+of the electrical layout, **not** the mechanical accuracy of representative
+component models or the approximate controller/header stack.
 
 The build logs and UF2 outputs remain in the working environment under
 `/tmp/opencode/cleaver-revision/` and `/tmp/opencode/cleaver-vial/`; they are not
@@ -61,8 +72,9 @@ python3 -B scripts/check_kicad.py
 ```
 
 The checker exports a fresh schematic netlist, verifies actual pad nets and
-module/LED geometry, checks QMK/Vial/CSV mapping, runs ERC, and runs DRC with
-zone refill, all track errors, schematic parity, and all severities. It does not
+module/LED geometry, checks QMK/Vial/CSV mapping and local model coverage, runs
+ERC, and runs DRC with zone refill, all track errors, schematic parity, and all
+severities. It does not
 save or alter the board. Success requires no violations and no unconnected items;
 the supplied routed board passes those conditions.
 

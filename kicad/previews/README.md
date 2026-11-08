@@ -1,0 +1,19 @@
+# Populated KiCad previews
+
+These are KiCad 10.0.8 raytraced views of `../Cleaver.kicad_pcb`, including the
+bundled component models. They are not separate artistic renders or mechanical
+clearance approvals. See [model limitations](../Cleaver.3dshapes/README.md).
+
+- [Top / switches and controller](Cleaver-top.png)
+- [Bottom / sockets, LEDs, diodes, capacitors](Cleaver-bottom.png)
+
+To recreate them from the repository root:
+
+```sh
+kicad-cli pcb render --output kicad/previews/Cleaver-top.png --width 2400 --height 1100 --side top --rotate 25,0,8 --zoom 1.9 --background opaque --quality high kicad/Cleaver.kicad_pcb
+kicad-cli pcb render --output kicad/previews/Cleaver-bottom.png --width 2400 --height 1100 --side bottom --rotate 20,0,352 --zoom 1.9 --background opaque --quality high kicad/Cleaver.kicad_pcb
+```
+
+The interactive **Alt+3** viewer lets you rotate/zoom further. No keycaps, plate,
+stabilizers, case, USB cable, or TP1 wire are modeled. The YD module assembly and
+header stack are explicitly approximate.

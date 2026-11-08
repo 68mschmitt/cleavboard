@@ -50,4 +50,9 @@
         (fp_rect (start -4.5 -27) (end 4.5 -19) (layer F.Fab) (width 0.1))
         (fp_text user "USB-C -> EDGE" (at 0 -17) (layer F.SilkS)
           (effects (font (size 1 1) (thickness 0.15))))
+  (model "${KIPRJMOD}/Cleaver.3dshapes/YD_RP2040_Approx.wrl"
+    (offset (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 0))
+  )
 )

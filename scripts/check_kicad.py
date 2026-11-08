@@ -13,6 +13,7 @@ from pathlib import Path
 import pcbnew
 
 from design import ROOT, MODULE_X, MODULE_Y, ROW_GPIOS, COL_GPIOS, read_keys, components
+from models_3d import validate_models
 
 
 def main():
@@ -29,6 +30,7 @@ def main():
     root = ET.parse(netfile).getroot()
     nets = {(p.get('ref'),p.get('pin')): n.get('name') for n in root.findall('./nets/net') for p in n.findall('node')}
     board = pcbnew.LoadBoard(str(pcb))
+    models = validate_models(board)
     footprints = {fp.GetReference():fp for fp in board.GetFootprints()}
     assert len(footprints)==len(parts), 'Unexpected/missing board components'
     for part in parts:
@@ -111,9 +113,9 @@ def main():
     report = dict(revision='0.3',matrix='8x16',unique_switches=len(keys),rgb_leds=len(leds),
                   pcb_sha256=hashlib.sha256(pcb.read_bytes()).hexdigest(),
                   schematic_sha256=hashlib.sha256(sch.read_bytes()).hexdigest(),
-                  erc='pass',drc='pass',schematic_pcb_firmware_mapping='pass')
+                  erc='pass',drc='pass',schematic_pcb_firmware_mapping='pass',models_3d=models)
     (args.reports/'validation.json').write_text(json.dumps(report,indent=2)+'\n')
-    print('PASS: 117 unique keys, 117 RGB LEDs, YD pinout, netlist/PCB/Vial parity, ERC and DRC.')
+    print('PASS: 117 unique keys, 117 RGB LEDs, YD pinout, netlist/PCB/Vial parity, 597 local 3D models, ERC and DRC.')
 
 
 if __name__=='__main__':

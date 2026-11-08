@@ -3,9 +3,17 @@
   "matrix": "8x16",
   "unique_switches": 117,
   "rgb_leds": 117,
-  "pcb_sha256": "d4e82747e944aeb6163329050d4a07a9647fc5f56bee77ac42a1692ae5242a4d",
+  "pcb_sha256": "21f84f1fab44f2d1fdb1e2838983f971968c0e87a561cbeef837b8e7a8335728",
   "schematic_sha256": "03de767a08c876dc84b49ea1ddc507e7f674f21d61b96643c11b019c4b473f65",
   "erc": "pass",
   "drc": "pass",
-  "schematic_pcb_firmware_mapping": "pass"
+  "schematic_pcb_firmware_mapping": "pass",
+  "models_3d": {
+    "populated_footprints": 480,
+    "model_instances": 597,
+    "unique_models": 11,
+    "intentionally_unmodeled": [
+      "TP1: bare wire-soldering pad"
+    ]
+  }
 }

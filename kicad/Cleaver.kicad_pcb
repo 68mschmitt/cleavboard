@@ -199,6 +199,11 @@
 			(uuid "9cd4e054-1f3f-44b5-8ffa-e12f3a72cf13")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_Radial_D8_H11.5_P3.5.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -723,6 +728,16 @@
 			(uuid "b37f1688-e7da-453d-a6c4-285aa76338a1")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -1247,6 +1262,16 @@
 			(uuid "3208d7df-c3ef-4368-a7ef-0010cd751190")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -1771,6 +1796,16 @@
 			(uuid "dff4523e-c064-46f5-a3c1-dce2b4faadd1")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -2295,6 +2330,16 @@
 			(uuid "69c00dee-cefb-4311-a290-9a814d5e6d6f")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -2819,6 +2864,16 @@
 			(uuid "f50f3c89-2179-466a-afad-20a28d41e554")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -3343,6 +3398,16 @@
 			(uuid "1ef550ad-a6b7-4628-9ff6-5c81ab17db05")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -3867,6 +3932,16 @@
 			(uuid "b52f9c83-04b8-4f07-81de-f47cb7f8bd16")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -4391,6 +4466,16 @@
 			(uuid "ae7993f1-e7cb-43f8-bca9-5631f98d7bd3")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -4915,6 +5000,16 @@
 			(uuid "1822b58f-901c-4ef4-bfe6-1379aa95fad1")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -5439,6 +5534,16 @@
 			(uuid "a48f6b34-c5d8-481b-af01-78854f55d074")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -5963,6 +6068,16 @@
 			(uuid "6ebd140e-17ae-4f07-a7b7-a22f3ffcfd6c")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -6487,6 +6602,16 @@
 			(uuid "ace40127-f3f9-485a-98dc-0dd860f3803c")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:PTC_1206"
 		(layer "F.Cu")
@@ -6567,6 +6692,11 @@
 			(uuid "34c217f7-d694-4116-8aed-bf350914207a")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/Fuse_1206_3216Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -7091,6 +7221,16 @@
 			(uuid "878540a9-22cb-4247-91ed-ddc01de9ab90")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -7615,6 +7755,16 @@
 			(uuid "15da073a-92f6-4765-81f9-4b3d9d163d07")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -8139,6 +8289,16 @@
 			(uuid "c6506323-6d62-4463-8a4f-1b6a8d2fb72f")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -8663,6 +8823,16 @@
 			(uuid "bf7d3c28-8482-464c-b148-8c3fe05aae29")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -9187,6 +9357,16 @@
 			(uuid "45c30300-3d1b-4fcd-a031-7b75614c5d1b")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -9711,6 +9891,16 @@
 			(uuid "4613db09-e70e-4918-9825-59a2c2e26afb")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -10235,6 +10425,16 @@
 			(uuid "660117b2-1e2d-4ce4-9d91-0c24176f8016")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -10759,6 +10959,16 @@
 			(uuid "329ca74b-347a-48ad-98c2-536c546d39ae")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -11283,6 +11493,16 @@
 			(uuid "9ccae265-f1f8-42ac-875b-ab639a7b1e83")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -11807,6 +12027,16 @@
 			(uuid "74d4494a-60ea-48e8-8cb9-37ae8f90766f")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -12331,6 +12561,16 @@
 			(uuid "506b6f8f-7796-457a-a862-7729f76bc895")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -12855,6 +13095,16 @@
 			(uuid "cc8f4be2-0eb7-4ba3-9089-184427e928f7")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -13379,6 +13629,16 @@
 			(uuid "ede149b5-e5f6-4bfa-965d-e3558290fae9")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -13903,6 +14163,16 @@
 			(uuid "16389133-8627-4412-83dd-2db5a22f38d6")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -14427,6 +14697,16 @@
 			(uuid "d98d12e3-9253-4a95-892e-156716cffa8c")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -14951,6 +15231,16 @@
 			(uuid "55323b51-deaf-44a8-9cb1-a16a56c4e6ff")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -15475,6 +15765,16 @@
 			(uuid "de864e97-0cac-4c75-9436-b5e824b19066")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -15999,6 +16299,16 @@
 			(uuid "9dac392f-c160-4ae8-a722-b4fda68af193")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:R_0805"
 		(layer "F.Cu")
@@ -16080,6 +16390,11 @@
 			(uuid "c9da9715-fbc0-4bed-87b8-1715a6468645")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/R_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "F.Cu")
@@ -16161,6 +16476,11 @@
 			(uuid "12631830-6683-4dbd-91d4-08a0c89f4128")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -16685,6 +17005,16 @@
 			(uuid "c006891f-9ada-473c-a6d1-4e7373572703")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -17209,6 +17539,16 @@
 			(uuid "2adb45ac-f196-4781-849e-4a1dc3b14c53")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -17733,6 +18073,16 @@
 			(uuid "bc3aae8e-9ae0-4cec-aba6-e5eccd3f9999")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -18257,6 +18607,16 @@
 			(uuid "fd55298f-5064-4d15-a485-f698891856f3")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -18781,6 +19141,16 @@
 			(uuid "b43f4dbf-d7cb-49de-9760-34f87a8f843d")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -19305,6 +19675,16 @@
 			(uuid "11b88173-2016-4174-9d48-aeab774ae7c4")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "F.Cu")
@@ -19386,6 +19766,11 @@
 			(uuid "598f03d4-cc48-4688-b0e5-a751699981d2")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -19910,6 +20295,16 @@
 			(uuid "aa22ce0d-24fc-45c2-9ee9-e3c62dc7f316")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -20434,6 +20829,16 @@
 			(uuid "973b6d63-0b4c-465f-bf4b-74d69f81f495")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -20958,6 +21363,16 @@
 			(uuid "5c244749-3474-4fd6-9df8-ee60d42581a9")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -21482,6 +21897,16 @@
 			(uuid "0be84e73-3545-4b98-9410-04899ae86039")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -22006,6 +22431,16 @@
 			(uuid "6d4153b8-31fa-420f-af42-676f3eeeaa14")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:R_0805"
 		(layer "F.Cu")
@@ -22087,6 +22522,11 @@
 			(uuid "024b36a3-397c-41f6-a53f-b70c9119db67")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/R_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -22611,6 +23051,16 @@
 			(uuid "c58d6d0e-6fa4-4387-93d3-8569bc564e8e")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -23135,6 +23585,16 @@
 			(uuid "4e690374-1342-4d8a-9ccc-1d55ba63a24d")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -23659,6 +24119,16 @@
 			(uuid "12d34b31-70fd-4205-b5ba-7b83653714a8")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -24183,6 +24653,16 @@
 			(uuid "5b69366c-cd18-484e-9e78-efaa24524274")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -24707,6 +25187,16 @@
 			(uuid "d0dbdf44-57c4-470e-bead-71361123d8fb")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:YD_RP2040"
 		(layer "F.Cu")
@@ -25155,6 +25645,11 @@
 			(uuid "50de8c78-9ffe-4584-a7e9-9454b16f6403")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/YD_RP2040_Approx.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -25679,6 +26174,16 @@
 			(uuid "7f20f97f-846b-4705-bf7f-4af50b0b92df")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:WirePad"
 		(layer "F.Cu")
@@ -26278,6 +26783,16 @@
 			(uuid "fff59f2a-3fa7-466d-83ba-961b7caa5128")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -26802,6 +27317,16 @@
 			(uuid "1bfd8f3d-b0f7-41a6-947e-fd710458b48e")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -27326,6 +27851,16 @@
 			(uuid "0fb9b24e-a89e-4fec-92ca-ddece22e41d6")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -27850,6 +28385,16 @@
 			(uuid "708e4dea-eb4f-45ee-9690-d25efbd95c58")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -28374,6 +28919,16 @@
 			(uuid "d19d4303-5b65-4022-ae86-98f405ddb6d9")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -28898,6 +29453,16 @@
 			(uuid "b9c70612-56fd-4d0c-aa0d-76c246f874fc")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -29422,6 +29987,16 @@
 			(uuid "4dd25ef2-3666-4c32-b86b-e8c74e172f51")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -29946,6 +30521,16 @@
 			(uuid "5b145db6-3055-461b-a1d1-8620ba63620d")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -30470,6 +31055,16 @@
 			(uuid "44620c3c-eb99-48f3-ad6b-1754561ddcc3")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -30994,6 +31589,16 @@
 			(uuid "7ef9f5a2-c919-4441-94d1-251e22ac18b9")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -31518,6 +32123,16 @@
 			(uuid "c152efff-f133-45ee-8fd9-88198d4195be")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -32042,6 +32657,16 @@
 			(uuid "d4584436-4626-4139-a697-4d8fc3e0bdfe")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -32566,6 +33191,16 @@
 			(uuid "42ecc079-6a5f-4a7a-a563-08d9a206e22e")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -33090,6 +33725,16 @@
 			(uuid "16559987-5c2b-4ba9-87b1-19ac09c5e780")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -33614,6 +34259,16 @@
 			(uuid "fe16cff6-20e3-4830-a629-9b1766d29883")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -34138,6 +34793,16 @@
 			(uuid "8ca252bd-d886-4a0b-bcbf-1110e8d6f733")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -34662,6 +35327,16 @@
 			(uuid "97ce80d6-5b63-4a04-af87-6bc6da849b7e")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -35186,6 +35861,16 @@
 			(uuid "f933b83a-7c77-428d-abe8-8e4a597aa778")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -35710,6 +36395,16 @@
 			(uuid "8f1fe180-4e56-4e69-a3d9-0d68a76a764b")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -36234,6 +36929,16 @@
 			(uuid "c84a8350-b86a-4275-8d72-bfe43b01ef65")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -36758,6 +37463,16 @@
 			(uuid "e9fb90ac-f2ff-4c1c-a388-97c9c55a4f4b")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -37282,6 +37997,16 @@
 			(uuid "151d8599-0c18-43e4-8dd1-f91eb5bc6fa9")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -37806,6 +38531,16 @@
 			(uuid "dd459033-bdea-4861-8a57-2645ec6b93e9")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -38330,6 +39065,16 @@
 			(uuid "b1a2ea6d-6553-4911-9de1-4d6289a3b027")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -38854,6 +39599,16 @@
 			(uuid "b235a8d0-c161-4255-a489-38f3e46d6648")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -39378,6 +40133,16 @@
 			(uuid "34372d86-eb6d-4bbe-b646-66de22ce8dd5")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -39902,6 +40667,16 @@
 			(uuid "8310c51d-7615-4e34-9cbd-938dc8fecc8c")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -40426,6 +41201,16 @@
 			(uuid "fab514ab-6423-4397-ac01-58cbad975770")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -40950,6 +41735,16 @@
 			(uuid "bf3b2736-d59a-4289-895f-4892d20b4ed6")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -41474,6 +42269,16 @@
 			(uuid "f262f88a-7986-424c-aca0-079aa1a08af6")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -41998,6 +42803,16 @@
 			(uuid "5d7d36e5-b01b-4d78-a18e-7685009be182")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -42522,6 +43337,16 @@
 			(uuid "e5a6d4ff-900d-4b1a-94b1-1bff37469ebd")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:TPS2553"
 		(layer "F.Cu")
@@ -42630,6 +43455,11 @@
 			(uuid "f09b03d5-a82c-47c9-905e-db74df2d1f49")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SOT-23-6.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -43154,6 +43984,16 @@
 			(uuid "eb76f671-6d0d-4318-bc3d-9f608128c5c6")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -43678,6 +44518,16 @@
 			(uuid "4fe791af-a691-46a8-8a41-00175e844a82")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -44202,6 +45052,16 @@
 			(uuid "b5dffed0-1a1e-40e1-8557-e8d15f5b41c9")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -44726,6 +45586,16 @@
 			(uuid "6780ef9c-1920-4f69-ad3a-974a48dff205")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -45250,6 +46120,16 @@
 			(uuid "ac64dda9-a2b4-4653-84fc-029612ab5b84")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:R_0805"
 		(layer "F.Cu")
@@ -45330,6 +46210,11 @@
 			(uuid "926180b7-8a14-4f5e-8ac8-64110859a50d")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/R_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -45854,6 +46739,16 @@
 			(uuid "bef09a53-d8fd-4069-991c-166a98bee5c8")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -46378,6 +47273,16 @@
 			(uuid "e5e1200c-92e6-4972-a791-d90caf7a50c8")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -46902,6 +47807,16 @@
 			(uuid "a17b7b5a-f395-41d1-a15b-6abe81c12b87")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -47426,6 +48341,16 @@
 			(uuid "ccaec752-a90f-46ac-952d-8597a76c79ad")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -47950,6 +48875,16 @@
 			(uuid "ce9253e5-ca0d-4bc8-b332-85e6497987f0")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -48474,6 +49409,16 @@
 			(uuid "dcdcd0d2-e7cb-494c-a414-026d765fa9cf")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -48998,6 +49943,16 @@
 			(uuid "9f0177ae-c0f7-4d42-8fba-fbd385860199")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -49522,6 +50477,16 @@
 			(uuid "8d67b3fd-c098-489f-893f-6fab40c82606")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -50046,6 +51011,16 @@
 			(uuid "29eeb200-c362-42aa-ba79-750c0bd6cb30")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -50570,6 +51545,16 @@
 			(uuid "94e5cc3f-b1bb-486f-9b9f-a5da6f273f3a")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -51094,6 +52079,16 @@
 			(uuid "c3e469d2-605e-4e16-9795-5454b7c3044c")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "F.Cu")
@@ -51175,6 +52170,11 @@
 			(uuid "fc0f4f28-aa57-4ef5-a80f-63e793c31c5e")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -51699,6 +52699,16 @@
 			(uuid "c722609f-381a-4aae-8bec-8169446da121")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -52223,6 +53233,16 @@
 			(uuid "2946bf46-9b2d-4b20-b694-6b98761c3834")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -52747,6 +53767,16 @@
 			(uuid "845d6da5-04b8-4d71-9852-66b379654759")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -53271,6 +54301,16 @@
 			(uuid "6ad8887f-7c73-4255-b165-522586925337")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -53795,6 +54835,16 @@
 			(uuid "9df323b5-96df-4a47-8960-8e1e4df772bc")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -54319,6 +55369,16 @@
 			(uuid "471a6949-3249-45c5-a0dc-49d7239ab4ef")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -54843,6 +55903,16 @@
 			(uuid "e76a370f-7dab-46f9-9946-1423f0849948")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -55367,6 +56437,16 @@
 			(uuid "f555e95f-d9a2-44fc-8cbe-2dcbadfa996f")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -55891,6 +56971,16 @@
 			(uuid "0092af2f-07f9-49d8-be48-11bdf969910f")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:R_0805"
 		(layer "F.Cu")
@@ -55972,6 +57062,11 @@
 			(uuid "442a3d6a-6bf2-4449-8c10-0a3e26cfaf5b")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/R_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -56496,6 +57591,16 @@
 			(uuid "82d2b0b3-4f84-4d1b-a633-1995c4e862ba")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -57020,6 +58125,16 @@
 			(uuid "4b81cc8d-fab7-48d1-890d-28622e0b43a9")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -57544,6 +58659,16 @@
 			(uuid "f41fd4a2-ff6e-4d2f-875a-0ba2c77ab01f")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -58068,6 +59193,16 @@
 			(uuid "977ebfbe-007d-4393-89c8-855b25e34986")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -58592,6 +59727,16 @@
 			(uuid "10695650-17e3-4c91-b996-42fa94834562")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -59116,6 +60261,16 @@
 			(uuid "a1c734d2-a75a-4092-8ca4-682e3357651b")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -59640,6 +60795,16 @@
 			(uuid "73a8c0b8-cee5-4484-bc21-a61d30b693db")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -60164,6 +61329,16 @@
 			(uuid "cbed81ca-9563-4340-8ff8-5c8ef84ba37f")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:LV1T125"
 		(layer "F.Cu")
@@ -60265,6 +61440,11 @@
 			(uuid "3213bc52-9d79-45c3-96df-b50f61974a64")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SOT-23-5.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -60789,6 +61969,16 @@
 			(uuid "bbf27ba6-ddd0-4da1-92a1-9e233042b4d9")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -61313,6 +62503,16 @@
 			(uuid "7fd90806-ea2e-46a4-a68b-49ab0f53765e")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -61837,6 +63037,16 @@
 			(uuid "1067c50d-5f10-4d55-be18-20c3eacc2ddb")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -62361,6 +63571,16 @@
 			(uuid "252aee25-331c-4617-964d-a9f0034eb70f")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:Kailh_socket_MX"
 		(layer "F.Cu")
@@ -62885,6 +64105,16 @@
 			(uuid "2ae59a91-0fa5-4d2a-b0f1-40b110915331")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Cherry_MX_Plate.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/SW_Hotswap_Kailh_MX.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -63015,6 +64245,11 @@
 			(uuid "1493eeca-b3dc-4376-9273-f797c3aac13a")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -63145,6 +64380,11 @@
 			(uuid "042319e3-fe36-40a2-aa76-3e83cc1f17c5")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -63275,6 +64515,11 @@
 			(uuid "1003d6c4-0f5a-46a8-a383-c615a954985d")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -63370,6 +64615,11 @@
 			(uuid "e4a1eeb8-ec33-4642-a375-872df30baa6d")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -63455,6 +64705,11 @@
 			(uuid "fe1d1ebf-bd88-4126-98d8-9c4bdf45b998")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -63585,6 +64840,11 @@
 			(uuid "bf08072e-3fd1-446f-a04b-ba89c38b67ad")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -63715,6 +64975,11 @@
 			(uuid "ff1b55c2-55bf-47bd-a071-56def677291a")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -63800,6 +65065,11 @@
 			(uuid "c79313a0-a4d6-4d91-84a0-c563168c94ce")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -63895,6 +65165,11 @@
 			(uuid "1c5fc20a-e89a-4a1b-b3c3-ae3c316b8895")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -64025,6 +65300,11 @@
 			(uuid "a8fda3ac-827b-4ada-917e-a7e870c40a41")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -64110,6 +65390,11 @@
 			(uuid "fc833403-e20c-4467-bd7b-77e9d618e1f7")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -64205,6 +65490,11 @@
 			(uuid "120656f2-110a-4d7e-99be-f7b48a1f40ab")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -64300,6 +65590,11 @@
 			(uuid "d5129a5e-a039-44ef-9fc4-891796409657")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -64395,6 +65690,11 @@
 			(uuid "f5097dde-ab0a-4838-adef-0e48ac1485cc")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -64490,6 +65790,11 @@
 			(uuid "39caac31-0c76-4bcd-b063-de436f4fccfe")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -64575,6 +65880,11 @@
 			(uuid "365802f8-6998-4a7d-94e9-49d4ba45ee3d")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -64705,6 +66015,11 @@
 			(uuid "5af66b64-1546-4d1a-a755-58136db4277e")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -64800,6 +66115,11 @@
 			(uuid "7fe912ad-98a8-4a2a-baa4-87dd176d266c")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -64895,6 +66215,11 @@
 			(uuid "70aaa42c-7090-41c0-b7c4-e86544517874")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -64990,6 +66315,11 @@
 			(uuid "a06975b4-c811-4753-90bb-bf2bad752c4d")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -65075,6 +66405,11 @@
 			(uuid "7eb76376-cfb8-468d-a870-93e188e2d12f")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -65205,6 +66540,11 @@
 			(uuid "e6e00283-2252-478c-86b6-1934565681a2")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -65335,6 +66675,11 @@
 			(uuid "3d91290e-a49e-4fd7-abd2-80cb62989c81")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -65465,6 +66810,11 @@
 			(uuid "c31befd3-aedd-443c-9c8f-2cb7d99e8fd4")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -65595,6 +66945,11 @@
 			(uuid "cde4c4ef-b8fa-44ef-a37a-77a54342a294")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -65725,6 +67080,11 @@
 			(uuid "4968814d-0090-410e-b7a3-31e08e921970")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -65810,6 +67170,11 @@
 			(uuid "de5963ea-3867-4f11-af01-c3104bd2a45e")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -65940,6 +67305,11 @@
 			(uuid "5db81f73-b0d4-42e8-97a4-e91e07130ceb")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -66070,6 +67440,11 @@
 			(uuid "87353609-b2b0-4c95-a05f-a0fdcf7dc9a3")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -66200,6 +67575,11 @@
 			(uuid "78915dd4-d953-4ea3-ba3c-5d119fd3b399")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -66330,6 +67710,11 @@
 			(uuid "1cf3de54-9a1d-4fd5-93e7-bb002a02d6b6")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -66415,6 +67800,11 @@
 			(uuid "2f2b02cd-ab65-4c61-b31d-82e7b3beba8b")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -66510,6 +67900,11 @@
 			(uuid "c4fe4b92-cbc9-4371-b5b1-21fe6950ea8a")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -66595,6 +67990,11 @@
 			(uuid "7ff354f3-c428-493b-a9c8-6d449857e584")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -66680,6 +68080,11 @@
 			(uuid "341ef56b-c00d-4478-8df4-45a25cccf029")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -66775,6 +68180,11 @@
 			(uuid "27f4a25f-2b09-4a5b-9222-f6c413b33484")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -66905,6 +68315,11 @@
 			(uuid "ed43a399-e963-4c18-9cc9-7a5de96ac5fa")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -66990,6 +68405,11 @@
 			(uuid "67f65e1b-4c51-4158-a442-7e53fbb78aa7")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -67075,6 +68495,11 @@
 			(uuid "c5af474c-0e65-4bf5-97ac-9d488ae19bee")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -67170,6 +68595,11 @@
 			(uuid "e59f046d-f83f-4159-acc7-7890feaf3677")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -67265,6 +68695,11 @@
 			(uuid "ebb6225f-4f6d-445a-9adf-0522d60a6720")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -67395,6 +68830,11 @@
 			(uuid "a90525d6-02fe-4125-8ac3-c52129f18865")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -67490,6 +68930,11 @@
 			(uuid "22840fde-041e-46c0-aaa4-940b809c9964")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -67575,6 +69020,11 @@
 			(uuid "c78968ff-b3b1-4d23-8525-21947626aabb")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -67660,6 +69110,11 @@
 			(uuid "dd0a6832-6955-4d53-88fa-22991e824755")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -67755,6 +69210,11 @@
 			(uuid "89b214fc-fefe-4026-9d70-f9d30c25a85f")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -67840,6 +69300,11 @@
 			(uuid "74e3ce45-6161-4b6c-818a-69bd1ab52303")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -67925,6 +69390,11 @@
 			(uuid "02282180-5433-4cd3-972d-389181da769f")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -68020,6 +69490,11 @@
 			(uuid "8514e744-154d-430b-b4a6-5dbf393f821a")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -68105,6 +69580,11 @@
 			(uuid "2ca9baf9-7df6-424f-891c-45f15ad7106e")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -68190,6 +69670,11 @@
 			(uuid "c0911bb6-67ac-4002-ad76-b5526575d06a")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -68275,6 +69760,11 @@
 			(uuid "f3d5de02-5cd6-4ac1-a6f8-7f7b737d11bc")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -68360,6 +69850,11 @@
 			(uuid "aefafe44-aaef-4832-8a42-9f43d0906491")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -68445,6 +69940,11 @@
 			(uuid "55e5bf1b-422d-49f2-90ce-270c15d11ace")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -68530,6 +70030,11 @@
 			(uuid "27899bf8-1b08-4999-9086-79333b99d8d3")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -68625,6 +70130,11 @@
 			(uuid "a83d5a87-577a-41e9-a146-b49f46e514a6")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -68755,6 +70265,11 @@
 			(uuid "db233191-ec90-4260-9513-2d0f3829052f")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -68885,6 +70400,11 @@
 			(uuid "f49cb62a-b29d-4f99-83e8-5d6e31b0bd7f")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -68970,6 +70490,11 @@
 			(uuid "d26e0b4c-16d2-4523-b41b-52b77ce1dc05")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -69055,6 +70580,11 @@
 			(uuid "b547c05c-ec06-4a24-966f-9a50a81efe3d")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -69140,6 +70670,11 @@
 			(uuid "f8a28920-963d-4baa-8d03-6b26a94c6518")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -69225,6 +70760,11 @@
 			(uuid "edd0cdc6-1c28-4a27-af68-73d0371206a6")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -69320,6 +70860,11 @@
 			(uuid "c1b732bb-44f7-40cb-8ff4-135384ae7b35")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -69450,6 +70995,11 @@
 			(uuid "a804031a-8d02-4d1c-b5fb-18243141f29d")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -69535,6 +71085,11 @@
 			(uuid "a8e0d3d3-ecd7-4510-82c5-cf88332bbac8")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -69630,6 +71185,11 @@
 			(uuid "21d042bc-1758-4565-96f6-dbb4b73f8394")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -69725,6 +71285,11 @@
 			(uuid "c4c4b0f1-9d6e-4263-a3f9-8a84e5de2b54")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -69810,6 +71375,11 @@
 			(uuid "d54bcb19-27c8-41e5-907b-6abc366f073e")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -69905,6 +71475,11 @@
 			(uuid "8c518f4d-74ea-4296-8088-87d09937debb")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -70000,6 +71575,11 @@
 			(uuid "1394b93d-e81f-440f-9ccf-16209f0ec51a")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -70130,6 +71710,11 @@
 			(uuid "493cdc87-70ce-4dfa-8842-3c6c76b1d8bf")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -70225,6 +71810,11 @@
 			(uuid "791be582-c46b-4112-999d-1d8a51837870")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -70355,6 +71945,11 @@
 			(uuid "0388c8e7-eca7-425c-86ac-921a4d6562bd")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -70485,6 +72080,11 @@
 			(uuid "d69c1552-4e3e-4ca3-8272-b0e9e1c78968")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -70580,6 +72180,11 @@
 			(uuid "74ea71e4-bab7-4a1b-9bda-22ff8037caae")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -70665,6 +72270,11 @@
 			(uuid "f0683dc5-8a6a-428e-9849-f83528a2cd52")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -70750,6 +72360,11 @@
 			(uuid "3dce9d03-7077-40c2-83f6-63b8052d9e17")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -70880,6 +72495,11 @@
 			(uuid "5ae9e8ec-05af-4da4-b289-11f2cf0a9ce1")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -70965,6 +72585,11 @@
 			(uuid "7cc3a688-b7cc-4d6d-841e-f642d3e82139")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -71050,6 +72675,11 @@
 			(uuid "b7ad0bf6-1773-4caf-a182-adaaf9cd8a17")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -71145,6 +72775,11 @@
 			(uuid "f35001c1-8d74-4766-8579-e6bd66368850")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -71240,6 +72875,11 @@
 			(uuid "f2b43adf-a286-423b-8988-0256c30a8b2a")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -71370,6 +73010,11 @@
 			(uuid "d4724d3c-c1b8-4996-a834-3a3b3a70eaf3")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -71500,6 +73145,11 @@
 			(uuid "be8a1a40-2d95-4c57-bdb7-1c7298fedf1e")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -71630,6 +73280,11 @@
 			(uuid "7d8e99db-100b-4401-8b91-61c545b3cfa0")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -71715,6 +73370,11 @@
 			(uuid "17f96f10-db44-48a8-a2ad-1bd3cba7e713")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -71810,6 +73470,11 @@
 			(uuid "ab152cf1-4866-43b6-8bc0-5f486a6bad85")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -71940,6 +73605,11 @@
 			(uuid "354ddf33-3004-4f00-9629-434eeddd3976")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -72035,6 +73705,11 @@
 			(uuid "49c8f8b8-88c0-4ead-b152-e3fd7b0ec892")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -72120,6 +73795,11 @@
 			(uuid "eacca39b-55e2-4b48-994f-55e93549d515")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -72205,6 +73885,11 @@
 			(uuid "10baf0ec-e858-4221-9562-b6cc2cb14ee0")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -72290,6 +73975,11 @@
 			(uuid "8a0ed530-feca-41b1-80e4-38ce988d02f9")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -72375,6 +74065,11 @@
 			(uuid "63b14de4-f66b-498b-831f-f565810357fc")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -72460,6 +74155,11 @@
 			(uuid "885b4eba-0a5a-4ef3-b245-90a25391d4e5")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -72590,6 +74290,11 @@
 			(uuid "2063d9e3-d402-4f35-b593-00a935820079")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -72675,6 +74380,11 @@
 			(uuid "7095cf93-7fdd-4ec2-940f-994aeff5309e")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -72770,6 +74480,11 @@
 			(uuid "0f15cc64-2409-4d45-b522-e1a813ceb9a5")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -72865,6 +74580,11 @@
 			(uuid "3b6ed4bd-6e96-4e54-a69d-c364347eaa97")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -72950,6 +74670,11 @@
 			(uuid "7f3554a0-4e1a-4dc6-ba25-c90e1ab84e39")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -73045,6 +74770,11 @@
 			(uuid "18e63e63-e758-4e54-85be-38e75845a399")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -73140,6 +74870,11 @@
 			(uuid "db333591-476d-4589-a4a6-11862f2f10f4")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -73235,6 +74970,11 @@
 			(uuid "5f39c8e4-5094-4e54-bb44-ee63dcfd7a74")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -73365,6 +75105,11 @@
 			(uuid "af1545cc-d0ed-4812-9f1c-5600589293f7")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -73460,6 +75205,11 @@
 			(uuid "5982388b-0d1f-4cc1-8f42-586023bfc525")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -73590,6 +75340,11 @@
 			(uuid "594b78bc-f2bc-4185-909d-9462717c28a1")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -73685,6 +75440,11 @@
 			(uuid "95d79bbf-6598-4ce6-8c31-bd8e0e8c7318")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -73770,6 +75530,11 @@
 			(uuid "5f9af844-b639-4a7b-9fe2-5f5b3d346afe")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -73900,6 +75665,11 @@
 			(uuid "66317481-746f-4048-9eaa-0d2250f8ed68")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -73995,6 +75765,11 @@
 			(uuid "8a6e0f12-dfe7-403b-97aa-b23bd398476f")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -74090,6 +75865,11 @@
 			(uuid "04b28c08-cd1f-42b0-908e-693188bddb24")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -74185,6 +75965,11 @@
 			(uuid "fbdeaee2-57ba-4240-8095-d67f60b438ea")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -74270,6 +76055,11 @@
 			(uuid "eaa7b343-2194-4507-8354-c3586929f7b9")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -74400,6 +76190,11 @@
 			(uuid "d7960696-0799-4776-bc1a-b1daae3fc38a")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -74530,6 +76325,11 @@
 			(uuid "45150100-0464-487a-8b85-05814cb1cf39")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -74625,6 +76425,11 @@
 			(uuid "8be4623f-5a26-4aa0-8a52-ca1ff0e6c97b")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -74755,6 +76560,11 @@
 			(uuid "271e7120-2d54-455c-9352-af9fc61e1a49")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -74850,6 +76660,11 @@
 			(uuid "9afba043-ef87-4bcb-82db-c2dfa87062e6")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -74945,6 +76760,11 @@
 			(uuid "f06c6e84-617f-4551-a685-ca0640fc3dba")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -75040,6 +76860,11 @@
 			(uuid "3eb01214-4a83-4a17-a077-05feaf89b4d0")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -75170,6 +76995,11 @@
 			(uuid "e086dc6f-bb8d-4e0e-834b-d7cd4385a85c")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -75300,6 +77130,11 @@
 			(uuid "e4b347b5-3f8b-443c-9275-2910c0ff045c")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -75385,6 +77220,11 @@
 			(uuid "a5fcd199-1ee9-4e51-9a1c-6bc7b4f1e696")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -75470,6 +77310,11 @@
 			(uuid "ce7f4488-ff8d-4d58-983b-17e56cc3ac1f")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -75600,6 +77445,11 @@
 			(uuid "02b37021-0395-4597-9d2b-573e94e457af")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -75695,6 +77545,11 @@
 			(uuid "19e8de24-affb-44f2-8978-37f12818ab51")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -75780,6 +77635,11 @@
 			(uuid "0dbae31e-527e-4249-b685-0593edd74458")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -75875,6 +77735,11 @@
 			(uuid "069629ed-96f7-412c-9af0-c961b6675807")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -75970,6 +77835,11 @@
 			(uuid "7281d12e-bbd8-41dc-bde4-96098027b0bf")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -76100,6 +77970,11 @@
 			(uuid "6826a59b-f905-4365-9c20-c4ab3a4ff14d")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -76230,6 +78105,11 @@
 			(uuid "fef17c7b-fc7d-4143-b89b-946c1cd0d7fa")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -76360,6 +78240,11 @@
 			(uuid "258e35b0-a440-4eaa-8438-6ebaf8bb567c")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -76490,6 +78375,11 @@
 			(uuid "74eb2f43-7167-474f-9bd8-440116b828b9")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -76585,6 +78475,11 @@
 			(uuid "53542d06-d03c-477e-a61c-bbe8a530d5c2")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -76670,6 +78565,11 @@
 			(uuid "f2cbe511-6882-48d8-9a50-0e992f3d5f5c")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -76755,6 +78655,11 @@
 			(uuid "a02a3a1f-8b73-4ac7-9fd0-29c21080c10a")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -76850,6 +78755,11 @@
 			(uuid "72cb79c6-0805-4d41-8199-eb2ea221a0a4")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -76980,6 +78890,11 @@
 			(uuid "7b45b924-a876-4f91-b029-51d5db3b7a20")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -77110,6 +79025,11 @@
 			(uuid "59f5bdb1-318c-4eb3-921e-055bfa1b60b6")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -77195,6 +79115,11 @@
 			(uuid "3750c47b-b175-4de1-910f-880cd5651514")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -77280,6 +79205,11 @@
 			(uuid "c59f8141-5449-45b9-a4b6-f625601878e1")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -77365,6 +79295,11 @@
 			(uuid "8822762e-0afe-44e6-bbb6-d4add8f5cc09")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -77460,6 +79395,11 @@
 			(uuid "803f8b07-d4b7-417f-a986-c7a1056f4b60")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -77555,6 +79495,11 @@
 			(uuid "8636f2d1-5b4c-4e35-a918-30ee486093b6")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -77650,6 +79595,11 @@
 			(uuid "412e399f-c3cd-4865-a74e-e4eca3b74ead")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -77745,6 +79695,11 @@
 			(uuid "0d38aca2-4033-41a8-a41b-c1ac0f5a23d4")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -77840,6 +79795,11 @@
 			(uuid "f65ec50b-ebdc-4784-bc83-914759f37e75")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -77925,6 +79885,11 @@
 			(uuid "b5522bec-5b46-4918-a14e-37a1568bcbea")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -78020,6 +79985,11 @@
 			(uuid "ba23f65b-7737-4fb5-962c-cb9c0734cca2")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -78105,6 +80075,11 @@
 			(uuid "1fe4a391-1c1a-4c60-9bf7-acbca000b490")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -78200,6 +80175,11 @@
 			(uuid "6f49c0a9-6a0d-4490-b76b-815ea9539732")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -78330,6 +80310,11 @@
 			(uuid "40ad4e9a-850e-4b21-b2df-48fe957c49b4")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -78415,6 +80400,11 @@
 			(uuid "a27e45cb-be5c-44e2-b682-a7dccbc27ebb")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -78510,6 +80500,11 @@
 			(uuid "2e4cc1da-f238-40b3-90c3-afb58b08522d")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -78640,6 +80635,11 @@
 			(uuid "4a2c57f4-aa7c-4381-9ff9-a46dd97e5657")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -78770,6 +80770,11 @@
 			(uuid "5dabde02-1693-4338-ace7-5d6c2e90e230")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -78865,6 +80870,11 @@
 			(uuid "2831ec4b-729b-45fb-8f34-383c745c1880")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -78950,6 +80960,11 @@
 			(uuid "da52b31f-efa7-40bb-bb50-d6f37c446c3d")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -79035,6 +81050,11 @@
 			(uuid "0ff9d38e-7eb1-4021-aaa8-59870908db67")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -79130,6 +81150,11 @@
 			(uuid "4d321958-6280-431a-8141-00aa4088bd71")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -79225,6 +81250,11 @@
 			(uuid "c58f0335-09fe-46b3-9360-68cace0d34ab")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -79320,6 +81350,11 @@
 			(uuid "1f4216a8-af14-431c-90cc-c2932110ff27")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -79415,6 +81450,11 @@
 			(uuid "c595631f-5118-4a24-9f60-0e4d66d41a80")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -79510,6 +81550,11 @@
 			(uuid "43393fd2-00dc-4a89-8463-204653ab3174")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -79640,6 +81685,11 @@
 			(uuid "24357e47-9822-40c3-b8c1-53462d1a0127")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -79770,6 +81820,11 @@
 			(uuid "08c57398-e77a-4c98-bea0-3145a8650b6d")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -79865,6 +81920,11 @@
 			(uuid "c31c5ad0-12ad-4898-b8c9-5233e1129773")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -79960,6 +82020,11 @@
 			(uuid "8bc5608d-9c1b-42d5-aecb-be0a184d84ff")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -80055,6 +82120,11 @@
 			(uuid "966dbebe-0478-4b64-9391-50d1deeef44e")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -80185,6 +82255,11 @@
 			(uuid "147be941-3c2d-46e5-852a-96bdccb8e079")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -80280,6 +82355,11 @@
 			(uuid "971257f3-d104-4fcb-9d25-7e3707a28712")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -80365,6 +82445,11 @@
 			(uuid "d3d9369e-cecc-4b68-bc5f-2fee1dc889b9")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -80495,6 +82580,11 @@
 			(uuid "cab89e26-97dc-480c-a2de-11ac4396b97b")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -80590,6 +82680,11 @@
 			(uuid "cf30b92d-44f9-48b9-af43-94a0020f7a3a")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -80685,6 +82780,11 @@
 			(uuid "334dadf6-bc41-46c8-9af7-813451f5fd72")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -80770,6 +82870,11 @@
 			(uuid "8b9096d5-b1fd-4cda-ac41-96cbe77e2a98")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -80855,6 +82960,11 @@
 			(uuid "a6956694-c9ad-4843-9a1e-f60183467e28")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -80950,6 +83060,11 @@
 			(uuid "9e867a48-4e19-409a-92d9-7f852e3aef7b")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -81035,6 +83150,11 @@
 			(uuid "d92f852d-335f-4127-823e-782b4006abdc")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -81165,6 +83285,11 @@
 			(uuid "773d2f9a-bbe2-4781-afb3-5e3a9c90e884")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -81260,6 +83385,11 @@
 			(uuid "a2ca1b43-52fd-4a2c-8822-f515f49c3ae0")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -81345,6 +83475,11 @@
 			(uuid "c28f8001-0862-4122-ae8a-1a1636c21f42")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -81475,6 +83610,11 @@
 			(uuid "3eed01b6-3eeb-4d35-8913-8b0d964cf6e5")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -81570,6 +83710,11 @@
 			(uuid "ea463418-864f-424f-9e20-492d0fcee954")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -81655,6 +83800,11 @@
 			(uuid "325298a8-4e4d-4b1d-b97b-8d77bb2db131")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -81740,6 +83890,11 @@
 			(uuid "cfd52e9e-f428-401c-b314-f88598dbef46")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -81870,6 +84025,11 @@
 			(uuid "0c2a72cb-218c-4711-88aa-ad5105301239")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -81955,6 +84115,11 @@
 			(uuid "028acf41-89a8-40d3-87bd-351e5c2a5783")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -82040,6 +84205,11 @@
 			(uuid "a45013f6-9085-4697-a653-9296d7d8769d")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -82170,6 +84340,11 @@
 			(uuid "1fea17ca-ed64-4cfe-9c4e-d569c70d083c")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -82300,6 +84475,11 @@
 			(uuid "0e7cd5e5-0969-4c04-bec2-3834193d7ad1")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -82385,6 +84565,11 @@
 			(uuid "e501ecf4-d37d-4099-a957-a96f258223ad")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -82515,6 +84700,11 @@
 			(uuid "a03772da-d1f3-4168-80f4-4d8871577449")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -82610,6 +84800,11 @@
 			(uuid "803c376d-86cd-4912-8ed7-7d7e7c40e62d")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -82740,6 +84935,11 @@
 			(uuid "ce8a43a7-754d-4cdf-8fcc-9182121153b4")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -82825,6 +85025,11 @@
 			(uuid "d065ec19-cb75-4e60-9c48-048b81f3100b")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -82955,6 +85160,11 @@
 			(uuid "000c69e5-45bb-422c-a7de-e00fb9b67f15")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -83040,6 +85250,11 @@
 			(uuid "72189bbc-e5e7-4a9f-8fcf-47accfd8e7e6")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -83125,6 +85340,11 @@
 			(uuid "af3660ff-f66d-4d5c-961e-230afd1f2871")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -83255,6 +85475,11 @@
 			(uuid "376c85c1-81e8-41c4-98bd-02915529f0f0")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -83385,6 +85610,11 @@
 			(uuid "535715d5-a4a3-4f30-b2aa-f292e5bd9594")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -83480,6 +85710,11 @@
 			(uuid "34d7cb8f-27b1-4db1-b40b-8660df964aaf")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -83575,6 +85810,11 @@
 			(uuid "78489d69-6ed5-4ef4-88a7-a4aa5e64a354")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -83670,6 +85910,11 @@
 			(uuid "09553ffa-9445-4383-b462-9a9a56d4cfa9")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -83755,6 +86000,11 @@
 			(uuid "074e8f72-100d-41ce-8336-db8c949e4ffa")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -83885,6 +86135,11 @@
 			(uuid "ab03febc-9b90-457b-a4b3-0a72aca1e941")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -83970,6 +86225,11 @@
 			(uuid "1ed63772-762b-472f-a3b2-a73231752a4e")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -84065,6 +86325,11 @@
 			(uuid "ea848036-16a2-4008-9448-867bcc30a02c")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -84160,6 +86425,11 @@
 			(uuid "f8867c9d-0d9c-46ed-9e54-951d76b1a47d")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -84245,6 +86515,11 @@
 			(uuid "6f67bc9e-4a3b-41aa-b10b-9598c66882c0")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -84375,6 +86650,11 @@
 			(uuid "0a883517-a49d-49cc-8d36-5038a474ddb6")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -84460,6 +86740,11 @@
 			(uuid "c08866fc-2a00-4475-b564-105cd3aecbb4")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -84590,6 +86875,11 @@
 			(uuid "b3c5aca6-b494-42a5-a060-e73bfe5b0c42")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -84685,6 +86975,11 @@
 			(uuid "9800b810-a750-491e-b20d-c9a1f198a0be")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -84780,6 +87075,11 @@
 			(uuid "fc19d71d-c13b-4233-9ba2-5ba32175a5a7")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -84865,6 +87165,11 @@
 			(uuid "dc5057d2-ed98-43a2-a3bc-da1ef24ea68b")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -84950,6 +87255,11 @@
 			(uuid "a01773cb-1f77-4fe6-a93c-df0345d45ec0")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -85080,6 +87390,11 @@
 			(uuid "a09fe74e-5a66-4410-94fc-15e031e5ba46")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -85210,6 +87525,11 @@
 			(uuid "b2a29cc8-2cf8-42e9-958a-83b7f1a50de7")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -85340,6 +87660,11 @@
 			(uuid "487f2b0b-b6d8-42ef-b79b-dde7ea2fa418")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -85470,6 +87795,11 @@
 			(uuid "d0cde1c7-752b-434a-8f8d-8928b8cbeeec")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -85555,6 +87885,11 @@
 			(uuid "d3a72631-31ab-4f5d-a254-7b64729bcac7")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -85685,6 +88020,11 @@
 			(uuid "896706a4-9d15-41f0-9180-42aa79cf6a45")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -85815,6 +88155,11 @@
 			(uuid "6a92dcd7-bbe2-4abb-aeac-cbb08d2c94aa")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -85945,6 +88290,11 @@
 			(uuid "9ab6d87e-589a-47d0-b762-5a0154799489")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -86075,6 +88425,11 @@
 			(uuid "05347db5-31cb-42dd-ad71-379425a5c511")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -86205,6 +88560,11 @@
 			(uuid "77115c20-fca8-4e46-809d-a0c4839e1b7b")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -86335,6 +88695,11 @@
 			(uuid "34392b91-8c91-4496-9cf9-8ab7adc4316c")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -86465,6 +88830,11 @@
 			(uuid "e67ec63c-b9dd-487f-ad08-d17231ac7576")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -86595,6 +88965,11 @@
 			(uuid "35d571c3-d4ee-4fc4-8ff9-2ab36c1f9ab0")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -86690,6 +89065,11 @@
 			(uuid "e056e703-de94-40e2-a4d3-6434fb636497")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -86785,6 +89165,11 @@
 			(uuid "1201da81-6907-4295-9ad7-2cb68f49861e")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -86915,6 +89300,11 @@
 			(uuid "c2f09d9a-75e5-4328-acb0-00d01f1491a0")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -87010,6 +89400,11 @@
 			(uuid "154e0042-ab04-4616-ab3b-3bcae662b1df")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -87105,6 +89500,11 @@
 			(uuid "2b39e430-4110-4734-bdb1-ea83c0ec036a")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -87190,6 +89590,11 @@
 			(uuid "58939ba2-495a-4131-809c-4ec3bbe9c0ea")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -87275,6 +89680,11 @@
 			(uuid "d8fba6e5-c416-4904-b5ea-a7fbdb048cd8")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -87405,6 +89815,11 @@
 			(uuid "2e83360c-116e-49ab-9696-288129faad0f")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -87490,6 +89905,11 @@
 			(uuid "4f3928f6-74e4-447b-91d3-d3efe6da95cc")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -87575,6 +89995,11 @@
 			(uuid "175d274e-b905-4c37-b8e1-f87c3b5cd78f")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -87660,6 +90085,11 @@
 			(uuid "3da623d6-187d-41e6-b335-bedcc6f16dbf")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -87745,6 +90175,11 @@
 			(uuid "bc92b680-42b0-4a2d-9ed4-2b82cb721387")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -87830,6 +90265,11 @@
 			(uuid "5355b918-e360-47c6-9b4a-aaf6e806dd92")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -87925,6 +90365,11 @@
 			(uuid "21c78c95-0608-4aaa-86d8-12b6295d9e3f")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -88055,6 +90500,11 @@
 			(uuid "de9714a5-ea63-44b1-932b-6ac1c7331dfb")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -88140,6 +90590,11 @@
 			(uuid "1f245dbc-8d97-4123-a9c6-b6273f3e0f84")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -88235,6 +90690,11 @@
 			(uuid "36ca4143-b5b0-4ce3-a4d1-5d643eedd069")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -88320,6 +90780,11 @@
 			(uuid "27c60662-9a35-4293-b8cd-d2fe68db1ae5")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -88450,6 +90915,11 @@
 			(uuid "3c39d462-5a34-4f03-9c48-aef43d9c6aa9")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -88545,6 +91015,11 @@
 			(uuid "a2cc9f4e-2185-434a-a555-0e5f97e59aa7")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -88675,6 +91150,11 @@
 			(uuid "985982d3-f28f-4343-a6f4-e41a03593e86")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -88760,6 +91240,11 @@
 			(uuid "2530fef9-17b1-4475-8d2c-cd14daa74579")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -88855,6 +91340,11 @@
 			(uuid "2ddf4472-ff16-44fa-be85-1b52e76a8810")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -88985,6 +91475,11 @@
 			(uuid "69903f96-d2ae-430d-bdad-c5619a651074")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -89080,6 +91575,11 @@
 			(uuid "ece74978-398b-457b-bcac-b977f726627f")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -89165,6 +91665,11 @@
 			(uuid "3f7c3f27-69de-4df9-93d9-43543575c3fc")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -89295,6 +91800,11 @@
 			(uuid "bd081d71-6336-410f-baae-4f42bcf6da2b")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -89390,6 +91900,11 @@
 			(uuid "386d988b-0da5-4f2d-9e40-59e2241a724a")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -89475,6 +91990,11 @@
 			(uuid "dc46f4af-517a-4347-9ecb-74baa1361603")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -89570,6 +92090,11 @@
 			(uuid "d6fd47c0-a064-4837-9cfe-d724bc129195")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -89655,6 +92180,11 @@
 			(uuid "8bfa9eab-115e-4620-92c4-7f8f384cdee6")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -89750,6 +92280,11 @@
 			(uuid "5e9f0ccd-3e26-4ba6-a9d1-aa3fe404770b")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -89835,6 +92370,11 @@
 			(uuid "7a9c5812-4222-4199-849c-d53588f27005")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -89930,6 +92470,11 @@
 			(uuid "0d8a8b97-5d4d-4d88-ba3d-a2607fd18fef")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -90060,6 +92605,11 @@
 			(uuid "4e9a88a3-ca62-4f7d-a3a5-3b226c4614df")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -90145,6 +92695,11 @@
 			(uuid "7e9112f4-2414-48ae-8bb1-14d2e8ed8257")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -90275,6 +92830,11 @@
 			(uuid "682003e0-923d-4f8f-b977-80019831a983")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -90405,6 +92965,11 @@
 			(uuid "97e18d01-a972-4ea3-8bf3-a2f75f9b55d8")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -90490,6 +93055,11 @@
 			(uuid "302b738b-a3b2-4c9b-b5db-439f982de66d")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -90620,6 +93190,11 @@
 			(uuid "85e035aa-fde2-4e0d-9049-a79c2dc59e4c")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -90705,6 +93280,11 @@
 			(uuid "ce2c6303-1af6-43ff-8bda-eb2c3ff10d10")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -90800,6 +93380,11 @@
 			(uuid "67dcb86e-53aa-49f6-9c35-b23dd63e9150")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -90930,6 +93515,11 @@
 			(uuid "06800a5d-7d31-47d5-a2da-960d5cf62252")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -91015,6 +93605,11 @@
 			(uuid "08f206f3-99d9-47e9-8a28-d45afbf0e74b")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -91100,6 +93695,11 @@
 			(uuid "e4bdcf82-a4cd-4de6-9b13-62a29a6c7cdc")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -91230,6 +93830,11 @@
 			(uuid "5bee27f6-bcca-4f93-81c4-62d829c80390")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -91325,6 +93930,11 @@
 			(uuid "d14e28a9-77b1-4798-87d6-b90f357c723a")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -91455,6 +94065,11 @@
 			(uuid "1ea98183-061b-4cfd-950b-c433c4246a24")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -91550,6 +94165,11 @@
 			(uuid "5c0c275d-d351-459e-9a75-bc37f3eb6f3b")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -91635,6 +94255,11 @@
 			(uuid "ef9bcaed-3e07-4baf-bc7f-322875709362")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -91765,6 +94390,11 @@
 			(uuid "09cdfe02-2839-4581-b878-2a53a21d3bb9")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -91850,6 +94480,11 @@
 			(uuid "4107a652-2d59-4389-8928-44a95ce3cd41")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -91945,6 +94580,11 @@
 			(uuid "0c29fc2b-32f2-49df-b3d7-779420300757")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -92075,6 +94715,11 @@
 			(uuid "78297c8b-4fcd-436a-b362-ee64137343da")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -92205,6 +94850,11 @@
 			(uuid "7b44614e-7c12-48dd-a666-e2284ba6c87e")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -92300,6 +94950,11 @@
 			(uuid "2e9ffd62-5b81-4f12-897c-f633e9b30622")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -92430,6 +95085,11 @@
 			(uuid "7a273f65-cf14-4f9a-ab27-565591831851")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -92560,6 +95220,11 @@
 			(uuid "b29701f5-a4d3-47e2-bb86-2194f6c9e5bd")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -92645,6 +95310,11 @@
 			(uuid "112108b7-cde5-4c3c-b117-7505b428a117")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -92730,6 +95400,11 @@
 			(uuid "3007f96d-062d-4c89-ab5b-a84200c36f53")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -92860,6 +95535,11 @@
 			(uuid "8159fbc2-b47b-454f-a56c-c547663ad401")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -92955,6 +95635,11 @@
 			(uuid "06fdb7c8-c2ce-49a1-8ca6-ebe1e4468a95")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -93050,6 +95735,11 @@
 			(uuid "6e99d158-8f5f-460d-8ff4-d7e971af979b")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -93135,6 +95825,11 @@
 			(uuid "cc287a8c-0ff2-4bd4-ba6f-8c0aa46b9cb3")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -93265,6 +95960,11 @@
 			(uuid "87d2727c-6f79-44d4-a25f-3f9ef26452aa")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -93360,6 +96060,11 @@
 			(uuid "065d237f-1c32-4286-a4a1-d19017dd70c8")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -93455,6 +96160,11 @@
 			(uuid "01a7a38a-149d-4651-905d-2cdb047a310b")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -93585,6 +96295,11 @@
 			(uuid "e39757ee-fab5-4302-b38b-fb82ad09ddf4")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -93715,6 +96430,11 @@
 			(uuid "ceb77c80-dd0a-4d68-b247-d0151d233965")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -93810,6 +96530,11 @@
 			(uuid "40e638fe-dd90-446b-8535-a7e0cb0d7e5e")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -93905,6 +96630,11 @@
 			(uuid "41a6d1e3-8dcf-4f7b-9939-c09e9f90b344")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -94035,6 +96765,11 @@
 			(uuid "a36e4d25-24aa-4ea2-ac5d-3e4b477bb7b3")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -94130,6 +96865,11 @@
 			(uuid "96046028-1c68-4154-9411-f1889f69dee3")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -94225,6 +96965,11 @@
 			(uuid "4502accd-71a4-46b2-a128-118c748a3b25")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -94310,6 +97055,11 @@
 			(uuid "5da6381f-beae-4caa-927d-f4cd866f50a5")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -94395,6 +97145,11 @@
 			(uuid "527d3dfd-8f6d-45c2-9a6f-514855aa9508")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -94525,6 +97280,11 @@
 			(uuid "13d7d930-0dc1-4035-953f-d026fa744ca0")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -94610,6 +97370,11 @@
 			(uuid "7cb375d8-96e2-4e50-aa5d-e3f84dcdadf0")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -94705,6 +97470,11 @@
 			(uuid "ef4d56bc-1c5a-43fa-9508-3be055846b4a")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -94790,6 +97560,11 @@
 			(uuid "40e3cb52-6056-4f75-abc4-60cf1edfce5a")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -94920,6 +97695,11 @@
 			(uuid "6e3e1e6f-bbf6-454a-9775-af2e250994cf")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -95005,6 +97785,11 @@
 			(uuid "11c95af6-6664-431c-b95e-ad3f30d97868")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -95100,6 +97885,11 @@
 			(uuid "7ff5494c-f58c-40b7-b629-5339cd83390b")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -95195,6 +97985,11 @@
 			(uuid "d481e66c-5e39-471d-933f-23f39b7c7c2f")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -95280,6 +98075,11 @@
 			(uuid "8658e0bd-64e1-47d9-b3ad-5ffdc1732c0b")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -95375,6 +98175,11 @@
 			(uuid "c5e5d36c-06e7-4b6f-9a81-5c88dd8e6f38")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -95470,6 +98275,11 @@
 			(uuid "4e31badc-dba1-4fb3-8c5b-2e8360e17d40")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -95555,6 +98365,11 @@
 			(uuid "a91d0d47-c0bc-4ff5-b779-2094376ddc6f")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -95650,6 +98465,11 @@
 			(uuid "5cfd82e1-7fbc-44f9-80ec-44edde7e5cad")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -95780,6 +98600,11 @@
 			(uuid "ddbe8f6d-ccf8-47f9-83ca-b6db78d220cf")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -95875,6 +98700,11 @@
 			(uuid "06b2b5a2-6c69-4c2e-b7d8-1bf078865b65")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -96005,6 +98835,11 @@
 			(uuid "a7bda128-dede-4e14-ad4c-fcbd8d8bcd24")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -96100,6 +98935,11 @@
 			(uuid "ec3b1c3c-3007-4bde-916c-03ecc376e8ea")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -96195,6 +99035,11 @@
 			(uuid "b32abc36-f636-4b6e-b609-8f795d72d9bb")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -96280,6 +99125,11 @@
 			(uuid "818c914e-d27b-4158-add9-04d2898ee13c")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -96365,6 +99215,11 @@
 			(uuid "e1a60308-251b-43bc-9682-87073ea357fb")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -96450,6 +99305,11 @@
 			(uuid "e63c70bb-0ca2-47ff-9527-78e5087040ab")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -96535,6 +99395,11 @@
 			(uuid "bdd89c26-40eb-41c5-b8ba-3fa9afb7057a")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -96665,6 +99530,11 @@
 			(uuid "a16ba0f6-d174-4eae-9f9d-3c00d4a51b08")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -96795,6 +99665,11 @@
 			(uuid "18eed8ab-93c1-4790-a5fe-7911fbefbd2e")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -96925,6 +99800,11 @@
 			(uuid "6d8a95d2-645b-41e1-888a-825584449062")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -97055,6 +99935,11 @@
 			(uuid "565a04d9-6de4-40dc-a327-eb224b361377")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -97150,6 +100035,11 @@
 			(uuid "6a53cfd8-8942-41df-bf27-6471cdc70b96")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -97280,6 +100170,11 @@
 			(uuid "5af633b2-237a-4a25-a0f1-918f999190fc")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -97410,6 +100305,11 @@
 			(uuid "7959c8c5-7146-4be6-a803-335373119b8a")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -97495,6 +100395,11 @@
 			(uuid "5527ceb1-1d84-4d55-a1c7-736309aee427")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -97625,6 +100530,11 @@
 			(uuid "08b08853-2958-4ae8-83a3-5e4e107ab17b")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -97710,6 +100620,11 @@
 			(uuid "67ecbb7e-a703-4c5b-9377-ee17c86f3c7c")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -97795,6 +100710,11 @@
 			(uuid "fa98e120-2881-4f15-ad22-ebeae07b4422")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -97925,6 +100845,11 @@
 			(uuid "8195a587-027d-4e7c-97f0-5b4294a8c0b8")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -98010,6 +100935,11 @@
 			(uuid "a2057bab-6bcb-4a5f-9958-04829feebdbe")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -98105,6 +101035,11 @@
 			(uuid "5df0f384-b96d-40a3-82ea-19c71c78efe8")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -98235,6 +101170,11 @@
 			(uuid "bc734db6-01ae-43bf-9845-4e6eae4965ec")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -98365,6 +101305,11 @@
 			(uuid "04045bbd-3e25-49cf-aa98-13784a8d80ec")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -98450,6 +101395,11 @@
 			(uuid "c5dd9167-b0b0-416e-b5e9-144a4e7b1615")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -98580,6 +101530,11 @@
 			(uuid "485deafa-d49d-4471-9f31-3aee0b20de28")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -98675,6 +101630,11 @@
 			(uuid "9f62a64a-2bf4-448a-ab1e-bc277cf1e9ed")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -98760,6 +101720,11 @@
 			(uuid "5512944f-ac3f-4fe4-8406-81c48cf90ca6")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -98845,6 +101810,11 @@
 			(uuid "95ec8931-ad30-4cd9-9f42-6640a910940b")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:MINI_E"
 		(layer "B.Cu")
@@ -98975,6 +101945,11 @@
 			(uuid "5d2a0b99-63c5-4060-a040-e12cf77c559f")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:D_SOD123"
 		(layer "B.Cu")
@@ -99070,6 +102045,11 @@
 			(uuid "5b8f919f-7bb7-4aa1-993a-0c32c89ca45e")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/D_SOD-123.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(footprint "Cleaver:C_0805"
 		(layer "B.Cu")
@@ -99155,6 +102135,11 @@
 			(uuid "35942401-28a9-4f72-9974-d25b4b195c94")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/Cleaver.3dshapes/C_0805_2012Metric.wrl"
+		  (offset (xyz 0 0 0))
+		  (scale (xyz 1 1 1))
+		  (rotate (xyz 0 0 0))
+		)
 	)
 	(gr_line
 		(start 2.525 31.1)

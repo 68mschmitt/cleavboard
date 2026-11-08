@@ -14,4 +14,9 @@
         (fp_rect (start -1.8 -1.6) (end 1.8 1.6) (layer Edge.Cuts) (width 0.05))
         (fp_line (start 3.3 -1.6) (end 3.8 -1.6) (layer F.SilkS) (width 0.12))
         (fp_line (start 3.8 -1.6) (end 3.8 -1.35) (layer F.SilkS) (width 0.12))
+  (model "${KIPRJMOD}/Cleaver.3dshapes/LED_SK6812MINI-E_Reverse.wrl"
+    (offset (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 0))
+  )
 )

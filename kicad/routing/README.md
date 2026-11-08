@@ -18,7 +18,7 @@ The generator adds the off-pad ground/power fanouts, In1.Cu ground plane,
 F.Cu switched-5 V pour, and local bulk-capacitor connection, imports the saved
 signal routing/completion copper, and fills the zones. **This round trip was
 tested: 0 ERC violations, 0 DRC violations, 0 unconnected items, 0 schematic
-parity issues, and 11 passing unit tests.**
+parity issues, and 18 passing unit tests (including 3D-model checks).**
 
 ## Routing provenance
 
