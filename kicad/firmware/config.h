@@ -1,13 +1,17 @@
 #pragma once
 
-#define MATRIX_ROWS 7
-#define MATRIX_COLS 17
-#define MATRIX_ROW_PINS { GP0, GP1, GP2, GP3, GP4, GP5, GP6 }
-#define MATRIX_COL_PINS { GP7, GP8, GP9, GP10, GP11, GP12, GP13, GP14, GP15, GP16, GP17, GP18, GP19, GP20, GP21, GP22, GP26 }
-#define DIODE_DIRECTION ROW2COL
-
-#define WS2812_DI_PIN GP27
+// LED power MUST come from the raw USB VBUS tap at TP1, not module Vout.
+// Keep the 8/255 cap until total current and rail voltage are measured.
+#define RGB_MATRIX_DEFAULT_VAL 8
 #define RGB_MATRIX_LED_COUNT 117
-// Conservative USB-only starting point; increase only after measuring total current.
-#define RGB_MATRIX_MAXIMUM_BRIGHTNESS 12
-#define USB_MAX_POWER_CONSUMPTION 500
+#define ENABLE_RGB_MATRIX_CYCLE_LEFT_RIGHT
+#define ENABLE_RGB_MATRIX_SOLID_REACTIVE_SIMPLE
+#define RGB_MATRIX_KEYPRESSES
+#define WS2812_TIMING 1250
+#define WS2812_T0H 350
+#define WS2812_T1H 700
+#define WS2812_TRST_US 280
+#define LED_POWER_PIN GP28
+#define CLEAVER_CAPS_LED 61
+#define CLEAVER_NUM_LED 34
+#define CLEAVER_SCROLL_LED 1

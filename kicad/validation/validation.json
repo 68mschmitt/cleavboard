@@ -1,0 +1,11 @@
+{
+  "revision": "0.3",
+  "matrix": "8x16",
+  "unique_switches": 117,
+  "rgb_leds": 117,
+  "pcb_sha256": "d4e82747e944aeb6163329050d4a07a9647fc5f56bee77ac42a1692ae5242a4d",
+  "schematic_sha256": "03de767a08c876dc84b49ea1ddc507e7f674f21d61b96643c11b019c4b473f65",
+  "erc": "pass",
+  "drc": "pass",
+  "schematic_pcb_firmware_mapping": "pass"
+}

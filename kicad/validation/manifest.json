@@ -1,0 +1,95 @@
+{
+  "recorded_utc": "2026-11-08T18:21:04.010191+00:00",
+  "revision": "0.3",
+  "kicad_version": "10.0.8",
+  "checks": {
+    "unit_tests_passed": 11,
+    "erc_violations": 0,
+    "drc_violations": 0,
+    "unconnected_items": 0,
+    "schematic_parity_issues": 0,
+    "session_regeneration": "pass",
+    "manufacturing_rules_unchanged": true
+  },
+  "pcb": {
+    "footprints": 481,
+    "switches": 117,
+    "rgb_leds": 117,
+    "track_segments": 4154,
+    "through_vias": 609,
+    "minimum_signal_track_mm": 0.2,
+    "copper_layers": [
+      "F.Cu",
+      "In1.Cu",
+      "In2.Cu",
+      "B.Cu"
+    ],
+    "bulk_capacitor_thermal_relief": true
+  },
+  "routing": {
+    "base_router": "Freerouting 1.9.0",
+    "completion_connections": 10,
+    "canonical_session": "kicad/routing/Cleaver.ses"
+  },
+  "firmware": {
+    "repository": "https://github.com/vial-kb/vial-qmk",
+    "commit": "dd43959ae5c08d8a28d38a1acf7b04e86b14a344",
+    "toolchain": "arm-none-eabi-gcc (Arch Repository) 16.2.0",
+    "commands": [
+      "make cleaver:default -j4",
+      "make cleaver:vial -j4"
+    ],
+    "source_tree_sha256": "10cc32c3f1f1f64b33f590bc6fb55d52830b95dc118e6e70a04969f2fca290e6",
+    "source_hash_method": "Sorted relative POSIX file path + NUL + file bytes, concatenated for all files in kicad/firmware",
+    "uf2": {
+      "cleaver_default.uf2": {
+        "bytes": 74240,
+        "sha256": "2112ffa4ae360cc183a090c86b0ae1c36a782043403b3f0ba5ef1a96ba8a692c"
+      },
+      "cleaver_vial.uf2": {
+        "bytes": 111616,
+        "sha256": "a77bd060ec5c4a0864603d530dea9d351b25f90ba04ebc0fc6c5a721adf83000"
+      }
+    }
+  },
+  "sha256": {
+    "kicad/Cleaver.kicad_pcb": "d4e82747e944aeb6163329050d4a07a9647fc5f56bee77ac42a1692ae5242a4d",
+    "kicad/Cleaver.kicad_sch": "03de767a08c876dc84b49ea1ddc507e7f674f21d61b96643c11b019c4b473f65",
+    "kicad/Cleaver.kicad_pro": "55b40c1b04c12626b4a80b4d166a3b1b31baa41be4a97d2a17a3a969ae79c129",
+    "kicad/Cleaver.kicad_sym": "adc94727d0f37c64aa079a65d91331ec54667507ad5c973df75ad0927f2df40d",
+    "kicad/fp-lib-table": "c99c3b6f698c59b37490e64a2855002d7affd1a603b4662e3fc6698f5ea7e626",
+    "kicad/sym-lib-table": "411dacdfa0aab3680ffc44f31ab8e6e770fefd97ed59e09fcbbe19e981512576",
+    "kicad/BOM.csv": "e6780c35c81d246bb1354a931c0834460fc3b46418c247f5214e76890a6ceb18",
+    "kicad/routing/Cleaver.ses": "0ca152756f3d7968ca1aa591749cfe8fa619767d9372bc72bf35aad4fbbb43db",
+    "kicad/validation/erc.json": "3e31c804d4331f2ba872a78f07036decbb2a650ad29b3f90863011da367edec8",
+    "kicad/validation/drc.json": "c7a8ca59937656b70b5305177e386ebf084b9af57426d6078486b431b9ef3a26",
+    "kicad/validation/validation.json": "18a78a84c421665cab80df42caa8fedeb8dbe09d64bdcad8c0e3063e690eba10",
+    "kicad/Cleaver.pretty/C_0805.kicad_mod": "a096626407b0e7550494e8e2485ceb97f8bfdfc220a18f2cb36d0bce22a58741",
+    "kicad/Cleaver.pretty/C_Radial8.kicad_mod": "d4c4ba10aa68a760b56222d381a201b9ca8cb38471cfda7c69284f58da17f8bd",
+    "kicad/Cleaver.pretty/D_SOD123.kicad_mod": "ba57b979ac238d7ba962d8b4f26bcb38948cd475f9caa11b7e60c24de68aa6d1",
+    "kicad/Cleaver.pretty/Kailh_socket_MX.kicad_mod": "34c5505b897c1f55241e021f9bafb56e6a780d69dc2448e883c45ff9ebc9aa87",
+    "kicad/Cleaver.pretty/LV1T125.kicad_mod": "d68f263140a603579090521d027c469377c3366c5db4c1e03c700d81e3b87670",
+    "kicad/Cleaver.pretty/MINI_E.kicad_mod": "0b0fdeb5a7507a40113cfa1eee13db523cb1d0ad325ace60dc36713aa8b43319",
+    "kicad/Cleaver.pretty/PTC_1206.kicad_mod": "c54eed74ad1def85769f8b6f18db41a93cb0fd3bc09bd7614d586a5d7c9e6fcc",
+    "kicad/Cleaver.pretty/R_0805.kicad_mod": "d9381dafcb6e5b016d486a94cde54987c816c8445f9df70c1c7d2f5096eb5a40",
+    "kicad/Cleaver.pretty/TPS2553.kicad_mod": "fb4c7dcfde6c1db61c7d664d300b9ff09fd4a8b4dd3a62ac0aeefc857313d06f",
+    "kicad/Cleaver.pretty/WirePad.kicad_mod": "aa9d965cbec8977ed390fd730e50c8f98cc6c89a0d1dd6ebf266b6da37b88bd1",
+    "kicad/Cleaver.pretty/YD_RP2040.kicad_mod": "8118102ce555a1c00bfd1168c50360b2da5b263be61a5a484c7cbffae993c2c4",
+    "kicad/Cleaver.pretty/LICENSE.md": "488ddee0c9cea692eb9adb90d7dd6461d10af52e7c1a1d7066399ef590c62b70",
+    "kicad/firmware/cleaver.c": "f7a5c8daba1710fd302b775add87235aa4c61d55300cfaf673a9dda0785a4b7c",
+    "kicad/firmware/config.h": "d55cc1bdf1f9069d4277c773c239daeb1c5be7c1b3e2861cd25276a840adb141",
+    "kicad/firmware/key_matrix.csv": "5319b9b90231dec1e49dc531ba64ed880fe381aca48f29b662239494da2ea02c",
+    "kicad/firmware/keyboard.json": "acdca7ca9b220ac285c11e71d24fce41e84886ce2c7cb5b64c84d005597ac584",
+    "kicad/firmware/keymaps/default/keymap.c": "6ad3a87e32c963c2e6d2e2608e1e9a2ad8e08d57d045d7ac8be9e8f26a80f6cb",
+    "kicad/firmware/keymaps/vial/config.h": "8e2ed30fbf35fdf0306cc484d672a541bdecaefa2d1e50791eef30f0c333c7f4",
+    "kicad/firmware/keymaps/vial/keymap.c": "6ad3a87e32c963c2e6d2e2608e1e9a2ad8e08d57d045d7ac8be9e8f26a80f6cb",
+    "kicad/firmware/keymaps/vial/rules.mk": "dacb01359b7158160688217bf89c79a0dfcd01c9467ff916a053adb6cc41e89a",
+    "kicad/firmware/keymaps/vial/vial.json": "157c1729c1db6fa62a8924cb2108fd97dec0f3657f368840b4ba554dc858dd91",
+    "kicad/firmware/rules.mk": "50f8fa06503321f092449eeebfab9b1e58048f9cd3b0b5235201cadb4bb1ef22",
+    "scripts/design.py": "c6183666bf4d84c6d9bcbef8b7314f1412d878bf0cb8e7d6a3c727528e819e6c",
+    "scripts/generate_kicad.py": "4c094bf3b9078754eaf4a8c3730b041ed1181c625c86f30aca488f7c12ef2aa5",
+    "scripts/check_kicad.py": "5738a8edca98d3d261ee0a485a0674c7def392baa46bb40ec4aef66d6b5f6e0a",
+    "scripts/test_design.py": "d3c639d0d322cae9fc18ae26eae0aabea78717baa1305d8e0b5f949c193a95c5",
+    "scripts/test_generation.py": "c3c88867289ec2674d98cf19fe2e8b5b54905da0a4e06709122e841415635fba"
+  }
+}

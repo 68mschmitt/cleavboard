@@ -1,74 +1,211 @@
-# Cleaver KiCad project
+# Cleaver PCB — revision 0.3
 
-Generated from the supplied KLE JSON and plate DXF by `scripts/generate_kicad.py`:
-**117 MX switch positions** (Kailh MX hotswap sockets), one 1N4148W diode per key
-(ROW2COL), and **117 SK6812MINI-E RGB pixels** in a serpentine chain. The three
-lock-indicator graphics in the KLE are decals, not footprints.
+117 MX hot-swap switches, 117 reverse-mount RGB LEDs, and the **DWEII / VCC-GND
+YD-RP2040 4MB USB-C module** identified in your supplied manual. The keyboard is
+USB-powered, with **no mechanical power switch** and no separate power supply.
 
-## Controller and USB access
+Read [VALIDATION.md](VALIDATION.md) for the recorded checks and remaining prototype
+tests. The old [DESIGN_REVIEW.md](DESIGN_REVIEW.md) describes revision 0.2, not this
+replacement design. Electrical checks do not substitute for a physical prototype
+or final plate/case checks.
 
-The controller is a Raspberry Pi Pico form-factor RP2040 module on a soldered 2x20,
-2.54 mm header footprint, in the **top-right corner with its USB connector flush with
-the right board edge**, so the cable plugs straight in from the edge. The stock Pico is
-micro-USB; if you want USB-C at that edge, buy the same outline with a USB-C
-receptacle (several Pico-pinout modules offer this) or move to the bare-RP2040 +
-board-mounted USB-C jack topology (what the 4-layer full-size reference designs use).
-The Pico footprint is deliberate here: it is what exposes all 26 usable GPIOs the
-7 x 17 grid needs; Pro Micro-style footprints do not.
+## Important: the approved USB power tap is required
 
-## Matrix and routing
+The module's **pin 40 is Vout behind its small BAT54C diode**, not an unrestricted
+USB 5 V supply. It is deliberately **unconnected** on this PCB. Do not power all
+117 LEDs through that pin, VIN, 3V3, or a GPIO.
 
-Typical custom-QMK physical grid: **7 row wires** (the seven key rows, GP0-GP6)
-x **17 column wires** (GP7-GP22, GP26), RGB data GP27, GP28 spare. Each switch is
-dioded ROW2COL; staggered key columns (up to 2u wide) share one column bus.
+Add **one short insulated wire** from the module's **raw USB VBUS, before the
+BAT54C diode**, to the through-hole pad marked **TP1 / USB 5V TAP +** at `(446, 27)`
+mm. Ground returns through the module's ordinary GND header pins; no second wire
+is needed. The single USB-C cable still powers everything.
 
-4-layer stackup and what lives where:
+On the published YD-RP2040 V1.1 schematic, raw USB VBUS is the USB-fed anode of D2
+(BAT54C, pin 1); pin 3 is the diode-combined output, **not** the tap. Your listing
+shows a V1.3 board, so **identify the raw VBUS point by continuity to the USB
+connector's VBUS with power disconnected**, rather than trusting a reference
+designator or a photo. A USB breakout makes this check easier. Then verify about
+5 V relative to GND with the module alone powered. Disconnect power before
+soldering the wire, insulate it, and provide strain relief. Do not attach to USB
+data, CC, shell mounting tabs, or the diode's output. If the point cannot be
+identified confidently, stop rather than bridging the diode or guessing.
 
-- **B.Cu**: sockets/diodes, KEY wires, row-bus stubs, horizontal row buses, LED power
-  rails and data-chain rails, USB power feed.
-- **In1.Cu**: column ladders - a via at every cathode, a short rung to the cluster bus
-  column, and northbound entry lanes into the fanout; each cluster's entry threads to
-  its header pad through the corridor between the function and number rows.
-- **In2.Cu**: row fanout - each header pad drops south between the pad columns and
-  connects through a via to its row bus at the far east end.
-- **F.Cu**: LED footprints with a via on every pad; VDD/DOUT hop down to the B.Cu
-  rails at the pad rows, DIN/GND likewise.
+LED power path:
 
-The header fanout lanes thread the 0.74 mm gaps between the 2.54 mm pad columns
-(ROW0/GP0 uses a narrow east lane beside the connector shell). This is tight for
-typical fabs: verify against your fabricator's minimum clearance before ordering; the
-corridor levels are parameterised at the top of `scripts/generate_kicad.py`.
+```text
+Module USB VBUS tap → TP1 → F1 (0.50 A PTC) → U3 (TPS2553) → LED_5V
+Module GPIO28 → U3 enable (100 kΩ default-off pull-down)
+Module GPIO27 → U2 level translator → R1 (330 Ω) → first LED DIN
+```
 
-`firmware/key_matrix.csv` maps every key to its electrical (row, column) and LED chain
-index; `config.h` / `keyboard.json` / `rules.mk` are starting points for a QMK/Vial
-definition. Full-white current for 117 pixels is far beyond USB capability: the QMK
-starting point caps `RGB_MATRIX_MAXIMUM_BRIGHTNESS` at 12/255 and declares 500 mA.
-Measure before raising it.
+- U3's **75 kΩ, 1%** current-limit resistor gives approximately **353 mA nominal**
+  LED-branch current limiting (about **311–401 mA** using the datasheet bounds and
+  resistor tolerance). This is separate from the module's own consumption.
+- Firmware caps brightness at **8/255**. For 12 mA/colour LEDs, full-white colour
+  current is approximately 132 mA at this setting, plus LED idle current and MCU
+  consumption. Measure the actual total; a brightness setting or USB descriptor is
+  not itself a current measurement. Do not raise the cap casually.
+- RGB power stays off until USB is configured, and is removed on suspend and when
+  RGB Matrix is disabled. R2 keeps it off during reset/bootloader operation.
+- Every LED has its own 100 nF capacitor. C2 is 22 µF; **C5 is a low-impedance
+  470 µF reservoir after the current limiter**, to supply coincident LED PWM pulses.
+  It is not attached directly across USB at cable insertion. Fit its polarity
+  correctly: square pad 1 is positive, and the can's negative stripe goes to pad 2.
+- U2 is **SN74LV1T125DBVR**, not an arbitrary 74LVC/HC/AHCT substitute. Its
+  reduced input thresholds translate 3.3 V data to the LED supply, and its input
+  tolerates the GPIO while the LED supply is off.
+- Do not connect a second external 5 V supply at TP1 while USB is connected. This
+  design is for a tap from the same module's USB input, not power-source selection.
 
-## Important status
+## Controller placement and pinout
 
-This is a **routed prototype, not a manufacturing sign-off**. Schematic ERC is clean
-(0/0). PCB DRC is not clean yet: the grid, fanout comb, LED chain and power chain are
-placed and the netlist is complete, but a few hundred violations remain, clustered in
-fixable families - work through them in this order:
+The module uses two 20-pin, 2.54 mm-pitch headers **17.78 mm apart**. Its body is
+**53.34 × 22.86 mm**, based on the YD manufacturer's mechanical drawing. It sits
+top-right, USB-C facing the right edge. The body ends at the board edge and the
+receptacle mouth can project slightly past it. Use headers/sockets with sufficient
+underside clearance, and confirm the actual purchased board against a 1:1 print.
 
-1. LED pad via-in-pad lands vs the chain/power rails on the inner layers (shorting +
-   dangling via warnings): re-level the chain hop segments or give the LED pads their
-   own attach stubs so no rail crosses a foreign via land on the same layer.
-2. Header fanout lanes vs pad/stabilizer-hole clearances - everything is
-   parameterised at the top of `scripts/generate_kicad.py` (`COL_FANOUT0`,
-   `COL_FANOUT_STEP`, `lane_x`, `ROW_BUS_OFF`).
-3. Board-edge clearances (ROW0 east lane, right-margin spines, bottom strip lanes).
-4. No ground pours, mounting holes, or case yet.
+This is **not a Pico symbol or an alternating-numbered 2×20 connector**:
 
-Then verify the socket/LED geometry against the DXF and your switch cutaways, review
-every remaining clearance against your fab rules, and inspect a 1:1 print. Key
-apertures and the 16 plate stabilizer slots are reference art on `Dwgs.User` only -
-keep them out of Gerbers.
+| Module pin | YD-RP2040 function | Carrier use |
+| --- | --- | --- |
+| 35 | GP29 | Unconnected/spare |
+| 36 | 3V3_OUT | Unconnected |
+| 37 | GP23 / onboard RGB | Unconnected |
+| 38 | GND | Ground plane |
+| 39 | VIN | Unconnected |
+| 40 | Diode-protected Vout | Unconnected |
 
-## Regeneration
+The module's BOOT and RESET buttons remain accessible in the upper-right area.
+No separate USB connector or USB data traces are required on the carrier.
 
-From the repository root run `python scripts/generate_kicad.py`; it reads the layout
-JSON/DXF under `plate-2026-11-07T22_24_25.197Z/` and rewrites the schematic, PCB,
-symbols, footprints, and firmware files under `kicad/` (your `Cleaver.kicad_pro` is
-preserved).
+## Matrix, RGB order, and assembly
+
+The electrical matrix is **8×16 ROW2COL**, with 117 unique populated cells:
+
+| Function | GPIOs |
+| --- | --- |
+| Rows 0–7 | GP0–GP7 |
+| Columns 0–15 | GP8–GP22, GP26 |
+| RGB data | GP27 |
+| RGB power enable | GP28 |
+
+Logical rows are banks of 16 switches in KLE order, **not** the seven physical
+key rows. This avoids the old duplicate addresses without adding an expander.
+Vial still displays the original physical layout. Every switch goes from its row
+through the switch to the diode anode; the cathode connects to the column.
+
+- Diodes are **1N4148W, SOD-123**, using normal **pad 1 = cathode, pad 2 = anode**
+  numbering. Match the diode's stripe to the footprint's cathode mark.
+  Solder the diodes and small passives **before** the hot-swap sockets so the
+  socket bodies do not obstruct the iron. Check the repeated cell on a 1:1 print.
+- LEDs use the **SK6812MINI-E Rev.02 pinout** documented for Adafruit product
+  **4960**: 1=VDD, 2=DOUT, 3=GND, 4=DIN. Verify the exact purchased LED/revision;
+  similarly named parts can renumber their leads. Do not substitute MINI/EA/5050
+  packages based only on a similar name.
+- LEDs and their 0805 bypass capacitors are on **B.Cu**, with emitters facing
+  through the **3.6 × 3.2 mm PCB openings toward the switches**. These are real
+  Edge.Cuts, not reference artwork. Mounting pads are outside the opening and
+  retain at least 0.5 mm nominal edge clearance.
+  From the **top/emitter side**, pad 1 is upper-left, pad 2 lower-left, pad 3
+  lower-right, and pad 4 upper-right. The ground-corner mark is on the back.
+  Check this orientation on one LED before assembling the entire chain.
+  Specify an internal milling-corner radius **no larger than 0.5 mm** (prefer
+  0.4 mm) for these small openings; a default 2 mm-diameter cutter will not fit
+  the LED's square corners. Confirm the fabricator's aperture tolerances.
+- The chain begins at the function-row Pause key near the MCU circuitry, runs
+  left across that row, and then snakes across subsequent physical rows. Firmware
+  entries are in **actual chain order**, not switch-reference order.
+- `firmware/key_matrix.csv` gives switch, matrix cell, position, and RGB index.
+  `BOM.csv` lists exact references, values, board side, and placement coordinates.
+  SWxxx, Dxxx, and LEDxxx refer to the same physical key; C101 belongs to SW001.
+  Each SW footprint combines a **front-side MX switch with a back-side Kailh
+  socket**. Do not use its top-level footprint side as an automated assembly
+  instruction; this design/BOM is intended for hand assembly. Also provide two
+  1×20 headers (and optional mating sockets) and the insulated USB tap wire.
+- Caps/Num/Scroll lock are indicated using their **own keys' RGB LEDs**. The three
+  decorative KLE circles above the numpad do not represent additional components
+  hidden beneath the MCU.
+
+The four-layer stack uses In1.Cu as ground return, with explicit ground vias
+outside solder pads. A **switched LED_5V pour on F.Cu** and off-pad power vias
+feed each LED and bypass capacitor, avoiding a narrow, serial supply chain.
+Signals use F.Cu/In2.Cu/B.Cu. Preferred track widths are
+0.3 mm for signals and 0.6 mm for power; manufacturing minima remain 0.2 mm track,
+0.2 mm clearance, 0.5 mm copper-to-edge, and the existing project hole rules.
+Ordinary through-vias are used; filled/capped via-in-pad fabrication is not needed.
+
+The power/buffer circuit and bulk capacitor occupy the empty region **left of
+the MCU**, rather than overlapping its body or headers. C5 is an 8 mm-diameter
+Panasonic **EEU-FR1A471**, with 3.5 mm lead pitch and an approximately 11.5 mm body
+height (allow the manufacturer's maximum installed height in the case).
+
+**Mechanical assumptions:** retain the supplied switch centres and board outline;
+use the supplied plate and **plate-mounted stabilizers**. PCB-mounted stabilizer
+holes, a case, and case-specific mounting holes are not defined. Confirm switch
+LED windows, stabilizers, controller/button access, cable plug clearance, capacitor
+height, and support against the real plate/case before ordering a production run.
+
+## Vial-QMK firmware
+
+Copy `firmware/` to `keyboards/cleaver/` in a **vial-qmk** checkout. From that
+checkout run:
+
+```sh
+make cleaver:default
+make cleaver:vial
+```
+
+The Vial keymap includes its own UID, physical `vial.json`, VIA/Vial/VialRGB rules,
+and a secure **Esc + main Enter** unlock combination. No insecure-unlock option is
+enabled. The RP2040 vendor/PIO WS2812 driver uses GRB data and explicit timings.
+The module's onboard RGB LED is not included in the keyboard's 117-LED chain.
+Default macro-key assignments can be changed in Vial.
+
+Build provenance and the tested vial-qmk commit belong in [VALIDATION.md](VALIDATION.md).
+Compiled firmware has not been exercised on a physical keyboard by this agent.
+
+## Regeneration and checks
+
+`scripts/design.py` is the shared source for schematic, PCB nets, matrix, RGB
+order, and firmware. The PCB receives pad nets from **KiCad's exported schematic
+netlist**. Regeneration preserves project settings except for the explicit power
+netclass and the preferred 0.3 mm signal width; it does not weaken DRC minima.
+
+Generate a fresh **unrouted** placement and DSN only when deliberately restarting
+routing:
+
+```sh
+python3 -B scripts/generate_kicad.py --placement-only
+```
+
+Import a matching routed Specctra session:
+
+```sh
+python3 -B scripts/generate_kicad.py --ses kicad/routing/Cleaver.ses
+python3 -B scripts/check_kicad.py
+python3 -B -m unittest discover -s scripts -p 'test_*.py'
+```
+
+See `routing/README.md` for the autorouter invocation. The DSN preparation carries
+KiCad's edge clearances and power widths into the router; a router reporting
+“0 violations” is **not** a substitute for KiCad DRC after session import.
+
+## Hardware sources
+
+- [Your supplied module manual and listing photographs](https://manuals.plus/asin/B0CG9BY48X).
+- [YD-RP2040 manufacturer drawing, pinout, and schematic mirror](https://github.com/initdc/YD-RP2040).
+  The listing photo is V1.3; the available schematic is V1.1. Verify the USB tap on
+  the actual board as described above.
+- [SK6812MINI-E Rev.02 datasheet](https://cdn-shop.adafruit.com/product-files/4960/4960_SK6812MINI-E_REV02_EN.pdf).
+  Reverse-mount pad orientation was cross-checked against the
+  [established MX MINI-E footprint](https://github.com/ebastler/kicad-keyboard-parts.pretty/blob/master/MX_SK6812MINI-E.kicad_mod).
+- [SN74LV1T125](https://www.ti.com/lit/ds/symlink/sn74lv1t125.pdf),
+  [TPS2553](https://www.ti.com/lit/ds/symlink/tps2553.pdf), and
+  [EEU-FR1A471 mechanical/electrical specification](https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFR1A471).
+
+Bring up the prototype on current-limited USB power: check supply polarity/shorts,
+test the module and one key first, then one LED, all 117 keys (including chords),
+the complete RGB chain, maximum allowed full-white current/rail ripple,
+suspend/resume, and USB-A-to-C plus C-to-C enumeration. Keep the brightness cap
+until those measurements pass.

@@ -1,3 +1,1 @@
-(sym_lib_table
-  (lib (name "Cleaver") (type "KiCad") (uri "${KIPRJMOD}/Cleaver.kicad_sym") (options "") (descr "Project-local Cleaver keyboard symbols"))
-)
+(sym_lib_table (lib (name "Cleaver") (type "KiCad") (uri "${KIPRJMOD}/Cleaver.kicad_sym") (options "") (descr "Cleaver local symbols")))
