@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "Cleaver") (type "KiCad") (uri "${KIPRJMOD}/Cleaver.pretty") (options "") (descr "Project-local Cleaver keyboard footprints"))
+)
