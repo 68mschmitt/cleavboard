@@ -3,6 +3,10 @@
 Use these files with the revision 0.4 PCB. The original supplied plate remains
 in its original directory as an input/reference; it does not include these mounts.
 
+For a full-size printed PCB mockup, use the four interlocking STL sections in
+[`pcb-fit-model/`](pcb-fit-model/README.md). Each fits a 235 × 235 mm bed; joined
+together they reproduce the board outline, mechanical holes and 1.6 mm thickness.
+
 ## Mounting
 
 - **11 × 2.2 mm non-plated holes for M2 hardware**, shared by PCB and plate.

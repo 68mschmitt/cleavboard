@@ -1,0 +1,164 @@
+{
+  "source_pcb": "kicad/Cleaver.kicad_pcb",
+  "source_sha256": "7b83a48035d38c427af6c47ff20fb311b552b90ad182bab0faea532f9db61585",
+  "assembled_size_mm": [
+    452.4375,
+    147.6375,
+    1.6
+  ],
+  "bed_mm": [
+    235,
+    235
+  ],
+  "brim_allowance_each_side_mm": 5,
+  "source_features": {
+    "edge_cut_windows": 117,
+    "nonplated_drills": 596,
+    "plated_component_drills": 43,
+    "omitted_electrical_vias": 667
+  },
+  "joint": {
+    "gap_mm": 0.2,
+    "nominal_tab_head_diameter_mm": 7,
+    "nominal_tab_neck_width_mm": 4,
+    "nominal_tab_projection_mm": 8,
+    "seams": [
+      {
+        "between_parts": [
+          1,
+          2
+        ],
+        "tab_centers_pcb_xy_mm": [
+          [
+            123.5,
+            23.8
+          ],
+          [
+            114.5,
+            132
+          ]
+        ],
+        "minimum_nominal_seam_to_hole_mm": 2.668231
+      },
+      {
+        "between_parts": [
+          2,
+          3
+        ],
+        "tab_centers_pcb_xy_mm": [
+          [
+            230.71875,
+            23.8
+          ],
+          [
+            221.71875,
+            132
+          ]
+        ],
+        "minimum_nominal_seam_to_hole_mm": 1.642454
+      },
+      {
+        "between_parts": [
+          3,
+          4
+        ],
+        "tab_centers_pcb_xy_mm": [
+          [
+            337.875,
+            23.8
+          ],
+          [
+            328.875,
+            132
+          ]
+        ],
+        "minimum_nominal_seam_to_hole_mm": 1.380382
+      }
+    ],
+    "clearance_removed_area_mm2": 118.6899,
+    "existing_openings_preserved": 756,
+    "overlap_area_mm2": 0
+  },
+  "parts": [
+    {
+      "file": "Cleaver-PCB-1-left.stl",
+      "size_mm": [
+        127.0,
+        147.6375,
+        1.6
+      ],
+      "assembled_translation_mm": [
+        0.0,
+        0,
+        0
+      ],
+      "triangles": 40220,
+      "through_openings": 178,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "volume_mm3": 25802.9882,
+      "sha256": "caf3766e9fd8cb42f5f58f632619e0371c84d874d383c1ecda4f98b09ab6b2cc"
+    },
+    {
+      "file": "Cleaver-PCB-2-middle-left.stl",
+      "size_mm": [
+        128.3,
+        147.6375,
+        1.6
+      ],
+      "assembled_translation_mm": [
+        109.7,
+        0,
+        0
+      ],
+      "triangles": 48412,
+      "through_openings": 206,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "volume_mm3": 24124.3352,
+      "sha256": "6a841d6460a646c1a16730240ece381d93b59df451763487342bf4a0bdd7259e"
+    },
+    {
+      "file": "Cleaver-PCB-3-middle-right.stl",
+      "size_mm": [
+        122.95619,
+        147.6375,
+        1.6
+      ],
+      "assembled_translation_mm": [
+        218.41881025440827,
+        0,
+        0
+      ],
+      "triangles": 39296,
+      "through_openings": 164,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "volume_mm3": 22501.0722,
+      "sha256": "0a05a5d689171e50eabf5e1e156e707b3e71312f46ebe878d79b1f67e18ff11c"
+    },
+    {
+      "file": "Cleaver-PCB-4-right.stl",
+      "size_mm": [
+        126.86244,
+        147.6375,
+        1.6
+      ],
+      "assembled_translation_mm": [
+        325.57506025440824,
+        0,
+        0
+      ],
+      "triangles": 49288,
+      "through_openings": 208,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "volume_mm3": 26153.2836,
+      "sha256": "cc9ae17c1fbca397ac9aee4bebaa0e864cb54ecef3de44e0b283b3dd3ffe2a86"
+    }
+  ]
+}
