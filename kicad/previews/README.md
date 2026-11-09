@@ -10,8 +10,8 @@ clearance approvals. See [model limitations](../Cleaver.3dshapes/README.md).
 To recreate them from the repository root:
 
 ```sh
-kicad-cli pcb render --output kicad/previews/Cleaver-top.png --width 2400 --height 1100 --side top --rotate 25,0,8 --zoom 1.9 --background opaque --quality high kicad/Cleaver.kicad_pcb
-kicad-cli pcb render --output kicad/previews/Cleaver-bottom.png --width 2400 --height 1100 --side bottom --rotate 20,0,352 --zoom 1.9 --background opaque --quality high kicad/Cleaver.kicad_pcb
+kicad-cli pcb render --output kicad/previews/Cleaver-top.png --width 2200 --height 900 --side top --zoom 2.3 --quality high kicad/Cleaver.kicad_pcb
+kicad-cli pcb render --output kicad/previews/Cleaver-bottom.png --width 2200 --height 900 --side bottom --zoom 2.3 --quality high kicad/Cleaver.kicad_pcb
 ```
 
 The interactive **Alt+3** viewer lets you rotate/zoom further. No keycaps, plate,

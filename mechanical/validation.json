@@ -1,0 +1,81 @@
+{
+  "mounting_holes": 11,
+  "plate_connected": true,
+  "plate_geometry_valid": true,
+  "stabilizers": [
+    {
+      "ref": "SW031",
+      "legend": "Backspace",
+      "size": "2u",
+      "x_mm": 290.5125,
+      "y_mm": 38.1,
+      "rotation_deg": 0,
+      "stem_spacing_mm": 23.8
+    },
+    {
+      "ref": "SW060",
+      "legend": "+",
+      "size": "2u",
+      "x_mm": 442.9125,
+      "y_mm": 66.675,
+      "rotation_deg": 90,
+      "stem_spacing_mm": 23.8
+    },
+    {
+      "ref": "SW074",
+      "legend": "Enter",
+      "size": "2u",
+      "x_mm": 288.13125,
+      "y_mm": 76.2,
+      "rotation_deg": 0,
+      "stem_spacing_mm": 23.8
+    },
+    {
+      "ref": "SW079",
+      "legend": "Shift",
+      "size": "2u",
+      "x_mm": 45.24375,
+      "y_mm": 95.25,
+      "rotation_deg": 0,
+      "stem_spacing_mm": 23.8
+    },
+    {
+      "ref": "SW090",
+      "legend": "Shift",
+      "size": "2u",
+      "x_mm": 283.36875000000003,
+      "y_mm": 95.25,
+      "rotation_deg": 0,
+      "stem_spacing_mm": 23.8
+    },
+    {
+      "ref": "SW097",
+      "legend": "Enter",
+      "size": "2u",
+      "x_mm": 442.9125,
+      "y_mm": 104.775,
+      "rotation_deg": 90,
+      "stem_spacing_mm": 23.8
+    },
+    {
+      "ref": "SW102",
+      "legend": "Space",
+      "size": "6.25u",
+      "x_mm": 154.78125,
+      "y_mm": 114.30000000000001,
+      "rotation_deg": 0,
+      "stem_spacing_mm": 100
+    },
+    {
+      "ref": "SW110",
+      "legend": "0/Ins",
+      "size": "2u",
+      "x_mm": 395.2875,
+      "y_mm": 114.30000000000001,
+      "rotation_deg": 0,
+      "stem_spacing_mm": 23.8
+    }
+  ],
+  "plate_thickness_mm": 1.5,
+  "pcb_to_plate_top_nominal_mm": 5
+}

@@ -6,7 +6,8 @@ needed: all assignments use `${KIPRJMOD}/Cleaver.3dshapes/`.
 
 The board includes **597 model placements across 480 component footprints**.
 Each switch footprint has both a front-side switch and a back-side socket.
-**TP1 is intentionally bare**: it is a wire-soldering pad, not a connector. The
+**TP1–TP6, mounting holes and fiducials are intentionally bare**. TP1 is a
+wire-soldering pad, not a connector. The
 USB tap wire is not modeled because its actual module attachment point and
 routing must be established on the purchased module.
 

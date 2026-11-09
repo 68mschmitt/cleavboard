@@ -1,4 +1,4 @@
-# Revision 0.3 validation
+# Revision 0.4 validation
 
 **Electrical/layout checks pass, including complete copper connectivity.**
 The archived routing was imported into a freshly regenerated board and checked
@@ -6,7 +6,7 @@ again. Physical fit, assembly, USB power measurements, and hardware operation
 remain unverified; complete the prototype checks below before a production run.
 
 The schematic and placement target the DWEII / VCC-GND YD-RP2040 USB-C module,
-117 unique keys, and 117 reverse-mounted SK6812MINI-E Rev.02 LEDs. No physical
+117 unique keys, and 117 reverse-mounted OPSCO SK6812MINI-E C5149201 LEDs. No physical
 prototype has been assembled or tested by this agent.
 
 ## Checks recorded on 2026-11-08
@@ -15,7 +15,7 @@ prototype has been assembled or tested by this agent.
 | --- | --- |
 | KiCad version | 10.0.8 |
 | Schematic ERC, meaningful electrical pin types | 0 violations |
-| Shared-design/geometry/router-boundary/model unit tests | 18 passed |
+| Shared-design/geometry/router-boundary/model/assembly unit tests | 21 passed |
 | Schematic/PCB net assignments | Pass |
 | 8×16 matrix, 117 unique addresses | Pass |
 | QMK and Vial matrix/RGB-order parity | Pass |
@@ -26,10 +26,12 @@ prototype has been assembled or tested by this agent.
 | Schematic/PCB parity issues | **0** |
 | Same-net via holes outside exposed SMD solder lands | Pass |
 | Regeneration from archived `routing/Cleaver.ses` | Pass; fresh ERC/DRC/connectivity checks repeated |
-| Bundled 3D models | 597 placements / 480 populated footprints; TP1 intentionally bare |
-| KiCad populated top/bottom raytracing and STEP export | Pass; model-only update, electrical geometry unchanged |
-| `default` firmware build | Succeeded |
-| `vial` firmware build, including VialRGB | Succeeded |
+| Factory assembly | 478 SMD placements, all bottom; socket origins corrected |
+| Mechanical mounting | 11 M2 holes, 6 mm copper-free hardware envelopes |
+| Plate generation | Connected plate, matching holes, 7 × 2u + 1 × 6.25u stabilizers |
+| Bundled 3D models | 597 placements / 480 populated footprints; pads/holes/fiducials bare |
+| `default` firmware build | Previously succeeded; firmware unchanged in PCB revision 0.4 |
+| `vial` firmware build, including VialRGB | Previously succeeded; firmware unchanged |
 
 Firmware was built with `make cleaver:default -j4` and `make cleaver:vial -j4`
 against **vial-qmk `dd43959ae5c08d8a28d38a1acf7b04e86b14a344`**, using
@@ -46,17 +48,22 @@ GP28 power control. Build success does not establish hardware operation.
 - [`validation/manifest.json`](validation/manifest.json): SHA-256 hashes of the
   electrical files, active libraries/models, previews, firmware source, routing
   archive, checker, and tests; also firmware build provenance and UF2 hashes.
-- [`routing/Cleaver.ses`](routing/Cleaver.ses): the accepted routing, including
-  the ten final completion connections. See `routing/README.md`.
+- [`routing/Cleaver.ses`](routing/Cleaver.ses): all accepted revision 0.4 copper,
+  including the underside reroute. See `routing/README.md`.
 - [`Cleaver.3dshapes/README.md`](Cleaver.3dshapes/README.md): model sources,
   licenses, and approximation limits; previews in [`previews/`](previews/).
 
-The populated-3D update added only model assignments to the PCB and footprint
-files. Removing those assignments reproduces the previous PCB byte-for-byte
-(SHA-256 `d4e82747e944aeb6163329050d4a07a9647fc5f56bee77ac42a1692ae5242a4d`).
-Fresh ERC/DRC and connectivity checks remain clean. This verifies preservation
-of the electrical layout, **not** the mechanical accuracy of representative
-component models or the approximate controller/header stack.
+Revision 0.4 changes placement, routing and mechanical features. It is not a
+model-only change. The OPSCO purchasing part's pin numbering is aligned with
+its catalog datasheet; physical LED signal locations and firmware remain the
+same. The 100 nF and 1 µF purchasing capacitors are rated 50 V instead of the
+previous 10 V minimum. All project electrical DRC rules remain in effect.
+
+The manufacturing package and its independent SHA-256 manifest are under
+[`../manufacturing/rev0.4/`](../manufacturing/rev0.4/). That package includes fresh
+checks, exact purchasing BOM, bottom CPL, pad-orientation data, assembly drawing,
+Gerbers, separate PTH/NPTH drills, and sourcing references. JLCPCB catalog support
+is established for sockets/LEDs; order-specific stock and DFM acceptance are not.
 
 The build logs and UF2 outputs remain in the working environment under
 `/tmp/opencode/cleaver-revision/` and `/tmp/opencode/cleaver-vial/`; they are not
@@ -81,7 +88,7 @@ the supplied routed board passes those conditions.
 The pre-existing project disables missing-courtyard, track-end-centering, tuning
 profile, and footprint-filter/type checks. These settings were not relaxed to
 accept routing. In particular, a clean electrical DRC is not a component-body or
-case-fit guarantee; the hand-assembly/prototype checks below are still required.
+case-fit guarantee; the physical prototype checks below are still required.
 The project comparison confirms that only netclass preferences were changed;
 manufacturing minima, DRC/ERC severity settings, and exclusions remain unchanged.
 
@@ -93,9 +100,11 @@ manufacturing minima, DRC/ERC severity settings, and exclusions remain unchanged
 2. Identify **raw USB VBUS before the module's diode** on the actual board and
    install the approved wire to TP1. Do not guess from a V1.1 reference designator
    when using a V1.3 module. Follow `README.md`.
-3. Fit one switch/socket/diode/LED/capacitor cell to the supplied plate. Confirm
-   LED polarity, lead overlap, emitter height, and hand-soldering access. Use
-   plate-mounted stabilizers; case-specific holes are not defined.
+3. Print the new stabilizer/switch fit coupon in `../mechanical/`, check clip fit
+   with the actual plate-mount stabilizers, and confirm plate spacing. The case
+   uses the 11 supplied M2 axes. Confirm LED polarity, lead overlap and emitter
+   height on the assembled prototype. The MCU/capacitor plate openings and
+   approximate models do not establish maximum-tolerance fit.
 4. Measure total USB current, the limited LED-branch current, pre-configuration
    and suspend current, startup behavior,
    and full-white rail ripple/voltage at the farthest LEDs at **8/255** brightness.

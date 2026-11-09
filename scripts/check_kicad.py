@@ -12,7 +12,7 @@ from pathlib import Path
 
 import pcbnew
 
-from design import ROOT, MODULE_X, MODULE_Y, ROW_GPIOS, COL_GPIOS, read_keys, components
+from design import ROOT, MODULE_X, MODULE_Y, ROW_GPIOS, COL_GPIOS, read_keys, components, MOUNTING_HOLES, FIDUCIALS
 from models_3d import validate_models
 
 
@@ -32,10 +32,11 @@ def main():
     board = pcbnew.LoadBoard(str(pcb))
     models = validate_models(board)
     footprints = {fp.GetReference():fp for fp in board.GetFootprints()}
-    assert len(footprints)==len(parts), 'Unexpected/missing board components'
+    assert len(footprints)==len(parts)+len(MOUNTING_HOLES)+len(FIDUCIALS), 'Unexpected/missing board components'
     for part in parts:
         ref = part['ref']
         fp = footprints[ref]
+        assert fp.GetLayer()==(pcbnew.B_Cu if part['back'] else pcbnew.F_Cu), f'{ref}: wrong assembly side'
         assert abs(pcbnew.ToMM(fp.GetPosition().x)-part['x'])<.001, f'{ref} moved in X'
         assert abs(pcbnew.ToMM(fp.GetPosition().y)-part['y'])<.001, f'{ref} moved in Y'
         pads = {p.GetNumber():p for p in fp.Pads() if p.GetNumber()}
@@ -61,8 +62,8 @@ def main():
         fp = footprints[key['led_ref']]
         assert fp.GetLayer()==pcbnew.B_Cu, 'LED solder lands must be on the back'
         pads = {p.GetNumber():p for p in fp.Pads()}
-        for number,(dx,dy) in {'1':(-3.05,-.75),'2':(-3.05,.75),
-                                '3':(3.05,.75),'4':(3.05,-.75)}.items():
+        for number,(dx,dy) in {'3':(-3.05,-.75),'4':(-3.05,.75),
+                                '1':(3.05,.75),'2':(3.05,-.75)}.items():
             point = pads[number].GetPosition()
             assert abs(pcbnew.ToMM(point.x)-key['x']-dx)<.001, f'{key["led_ref"]}.{number} reverse-mount X'
             assert abs(pcbnew.ToMM(point.y)-key['y']-5.08-dy)<.001, f'{key["led_ref"]}.{number} reverse-mount Y'
@@ -81,7 +82,7 @@ def main():
             # 0.05mm allowance. KiCad DRC alone permits same-net via-in-pad.
             box = pad.GetBoundingBox()
             box.Inflate(via.GetDrillValue()//2+pcbnew.FromMM(.05))
-            assert not box.Contains(via.GetPosition()), f'Via hole in solder land {pad.GetParent().GetReference()}.{pad.GetNumber()}'
+            assert not box.Contains(via.GetPosition()), f'Via hole in solder land {pad.GetParentFootprint().GetReference()}.{pad.GetNumber()}'
     fw = folder/'firmware'
     info = json.loads((fw/'keyboard.json').read_text())
     assert info['matrix_pins']==dict(rows=ROW_GPIOS,cols=COL_GPIOS)
@@ -110,7 +111,7 @@ def main():
             assert not data['violations'] and not data['unconnected_items'] and not data.get('schematic_parity',[]), 'DRC report is not clean'
         else:
             assert not any(sheet['violations'] for sheet in data['sheets']), 'ERC report is not clean'
-    report = dict(revision='0.3',matrix='8x16',unique_switches=len(keys),rgb_leds=len(leds),
+    report = dict(revision='0.4',matrix='8x16',unique_switches=len(keys),rgb_leds=len(leds),
                   pcb_sha256=hashlib.sha256(pcb.read_bytes()).hexdigest(),
                   schematic_sha256=hashlib.sha256(sch.read_bytes()).hexdigest(),
                   erc='pass',drc='pass',schematic_pcb_firmware_mapping='pass',models_3d=models)

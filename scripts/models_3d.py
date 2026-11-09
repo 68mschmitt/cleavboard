@@ -4,7 +4,7 @@ from __future__ import annotations
 import json
 import re
 
-from design import ROOT
+from design import ROOT, MOUNTING_HOLES, FIDUCIALS, read_keys, components
 
 PREFIX = '${KIPRJMOD}/Cleaver.3dshapes/'
 # Models use their native units: millimeters in STEP, 0.1 inch in KiCad VRML.
@@ -23,6 +23,9 @@ MODELS = {
     'C_Radial8': ('C_Radial_D8_H11.5_P3.5.wrl',),
     # TP1 is an exposed wire-soldering pad, not a mounted connector/component.
     'WirePad': (),
+    'TestPad': (),
+    'MountingHole_M2': (),
+    'Fiducial': (),
 }
 
 
@@ -110,8 +113,9 @@ def update_board_models(path):
         # every non-model byte survive insertion verbatim.
         start = text.rfind('\n',0,start)+1
         spans.append((start,end,name))
-    if len(spans)!=481:
-        raise ValueError(f'Expected 481 footprints, found {len(spans)}')
+    expected = len(components(*read_keys())) + len(MOUNTING_HOLES) + len(FIDUCIALS)
+    if len(spans)!=expected:
+        raise ValueError(f'Expected {expected} footprints, found {len(spans)}')
     for start,end,name in reversed(spans):
         text = text[:start]+replace_models(text[start:end],name,'\t\t')+text[end:]
     assert without_models(text)==original, 'Non-model PCB content changed'
@@ -135,8 +139,9 @@ def validate_models(board):
             assert path.with_suffix('.step').is_file(), f'Missing STEP counterpart: {path}'
         count += len(actual)
         populated += bool(actual)
-    assert len(list(board.GetFootprints()))==481
+    assert len(list(board.GetFootprints()))==len(components(*read_keys())) + len(MOUNTING_HOLES) + len(FIDUCIALS)
     assert (populated,count)==(480,597), (populated,count)
     return dict(populated_footprints=populated,model_instances=count,
                 unique_models=len({name for names in MODELS.values() for name in names}),
-                intentionally_unmodeled=['TP1: bare wire-soldering pad'])
+                intentionally_unmodeled=['TP1: wire pad', 'TP2-TP6: probe pads',
+                                        'H*: mounting holes', 'FID*: bare copper fiducials'])

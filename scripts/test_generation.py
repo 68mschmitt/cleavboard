@@ -16,8 +16,8 @@ class GenerationTests(unittest.TestCase):
         fp = pcbnew.FootprintLoad(str(ROOT/'kicad/Cleaver.pretty'), 'MINI_E')
         fp.SetPosition(pcbnew.VECTOR2I(0,0)); board.Add(fp)
         fp.Flip(fp.GetPosition(), pcbnew.FLIP_DIRECTION_TOP_BOTTOM)
-        expected = {'1':(-3.05,-.75),'2':(-3.05,.75),
-                    '3':(3.05,.75),'4':(3.05,-.75)}
+        expected = {'3':(-3.05,-.75),'4':(-3.05,.75),
+                    '1':(3.05,.75),'2':(3.05,-.75)}
         for pad in fp.Pads():
             actual = pcbnew.ToMM(pad.GetPosition())
             self.assertAlmostEqual(actual[0],expected[pad.GetNumber()][0],places=5)

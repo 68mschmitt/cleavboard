@@ -1,4 +1,4 @@
-# Cleaver PCB — revision 0.3
+# Cleaver PCB — revision 0.4
 
 117 MX hot-swap switches, 117 reverse-mount RGB LEDs, and the **DWEII / VCC-GND
 YD-RP2040 4MB USB-C module** identified in your supplied manual. The keyboard is
@@ -8,6 +8,14 @@ Read [VALIDATION.md](VALIDATION.md) for the recorded checks and remaining protot
 tests. The old [DESIGN_REVIEW.md](DESIGN_REVIEW.md) describes revision 0.2, not this
 replacement design. Electrical checks do not substitute for a physical prototype
 or final plate/case checks.
+
+**Revision 0.4 manufacturing:** all 478 factory-populated SMD parts are on the
+underside. MCU/headers and C5 stay on top for owner soldering. There are 11 M2
+mounting holes, five labelled underside probe pads and three bottom fiducials.
+Use [`../manufacturing/rev0.4/`](../manufacturing/rev0.4/) for the purchasing BOM,
+corrected socket placement data and fabrication package; use
+[`../mechanical/`](../mechanical/) for the matching stabilizer/switch plate and
+case mounting references. Older loose Gerbers are not this revision.
 
 ## Important: the approved USB power tap is required
 
@@ -97,18 +105,18 @@ through the switch to the diode anode; the cathode connects to the column.
 
 - Diodes are **1N4148W, SOD-123**, using normal **pad 1 = cathode, pad 2 = anode**
   numbering. Match the diode's stripe to the footprint's cathode mark.
-  Solder the diodes and small passives **before** the hot-swap sockets so the
-  socket bodies do not obstruct the iron. Check the repeated cell on a 1:1 print.
-- LEDs use the **SK6812MINI-E Rev.02 pinout** documented for Adafruit product
-  **4960**: 1=VDD, 2=DOUT, 3=GND, 4=DIN. Verify the exact purchased LED/revision;
-  similarly named parts can renumber their leads. Do not substitute MINI/EA/5050
+  Diodes sit 8.25 mm above switch centres, improving body clearance to sockets.
+  These and all other SMD parts are factory-assembled underneath.
+- LEDs use the **OPSCO SK6812MINI-E / C5149201 catalog pinout**:
+  **1=GND, 2=DIN, 3=VDD, 4=DOUT**. This renumbers the older Rev.02 sheet's pins
+  without changing physical net positions. Do not substitute MINI/EA/5050
   packages based only on a similar name.
 - LEDs and their 0805 bypass capacitors are on **B.Cu**, with emitters facing
   through the **3.6 × 3.2 mm PCB openings toward the switches**. These are real
   Edge.Cuts, not reference artwork. Mounting pads are outside the opening and
   retain at least 0.5 mm nominal edge clearance.
-  From the **top/emitter side**, pad 1 is upper-left, pad 2 lower-left, pad 3
-  lower-right, and pad 4 upper-right. The ground-corner mark is on the back.
+  From the **top/emitter side**, pad 3 is upper-left, pad 4 lower-left, pad 1
+  lower-right, and pad 2 upper-right. The ground-corner mark is on the back.
   Check this orientation on one LED before assembling the entire chain.
   Specify an internal milling-corner radius **no larger than 0.5 mm** (prefer
   0.4 mm) for these small openings; a default 2 mm-diameter cutter will not fit
@@ -121,11 +129,12 @@ through the switch to the diode anode; the cathode connects to the column.
   SWxxx, Dxxx, and LEDxxx refer to the same physical key; C101 belongs to SW001.
   Each SW footprint combines a **front-side MX switch with a back-side Kailh
   socket**. Do not use its top-level footprint side as an automated assembly
-  instruction; this design/BOM is intended for hand assembly. Also provide two
-  1×20 headers (and optional mating sockets) and the insulated USB tap wire.
+  instruction. The revision-specific factory CPL corrects both side and socket
+  centre. The owner provides two 1×20 headers (and optional mating sockets) and
+  the insulated USB tap wire.
 - Caps/Num/Scroll lock are indicated using their **own keys' RGB LEDs**. The three
   decorative KLE circles above the numpad do not represent additional components
-  hidden beneath the MCU.
+hidden beneath the MCU.
 
 The four-layer stack uses In1.Cu as ground return, with explicit ground vias
 outside solder pads. A **switched LED_5V pour on F.Cu** and off-pad power vias
@@ -140,11 +149,12 @@ the MCU**, rather than overlapping its body or headers. C5 is an 8 mm-diameter
 Panasonic **EEU-FR1A471**, with 3.5 mm lead pitch and an approximately 11.5 mm body
 height (allow the manufacturer's maximum installed height in the case).
 
-**Mechanical assumptions:** retain the supplied switch centres and board outline;
-use the supplied plate and **plate-mounted stabilizers**. PCB-mounted stabilizer
-holes, a case, and case-specific mounting holes are not defined. Confirm switch
-LED windows, stabilizers, controller/button access, cable plug clearance, capacitor
-height, and support against the real plate/case before ordering a production run.
+**Mechanical interface:** switch centres and board outline are retained. The
+new plate in `../mechanical/` includes matching M2 holes and Cherry-style
+**plate-mount stabilizers**: seven 2u sets and one 6.25u spacebar set. Do not use
+PCB-mount stabilizers. The custom printed case uses the supplied hole-coordinate
+table and 6 mm screw/standoff envelopes. See the mechanical README for nominal
+plate spacing, clip thickness, controller/capacitor openings and a fit coupon.
 
 ## Populated 3D view
 
@@ -152,7 +162,7 @@ Open **Cleaver.kicad_pcb → View → 3D Viewer (Alt+3)**. The project includes 
 models for **all 480 component footprints**, including front-side MX switches,
 back-side sockets, LEDs/passives, and a simplified YD-RP2040 with headers/USB-C.
 No extra model-library installation is needed. Flip the view with **F** to see
-the underside. TP1 is intentionally a bare wire pad.
+the underside. TP1–TP6, mounting holes and fiducials intentionally have no models.
 
 - [Top-side preview](previews/Cleaver-top.png)
 - [Bottom-side preview](previews/Cleaver-bottom.png)
@@ -213,8 +223,8 @@ KiCad's edge clearances and power widths into the router; a router reporting
 - [YD-RP2040 manufacturer drawing, pinout, and schematic mirror](https://github.com/initdc/YD-RP2040).
   The listing photo is V1.3; the available schematic is V1.1. Verify the USB tap on
   the actual board as described above.
-- [SK6812MINI-E Rev.02 datasheet](https://cdn-shop.adafruit.com/product-files/4960/4960_SK6812MINI-E_REV02_EN.pdf).
-  Reverse-mount pad orientation was cross-checked against the
+- [OPSCO C5149201 datasheet](https://datasheet.lcsc.com/datasheet/pdf/0907a34a701b4aef568078003f6e9eae.pdf).
+  Physical reverse-mount signal orientation also agrees with the
   [established MX MINI-E footprint](https://github.com/ebastler/kicad-keyboard-parts.pretty/blob/master/MX_SK6812MINI-E.kicad_mod).
 - [SN74LV1T125](https://www.ti.com/lit/ds/symlink/sn74lv1t125.pdf),
   [TPS2553](https://www.ti.com/lit/ds/symlink/tps2553.pdf), and

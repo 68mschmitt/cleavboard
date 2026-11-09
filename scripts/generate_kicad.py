@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build Cleaver revision 0.3; import a Specctra session for the routed PCB.
+"""Build Cleaver revision 0.4; import a complete-copper Specctra routing session.
 
 The electrical model is in design.py. No geometry-only wiring guesses are made:
 the PCB takes its pad nets from KiCad's exported schematic netlist. Project rules
@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import math
 import re
 import subprocess
 import uuid
@@ -20,7 +21,7 @@ import pcbnew
 
 from design import (ROOT, INPUT, U, BOARD_W, BOARD_H, ROW_GPIOS, COL_GPIOS,
                     MODULE_PINS, RGB_GPIO, POWER_GPIO, read_keys, components,
-                    default_keycodes)
+                    default_keycodes, MOUNTING_HOLES, FIDUCIALS, TEST_POINTS)
 from models_3d import update_library_models
 
 OUT = ROOT / "kicad"
@@ -59,10 +60,10 @@ def symbol_pins():
         "YD_RP2040": module,
         "MX": [pin(1, "ROW", "passive", -5.08, 0), pin(2, "KEY", "passive", 5.08, 0, 180)],
         "D_SOD123": [pin(2, "A", "passive", -5.08, 0), pin(1, "K", "passive", 5.08, 0, 180)],
-        "MINI_E": [pin(1, "VDD", "power_in", -5.08, 2.54),
-                   pin(4, "DIN", "input", -5.08, -2.54),
-                   pin(2, "DOUT", "output", 5.08, 2.54, 180),
-                   pin(3, "GND", "power_in", 5.08, -2.54, 180)],
+        "MINI_E": [pin(3, "VDD", "power_in", -5.08, 2.54),
+                   pin(2, "DIN", "input", -5.08, -2.54),
+                   pin(4, "DOUT", "output", 5.08, 2.54, 180),
+                   pin(1, "GND", "power_in", 5.08, -2.54, 180)],
         "LV1T125": [pin(1, "~{OE}", "input", -7.62, 2.54),
                      pin(2, "A", "input", -7.62, 0),
                      pin(3, "GND", "power_in", -7.62, -2.54),
@@ -75,6 +76,7 @@ def symbol_pins():
                       pin(5, "ILIM", "passive", 7.62, 0, 180),
                       pin(6, "OUT", "power_out", 7.62, 5.08, 180)],
         "WirePad": [pin(1, "VBUS", "passive", 5.08, 0, 180)],
+        "TestPad": [pin(1, "TEST", "passive", 5.08, 0, 180)],
         "R_0805": two, "C_0805": two, "PTC_1206": two,
         "C_Radial8": [pin(1, "+", "passive", -5.08, 0), pin(2, "-", "passive", 5.08, 0, 180)],
         "PowerFlag": [pin(1, "pwr", "power_out", 0, 0)],
@@ -123,14 +125,14 @@ def write_footprints():
                           ("TPS2553", [(1,-1,-1),(2,-1,0),(3,-1,1),(4,1,1),(5,1,0),(6,1,-1)])):
         definitions[kind] = footprint(kind,
             "\n".join(smd(n, x * 1.1375, y * .95, 1.325, .6) for n,x,y in numbers), (.8, 1.45))
-    # Rev02 function numbering, viewed from the component's solder side, with
+    # OPSCO C5149201 numbering, viewed from the component's solder side, with
     # its emitter pointing THROUGH the board (reverse mount). Mirror the
     # emitter-view datasheet once here, before KiCad's normal B.Cu flip.
     # 3.6 x 3.2 opening accommodates the 3.2 x 2.8 body; >=0.5 mm copper
     # clearance is retained even with Edge.Cuts line width included.
     definitions["MINI_E"] = footprint("MINI_E", "\n".join([
-        smd(1, -3.05, .75, 1.4, .9), smd(2, -3.05, -.75, 1.4, .9),
-        smd(3, 3.05, -.75, 1.4, .9), smd(4, 3.05, .75, 1.4, .9)]), (1.6, 1.4), '''
+        smd(3, -3.05, .75, 1.4, .9), smd(4, -3.05, -.75, 1.4, .9),
+        smd(1, 3.05, -.75, 1.4, .9), smd(2, 3.05, .75, 1.4, .9)]), (1.6, 1.4), '''
         (fp_rect (start -1.8 -1.6) (end 1.8 1.6) (layer Edge.Cuts) (width 0.05))
         (fp_line (start 3.3 -1.6) (end 3.8 -1.6) (layer F.SilkS) (width 0.12))
         (fp_line (start 3.8 -1.6) (end 3.8 -1.35) (layer F.SilkS) (width 0.12))''')
@@ -146,6 +148,13 @@ def write_footprints():
     definitions["WirePad"] = footprint("WirePad",
         '(pad 1 thru_hole circle (at 0 0) (size 2.4 2.4) (drill 1.0) (layers *.Cu *.Mask))',
         (1.2, 1.2), through=True)
+    definitions['TestPad'] = footprint('TestPad',
+        '(pad 1 smd circle (at 0 0) (size 1.5 1.5) (layers F.Cu F.Mask))', (.75,.75))
+    definitions['MountingHole_M2'] = footprint('MountingHole_M2',
+        '(pad "" np_thru_hole circle (at 0 0) (size 2.2 2.2) (drill 2.2) (layers *.Cu *.Mask))',
+        (3,3), '(fp_circle (center 0 0) (end 3 0) (layer Dwgs.User) (width 0.1))', through=True)
+    definitions['Fiducial'] = footprint('Fiducial',
+        '(pad "" smd circle (at 0 0) (size 1 1) (layers F.Cu F.Mask) (solder_mask_margin 1))', (.5,.5))
     definitions["C_Radial8"] = footprint("C_Radial8", '''
         (pad 1 thru_hole rect (at -1.75 0) (size 1.8 1.8) (drill 0.8) (layers *.Cu *.Mask))
         (pad 2 thru_hole circle (at 1.75 0) (size 1.8 1.8) (drill 0.8) (layers *.Cu *.Mask))''',
@@ -188,7 +197,7 @@ def symbol_definition(kind, qualified):
         (polyline (pts (xy -2.54 0) (xy 2.54 1.27)) (stroke (width 0.15)) (fill (type none)))'''
     elif kind in ("R_0805", "PTC_1206"):
         graphic = '(rectangle (start -2.54 1.016) (end 2.54 -1.016) (stroke (width 0.15)) (fill (type none)))'
-    elif kind == "WirePad":
+    elif kind in ("WirePad", "TestPad"):
         graphic = '''(circle (center 0 0) (radius 1.27) (stroke (width 0.15)) (fill (type none)))
         (polyline (pts (xy 1.27 0) (xy 2.54 0)) (stroke (width 0.15)) (fill (type none)))'''
     fp = "" if kind == "PowerFlag" else f"Cleaver:{FP_NAMES.get(kind, kind)}"
@@ -270,7 +279,7 @@ def generate_schematic(parts, keys, leds):
     wire('RGB_BUFFERED',[(x+7.62,y+2.54),(rx-7.62,y+2.54),(rx-7.62,ry),(rx-5.08,ry)],'RGB-buffer')
     header = f'''(kicad_sch (version 20250114) (generator "eeschema") (generator_version "10.0")
       (uuid {ROOT_ID}) (paper "A0")
-      (title_block (title "Cleaver - YD-RP2040 USB-C") (date "2026-11-08") (rev "0.3"))
+      (title_block (title "Cleaver - YD-RP2040 USB-C") (date "2026-11-08") (rev "0.4"))
       (lib_symbols {' '.join(symbol_definition(k, True) for k in PINS)})
       (text "117 UNIQUE KEYS - 8x16 ROW2COL - USB POWER ONLY - NO POWER SWITCH" (at 30 20 0)
         (effects (font (size 2 2)) (justify left)))
@@ -342,7 +351,7 @@ def ground_fanout(board, keys, parts, net):
     kinds = {p["ref"]: p["kind"] for p in parts}
     for fp in board.GetFootprints():
         ref = fp.GetReference()
-        if kinds[ref] not in ("LV1T125", "TPS2553", "R_0805", "C_0805"):
+        if kinds.get(ref) not in ("LV1T125", "TPS2553", "R_0805", "C_0805"):
             continue
         if ref.startswith("C") and int(ref[1:]) >= 101:
             continue  # cell capacitor is already connected above
@@ -352,7 +361,7 @@ def ground_fanout(board, keys, parts, net):
             x,y = pcbnew.ToMM(pad.GetPosition().x),pcbnew.ToMM(pad.GetPosition().y)
             vx = x - 1.3 if ref in ("U2", "U3") else x + 1.35
             t = pcbnew.PCB_TRACK(board)
-            t.SetStart(mm(x,y)); t.SetEnd(mm(vx,y)); t.SetLayer(pcbnew.F_Cu)
+            t.SetStart(mm(x,y)); t.SetEnd(mm(vx,y)); t.SetLayer(fp.GetLayer())
             t.SetWidth(pcbnew.FromMM(.3)); t.SetNet(net); t.SetLocked(True); board.Add(t)
             v = pcbnew.PCB_VIA(board)
             v.SetPosition(mm(vx,y)); v.SetWidth(pcbnew.FromMM(.6)); v.SetDrill(pcbnew.FromMM(.3))
@@ -367,17 +376,21 @@ def prepare_dsn(path):
     Exported netclasses are also made explicit: 0.6mm power, 0.3mm signals.
     """
     text = path.read_text()
+    led_count = 0
     def polygon(match):
+        nonlocal led_count
         points = [float(n) for n in match.group(1).split()]
         if len(points) != 10:
-            raise ValueError("Unexpected non-rectangular LED opening in DSN")
+            # Polygonal mounting screw keepouts already carry their full radius.
+            return match.group(0)
+        led_count += 1
         xs, ys = points[0::2], points[1::2]
         x0,x1,y0,y1 = min(xs)-325,max(xs)+325,min(ys)-325,max(ys)+325
         coords = f'{x0:g} {y0:g} {x1:g} {y0:g} {x1:g} {y1:g} {x0:g} {y1:g} {x0:g} {y0:g}'
         return '(keepout "" (polygon signal 0 ' + coords + '))'
     text, count = re.subn(r'\(keepout "" \(polygon signal 0\s+([\d.\s-]+)\)\)', polygon, text)
-    if count != 117:
-        raise ValueError(f"Expected 117 DSN LED opening keepouts, got {count}")
+    if led_count != 117:
+        raise ValueError(f"Expected 117 DSN LED opening keepouts, got {led_count}")
     def boundary(match):
         points = [float(n) for n in match.group(1).split()]
         xs,ys = points[0::2],points[1::2]
@@ -423,35 +436,7 @@ def prepare_dsn(path):
     path.write_text(text)
 
 
-def bulk_cap_connection(board):
-    """Short, wide local connection from the pulse reservoir to U3's output.
-
-    This is applied after session import as well as placement generation, so a
-    preserved signal-routing session cannot drop the reservoir connection.
-    """
-    net = board.FindNet("/LED_5V")
-    paths = [(pcbnew.In2_Cu, [(375.25,6),(375.25,3.8),(388,3.8),(388,12.4),(392.7,12.4)]),
-             (pcbnew.F_Cu, [(392.7,12.4),(391.1375,12.4),(391.1375,13.05)])]
-    existing = {(t.GetLayer(), t.GetNetCode(), t.GetStart().x,t.GetStart().y,t.GetEnd().x,t.GetEnd().y)
-                for t in board.GetTracks() if t.GetClass()=="PCB_TRACK"}
-    for layer,points in paths:
-        for a,b in zip(points,points[1:]):
-            start,end = mm(*a),mm(*b)
-            key = (layer,net.GetNetCode(),start.x,start.y,end.x,end.y)
-            reverse = (layer,net.GetNetCode(),end.x,end.y,start.x,start.y)
-            if key in existing or reverse in existing:
-                continue
-            t = pcbnew.PCB_TRACK(board); t.SetStart(start); t.SetEnd(end)
-            t.SetLayer(layer); t.SetNet(net); t.SetWidth(pcbnew.FromMM(.6))
-            t.SetLocked(True); board.Add(t)
-    if not any(t.GetClass()=="PCB_VIA" and t.GetNetCode()==net.GetNetCode()
-               and t.GetPosition()==mm(392.7,12.4) for t in board.GetTracks()):
-        v = pcbnew.PCB_VIA(board); v.SetPosition(mm(392.7,12.4))
-        v.SetWidth(pcbnew.FromMM(.7)); v.SetDrill(pcbnew.FromMM(.3))
-        v.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); v.SetNet(net); v.SetLocked(True); board.Add(v)
-
-
-def led_power_distribution(board, keys):
+def led_power_distribution(board, keys, fanout=True):
     """Low-impedance switched 5V pour with off-pad access for every LED/cap.
 
     Avoid a long serial power trace: a 117-pixel chain must not also be a chain
@@ -473,6 +458,8 @@ def led_power_distribution(board, keys):
         for x,y in ((.6,.6),(BOARD_W-.6,.6),(BOARD_W-.6,BOARD_H-.6),(.6,BOARD_H-.6)):
             outline.Append(pcbnew.FromMM(x),pcbnew.FromMM(y))
         board.Add(zone)
+    if not fanout:
+        return
     for key in keys:
         x,y = key['x'],key['y']+5.08
         for a,b in [((x-3.05,y-.75),(x-4.35,y-.75)),
@@ -487,12 +474,43 @@ def led_power_distribution(board, keys):
             via.SetNet(net); via.SetLocked(True); board.Add(via)
 
 
+def add_mechanics(board):
+    """Non-BOM holes/fiducials, with real all-copper screw-head keepouts."""
+    for kind, prefix, points in [('MountingHole_M2', 'H', MOUNTING_HOLES),
+                                  ('Fiducial', 'FID', FIDUCIALS)]:
+        for index, (x, y) in enumerate(points, 1):
+            fp = pcbnew.FootprintLoad(str(PRETTY), kind)
+            fp.SetFPID(pcbnew.LIB_ID('Cleaver', kind))
+            fp.SetReference(f'{prefix}{index}'); fp.SetPosition(mm(x,y))
+            fp.SetAttributes(fp.GetAttributes() | pcbnew.FP_BOARD_ONLY | pcbnew.FP_EXCLUDE_FROM_BOM | pcbnew.FP_EXCLUDE_FROM_POS_FILES)
+            board.Add(fp)
+            if kind == 'Fiducial':
+                fp.Flip(fp.GetPosition(), pcbnew.FLIP_DIRECTION_TOP_BOTTOM)
+            fp.Reference().SetVisible(False); fp.Value().SetVisible(False)
+            if kind != 'MountingHole_M2':
+                continue
+            zone = pcbnew.ZONE(board)
+            zone.SetIsRuleArea(True)
+            zone.SetLayerSet(pcbnew.LSET.AllCuMask())
+            zone.SetDoNotAllowTracks(True); zone.SetDoNotAllowVias(True)
+            zone.SetDoNotAllowZoneFills(True)
+            # NPTH itself is allowed; pads are checked separately by the mechanical checker.
+            zone.SetDoNotAllowPads(False)
+            zone.SetDoNotAllowFootprints(False)
+            outline = zone.Outline(); outline.NewOutline()
+            for i in range(64):
+                a = i * math.tau / 64
+                outline.Append(*mm(x+3*math.cos(a), y+3*math.sin(a)))
+            board.Add(zone)
+
+
 def generate_board(parts, keys, nets, report_dir, ses=None):
     board = pcbnew.BOARD()
     board.GetDesignSettings().SetCopperLayerCount(4)
+    board.GetDesignSettings().SetAuxOrigin(mm(0,BOARD_H))
     board.GetTitleBlock().SetTitle("Cleaver - YD-RP2040 USB-C / 117 keys")
     board.GetTitleBlock().SetDate("2026-11-08")
-    board.GetTitleBlock().SetRevision("0.3")
+    board.GetTitleBlock().SetRevision("0.4")
     ni = {}
     for name in sorted(set(nets.values())):
         item = pcbnew.NETINFO_ITEM(board, name)
@@ -518,6 +536,8 @@ def generate_board(parts, keys, nets, report_dir, ses=None):
             fp.Reference().SetTextSize(mm(.8,.8)); fp.Reference().SetTextThickness(pcbnew.FromMM(.12))
         elif ref == "U1":
             fp.Reference().SetPosition(mm(part["x"],part["y"]))
+        elif kind == 'TestPad':
+            fp.Reference().SetVisible(False)
         for pad in fp.Pads():
             key = (ref, str(pad.GetNumber()))
             if key in nets:
@@ -525,13 +545,19 @@ def generate_board(parts, keys, nets, report_dir, ses=None):
                 if expected is not None and nets[key].lstrip("/") != expected:
                     raise ValueError(f"Schematic net mismatch: {key} {expected} vs {nets[key]}")
                 pad.SetNet(ni[nets[key]])
+    add_mechanics(board)
+    for ref, net, x, y in TEST_POINTS:
+        label = pcbnew.PCB_TEXT(board)
+        label.SetText(ref+' '+{'RAW_USB_5V':'USB5V','LED_5V':'LED5V','RGB_BUFFERED':'RGB','LED_EN':'EN'}.get(net,net))
+        label.SetPosition(mm(x,y-1.5)); label.SetLayer(pcbnew.B_SilkS); label.SetMirrored(True)
+        label.SetTextSize(mm(.8,.8)); label.SetTextThickness(pcbnew.FromMM(.12)); board.Add(label)
     for k in keys:
         x,y = k["x"], k["y"]
         for a,b in [((x-7,y-7),(x+7,y-7)),((x+7,y-7),(x+7,y+7)),
                     ((x+7,y+7),(x-7,y+7)),((x-7,y+7),(x-7,y-7))]:
             line(board,a,b,pcbnew.Dwgs_User)
     for text,x,y,layer in [("USB 5V TAP +",435,27,pcbnew.F_SilkS),
-                           ("CLEAVER rev0.3 | USB-C | TP1: RAW USB VBUS",46,144.9,pcbnew.F_SilkS)]:
+                           ("CLEAVER rev0.4 | USB-C | TP1: RAW USB VBUS",46,144.9,pcbnew.F_SilkS)]:
         label = pcbnew.PCB_TEXT(board)
         label.SetText(text); label.SetPosition(mm(x,y)); label.SetLayer(layer)
         label.SetTextSize(mm(.8,.8)); label.SetTextThickness(pcbnew.FromMM(.12)); board.Add(label)
@@ -543,8 +569,9 @@ def generate_board(parts, keys, nets, report_dir, ses=None):
     for x,y in ((.6,.6),(BOARD_W-.6,.6),(BOARD_W-.6,BOARD_H-.6),(.6,BOARD_H-.6)):
         outline.Append(pcbnew.FromMM(x),pcbnew.FromMM(y))
     board.Add(zone)
-    ground_fanout(board, keys, parts, ni["/GND"])
-    led_power_distribution(board, keys)
+    if not ses:
+        ground_fanout(board, keys, parts, ni["/GND"])
+    led_power_distribution(board, keys, fanout=not ses)
     path = OUT / "Cleaver.kicad_pcb"
     pcbnew.SaveBoard(str(path), board)
     # Reload to apply the preserved project's fabrication rules and netclasses.
@@ -552,7 +579,7 @@ def generate_board(parts, keys, nets, report_dir, ses=None):
     if ses:
         if not pcbnew.ImportSpecctraSES(board, str(ses)):
             raise RuntimeError("Failed to import routing session")
-    bulk_cap_connection(board)
+    # Revision 0.4 sessions contain ALL copper, including power/ground fanouts.
     pcbnew.ZONE_FILLER(board).Fill(board.Zones())
     pcbnew.SaveBoard(str(path), board)
     if not ses:
@@ -641,6 +668,8 @@ def main():
         parser.error("Choose --placement-only or --ses FILE; never silently replace a routed board with an unrouted one")
     if args.ses and not args.ses.is_file():
         parser.error("Routing session does not exist")
+    if args.ses and not args.ses.read_text().startswith('(session Cleaver_rev0.4_complete_copper'):
+        parser.error('Use a revision 0.4 complete-copper session; older sessions omit required fanouts')
     args.reports.mkdir(parents=True, exist_ok=True)
     keys, leds = read_keys()
     parts = components(keys, leds)
@@ -653,7 +682,7 @@ def main():
         for p in parts:
             side = "F switch / B socket" if p["kind"]=="MX" else "B" if p["back"] else "F"
             writer.writerow([p["ref"],p["value"],FP_NAMES.get(p["kind"],p["kind"]),p["x"],p["y"],side])
-    print(f"Generated revision 0.3: {len(keys)} unique keys, 8x16, 117 LEDs; " + ("session imported" if args.ses else "UNROUTED placement/DSN only"))
+    print(f"Generated revision 0.4: {len(keys)} unique keys, 8x16, 117 LEDs; " + ("session imported" if args.ses else "UNROUTED placement/DSN only"))
 
 
 if __name__ == "__main__":

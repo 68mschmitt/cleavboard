@@ -1,0 +1,9 @@
+Item,Quantity,Mounting,Description
+U1,1,top,User supplied YD-RP2040 4MB USB-C module
+U1 headers,2,top,1x20 male 2.54mm headers; 17.78mm between rows
+C5,1,top,"Panasonic EEU-FR1A471 470uF 10V radial; 8mm diameter, 3.5mm pitch"
+TP1 wire,1,top,Short insulated raw USB VBUS tap wire
+MX switches,117,top,Plate-mounted MX-compatible switches
+2u stabilizers,7,plate,"Cherry-style plate mount, 23.8mm stem spacing"
+6.25u stabilizer,1,plate,"Cherry-style plate mount, 100mm stem spacing"
+Mounting screws,11,case/plate,M2; choose lengths for your printed case; 6mm reserved diameter

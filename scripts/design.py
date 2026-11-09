@@ -16,6 +16,15 @@ ROW_GPIOS = [f"GP{i}" for i in range(8)]
 COL_GPIOS = [f"GP{i}" for i in range(8, 23)] + ["GP26"]
 RGB_GPIO, POWER_GPIO = "GP27", "GP28"
 MODULE_X, MODULE_Y = BOARD_W - 26.67, 13.39
+# M2 clearance holes; reserve a 6 mm diameter for heads, washers and standoffs.
+# Coordinates are top-view millimetres from the PCB's upper-left corner.
+MOUNTING_HOLES = [(4, 4), (110, 23.8), (220, 23.8), (330, 23.8),
+                  (395, 26), (313, 70), (4, 143), (90, 138),
+                  (220, 138), (365, 138), (448, 138)]
+FIDUCIALS = [(20, 24), (360, 138), (395, 2)]
+TEST_POINTS = [('TP2', 'GND', 410, 27), ('TP3', 'RAW_USB_5V', 418, 27),
+               ('TP4', 'LED_5V', 426, 27), ('TP5', 'LED_EN', 434, 27),
+               ('TP6', 'RGB_BUFFERED', 402, 27)]
 MODULE_PINS = {
     1: "GP0", 2: "GP1", 3: "GND", 4: "GP2", 5: "GP3", 6: "GP4",
     7: "GP5", 8: "GND", 9: "GP6", 10: "GP7", 11: "GP8", 12: "GP9",
@@ -103,11 +112,12 @@ def components(keys, leds):
         add(k["ref"], "MX", k["legend"], x, y,
             {1: f"ROW{k['matrix_row']}", 2: k["key_net"]})
         # Standard SOD-123 numbering: 1=cathode, 2=anode.
-        add(k["diode"], "D_SOD123", "1N4148W", x, y - 8,
+        # Leave ~0.36 mm nominal body gap to the socket (was only ~0.11 mm).
+        add(k["diode"], "D_SOD123", "1N4148W", x, y - 8.25,
             {1: f"COL{k['matrix_col']:02d}", 2: k["key_net"]}, back=True)
-        add(k["led_ref"], "MINI_E", "SK6812MINI-E Rev02", x, y + 5.08,
-            {1: "LED_5V", 2: k["rgb_out"], 3: "GND", 4: k["rgb_in"]}, back=True)
-        add(k["cap_ref"], "C_0805", "100nF 10V X7R", x + 5.8, y + 5.08,
+        add(k["led_ref"], "MINI_E", "SK6812MINI-E C5149201", x, y + 5.08,
+            {3: "LED_5V", 4: k["rgb_out"], 1: "GND", 2: k["rgb_in"]}, back=True)
+        add(k["cap_ref"], "C_0805", "100nF 50V X7R", x + 5.8, y + 5.08,
             {1: "LED_5V", 2: "GND"}, back=True)
     # User-approved short wire from raw USB VBUS, BEFORE the module's BAT54C.
     # Pin 40 stays unused: never send the RGB load through that small diode.
@@ -122,14 +132,19 @@ def components(keys, leds):
     add("R1", "R_0805", "330R", 375, 21, {1: "RGB_BUFFERED", 2: "RGB_000"})
     add("R2", "R_0805", "100k", 384, 10, {1: "LED_EN", 2: "GND"})
     add("R3", "R_0805", "100k", 377, 25, {1: "RGB_DATA", 2: "GND"})
-    add("C1", "C_0805", "1uF 10V X7R", 394, 8, {1: "FUSED_5V", 2: "GND"})
+    add("C1", "C_0805", "1uF 50V X7R", 394, 8, {1: "FUSED_5V", 2: "GND"})
     add("C2", "C_0805", "22uF 10V X5R", 395, 14, {1: "LED_5V", 2: "GND"})
-    add("C3", "C_0805", "100nF 10V X7R", 386, 23, {1: "LED_5V", 2: "GND"})
+    add("C3", "C_0805", "100nF 50V X7R", 386, 23, {1: "LED_5V", 2: "GND"})
     add("R4", "R_0805", "75k 1%", 393, 17, {1: "CURRENT_LIMIT", 2: "GND"})
     # Downstream of the current limiter, not directly across USB: absorbs
     # coincident LED PWM pulses without tripping the 350mA input-current limit.
     add("C5", "C_Radial8", "470uF 10V EEU-FR1A471", 377, 6,
         {1: "LED_5V", 2: "GND"})
+    for part in result:
+        if part['ref'] in ('F1', 'U2', 'U3', 'R1', 'R2', 'R3', 'R4', 'C1', 'C2', 'C3'):
+            part['back'] = True
+    for ref, net, x, y in TEST_POINTS:
+        add(ref, 'TestPad', net, x, y, {1: net}, back=True)
     return result
 
 
