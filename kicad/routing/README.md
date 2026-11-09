@@ -41,6 +41,23 @@ python3 -B scripts/archive_routing.py kicad/Cleaver.kicad_pcb kicad/routing/Clea
 Always test a fresh generator round trip after updating the archive. The archive
 is reproducible copper geometry, not a promise of identical regenerated UUIDs.
 
+## Trace cleanup
+
+`scripts/clean_routing.py` simplifies same-width, same-layer runs into straight
+and 45-degree sections. It protects pad/via landings and branch junctions, and
+checks candidate shortcuts against other copper, holes, LED windows, mounting
+envelopes and fiducial mask openings. It requires Shapely >=2 as well as KiCad
+Python. To produce a candidate without replacing the accepted PCB:
+
+```sh
+python3 -B scripts/clean_routing.py kicad/Cleaver.kicad_pcb /tmp/opencode/Cleaver-cleaned.kicad_pcb --report /tmp/opencode/cleanup.json
+```
+
+This geometric pass does not prove filled-plane connectivity. Accept changes
+only after refilling zones with the project settings and running the full
+integration checker. The complete-copper session already includes the accepted
+cleanup; normal regeneration does not require rerunning the optimizer.
+
 ## Deliberate routing restart
 
 `python3 -B scripts/generate_kicad.py --placement-only` **replaces the PCB with
