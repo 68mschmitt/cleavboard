@@ -1,0 +1,28 @@
+{
+  "before": {
+    "track_segments": 7895,
+    "vias": 667,
+    "track_length_mm": 19718.857,
+    "segments_under_0_3_mm": 2835
+  },
+  "after": {
+    "track_segments": 4058,
+    "vias": 667,
+    "track_length_mm": 19604.16,
+    "segments_under_0_3_mm": 575
+  },
+  "simplified_runs": 370,
+  "acceptance": "Pass: fresh complete-copper session regeneration, ERC, DRC, unconnected-item and schematic-parity checks",
+  "baseline_commit": "7d83116",
+  "led_supply_bridges": {
+    "count": 2,
+    "width_mm": 0.4,
+    "layer": "In2.Cu",
+    "added_vias": 0,
+    "purpose": "Preserve LED supply connectivity after power-plane refill"
+  },
+  "sha256": {
+    "kicad/Cleaver.kicad_pcb": "7b83a48035d38c427af6c47ff20fb311b552b90ad182bab0faea532f9db61585",
+    "kicad/routing/Cleaver.ses": "951c4097bc484939ac2d649a6469c877544392138b83882a207626cfabebd90b"
+  }
+}

@@ -3,7 +3,7 @@
   "matrix": "8x16",
   "unique_switches": 117,
   "rgb_leds": 117,
-  "pcb_sha256": "7209a29cd6cc0782339ab9aef30f03c79788524b7b58c4ea76135e076b926e85",
+  "pcb_sha256": "7b83a48035d38c427af6c47ff20fb311b552b90ad182bab0faea532f9db61585",
   "schematic_sha256": "32951b4035d1ef8033b916ab0a030c1abf94100735da2ab19039d0a18f786065",
   "erc": "pass",
   "drc": "pass",

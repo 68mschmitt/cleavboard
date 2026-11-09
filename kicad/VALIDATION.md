@@ -15,7 +15,7 @@ prototype has been assembled or tested by this agent.
 | --- | --- |
 | KiCad version | 10.0.8 |
 | Schematic ERC, meaningful electrical pin types | 0 violations |
-| Shared-design/geometry/router-boundary/model/assembly unit tests | 21 passed |
+| Shared-design/geometry/router-boundary/model/assembly/routing unit tests | 25 passed (Shapely enabled) |
 | Schematic/PCB net assignments | Pass |
 | 8×16 matrix, 117 unique addresses | Pass |
 | QMK and Vial matrix/RGB-order parity | Pass |
@@ -29,6 +29,7 @@ prototype has been assembled or tested by this agent.
 | Factory assembly | 478 SMD placements, all bottom; socket origins corrected |
 | Mechanical mounting | 11 M2 holes, 6 mm copper-free hardware envelopes |
 | Plate generation | Connected plate, matching holes, 7 × 2u + 1 × 6.25u stabilizers |
+| Trace cleanup | 7,895 → 4,058 segments; sub-0.3 mm segments 2,835 → 575; 667 vias retained |
 | Bundled 3D models | 597 placements / 480 populated footprints; pads/holes/fiducials bare |
 | `default` firmware build | Previously succeeded; firmware unchanged in PCB revision 0.4 |
 | `vial` firmware build, including VialRGB | Previously succeeded; firmware unchanged |
@@ -64,6 +65,12 @@ The manufacturing package and its independent SHA-256 manifest are under
 checks, exact purchasing BOM, bottom CPL, pad-orientation data, assembly drawing,
 Gerbers, separate PTH/NPTH drills, and sourcing references. JLCPCB catalog support
 is established for sockets/LEDs; order-specific stock and DFM acceptance are not.
+
+The accepted routing cleanup replaces grid staircases and redundant pad-approach
+jogs with straight/45-degree runs. Two 0.4 mm inner-layer LED-supply connections
+restore continuity across regions separated by the refilled front power pour.
+Pad/via locations, track widths, layer assignments and circuit mapping are
+preserved. See `routing/cleanup.json` for before/after metrics and source hashes.
 
 The build logs and UF2 outputs remain in the working environment under
 `/tmp/opencode/cleaver-revision/` and `/tmp/opencode/cleaver-vial/`; they are not
