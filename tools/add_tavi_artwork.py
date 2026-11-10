@@ -18,12 +18,12 @@ from shapely.geometry import Polygon
 ROOT = Path(__file__).resolve().parents[1]
 NAME = "TavianaTactical_34mm"
 POSITION = (199, 122)
-PROJECTS = [(ROOT / "kicad", "Cleaver"),
+PROJECTS = [(ROOT / "designs/module-rp2040", "Cleaver"),
             (ROOT / "designs/embedded-rp2040", "Cleaver-Embedded")]
 
 
 def footprint():
-    image = Image.open(ROOT / "tavi-tac.png").convert("L")
+    image = Image.open(ROOT / "assets/artwork/taviana/tavi-tac.png").convert("L")
     ink = image.point(lambda value: 255 if value < 150 else 0)
     ink = ink.crop(ink.getbbox())
     # Preserve the aspect ratio; reinforce fine cables by about 0.05 mm per

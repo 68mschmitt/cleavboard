@@ -46,20 +46,21 @@ def main():
             padrows.append([ref,pad.GetNumber(),pad.GetNetname(),f'{px:.6f}',f'{H-py:.6f}',f'{px-x:.6f}',f'{y-py:.6f}'])
         bom.append([ref,p['value'],*identity[:4],'bottom',f'{x:.6f}',f'{y:.6f}',identity[4]])
     assert len(cpl)==476
-    write_csv(ROOT/'BOM.csv',['Reference','Value','Manufacturer','MPN','LCSC Part #','Package','Assembly Side','X_top_view_mm','Y_down_mm','Source'],bom)
+    write_csv(ROOT/'manufacturing/BOM.csv',['Reference','Value','Manufacturer','MPN','LCSC Part #','Package','Assembly Side','X_top_view_mm','Y_down_mm','Source'],bom)
     write_csv(out/'BOM-JLCPCB.csv',['Comment','Designator','Footprint','LCSC Part #','Manufacturer','Quantity'],[[mpn,','.join(refs),package,code,mfr,len(refs)] for (mfr,mpn,code,package,url),refs in groups.items()])
     write_csv(out/'CPL-JLCPCB.csv',['Designator','Mid X','Mid Y','Layer','Rotation'],cpl)
     write_csv(out/'pad-orientation-reference.csv',['Designator','Pad','Net','X_mm','Y_mm','DX_from_centroid_mm','DY_from_centroid_mm'],padrows)
     write_csv(out/'owner-installed.csv',['Item','Quantity','Mounting','Description'],[['U1',1,'top','YD-RP2040 4MB USB-C DWEII/VCC-GND module'],['U1 headers',2,'top','1x20 2.54mm male headers, 17.78mm row spacing'],['MX switches',117,'plate','Clip into plate and hot-swap sockets; no solder'],['2u stabilizers',7,'plate','Cherry-style plate mount'],['6.25u stabilizer',1,'plate','Cherry-style plate mount'],['M2 mounting hardware',11,'case','2.2mm holes; 6mm diameter reserved']])
     write_csv(out/'mounting-holes.csv',['Reference','X_mm','Y_down_mm','NPTH_diameter_mm'],[[f.GetReference(),f.GetPosition().x/1e6,f.GetPosition().y/1e6,2.2] for f in fps.values() if f.GetReference().startswith('H')])
     write_csv(out/'fiducials.csv',['Reference','X_mm','Y_up_mm','Side'],[[f.GetReference(),f.GetPosition().x/1e6,H-f.GetPosition().y/1e6,'bottom'] for f in fps.values() if f.GetReference().startswith('FID')])
-    pdf=ROOT/(NAME+'-schematic.pdf');run(['sch','export','pdf','-o',pdf,ROOT/(NAME+'.kicad_sch')])
+    (ROOT/'docs').mkdir(exist_ok=True)
+    pdf=ROOT/'docs'/(NAME+'-schematic.pdf');run(['sch','export','pdf','-o',pdf,ROOT/(NAME+'.kicad_sch')])
     # Crop the authentic KiCad export into easily printable detail pages.
     writer=PdfWriter()
     for left,top,right,bottom in [(10,295,600,515),(10,10,600,285),(615,10,1180,265),(615,265,1180,495)]:
         page=PdfReader(pdf).pages[0];sx=float(page.mediabox.width)/1189;sy=float(page.mediabox.height)/594
         page.cropbox=RectangleObject([left*sx,(594-bottom)*sy,right*sx,(594-top)*sy]);writer.add_page(page)
-    with (ROOT/(NAME+'-schematic-details.pdf')).open('wb') as f:writer.write(f)
+    with (ROOT/'docs'/(NAME+'-schematic-details.pdf')).open('wb') as f:writer.write(f)
     for name,layers,mirror in [('top-copper','F.Cu,F.Silkscreen,Edge.Cuts',False),('bottom-copper','B.Cu,B.Silkscreen,Edge.Cuts',True),('ground-plane','In1.Cu,Edge.Cuts',False),('return-plane','In2.Cu,Edge.Cuts',False),('bottom-assembly','B.Fab,B.Silkscreen,Edge.Cuts',True)]:
         svg=review/(name+'.svg');run(['pcb','export','svg','--layers',layers,'--page-size-mode','2','--exclude-drawing-sheet','--mode-single',*(['--mirror'] if mirror else []),'-o',svg,pcb])
         cairosvg.svg2png(url=str(svg),write_to=str(review/(name+'.png')),output_width=6000,background_color='#ffffff')

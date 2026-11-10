@@ -1,40 +1,33 @@
 # Cleaver keyboard
 
-A keyboard for my best tantrum buddy Cleaver: 117 hot-swap MX keys with per-key RGB.
+A keyboard for my best tantrum buddy Cleaver: 117 hot-swap MX keys, with RGB and
+single-color lighting variants.
 
 ## Choose a hardware design
 
 | Design | Open in KiCad | Documentation |
 | --- | --- | --- |
-| **Module-based, revision 0.5** — top YD-RP2040, all factory components bottom SMD | [`kicad/Cleaver.kicad_pro`](kicad/Cleaver.kicad_pro) | [Design and assembly](kicad/README.md), [recorded validation](kicad/VALIDATION.md), [live sourcing review](kicad/references/COMPONENT-REVIEW.md) |
-| **Embedded RP2040, revision 0.2** — onboard processor/USB-C, underside SMD assembly | [`designs/embedded-rp2040/Cleaver-Embedded.kicad_pro`](designs/embedded-rp2040/Cleaver-Embedded.kicad_pro) | [Project documentation and status](designs/embedded-rp2040/README.md), [routing before/after](designs/embedded-rp2040/review/README.md) |
+| **Module RP2040 — rev0.5:** YD-RP2040 module, per-key RGB | [Cleaver.kicad_pro](designs/module-rp2040/Cleaver.kicad_pro) | [Design and assembly](designs/module-rp2040/README.md), [manufacturing](designs/module-rp2040/manufacturing/README.md) |
+| **Embedded RP2040 — embedded-0.2:** onboard RP2040 and USB-C, per-key RGB | [Cleaver-Embedded.kicad_pro](designs/embedded-rp2040/Cleaver-Embedded.kicad_pro) | [Design and status](designs/embedded-rp2040/README.md), [handoff](designs/embedded-rp2040/HANDOFF.md) |
+| **Single-color devboard — white-0.1:** YD-RP2040 module, white backlight | [Cleaver-White.kicad_pro](designs/single-color-devboard/Cleaver-White.kicad_pro) | [Design and status](designs/single-color-devboard/README.md), [manufacturing](designs/single-color-devboard/manufacturing/README.md) |
 
-The original module-based design keeps its existing paths and files. The embedded
-design is a separate KiCad project with its own libraries, firmware, generation
-tools, and validation results. Check each project's documentation for its actual
-completion and prototype status.
-
-Both PCBs now include **Taviana Tactical top-side silkscreen artwork**.
-See [placement previews, checks and updated fabrication ZIPs](artwork/taviana/README.md).
+Each design owns its KiCad libraries, firmware, generation tools, validation,
+and manufacturing files. Read its documentation for revision and prototype status.
 
 ## Repository layout
 
 ```text
-kicad/                         Original module-based electronics and firmware
-mechanical/                    Original revision 0.4 plate/case references
-manufacturing/rev0.5/          Current module-based manufacturing package
-scripts/                      Original design's generation/verification tools
-plate-2026-11-07T22_24_25.197Z/ Original layout input
-designs/embedded-rp2040/       New integrated-controller design
-tools/                        Repository-level utilities
+assets/                        Shared layout inputs and silkscreen artwork
+designs/
+  module-rp2040/               Original RGB module design, mechanics and releases
+  embedded-rp2040/             Integrated-controller RGB design
+  single-color-devboard/       Module-based white-backlight design
+docs/                          Repository organization and path migration guide
+tools/                         Cross-design utilities and repository checks
 ```
 
-The root `Cleaver-gerbers.zip` and loose Gerbers in `kicad/` are historical
-exports. The original design's revision-specific handoff is in
-[`manufacturing/rev0.5/`](manufacturing/rev0.5/), with its
-[component review](kicad/references/COMPONENT-REVIEW.md). Manufacturing and mechanical
-artifacts are design-specific; use the embedded project's own instructions for
-that board.
-
-See [`designs/README.md`](designs/README.md) for project boundaries and comparison
-with the historical original-design baseline.
+- [Design comparison](designs/README.md)
+- [Repository structure and file-placement conventions](docs/REPOSITORY.md)
+- [Original keyboard layout](assets/layout/README.md)
+- [Taviana artwork, previews and recorded checks](assets/artwork/taviana/README.md)
+- [Tools and verification commands](tools/README.md)

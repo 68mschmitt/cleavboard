@@ -27,7 +27,7 @@ def main():
     expected = {ref for ref, f in fps.items()
                 if any(p.IsOnLayer(pcbnew.B_Paste) for p in f.Pads())}
     cpl = rows('manufacturing/CPL-JLCPCB.csv')
-    bom = rows('BOM.csv')
+    bom = rows('manufacturing/BOM.csv')
     grouped = rows('manufacturing/BOM-JLCPCB.csv')
     assert len(expected) == len(cpl) == len(bom) == 476
     assert Counter(r['Designator'] for r in cpl) == Counter({r: 1 for r in expected})

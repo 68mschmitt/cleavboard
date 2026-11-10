@@ -41,10 +41,10 @@ from the BOM and placement files. The local footprint and generator retain it.
 |---|---|
 | Editable project, schematic, routed 4-layer board | `Cleaver-White.kicad_*` |
 | Self-contained symbols/footprints | `Cleaver-White.kicad_sym`, `Cleaver-White.pretty/`, local library tables |
-| Real KiCad schematic PDF | [Full sheet](Cleaver-White-schematic.pdf), [four readable detail pages](Cleaver-White-schematic-details.pdf) |
+| Real KiCad schematic PDF | [Full sheet](docs/Cleaver-White-schematic.pdf), [four readable detail pages](docs/Cleaver-White-schematic-details.pdf) |
 | Actual copper, including filled zones | [Bottom](review/bottom-copper.png), [top](review/top-copper.png), [controller detail](review/controller-bottom-detail.png), [key-cell detail](review/key-cells-bottom-detail.png) |
 | All-layer vector review | `review/*.svg` / `review/*.png` |
-| Exact purchasing BOM | [BOM.csv](BOM.csv), [sourcing evidence](references/SOURCES.md) |
+| Exact purchasing BOM | [BOM.csv](manufacturing/BOM.csv), [sourcing evidence](references/SOURCES.md) |
 | 476 bottom factory placements | `manufacturing/BOM-JLCPCB.csv`, `manufacturing/CPL-JLCPCB.csv` |
 | Gerbers/drills and prototype ZIP | `manufacturing/fabrication/`, `manufacturing/Cleaver-White-white-0.1-prototype.zip` |
 | Fresh ERC/DRC, parity, geometry assertions | [validation/validation.json](validation/validation.json) |
@@ -110,7 +110,7 @@ $PY -B designs/single-color-devboard/source/manifest.py
 The normal generator restores `source/complete.ses` and refills zones. It reads
 only files inside this project. `source/layout.json` freezes the original matrix
 and coordinates; `source/base-rev04.kicad_pcb` freezes original geometry/matrix
-copper. Neither the root scripts nor another design is regenerated.
+copper. Generation inputs and outputs stay within this design.
 
 `generate.py --placement` **resets the board's new routing** and is only for a
 deliberate routing restart. `fanout.py`, `route.py`, and `grid_route.cpp` record

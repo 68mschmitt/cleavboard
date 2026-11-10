@@ -1,5 +1,11 @@
 # Validation artifacts
 
+These are recorded run artifacts. `manifest.json` predates the later artwork
+changes and repository reorganization, so it retains historical paths and hashes.
+Use the [migration guide](../../../docs/REPOSITORY.md#recorded-evidence) to locate
+moved files; the artwork-era board hash is recorded in
+[`../manufacturing/taviana/manifest.json`](../manufacturing/taviana/manifest.json).
+
 Run `python3 -B source/check.py` from the project directory with KiCad 10's
 Python interpreter. It exports the schematic netlist, runs ERC and DRC with all
 configured severities, enables schematic parity and zone refill, then checks
@@ -16,7 +22,7 @@ pin declarations, retained geometry and the exposed-pad vias.
   firmware evidence, excluding editor lock/state files and the manifest itself.
   Refresh with `python3 -B source/manifest.py` after all other outputs are final.
 
-PDF review artifacts come directly from the schematic through
+PDF review artifacts in `docs/` come directly from the schematic through
 `source/export_pdf.py`; the controller PDF contains four focused detail pages.
 The script does not redraw or independently interpret the circuit.
 

@@ -1,62 +1,51 @@
-# Hardware design variants
+# Hardware designs
 
-## Original module-based design
+| Directory | Controller | Lighting | Revision |
+| --- | --- | --- | --- |
+| [module-rp2040](module-rp2040/README.md) | Top-mounted YD-RP2040 module | 117 addressable RGB LEDs; raw USB VBUS tap | 0.5 |
+| [embedded-rp2040](embedded-rp2040/README.md) | Onboard RP2040, flash and USB-C | 117 addressable RGB LEDs | embedded-0.2 |
+| [single-color-devboard](single-color-devboard/README.md) | Top-mounted YD-RP2040 module | 117 white LEDs; low-current module Vout supply | white-0.1 |
 
-Revision 0.5 remains at the repository's original paths:
+All three retain the 117-key physical layout. Each project's README records its
+electrical, mechanical, assembly and prototype status. Use the firmware and
+manufacturing package belonging to that design and revision.
 
-- [`../kicad/`](../kicad/): schematic, routed PCB, libraries, firmware, reports.
-- [`../mechanical/`](../mechanical/): plate, mounting references, fit models.
-- [`../manufacturing/`](../manufacturing/): manufacturing package and review.
-- [`../scripts/`](../scripts/): original generators and checks.
-- [`../plate-2026-11-07T22_24_25.197Z/`](../plate-2026-11-07T22_24_25.197Z/): original input layout.
+## Project structure
 
-These paths are retained because the original generators and mechanical/model
-references depend on them, and the existing KiCad project may already be open.
-The new design does not replace, regenerate, or relocate these files.
+Each directory contains its editable KiCad project and project-local symbol,
+footprint and 3D-model libraries. Supporting files use these directories:
 
-The original source baseline is commit
-`8b0f52aa4cf324d2eb17dd09f180e6ee596c49ad`. To compare all original tracked
-design files with that baseline, from any working directory run:
+- `source/`: generators, routing tools and design-specific checks.
+- `firmware/`: QMK/Vial source and associated build documentation.
+- `manufacturing/`: BOMs, placements, fabrication packages and release records.
+- `mechanical/`: plate/case/fit-model files, where supplied.
+- `docs/`: exported schematic PDFs, where supplied.
+- `references/`: datasheets, sourcing evidence and reference images.
+- `validation/`: recorded checks and manifests.
+- `routing/`, `review/`, `previews/`: routing archives and visual evidence, where supplied.
+
+The module design reads the shared [layout input](../assets/layout/README.md).
+The other variants keep their frozen baseline geometry/data in `source/`.
+Project-local libraries and their attribution files travel with their project.
+
+## Historical baseline
+
+The original pre-variant baseline is commit
+`8b0f52aa4cf324d2eb17dd09f180e6ee596c49ad`. Run this read-only comparison from
+the repository root:
 
 ```sh
-python3 /path/to/cleaver-keyboard/tools/verify_legacy.py
+python3 -B tools/verify_legacy.py
 ```
 
-The later [Taviana artwork addition](../artwork/taviana/README.md) intentionally
-updates both active boards and their artwork-generation support. The historical
-baseline comparison will therefore report those changes.
+The tool maps historical paths to their current locations. Later hardware,
+artwork, documentation and tooling changes are expected to differ from that
+baseline. Local editor state and the preserved nested `.history` repository
+are excluded. See the [path migration guide](../docs/REPOSITORY.md#path-migration).
 
-The module-based revision 0.5 additionally updates `kicad/` and its root tools
-for bottom-only factory SMT assembly, available HanElectricity sockets and an
-SMD bulk capacitor. Its current handoff is [`../manufacturing/rev0.5/`](../manufacturing/rev0.5/);
-see the [component review](../kicad/references/COMPONENT-REVIEW.md).
+## Adding a design
 
-The checker is read-only. It excludes the nested `kicad/.history` Git working
-tree, which already had local changes when the new variant was started, and
-transient KiCad editor lockfiles, which disappear when an editor closes. It
-does not delete or reset those changes. It also excludes the root README,
-which is now the navigation page for both designs.
-
-## Embedded RP2040 design
-
-[`embedded-rp2040/`](embedded-rp2040/) is an independent project named
-**Cleaver-Embedded**, currently **embedded-0.2**, with underside-only SMD assembly
-and cleaned-up routing. See the [before/after review](embedded-rp2040/review/README.md). Open
-[`Cleaver-Embedded.kicad_pro`](embedded-rp2040/Cleaver-Embedded.kicad_pro).
-
-Its circuit replaces the module with a directly mounted RP2040, flash, clock,
-regulator, USB-C interface, and programming/debug connections. The existing key
-layout and matrix are the starting point. Its README records the implemented
-features, build/check commands, mechanical implications, and validation status.
-
-Use the generation and verification tools inside that directory for this
-variant. The root `scripts/` tools continue to target the original module-based
-design. Each variant owns its firmware and manufacturing outputs; a shared
-physical key layout does not make their controller connections or fabrication
-packages interchangeable.
-
-## Additional variants
-
-Place further hardware variants in their own `designs/<name>/` directory, with
-a distinct KiCad project name, local libraries, firmware, and documentation.
-Keep output paths within the chosen variant and add a link to the root README.
+Create `designs/<descriptive-name>/` with a distinct KiCad project name and the
+supporting directories it needs. Keep generated outputs within that project,
+document reproduction commands and status, and add it to this index and the
+root README.

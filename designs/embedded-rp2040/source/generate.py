@@ -286,7 +286,8 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__);group=parser.add_mutually_exclusive_group(required=True);group.add_argument('--placement',action='store_true');group.add_argument('--route',type=Path);args=parser.parse_args()
     if args.route and args.route.resolve().parent!=ROOT/'routing':parser.error('Route must be inside this project routing/')
     libraries();project();ps=parts();nets=schematic(ps);board(ps,nets,args.route);(ROOT/'source/components.json').write_text(json.dumps(ps,indent=2)+'\n')
-    with (ROOT/'BOM.csv').open('w') as f:
+    (ROOT/'manufacturing').mkdir(exist_ok=True)
+    with (ROOT/'manufacturing/BOM.csv').open('w') as f:
         w=csv.writer(f);w.writerow(['reference','value_or_MPN','footprint','x_mm','y_mm','side'])
         for p in ps:w.writerow([p['ref'],p['value'],NAME+':'+FP.get(p['kind'],p['kind']),p['x'],p['y'],'B' if p['back'] or p['kind']=='MX' else 'F'])
     print('Generated',len(ps),'parts;', 'route imported' if args.route else 'PLACEMENT REQUIRES ROUTING')

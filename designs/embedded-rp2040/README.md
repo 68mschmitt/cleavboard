@@ -1,7 +1,7 @@
 # Cleaver-Embedded — embedded-0.2
 
 **Taviana Tactical artwork:** the active PCB includes a 34 mm-wide top-side logo.
-See [previews and logo-inclusive fabrication files](../../artwork/taviana/README.md).
+See [previews and logo-inclusive fabrication files](../../assets/artwork/taviana/README.md).
 
 Open **[Cleaver-Embedded.kicad_pro](Cleaver-Embedded.kicad_pro)** in KiCad 10.
 This is a separate, editable project with a bare RP2040 and on-board USB-C.
@@ -11,9 +11,10 @@ The original Cleaver project is not its output directory or a build dependency.
 copper regeneration passed. See [the final handoff](HANDOFF.md) for exact results,
 hashes, independent firmware evidence and remaining release blockers.
 
-- [Complete schematic PDF](Cleaver-Embedded-schematic.pdf)
-- [Controller/power schematic PDF](Cleaver-Embedded-controller.pdf), four focused review pages
-- [BOM](BOM.csv), [firmware](firmware/README.md), [validation results](validation/validation.json)
+- [Complete schematic PDF](docs/Cleaver-Embedded-schematic.pdf)
+- [Controller/power schematic PDF](docs/Cleaver-Embedded-controller.pdf), four focused review pages
+- [BOM](manufacturing/BOM.csv), [firmware](firmware/README.md), [validation results](validation/validation.json)
+- [Manufacturing export index](manufacturing/README.md)
 - [Independent default/Vial firmware build evidence](validation/firmware/README.md)
 
 **Prototype engineering design, not fabrication released.** Fresh ERC, DRC,
@@ -117,7 +118,7 @@ copy to make traces visible; the validated PCB retains filled zones.
 The 117 original **3.6×3.2 mm square LED openings** are deliberately preserved.
 The LED body is nominally 3.2×2.8 mm with ±0.1 mm tolerance. With ±0.2 mm routed
 slot tolerance and R0.4/R0.5 internal corners, extreme-fit combinations can fail.
-This is the issue recorded in the legacy `manufacturing/ORDER-REVIEW.md`; DRC does
+This is the issue recorded in the [module ordering review](../module-rp2040/manufacturing/ORDER-REVIEW.md); DRC does
 not verify it. Obtain a tolerance-qualified opening/tooling agreement and fit
 coupon before fabrication release. This project does not claim to fix it.
 
@@ -144,7 +145,7 @@ maintained separately and is not overwritten by PCB regeneration.
 PDF export alone:
 
 ```sh
-kicad-cli sch export pdf -o Cleaver-Embedded-schematic.pdf Cleaver-Embedded.kicad_sch
+kicad-cli sch export pdf -o docs/Cleaver-Embedded-schematic.pdf Cleaver-Embedded.kicad_sch
 ```
 
 `source/export_pdf.py` also makes four controller-only pages using `pypdf`: MCU
@@ -152,8 +153,7 @@ and decoupling, flash/clock/boot/reset, USB-C/ESD/regulator, and LED power/buffe
 schematic source is authoritative; PDF crops are review artifacts, not a second
 electrical design. `source/route.py`/`grid_route.cpp` are optional routing-development
 tools (Pillow required); the saved archive is the normal reproducible route.
-No script imports the legacy generator or writes to root `kicad/`, `scripts/`,
-`mechanical/` or `manufacturing/`.
+Generation inputs and outputs are contained within `designs/embedded-rp2040/`.
 
 ## Reference and license notes
 

@@ -1,7 +1,7 @@
 # Component and technical sources
 
 Reviewed for `white-0.1` on 2026-11-10. Inventory observations are dated snapshots,
-not reservations. Exact purchasing identities and quantities are in `../BOM.csv`.
+not reservations. Exact purchasing identities and quantities are in `../manufacturing/BOM.csv`.
 
 | Evidence | Source / local copy | Design consequence |
 |---|---|---|

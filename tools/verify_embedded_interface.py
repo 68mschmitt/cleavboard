@@ -42,7 +42,9 @@ def main():
     args = parser.parse_args()
     project = args.project.resolve()
     board = pcbnew.LoadBoard(str(project.with_suffix(".kicad_pcb")))
-    original = pcbnew.LoadBoard(str(ROOT / "kicad/Cleaver.kicad_pcb"))
+    # Compare inherited geometry with this variant's frozen input, not a newer
+    # module revision whose sockets and component-side metadata have evolved.
+    original = pcbnew.LoadBoard(str(project.parent / "source/legacy-base.kicad_pcb"))
     footprints = {fp.GetReference(): fp for fp in board.GetFootprints()}
     old_footprints = {fp.GetReference(): fp for fp in original.GetFootprints()}
 
@@ -51,7 +53,7 @@ def main():
     # the footprint's nominal side, to verify one-sided SMD assembly.
     top_smd = []
     top_paste = []
-    with (project.parent / "BOM.csv").open(newline="") as bom_file:
+    with (project.parent / "manufacturing/BOM.csv").open(newline="") as bom_file:
         bom = {row["reference"]: row for row in csv.DictReader(bom_file)}
     for ref, fp in footprints.items():
         for pad in fp.Pads():
