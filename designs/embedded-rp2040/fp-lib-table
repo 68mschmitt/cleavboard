@@ -1,0 +1,1 @@
+(fp_lib_table (lib (name "Cleaver-Embedded") (type "KiCad") (uri "${KIPRJMOD}/Cleaver-Embedded.pretty") (options "") (descr "Isolated local library")))

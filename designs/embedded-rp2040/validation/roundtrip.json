@@ -1,0 +1,13 @@
+{
+  "copper_geometry_equal": true,
+  "footprint_pad_geometry_and_nets_equal": true,
+  "outline_equal": true,
+  "before_copper_items": 5382,
+  "after_copper_items": 5382,
+  "missing_copper_items": 0,
+  "extra_copper_items": 0,
+  "before_sha256": "6db8359332d7e6f4ec19afbcd5ab7ad08761b20a2dbad15f66c07cf0cffec3ef",
+  "after_sha256": "7df049a1b58404fc65e2fb25e4e2a0dc903e9bba429da0daee80960eff07797a",
+  "archive_sha256": "9925027ffe039c121d3d0407ddae1b6017fc5db508592308a574c58fc80ec7f2",
+  "pass": true
+}

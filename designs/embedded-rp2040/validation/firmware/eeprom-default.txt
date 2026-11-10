@@ -1,0 +1,25 @@
+/tmp/opencode/cleaver-vial/.build/cleaver_embedded_default.elf:     file format elf32-littlearm
+
+
+Disassembly of section .vectors:
+
+Disassembly of section .text:
+
+10002a90 <backing_store_read_bulk>:
+10002a90:	b510      	push	{r4, lr}
+10002a92:	0052      	lsls	r2, r2, #1
+10002a94:	4c05      	ldr	r4, [pc, #20]	@ (10002aac <backing_store_read_bulk+0x1c>)
+10002a96:	1812      	adds	r2, r2, r0
+10002a98:	1a09      	subs	r1, r1, r0
+10002a9a:	4290      	cmp	r0, r2
+10002a9c:	d101      	bne.n	10002aa2 <backing_store_read_bulk+0x12>
+10002a9e:	2001      	movs	r0, #1
+10002aa0:	bd10      	pop	{r4, pc}
+10002aa2:	5b03      	ldrh	r3, [r0, r4]
+10002aa4:	43db      	mvns	r3, r3
+10002aa6:	520b      	strh	r3, [r1, r0]
+10002aa8:	3002      	adds	r0, #2
+10002aaa:	e7f6      	b.n	10002a9a <backing_store_read_bulk+0xa>
+10002aac:	103fe000 	.word	0x103fe000
+
+Disassembly of section .data:

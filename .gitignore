@@ -1,0 +1,6 @@
+# Local Python and KiCad state. Already tracked legacy files remain preserved.
+__pycache__/
+*.py[cod]
+*.kicad_prl
+~*.lck
+*-backups/

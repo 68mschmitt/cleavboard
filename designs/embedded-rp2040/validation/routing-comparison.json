@@ -1,0 +1,3242 @@
+{
+  "current": {
+    "pcb_sha256": "7df049a1b58404fc65e2fb25e4e2a0dc903e9bba429da0daee80960eff07797a",
+    "total": {
+      "segments": 4556,
+      "length_mm": 20324.962,
+      "non_45_segments": 203,
+      "sub_0_2mm_segments": 508,
+      "vias": 826,
+      "degree_two_bends": 2984,
+      "collinear_split_points": 128
+    },
+    "layers": {
+      "B.Cu": {
+        "segments": 3605,
+        "vias": 0,
+        "length_mm": 12354.313,
+        "non_45_segments": 181,
+        "sub_0_2mm_segments": 382
+      },
+      "F.Cu": {
+        "segments": 433,
+        "vias": 0,
+        "length_mm": 4294.468,
+        "non_45_segments": 11,
+        "sub_0_2mm_segments": 50
+      },
+      "In1.Cu": {
+        "segments": 112,
+        "vias": 0,
+        "length_mm": 320.503,
+        "non_45_segments": 0,
+        "sub_0_2mm_segments": 10
+      },
+      "In2.Cu": {
+        "segments": 406,
+        "vias": 0,
+        "length_mm": 3355.679,
+        "non_45_segments": 11,
+        "sub_0_2mm_segments": 66
+      }
+    },
+    "nets": {
+      "/1V1": {
+        "segments": 30,
+        "vias": 6,
+        "length_mm": 38.567
+      },
+      "/3V3": {
+        "segments": 85,
+        "vias": 12,
+        "length_mm": 92.474
+      },
+      "/BOOT_SW": {
+        "segments": 9,
+        "vias": 3,
+        "length_mm": 28.446
+      },
+      "/CC1": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 6.097
+      },
+      "/CC2": {
+        "segments": 6,
+        "vias": 2,
+        "length_mm": 5.419
+      },
+      "/COL00": {
+        "segments": 77,
+        "vias": 16,
+        "length_mm": 708.814
+      },
+      "/COL01": {
+        "segments": 82,
+        "vias": 17,
+        "length_mm": 691.437
+      },
+      "/COL02": {
+        "segments": 81,
+        "vias": 13,
+        "length_mm": 664.132
+      },
+      "/COL03": {
+        "segments": 75,
+        "vias": 16,
+        "length_mm": 681.442
+      },
+      "/COL04": {
+        "segments": 108,
+        "vias": 21,
+        "length_mm": 649.751
+      },
+      "/COL05": {
+        "segments": 67,
+        "vias": 14,
+        "length_mm": 506.389
+      },
+      "/COL06": {
+        "segments": 88,
+        "vias": 18,
+        "length_mm": 601.984
+      },
+      "/COL07": {
+        "segments": 63,
+        "vias": 15,
+        "length_mm": 571.393
+      },
+      "/COL08": {
+        "segments": 74,
+        "vias": 11,
+        "length_mm": 559.342
+      },
+      "/COL09": {
+        "segments": 74,
+        "vias": 14,
+        "length_mm": 521.554
+      },
+      "/COL10": {
+        "segments": 66,
+        "vias": 9,
+        "length_mm": 494.466
+      },
+      "/COL11": {
+        "segments": 51,
+        "vias": 12,
+        "length_mm": 543.274
+      },
+      "/COL12": {
+        "segments": 73,
+        "vias": 15,
+        "length_mm": 627.582
+      },
+      "/COL13": {
+        "segments": 74,
+        "vias": 18,
+        "length_mm": 643.739
+      },
+      "/COL14": {
+        "segments": 79,
+        "vias": 12,
+        "length_mm": 551.441
+      },
+      "/COL15": {
+        "segments": 76,
+        "vias": 13,
+        "length_mm": 599.683
+      },
+      "/CURRENT_LIMIT": {
+        "segments": 10,
+        "vias": 0,
+        "length_mm": 4.826
+      },
+      "/FUSED_5V": {
+        "segments": 23,
+        "vias": 4,
+        "length_mm": 16.232
+      },
+      "/GND": {
+        "segments": 457,
+        "vias": 161,
+        "length_mm": 774.749
+      },
+      "/KEY000": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY001": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 12.412
+      },
+      "/KEY002": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY003": {
+        "segments": 8,
+        "vias": 0,
+        "length_mm": 27.25
+      },
+      "/KEY004": {
+        "segments": 8,
+        "vias": 0,
+        "length_mm": 24.429
+      },
+      "/KEY005": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 12.381
+      },
+      "/KEY006": {
+        "segments": 6,
+        "vias": 2,
+        "length_mm": 12.658
+      },
+      "/KEY007": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 12.381
+      },
+      "/KEY008": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY009": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY010": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY011": {
+        "segments": 5,
+        "vias": 2,
+        "length_mm": 19.05
+      },
+      "/KEY012": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 12.909
+      },
+      "/KEY013": {
+        "segments": 5,
+        "vias": 2,
+        "length_mm": 12.581
+      },
+      "/KEY014": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY015": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY016": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY017": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY018": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY019": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY020": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY021": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY022": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY023": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY024": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY025": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY026": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY027": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY028": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY029": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY030": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY031": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 12.548
+      },
+      "/KEY032": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY033": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY034": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY035": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY036": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY037": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY038": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY039": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY040": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY041": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY042": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY043": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY044": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY045": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY046": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY047": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY048": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY049": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 12.381
+      },
+      "/KEY050": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY051": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY052": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY053": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY054": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY055": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY056": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 12.381
+      },
+      "/KEY057": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY058": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY059": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY060": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY061": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY062": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY063": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY064": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY065": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY066": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY067": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY068": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY069": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY070": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY071": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY072": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY073": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY074": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY075": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY076": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY077": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY078": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY079": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY080": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY081": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY082": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY083": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY084": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY085": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY086": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY087": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY088": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY089": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY090": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY091": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY092": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY093": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY094": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY095": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY096": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY097": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY098": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY099": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY100": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY101": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY102": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY103": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY104": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY105": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY106": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY107": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY108": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY109": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY110": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY111": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY112": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY113": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY114": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY115": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY116": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/LED_5V": {
+        "segments": 332,
+        "vias": 243,
+        "length_mm": 484.958
+      },
+      "/LED_EN": {
+        "segments": 30,
+        "vias": 5,
+        "length_mm": 87.472
+      },
+      "/QSPI_SCLK": {
+        "segments": 8,
+        "vias": 0,
+        "length_mm": 14.943
+      },
+      "/QSPI_SD0": {
+        "segments": 6,
+        "vias": 2,
+        "length_mm": 17.132
+      },
+      "/QSPI_SD1": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 5.051
+      },
+      "/QSPI_SD2": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 6.446
+      },
+      "/QSPI_SD3": {
+        "segments": 7,
+        "vias": 2,
+        "length_mm": 16.891
+      },
+      "/QSPI_SS": {
+        "segments": 10,
+        "vias": 2,
+        "length_mm": 21.024
+      },
+      "/RAW_USB_5V": {
+        "segments": 39,
+        "vias": 7,
+        "length_mm": 95.598
+      },
+      "/RGB_000": {
+        "segments": 13,
+        "vias": 2,
+        "length_mm": 15.89
+      },
+      "/RGB_001": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_002": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_003": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 19.883
+      },
+      "/RGB_004": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.07
+      },
+      "/RGB_005": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_006": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.07
+      },
+      "/RGB_007": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 24.879
+      },
+      "/RGB_008": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.056
+      },
+      "/RGB_009": {
+        "segments": 10,
+        "vias": 2,
+        "length_mm": 17.627
+      },
+      "/RGB_010": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_011": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 24.595
+      },
+      "/RGB_012": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.07
+      },
+      "/RGB_013": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.07
+      },
+      "/RGB_014": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.033
+      },
+      "/RGB_015": {
+        "segments": 7,
+        "vias": 2,
+        "length_mm": 34.093
+      },
+      "/RGB_016": {
+        "segments": 13,
+        "vias": 0,
+        "length_mm": 34.886
+      },
+      "/RGB_017": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 33.989
+      },
+      "/RGB_018": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.178
+      },
+      "/RGB_019": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.271
+      },
+      "/RGB_020": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.208
+      },
+      "/RGB_021": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.246
+      },
+      "/RGB_022": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.212
+      },
+      "/RGB_023": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.246
+      },
+      "/RGB_024": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.229
+      },
+      "/RGB_025": {
+        "segments": 9,
+        "vias": 2,
+        "length_mm": 31.409
+      },
+      "/RGB_026": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.229
+      },
+      "/RGB_027": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.255
+      },
+      "/RGB_028": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.208
+      },
+      "/RGB_029": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.264
+      },
+      "/RGB_030": {
+        "segments": 9,
+        "vias": 2,
+        "length_mm": 39.738
+      },
+      "/RGB_031": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 43.558
+      },
+      "/RGB_032": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.249
+      },
+      "/RGB_033": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.237
+      },
+      "/RGB_034": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 33.988
+      },
+      "/RGB_035": {
+        "segments": 9,
+        "vias": 0,
+        "length_mm": 29.226
+      },
+      "/RGB_036": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.247
+      },
+      "/RGB_037": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.215
+      },
+      "/RGB_038": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 33.592
+      },
+      "/RGB_039": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 21.218
+      },
+      "/RGB_040": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.07
+      },
+      "/RGB_041": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_042": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 19.805
+      },
+      "/RGB_043": {
+        "segments": 9,
+        "vias": 2,
+        "length_mm": 15.503
+      },
+      "/RGB_044": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_045": {
+        "segments": 7,
+        "vias": 2,
+        "length_mm": 24.316
+      },
+      "/RGB_046": {
+        "segments": 7,
+        "vias": 2,
+        "length_mm": 19.781
+      },
+      "/RGB_047": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_048": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_049": {
+        "segments": 8,
+        "vias": 2,
+        "length_mm": 15.024
+      },
+      "/RGB_050": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.034
+      },
+      "/RGB_051": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_052": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.034
+      },
+      "/RGB_053": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_054": {
+        "segments": 5,
+        "vias": 2,
+        "length_mm": 18.312
+      },
+      "/RGB_055": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.027
+      },
+      "/RGB_056": {
+        "segments": 5,
+        "vias": 2,
+        "length_mm": 19.283
+      },
+      "/RGB_057": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.07
+      },
+      "/RGB_058": {
+        "segments": 8,
+        "vias": 2,
+        "length_mm": 19.8
+      },
+      "/RGB_059": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 24.555
+      },
+      "/RGB_060": {
+        "segments": 9,
+        "vias": 2,
+        "length_mm": 20.098
+      },
+      "/RGB_061": {
+        "segments": 15,
+        "vias": 2,
+        "length_mm": 41.175
+      },
+      "/RGB_062": {
+        "segments": 9,
+        "vias": 2,
+        "length_mm": 37.118
+      },
+      "/RGB_063": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.209
+      },
+      "/RGB_064": {
+        "segments": 9,
+        "vias": 0,
+        "length_mm": 34.311
+      },
+      "/RGB_065": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.217
+      },
+      "/RGB_066": {
+        "segments": 9,
+        "vias": 0,
+        "length_mm": 34.461
+      },
+      "/RGB_067": {
+        "segments": 8,
+        "vias": 0,
+        "length_mm": 34.258
+      },
+      "/RGB_068": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.217
+      },
+      "/RGB_069": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.246
+      },
+      "/RGB_070": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.234
+      },
+      "/RGB_071": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.241
+      },
+      "/RGB_072": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.254
+      },
+      "/RGB_073": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 41.128
+      },
+      "/RGB_074": {
+        "segments": 8,
+        "vias": 2,
+        "length_mm": 107.992
+      },
+      "/RGB_075": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.227
+      },
+      "/RGB_076": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.227
+      },
+      "/RGB_077": {
+        "segments": 9,
+        "vias": 0,
+        "length_mm": 49.964
+      },
+      "/RGB_078": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 21.219
+      },
+      "/RGB_079": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_080": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_081": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 19.797
+      },
+      "/RGB_082": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.07
+      },
+      "/RGB_083": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_084": {
+        "segments": 6,
+        "vias": 2,
+        "length_mm": 36.089
+      },
+      "/RGB_085": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 31.699
+      },
+      "/RGB_086": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.07
+      },
+      "/RGB_087": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.07
+      },
+      "/RGB_088": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_089": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.07
+      },
+      "/RGB_090": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_091": {
+        "segments": 6,
+        "vias": 2,
+        "length_mm": 17.298
+      },
+      "/RGB_092": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.07
+      },
+      "/RGB_093": {
+        "segments": 5,
+        "vias": 2,
+        "length_mm": 18.308
+      },
+      "/RGB_094": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.031
+      },
+      "/RGB_095": {
+        "segments": 6,
+        "vias": 2,
+        "length_mm": 30.148
+      },
+      "/RGB_096": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 31.699
+      },
+      "/RGB_097": {
+        "segments": 13,
+        "vias": 2,
+        "length_mm": 20.098
+      },
+      "/RGB_098": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 36.384
+      },
+      "/RGB_099": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 34.027
+      },
+      "/RGB_100": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 34.002
+      },
+      "/RGB_101": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 81.654
+      },
+      "/RGB_102": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 81.597
+      },
+      "/RGB_103": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 33.962
+      },
+      "/RGB_104": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 33.982
+      },
+      "/RGB_105": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 34.014
+      },
+      "/RGB_106": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 36.403
+      },
+      "/RGB_107": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.254
+      },
+      "/RGB_108": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.262
+      },
+      "/RGB_109": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 43.529
+      },
+      "/RGB_110": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 38.746
+      },
+      "/RGB_111": {
+        "segments": 10,
+        "vias": 0,
+        "length_mm": 107.131
+      },
+      "/RGB_112": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_113": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_114": {
+        "segments": 7,
+        "vias": 2,
+        "length_mm": 104.646
+      },
+      "/RGB_115": {
+        "segments": 5,
+        "vias": 2,
+        "length_mm": 19.99
+      },
+      "/RGB_116": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_BUFFERED": {
+        "segments": 24,
+        "vias": 3,
+        "length_mm": 36.784
+      },
+      "/RGB_DATA": {
+        "segments": 24,
+        "vias": 5,
+        "length_mm": 69.311
+      },
+      "/ROW0": {
+        "segments": 99,
+        "vias": 9,
+        "length_mm": 521.593
+      },
+      "/ROW1": {
+        "segments": 133,
+        "vias": 6,
+        "length_mm": 507.522
+      },
+      "/ROW2": {
+        "segments": 119,
+        "vias": 8,
+        "length_mm": 528.405
+      },
+      "/ROW3": {
+        "segments": 130,
+        "vias": 12,
+        "length_mm": 542.093
+      },
+      "/ROW4": {
+        "segments": 153,
+        "vias": 14,
+        "length_mm": 549.543
+      },
+      "/ROW5": {
+        "segments": 126,
+        "vias": 6,
+        "length_mm": 475.426
+      },
+      "/ROW6": {
+        "segments": 136,
+        "vias": 10,
+        "length_mm": 616.577
+      },
+      "/ROW7": {
+        "segments": 45,
+        "vias": 5,
+        "length_mm": 350.694
+      },
+      "/RUN": {
+        "segments": 23,
+        "vias": 5,
+        "length_mm": 50.081
+      },
+      "/SWCLK": {
+        "segments": 14,
+        "vias": 4,
+        "length_mm": 35.786
+      },
+      "/SWDIO": {
+        "segments": 10,
+        "vias": 4,
+        "length_mm": 22.146
+      },
+      "/USB_DM": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 1.374
+      },
+      "/USB_DP": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 1.374
+      },
+      "/USB_N": {
+        "segments": 16,
+        "vias": 0,
+        "length_mm": 15.908
+      },
+      "/USB_P": {
+        "segments": 15,
+        "vias": 0,
+        "length_mm": 16.201
+      },
+      "/XIN": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 5.659
+      },
+      "/XOUT": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 3.804
+      },
+      "/XTAL_OUT": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 5.481
+      }
+    },
+    "assembly": {
+      "bottom_smd_component_count": 515,
+      "top_smd_pads": [],
+      "top_paste_pads": []
+    },
+    "unmeasured_copper_types": {}
+  },
+  "baseline": {
+    "pcb_sha256": "a222b0e8a8911399a4cd30bc16992ea87cae2091e06ffe0e8048d5d89aede28a",
+    "total": {
+      "segments": 9693,
+      "length_mm": 20197.98,
+      "non_45_segments": 217,
+      "sub_0_2mm_segments": 4906,
+      "vias": 874,
+      "degree_two_bends": 8111,
+      "collinear_split_points": 108
+    },
+    "layers": {
+      "B.Cu": {
+        "segments": 4817,
+        "vias": 0,
+        "length_mm": 12174.205,
+        "non_45_segments": 190,
+        "sub_0_2mm_segments": 1579
+      },
+      "F.Cu": {
+        "segments": 1488,
+        "vias": 0,
+        "length_mm": 4289.44,
+        "non_45_segments": 13,
+        "sub_0_2mm_segments": 741
+      },
+      "In1.Cu": {
+        "segments": 1401,
+        "vias": 0,
+        "length_mm": 184.659,
+        "non_45_segments": 0,
+        "sub_0_2mm_segments": 1260
+      },
+      "In2.Cu": {
+        "segments": 1987,
+        "vias": 0,
+        "length_mm": 3549.675,
+        "non_45_segments": 14,
+        "sub_0_2mm_segments": 1326
+      }
+    },
+    "nets": {
+      "/1V1": {
+        "segments": 247,
+        "vias": 10,
+        "length_mm": 57.453
+      },
+      "/3V3": {
+        "segments": 356,
+        "vias": 19,
+        "length_mm": 109.304
+      },
+      "/BOOT_SW": {
+        "segments": 37,
+        "vias": 2,
+        "length_mm": 29.668
+      },
+      "/CC1": {
+        "segments": 34,
+        "vias": 2,
+        "length_mm": 9.888
+      },
+      "/CC2": {
+        "segments": 25,
+        "vias": 2,
+        "length_mm": 10.854
+      },
+      "/COL00": {
+        "segments": 139,
+        "vias": 14,
+        "length_mm": 712.753
+      },
+      "/COL01": {
+        "segments": 140,
+        "vias": 13,
+        "length_mm": 667.071
+      },
+      "/COL02": {
+        "segments": 447,
+        "vias": 10,
+        "length_mm": 658.572
+      },
+      "/COL03": {
+        "segments": 241,
+        "vias": 15,
+        "length_mm": 690.835
+      },
+      "/COL04": {
+        "segments": 365,
+        "vias": 21,
+        "length_mm": 657.814
+      },
+      "/COL05": {
+        "segments": 457,
+        "vias": 12,
+        "length_mm": 508.734
+      },
+      "/COL06": {
+        "segments": 313,
+        "vias": 17,
+        "length_mm": 607.953
+      },
+      "/COL07": {
+        "segments": 112,
+        "vias": 11,
+        "length_mm": 561.583
+      },
+      "/COL08": {
+        "segments": 135,
+        "vias": 12,
+        "length_mm": 546.059
+      },
+      "/COL09": {
+        "segments": 141,
+        "vias": 14,
+        "length_mm": 506.281
+      },
+      "/COL10": {
+        "segments": 94,
+        "vias": 8,
+        "length_mm": 483.261
+      },
+      "/COL11": {
+        "segments": 99,
+        "vias": 13,
+        "length_mm": 529.324
+      },
+      "/COL12": {
+        "segments": 87,
+        "vias": 13,
+        "length_mm": 610.323
+      },
+      "/COL13": {
+        "segments": 92,
+        "vias": 14,
+        "length_mm": 624.81
+      },
+      "/COL14": {
+        "segments": 193,
+        "vias": 15,
+        "length_mm": 538.928
+      },
+      "/COL15": {
+        "segments": 125,
+        "vias": 11,
+        "length_mm": 583.408
+      },
+      "/CURRENT_LIMIT": {
+        "segments": 10,
+        "vias": 0,
+        "length_mm": 4.826
+      },
+      "/FUSED_5V": {
+        "segments": 25,
+        "vias": 4,
+        "length_mm": 16.232
+      },
+      "/GND": {
+        "segments": 561,
+        "vias": 210,
+        "length_mm": 770.612
+      },
+      "/KEY000": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY001": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 12.412
+      },
+      "/KEY002": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY003": {
+        "segments": 8,
+        "vias": 0,
+        "length_mm": 27.25
+      },
+      "/KEY004": {
+        "segments": 8,
+        "vias": 0,
+        "length_mm": 24.429
+      },
+      "/KEY005": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 12.381
+      },
+      "/KEY006": {
+        "segments": 6,
+        "vias": 2,
+        "length_mm": 12.658
+      },
+      "/KEY007": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 12.381
+      },
+      "/KEY008": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY009": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY010": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY011": {
+        "segments": 5,
+        "vias": 2,
+        "length_mm": 19.05
+      },
+      "/KEY012": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 12.909
+      },
+      "/KEY013": {
+        "segments": 5,
+        "vias": 2,
+        "length_mm": 12.581
+      },
+      "/KEY014": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY015": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY016": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY017": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY018": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY019": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY020": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY021": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY022": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY023": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY024": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY025": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY026": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY027": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY028": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY029": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY030": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY031": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 12.548
+      },
+      "/KEY032": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY033": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY034": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY035": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY036": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY037": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY038": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY039": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY040": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY041": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY042": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY043": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY044": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY045": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY046": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY047": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY048": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY049": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 12.381
+      },
+      "/KEY050": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY051": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY052": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY053": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY054": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY055": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY056": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 12.381
+      },
+      "/KEY057": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY058": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY059": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY060": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY061": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY062": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY063": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY064": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY065": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY066": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY067": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY068": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY069": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY070": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY071": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY072": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY073": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY074": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY075": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY076": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY077": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY078": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY079": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY080": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY081": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY082": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY083": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY084": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY085": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY086": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY087": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY088": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY089": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY090": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY091": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY092": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY093": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY094": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY095": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY096": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY097": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY098": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY099": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY100": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY101": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY102": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY103": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY104": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY105": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY106": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY107": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY108": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY109": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY110": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY111": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY112": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY113": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY114": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY115": {
+        "segments": 4,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/KEY116": {
+        "segments": 3,
+        "vias": 0,
+        "length_mm": 11.472
+      },
+      "/LED_5V": {
+        "segments": 332,
+        "vias": 243,
+        "length_mm": 484.958
+      },
+      "/LED_EN": {
+        "segments": 115,
+        "vias": 5,
+        "length_mm": 72.374
+      },
+      "/QSPI_SCLK": {
+        "segments": 77,
+        "vias": 2,
+        "length_mm": 14.933
+      },
+      "/QSPI_SD0": {
+        "segments": 66,
+        "vias": 2,
+        "length_mm": 14.152
+      },
+      "/QSPI_SD1": {
+        "segments": 15,
+        "vias": 0,
+        "length_mm": 9.139
+      },
+      "/QSPI_SD2": {
+        "segments": 23,
+        "vias": 2,
+        "length_mm": 11.814
+      },
+      "/QSPI_SD3": {
+        "segments": 87,
+        "vias": 2,
+        "length_mm": 16.849
+      },
+      "/QSPI_SS": {
+        "segments": 48,
+        "vias": 2,
+        "length_mm": 12.337
+      },
+      "/RAW_USB_5V": {
+        "segments": 164,
+        "vias": 3,
+        "length_mm": 90.063
+      },
+      "/RGB_000": {
+        "segments": 13,
+        "vias": 2,
+        "length_mm": 15.89
+      },
+      "/RGB_001": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_002": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_003": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 19.883
+      },
+      "/RGB_004": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.07
+      },
+      "/RGB_005": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_006": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.07
+      },
+      "/RGB_007": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 24.879
+      },
+      "/RGB_008": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.056
+      },
+      "/RGB_009": {
+        "segments": 10,
+        "vias": 2,
+        "length_mm": 17.627
+      },
+      "/RGB_010": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_011": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 24.595
+      },
+      "/RGB_012": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.07
+      },
+      "/RGB_013": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.07
+      },
+      "/RGB_014": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.033
+      },
+      "/RGB_015": {
+        "segments": 7,
+        "vias": 2,
+        "length_mm": 34.093
+      },
+      "/RGB_016": {
+        "segments": 13,
+        "vias": 0,
+        "length_mm": 34.886
+      },
+      "/RGB_017": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 33.989
+      },
+      "/RGB_018": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.178
+      },
+      "/RGB_019": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.271
+      },
+      "/RGB_020": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.208
+      },
+      "/RGB_021": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.246
+      },
+      "/RGB_022": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.212
+      },
+      "/RGB_023": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.246
+      },
+      "/RGB_024": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.229
+      },
+      "/RGB_025": {
+        "segments": 9,
+        "vias": 2,
+        "length_mm": 31.409
+      },
+      "/RGB_026": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.229
+      },
+      "/RGB_027": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.255
+      },
+      "/RGB_028": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.208
+      },
+      "/RGB_029": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.264
+      },
+      "/RGB_030": {
+        "segments": 9,
+        "vias": 2,
+        "length_mm": 39.738
+      },
+      "/RGB_031": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 43.558
+      },
+      "/RGB_032": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.249
+      },
+      "/RGB_033": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.237
+      },
+      "/RGB_034": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 33.988
+      },
+      "/RGB_035": {
+        "segments": 9,
+        "vias": 0,
+        "length_mm": 29.226
+      },
+      "/RGB_036": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.247
+      },
+      "/RGB_037": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.215
+      },
+      "/RGB_038": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 33.592
+      },
+      "/RGB_039": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 21.218
+      },
+      "/RGB_040": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.07
+      },
+      "/RGB_041": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_042": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 19.805
+      },
+      "/RGB_043": {
+        "segments": 9,
+        "vias": 2,
+        "length_mm": 15.503
+      },
+      "/RGB_044": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_045": {
+        "segments": 7,
+        "vias": 2,
+        "length_mm": 24.316
+      },
+      "/RGB_046": {
+        "segments": 7,
+        "vias": 2,
+        "length_mm": 19.781
+      },
+      "/RGB_047": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_048": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_049": {
+        "segments": 8,
+        "vias": 2,
+        "length_mm": 15.024
+      },
+      "/RGB_050": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.034
+      },
+      "/RGB_051": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_052": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.034
+      },
+      "/RGB_053": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_054": {
+        "segments": 5,
+        "vias": 2,
+        "length_mm": 18.312
+      },
+      "/RGB_055": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.027
+      },
+      "/RGB_056": {
+        "segments": 5,
+        "vias": 2,
+        "length_mm": 19.283
+      },
+      "/RGB_057": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.07
+      },
+      "/RGB_058": {
+        "segments": 8,
+        "vias": 2,
+        "length_mm": 19.8
+      },
+      "/RGB_059": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 24.555
+      },
+      "/RGB_060": {
+        "segments": 9,
+        "vias": 2,
+        "length_mm": 20.098
+      },
+      "/RGB_061": {
+        "segments": 15,
+        "vias": 2,
+        "length_mm": 41.175
+      },
+      "/RGB_062": {
+        "segments": 9,
+        "vias": 2,
+        "length_mm": 37.118
+      },
+      "/RGB_063": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.209
+      },
+      "/RGB_064": {
+        "segments": 9,
+        "vias": 0,
+        "length_mm": 34.311
+      },
+      "/RGB_065": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.217
+      },
+      "/RGB_066": {
+        "segments": 9,
+        "vias": 0,
+        "length_mm": 34.461
+      },
+      "/RGB_067": {
+        "segments": 9,
+        "vias": 0,
+        "length_mm": 34.626
+      },
+      "/RGB_068": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.217
+      },
+      "/RGB_069": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.246
+      },
+      "/RGB_070": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.234
+      },
+      "/RGB_071": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.241
+      },
+      "/RGB_072": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.254
+      },
+      "/RGB_073": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 41.128
+      },
+      "/RGB_074": {
+        "segments": 8,
+        "vias": 2,
+        "length_mm": 107.992
+      },
+      "/RGB_075": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.227
+      },
+      "/RGB_076": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.227
+      },
+      "/RGB_077": {
+        "segments": 9,
+        "vias": 0,
+        "length_mm": 49.964
+      },
+      "/RGB_078": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 21.219
+      },
+      "/RGB_079": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_080": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_081": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 19.797
+      },
+      "/RGB_082": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.07
+      },
+      "/RGB_083": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_084": {
+        "segments": 6,
+        "vias": 2,
+        "length_mm": 36.089
+      },
+      "/RGB_085": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 31.699
+      },
+      "/RGB_086": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.07
+      },
+      "/RGB_087": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.07
+      },
+      "/RGB_088": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_089": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.07
+      },
+      "/RGB_090": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_091": {
+        "segments": 6,
+        "vias": 2,
+        "length_mm": 17.298
+      },
+      "/RGB_092": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.07
+      },
+      "/RGB_093": {
+        "segments": 5,
+        "vias": 2,
+        "length_mm": 18.308
+      },
+      "/RGB_094": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.031
+      },
+      "/RGB_095": {
+        "segments": 6,
+        "vias": 2,
+        "length_mm": 30.148
+      },
+      "/RGB_096": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 31.699
+      },
+      "/RGB_097": {
+        "segments": 16,
+        "vias": 2,
+        "length_mm": 20.098
+      },
+      "/RGB_098": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 36.384
+      },
+      "/RGB_099": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 34.027
+      },
+      "/RGB_100": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 34.002
+      },
+      "/RGB_101": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 81.654
+      },
+      "/RGB_102": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 81.597
+      },
+      "/RGB_103": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 33.962
+      },
+      "/RGB_104": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 33.982
+      },
+      "/RGB_105": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 34.014
+      },
+      "/RGB_106": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 36.403
+      },
+      "/RGB_107": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.254
+      },
+      "/RGB_108": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 29.262
+      },
+      "/RGB_109": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 43.529
+      },
+      "/RGB_110": {
+        "segments": 7,
+        "vias": 0,
+        "length_mm": 38.746
+      },
+      "/RGB_111": {
+        "segments": 10,
+        "vias": 0,
+        "length_mm": 107.131
+      },
+      "/RGB_112": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_113": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_114": {
+        "segments": 7,
+        "vias": 2,
+        "length_mm": 104.646
+      },
+      "/RGB_115": {
+        "segments": 5,
+        "vias": 2,
+        "length_mm": 19.99
+      },
+      "/RGB_116": {
+        "segments": 5,
+        "vias": 0,
+        "length_mm": 15.035
+      },
+      "/RGB_BUFFERED": {
+        "segments": 26,
+        "vias": 3,
+        "length_mm": 36.784
+      },
+      "/RGB_DATA": {
+        "segments": 114,
+        "vias": 5,
+        "length_mm": 70.365
+      },
+      "/ROW0": {
+        "segments": 496,
+        "vias": 10,
+        "length_mm": 504.616
+      },
+      "/ROW1": {
+        "segments": 621,
+        "vias": 6,
+        "length_mm": 496.069
+      },
+      "/ROW2": {
+        "segments": 259,
+        "vias": 11,
+        "length_mm": 538.252
+      },
+      "/ROW3": {
+        "segments": 195,
+        "vias": 11,
+        "length_mm": 551.029
+      },
+      "/ROW4": {
+        "segments": 169,
+        "vias": 13,
+        "length_mm": 549.218
+      },
+      "/ROW5": {
+        "segments": 206,
+        "vias": 4,
+        "length_mm": 485.298
+      },
+      "/ROW6": {
+        "segments": 171,
+        "vias": 9,
+        "length_mm": 622.288
+      },
+      "/ROW7": {
+        "segments": 189,
+        "vias": 6,
+        "length_mm": 346.933
+      },
+      "/RUN": {
+        "segments": 104,
+        "vias": 4,
+        "length_mm": 34.573
+      },
+      "/SWCLK": {
+        "segments": 144,
+        "vias": 3,
+        "length_mm": 14.727
+      },
+      "/SWDIO": {
+        "segments": 34,
+        "vias": 1,
+        "length_mm": 11.778
+      },
+      "/USB_DM": {
+        "segments": 23,
+        "vias": 0,
+        "length_mm": 2.164
+      },
+      "/USB_DP": {
+        "segments": 11,
+        "vias": 0,
+        "length_mm": 1.716
+      },
+      "/USB_N": {
+        "segments": 52,
+        "vias": 5,
+        "length_mm": 23.899
+      },
+      "/USB_P": {
+        "segments": 46,
+        "vias": 4,
+        "length_mm": 26.393
+      },
+      "/XIN": {
+        "segments": 166,
+        "vias": 2,
+        "length_mm": 12.297
+      },
+      "/XOUT": {
+        "segments": 16,
+        "vias": 0,
+        "length_mm": 3.213
+      },
+      "/XTAL_OUT": {
+        "segments": 48,
+        "vias": 2,
+        "length_mm": 6.384
+      }
+    },
+    "assembly": {
+      "bottom_smd_component_count": 493,
+      "top_smd_pads": [
+        "BTN1.1",
+        "BTN1.2",
+        "BTN2.1",
+        "BTN2.2",
+        "C10.1",
+        "C10.2",
+        "C11.1",
+        "C11.2",
+        "C12.1",
+        "C12.2",
+        "C13.1",
+        "C13.2",
+        "C14.1",
+        "C14.2",
+        "C15.1",
+        "C15.2",
+        "J1.A1",
+        "J1.A12",
+        "J1.A4",
+        "J1.A5",
+        "J1.A6",
+        "J1.A7",
+        "J1.A8",
+        "J1.A9",
+        "J1.B1",
+        "J1.B12",
+        "J1.B4",
+        "J1.B5",
+        "J1.B6",
+        "J1.B7",
+        "J1.B8",
+        "J1.B9",
+        "R10.1",
+        "R10.2",
+        "R11.1",
+        "R11.2",
+        "R12.1",
+        "R12.2",
+        "R13.1",
+        "R13.2",
+        "R14.1",
+        "R14.2",
+        "R15.1",
+        "R15.2",
+        "R16.1",
+        "R16.2",
+        "R17.1",
+        "R17.2",
+        "U1.1",
+        "U1.10",
+        "U1.11",
+        "U1.12",
+        "U1.13",
+        "U1.14",
+        "U1.15",
+        "U1.16",
+        "U1.17",
+        "U1.18",
+        "U1.19",
+        "U1.2",
+        "U1.20",
+        "U1.21",
+        "U1.22",
+        "U1.23",
+        "U1.24",
+        "U1.25",
+        "U1.26",
+        "U1.27",
+        "U1.28",
+        "U1.29",
+        "U1.3",
+        "U1.30",
+        "U1.31",
+        "U1.32",
+        "U1.33",
+        "U1.34",
+        "U1.35",
+        "U1.36",
+        "U1.37",
+        "U1.38",
+        "U1.39",
+        "U1.4",
+        "U1.40",
+        "U1.41",
+        "U1.42",
+        "U1.43",
+        "U1.44",
+        "U1.45",
+        "U1.46",
+        "U1.47",
+        "U1.48",
+        "U1.49",
+        "U1.5",
+        "U1.50",
+        "U1.51",
+        "U1.52",
+        "U1.53",
+        "U1.54",
+        "U1.55",
+        "U1.56",
+        "U1.57",
+        "U1.6",
+        "U1.7",
+        "U1.8",
+        "U1.9",
+        "U4.1",
+        "U4.2",
+        "U4.3",
+        "U4.4",
+        "U4.5",
+        "U4.6",
+        "U4.7",
+        "U4.8",
+        "U5.1",
+        "U5.2",
+        "U5.3",
+        "U5.4",
+        "U5.5",
+        "U6.1",
+        "U6.2",
+        "U6.3",
+        "U6.4",
+        "U6.5",
+        "U6.6",
+        "Y1.1",
+        "Y1.2",
+        "Y1.3",
+        "Y1.4"
+      ],
+      "top_paste_pads": [
+        "BTN1.1",
+        "BTN1.2",
+        "BTN2.1",
+        "BTN2.2",
+        "C10.1",
+        "C10.2",
+        "C11.1",
+        "C11.2",
+        "C12.1",
+        "C12.2",
+        "C13.1",
+        "C13.2",
+        "C14.1",
+        "C14.2",
+        "C15.1",
+        "C15.2",
+        "J1.A1",
+        "J1.A12",
+        "J1.A4",
+        "J1.A5",
+        "J1.A6",
+        "J1.A7",
+        "J1.A8",
+        "J1.A9",
+        "J1.B1",
+        "J1.B12",
+        "J1.B4",
+        "J1.B5",
+        "J1.B6",
+        "J1.B7",
+        "J1.B8",
+        "J1.B9",
+        "R10.1",
+        "R10.2",
+        "R11.1",
+        "R11.2",
+        "R12.1",
+        "R12.2",
+        "R13.1",
+        "R13.2",
+        "R14.1",
+        "R14.2",
+        "R15.1",
+        "R15.2",
+        "R16.1",
+        "R16.2",
+        "R17.1",
+        "R17.2",
+        "U1.",
+        "U1.",
+        "U1.",
+        "U1.",
+        "U1.1",
+        "U1.10",
+        "U1.11",
+        "U1.12",
+        "U1.13",
+        "U1.14",
+        "U1.15",
+        "U1.16",
+        "U1.17",
+        "U1.18",
+        "U1.19",
+        "U1.2",
+        "U1.20",
+        "U1.21",
+        "U1.22",
+        "U1.23",
+        "U1.24",
+        "U1.25",
+        "U1.26",
+        "U1.27",
+        "U1.28",
+        "U1.29",
+        "U1.3",
+        "U1.30",
+        "U1.31",
+        "U1.32",
+        "U1.33",
+        "U1.34",
+        "U1.35",
+        "U1.36",
+        "U1.37",
+        "U1.38",
+        "U1.39",
+        "U1.4",
+        "U1.40",
+        "U1.41",
+        "U1.42",
+        "U1.43",
+        "U1.44",
+        "U1.45",
+        "U1.46",
+        "U1.47",
+        "U1.48",
+        "U1.49",
+        "U1.5",
+        "U1.50",
+        "U1.51",
+        "U1.52",
+        "U1.53",
+        "U1.54",
+        "U1.55",
+        "U1.56",
+        "U1.6",
+        "U1.7",
+        "U1.8",
+        "U1.9",
+        "U4.1",
+        "U4.2",
+        "U4.3",
+        "U4.4",
+        "U4.5",
+        "U4.6",
+        "U4.7",
+        "U4.8",
+        "U5.1",
+        "U5.2",
+        "U5.3",
+        "U5.4",
+        "U5.5",
+        "U6.1",
+        "U6.2",
+        "U6.3",
+        "U6.4",
+        "U6.5",
+        "U6.6",
+        "Y1.1",
+        "Y1.2",
+        "Y1.3",
+        "Y1.4"
+      ]
+    },
+    "unmeasured_copper_types": {}
+  },
+  "delta": {
+    "segments": -5137,
+    "length_mm": 126.982,
+    "non_45_segments": -14,
+    "sub_0_2mm_segments": -4398,
+    "vias": -48,
+    "degree_two_bends": -5127,
+    "collinear_split_points": 20
+  }
+}

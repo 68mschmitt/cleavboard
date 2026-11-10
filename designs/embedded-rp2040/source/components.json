@@ -1,0 +1,7129 @@
+[
+  {
+    "ref": "SW001",
+    "kind": "MX",
+    "value": "Esc",
+    "x": 33.3375,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY000"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D001",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 33.3375,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL00",
+      "2": "KEY000"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED001",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 33.3375,
+    "y": 14.605,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_016",
+      "1": "GND",
+      "2": "RGB_015"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C101",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 39.137499999999996,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW002",
+    "kind": "MX",
+    "value": "F1",
+    "x": 71.4375,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY001"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D002",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 71.4375,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL01",
+      "2": "KEY001"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED002",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 71.4375,
+    "y": 14.605,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_015",
+      "1": "GND",
+      "2": "RGB_014"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C102",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 77.2375,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW003",
+    "kind": "MX",
+    "value": "F2",
+    "x": 90.4875,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY002"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D003",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 90.4875,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL02",
+      "2": "KEY002"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED003",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 90.4875,
+    "y": 14.605,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_014",
+      "1": "GND",
+      "2": "RGB_013"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C103",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 96.2875,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW004",
+    "kind": "MX",
+    "value": "F3",
+    "x": 109.53750000000001,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY003"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D004",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 109.53750000000001,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL03",
+      "2": "KEY003"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED004",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 109.53750000000001,
+    "y": 14.605,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_013",
+      "1": "GND",
+      "2": "RGB_012"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C104",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 115.3375,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW005",
+    "kind": "MX",
+    "value": "F4",
+    "x": 128.5875,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY004"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D005",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 128.5875,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL04",
+      "2": "KEY004"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED005",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 128.5875,
+    "y": 14.605,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_012",
+      "1": "GND",
+      "2": "RGB_011"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C105",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 134.38750000000002,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW006",
+    "kind": "MX",
+    "value": "F5",
+    "x": 157.1625,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY005"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D006",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 157.1625,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL05",
+      "2": "KEY005"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED006",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 157.1625,
+    "y": 14.605,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_011",
+      "1": "GND",
+      "2": "RGB_010"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C106",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 162.9625,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW007",
+    "kind": "MX",
+    "value": "F6",
+    "x": 176.2125,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY006"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D007",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 176.2125,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL06",
+      "2": "KEY006"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED007",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 176.2125,
+    "y": 14.605,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_010",
+      "1": "GND",
+      "2": "RGB_009"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C107",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 182.01250000000002,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW008",
+    "kind": "MX",
+    "value": "F7",
+    "x": 195.26250000000002,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY007"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D008",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 195.26250000000002,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL07",
+      "2": "KEY007"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED008",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 195.26250000000002,
+    "y": 14.605,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_009",
+      "1": "GND",
+      "2": "RGB_008"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C108",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 201.06250000000003,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW009",
+    "kind": "MX",
+    "value": "F8",
+    "x": 214.3125,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY008"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D009",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 214.3125,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL08",
+      "2": "KEY008"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED009",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 214.3125,
+    "y": 14.605,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_008",
+      "1": "GND",
+      "2": "RGB_007"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C109",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 220.1125,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW010",
+    "kind": "MX",
+    "value": "F9",
+    "x": 242.88750000000002,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY009"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D010",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 242.88750000000002,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL09",
+      "2": "KEY009"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED010",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 242.88750000000002,
+    "y": 14.605,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_007",
+      "1": "GND",
+      "2": "RGB_006"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C110",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 248.68750000000003,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW011",
+    "kind": "MX",
+    "value": "F10",
+    "x": 261.9375,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY010"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D011",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 261.9375,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL10",
+      "2": "KEY010"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED011",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 261.9375,
+    "y": 14.605,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_006",
+      "1": "GND",
+      "2": "RGB_005"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C111",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 267.7375,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW012",
+    "kind": "MX",
+    "value": "F11",
+    "x": 280.9875,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY011"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D012",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 280.9875,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL11",
+      "2": "KEY011"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED012",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 280.9875,
+    "y": 14.605,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_005",
+      "1": "GND",
+      "2": "RGB_004"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C112",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 286.7875,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW013",
+    "kind": "MX",
+    "value": "F12",
+    "x": 300.0375,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY012"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D013",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 300.0375,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL12",
+      "2": "KEY012"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED013",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 300.0375,
+    "y": 14.605,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_004",
+      "1": "GND",
+      "2": "RGB_003"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C113",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 305.83750000000003,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW014",
+    "kind": "MX",
+    "value": "PrtSc",
+    "x": 323.85,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY013"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D014",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 323.85,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL13",
+      "2": "KEY013"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED014",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 323.85,
+    "y": 14.605,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_003",
+      "1": "GND",
+      "2": "RGB_002"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C114",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 329.65000000000003,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW015",
+    "kind": "MX",
+    "value": "Scroll Lock",
+    "x": 342.90000000000003,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY014"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D015",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 342.90000000000003,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL14",
+      "2": "KEY014"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED015",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 342.90000000000003,
+    "y": 14.605,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_002",
+      "1": "GND",
+      "2": "RGB_001"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C115",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 348.70000000000005,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW016",
+    "kind": "MX",
+    "value": "Pause/Break",
+    "x": 361.95,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY015"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D016",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 361.95,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL15",
+      "2": "KEY015"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED016",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 361.95,
+    "y": 14.605,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_001",
+      "1": "GND",
+      "2": "RGB_000"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C116",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 367.75,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW017",
+    "kind": "MX",
+    "value": "M1",
+    "x": 9.525,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY016"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D017",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 9.525,
+    "y": 29.85,
+    "pins": {
+      "1": "COL00",
+      "2": "KEY016"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED017",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 9.525,
+    "y": 43.18,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_017",
+      "1": "GND",
+      "2": "RGB_016"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C117",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 15.325,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW018",
+    "kind": "MX",
+    "value": "~/`",
+    "x": 33.3375,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY017"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D018",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 33.3375,
+    "y": 29.85,
+    "pins": {
+      "1": "COL01",
+      "2": "KEY017"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED018",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 33.3375,
+    "y": 43.18,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_018",
+      "1": "GND",
+      "2": "RGB_017"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C118",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 39.137499999999996,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW019",
+    "kind": "MX",
+    "value": "!/1",
+    "x": 52.3875,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY018"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D019",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 52.3875,
+    "y": 29.85,
+    "pins": {
+      "1": "COL02",
+      "2": "KEY018"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED019",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 52.3875,
+    "y": 43.18,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_019",
+      "1": "GND",
+      "2": "RGB_018"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C119",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 58.1875,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW020",
+    "kind": "MX",
+    "value": "@/2",
+    "x": 71.4375,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY019"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D020",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 71.4375,
+    "y": 29.85,
+    "pins": {
+      "1": "COL03",
+      "2": "KEY019"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED020",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 71.4375,
+    "y": 43.18,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_020",
+      "1": "GND",
+      "2": "RGB_019"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C120",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 77.2375,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW021",
+    "kind": "MX",
+    "value": "#/3",
+    "x": 90.4875,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY020"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D021",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 90.4875,
+    "y": 29.85,
+    "pins": {
+      "1": "COL04",
+      "2": "KEY020"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED021",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 90.4875,
+    "y": 43.18,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_021",
+      "1": "GND",
+      "2": "RGB_020"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C121",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 96.2875,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW022",
+    "kind": "MX",
+    "value": "$/4",
+    "x": 109.53750000000001,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY021"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D022",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 109.53750000000001,
+    "y": 29.85,
+    "pins": {
+      "1": "COL05",
+      "2": "KEY021"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED022",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 109.53750000000001,
+    "y": 43.18,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_022",
+      "1": "GND",
+      "2": "RGB_021"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C122",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 115.3375,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW023",
+    "kind": "MX",
+    "value": "%/5",
+    "x": 128.5875,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY022"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D023",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 128.5875,
+    "y": 29.85,
+    "pins": {
+      "1": "COL06",
+      "2": "KEY022"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED023",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 128.5875,
+    "y": 43.18,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_023",
+      "1": "GND",
+      "2": "RGB_022"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C123",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 134.38750000000002,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW024",
+    "kind": "MX",
+    "value": "^/6",
+    "x": 147.63750000000002,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY023"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D024",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 147.63750000000002,
+    "y": 29.85,
+    "pins": {
+      "1": "COL07",
+      "2": "KEY023"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED024",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 147.63750000000002,
+    "y": 43.18,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_024",
+      "1": "GND",
+      "2": "RGB_023"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C124",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 153.43750000000003,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW025",
+    "kind": "MX",
+    "value": "&/7",
+    "x": 166.6875,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY024"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D025",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 166.6875,
+    "y": 29.85,
+    "pins": {
+      "1": "COL08",
+      "2": "KEY024"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED025",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 166.6875,
+    "y": 43.18,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_025",
+      "1": "GND",
+      "2": "RGB_024"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C125",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 172.4875,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW026",
+    "kind": "MX",
+    "value": "*/8",
+    "x": 185.7375,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY025"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D026",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 185.7375,
+    "y": 29.85,
+    "pins": {
+      "1": "COL09",
+      "2": "KEY025"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED026",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 185.7375,
+    "y": 43.18,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_026",
+      "1": "GND",
+      "2": "RGB_025"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C126",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 191.53750000000002,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW027",
+    "kind": "MX",
+    "value": "(/9",
+    "x": 204.7875,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY026"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D027",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 204.7875,
+    "y": 29.85,
+    "pins": {
+      "1": "COL10",
+      "2": "KEY026"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED027",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 204.7875,
+    "y": 43.18,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_027",
+      "1": "GND",
+      "2": "RGB_026"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C127",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 210.5875,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW028",
+    "kind": "MX",
+    "value": ")/0",
+    "x": 223.8375,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY027"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D028",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 223.8375,
+    "y": 29.85,
+    "pins": {
+      "1": "COL11",
+      "2": "KEY027"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED028",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 223.8375,
+    "y": 43.18,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_028",
+      "1": "GND",
+      "2": "RGB_027"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C128",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 229.63750000000002,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW029",
+    "kind": "MX",
+    "value": "_/-",
+    "x": 242.88750000000002,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY028"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D029",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 242.88750000000002,
+    "y": 29.85,
+    "pins": {
+      "1": "COL12",
+      "2": "KEY028"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED029",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 242.88750000000002,
+    "y": 43.18,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_029",
+      "1": "GND",
+      "2": "RGB_028"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C129",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 248.68750000000003,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW030",
+    "kind": "MX",
+    "value": "+/=",
+    "x": 261.9375,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY029"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D030",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 261.9375,
+    "y": 29.85,
+    "pins": {
+      "1": "COL13",
+      "2": "KEY029"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED030",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 261.9375,
+    "y": 43.18,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_030",
+      "1": "GND",
+      "2": "RGB_029"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C130",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 267.7375,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW031",
+    "kind": "MX",
+    "value": "Backspace",
+    "x": 290.5125,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY030"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D031",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 290.5125,
+    "y": 29.85,
+    "pins": {
+      "1": "COL14",
+      "2": "KEY030"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED031",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 290.5125,
+    "y": 43.18,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_031",
+      "1": "GND",
+      "2": "RGB_030"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C131",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 296.3125,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW032",
+    "kind": "MX",
+    "value": "Insert",
+    "x": 323.85,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY031"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D032",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 323.85,
+    "y": 29.85,
+    "pins": {
+      "1": "COL15",
+      "2": "KEY031"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED032",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 323.85,
+    "y": 43.18,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_032",
+      "1": "GND",
+      "2": "RGB_031"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C132",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 329.65000000000003,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW033",
+    "kind": "MX",
+    "value": "Home",
+    "x": 342.90000000000003,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY032"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D033",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 342.90000000000003,
+    "y": 29.85,
+    "pins": {
+      "1": "COL00",
+      "2": "KEY032"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED033",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 342.90000000000003,
+    "y": 43.18,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_033",
+      "1": "GND",
+      "2": "RGB_032"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C133",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 348.70000000000005,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW034",
+    "kind": "MX",
+    "value": "PgUp",
+    "x": 361.95,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY033"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D034",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 361.95,
+    "y": 29.85,
+    "pins": {
+      "1": "COL01",
+      "2": "KEY033"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED034",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 361.95,
+    "y": 43.18,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_034",
+      "1": "GND",
+      "2": "RGB_033"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C134",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 367.75,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW035",
+    "kind": "MX",
+    "value": "Num Lock",
+    "x": 385.7625,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY034"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D035",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 385.7625,
+    "y": 29.85,
+    "pins": {
+      "1": "COL02",
+      "2": "KEY034"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED035",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 385.7625,
+    "y": 43.18,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_035",
+      "1": "GND",
+      "2": "RGB_034"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C135",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 391.5625,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW036",
+    "kind": "MX",
+    "value": "/",
+    "x": 404.8125,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY035"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D036",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 404.8125,
+    "y": 29.85,
+    "pins": {
+      "1": "COL03",
+      "2": "KEY035"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED036",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 404.8125,
+    "y": 43.18,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_036",
+      "1": "GND",
+      "2": "RGB_035"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C136",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 410.6125,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW037",
+    "kind": "MX",
+    "value": "*",
+    "x": 423.8625,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY036"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D037",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 423.8625,
+    "y": 29.85,
+    "pins": {
+      "1": "COL04",
+      "2": "KEY036"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED037",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 423.8625,
+    "y": 43.18,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_037",
+      "1": "GND",
+      "2": "RGB_036"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C137",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 429.6625,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW038",
+    "kind": "MX",
+    "value": "-",
+    "x": 442.9125,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY037"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D038",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 442.9125,
+    "y": 29.85,
+    "pins": {
+      "1": "COL05",
+      "2": "KEY037"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED038",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 442.9125,
+    "y": 43.18,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_038",
+      "1": "GND",
+      "2": "RGB_037"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C138",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 448.71250000000003,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW039",
+    "kind": "MX",
+    "value": "M2",
+    "x": 9.525,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY038"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D039",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 9.525,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL06",
+      "2": "KEY038"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED039",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 9.525,
+    "y": 62.230000000000004,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_060",
+      "1": "GND",
+      "2": "RGB_059"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C139",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 15.325,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW040",
+    "kind": "MX",
+    "value": "Tab",
+    "x": 38.1,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY039"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D040",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 38.1,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL07",
+      "2": "KEY039"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED040",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 38.1,
+    "y": 62.230000000000004,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_059",
+      "1": "GND",
+      "2": "RGB_058"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C140",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 43.9,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW041",
+    "kind": "MX",
+    "value": "Q",
+    "x": 61.9125,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY040"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D041",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 61.9125,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL08",
+      "2": "KEY040"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED041",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 61.9125,
+    "y": 62.230000000000004,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_058",
+      "1": "GND",
+      "2": "RGB_057"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C141",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 67.7125,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW042",
+    "kind": "MX",
+    "value": "W",
+    "x": 80.9625,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY041"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D042",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 80.9625,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL09",
+      "2": "KEY041"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED042",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 80.9625,
+    "y": 62.230000000000004,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_057",
+      "1": "GND",
+      "2": "RGB_056"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C142",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 86.7625,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW043",
+    "kind": "MX",
+    "value": "E",
+    "x": 100.0125,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY042"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D043",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 100.0125,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL10",
+      "2": "KEY042"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED043",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 100.0125,
+    "y": 62.230000000000004,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_056",
+      "1": "GND",
+      "2": "RGB_055"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C143",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 105.8125,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW044",
+    "kind": "MX",
+    "value": "R",
+    "x": 119.0625,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY043"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D044",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 119.0625,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL11",
+      "2": "KEY043"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED044",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 119.0625,
+    "y": 62.230000000000004,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_055",
+      "1": "GND",
+      "2": "RGB_054"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C144",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 124.8625,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW045",
+    "kind": "MX",
+    "value": "T",
+    "x": 138.1125,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY044"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D045",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 138.1125,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL12",
+      "2": "KEY044"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED045",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 138.1125,
+    "y": 62.230000000000004,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_054",
+      "1": "GND",
+      "2": "RGB_053"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C145",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 143.91250000000002,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW046",
+    "kind": "MX",
+    "value": "Y",
+    "x": 157.1625,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY045"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D046",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 157.1625,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL13",
+      "2": "KEY045"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED046",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 157.1625,
+    "y": 62.230000000000004,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_053",
+      "1": "GND",
+      "2": "RGB_052"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C146",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 162.9625,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW047",
+    "kind": "MX",
+    "value": "U",
+    "x": 176.2125,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY046"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D047",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 176.2125,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL14",
+      "2": "KEY046"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED047",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 176.2125,
+    "y": 62.230000000000004,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_052",
+      "1": "GND",
+      "2": "RGB_051"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C147",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 182.01250000000002,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW048",
+    "kind": "MX",
+    "value": "I",
+    "x": 195.26250000000002,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY047"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D048",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 195.26250000000002,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL15",
+      "2": "KEY047"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED048",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 195.26250000000002,
+    "y": 62.230000000000004,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_051",
+      "1": "GND",
+      "2": "RGB_050"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C148",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 201.06250000000003,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW049",
+    "kind": "MX",
+    "value": "O",
+    "x": 214.3125,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY048"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D049",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 214.3125,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL00",
+      "2": "KEY048"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED049",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 214.3125,
+    "y": 62.230000000000004,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_050",
+      "1": "GND",
+      "2": "RGB_049"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C149",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 220.1125,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW050",
+    "kind": "MX",
+    "value": "P",
+    "x": 233.3625,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY049"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D050",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 233.3625,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL01",
+      "2": "KEY049"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED050",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 233.3625,
+    "y": 62.230000000000004,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_049",
+      "1": "GND",
+      "2": "RGB_048"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C150",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 239.16250000000002,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW051",
+    "kind": "MX",
+    "value": "{/[",
+    "x": 252.41250000000002,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY050"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D051",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 252.41250000000002,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL02",
+      "2": "KEY050"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED051",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 252.41250000000002,
+    "y": 62.230000000000004,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_048",
+      "1": "GND",
+      "2": "RGB_047"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C151",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 258.21250000000003,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW052",
+    "kind": "MX",
+    "value": "}/]",
+    "x": 271.46250000000003,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY051"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D052",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 271.46250000000003,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL03",
+      "2": "KEY051"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED052",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 271.46250000000003,
+    "y": 62.230000000000004,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_047",
+      "1": "GND",
+      "2": "RGB_046"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C152",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 277.26250000000005,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW053",
+    "kind": "MX",
+    "value": "|/\\",
+    "x": 295.27500000000003,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY052"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D053",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 295.27500000000003,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL04",
+      "2": "KEY052"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED053",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 295.27500000000003,
+    "y": 62.230000000000004,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_046",
+      "1": "GND",
+      "2": "RGB_045"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C153",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 301.07500000000005,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW054",
+    "kind": "MX",
+    "value": "Delete",
+    "x": 323.85,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY053"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D054",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 323.85,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL05",
+      "2": "KEY053"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED054",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 323.85,
+    "y": 62.230000000000004,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_045",
+      "1": "GND",
+      "2": "RGB_044"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C154",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 329.65000000000003,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW055",
+    "kind": "MX",
+    "value": "End",
+    "x": 342.90000000000003,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY054"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D055",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 342.90000000000003,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL06",
+      "2": "KEY054"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED055",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 342.90000000000003,
+    "y": 62.230000000000004,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_044",
+      "1": "GND",
+      "2": "RGB_043"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C155",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 348.70000000000005,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW056",
+    "kind": "MX",
+    "value": "PgDn",
+    "x": 361.95,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY055"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D056",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 361.95,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL07",
+      "2": "KEY055"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED056",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 361.95,
+    "y": 62.230000000000004,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_043",
+      "1": "GND",
+      "2": "RGB_042"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C156",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 367.75,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW057",
+    "kind": "MX",
+    "value": "7/Home",
+    "x": 385.7625,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY056"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D057",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 385.7625,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL08",
+      "2": "KEY056"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED057",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 385.7625,
+    "y": 62.230000000000004,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_042",
+      "1": "GND",
+      "2": "RGB_041"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C157",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 391.5625,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW058",
+    "kind": "MX",
+    "value": "8/\u2191",
+    "x": 404.8125,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY057"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D058",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 404.8125,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL09",
+      "2": "KEY057"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED058",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 404.8125,
+    "y": 62.230000000000004,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_041",
+      "1": "GND",
+      "2": "RGB_040"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C158",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 410.6125,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW059",
+    "kind": "MX",
+    "value": "9/PgUp",
+    "x": 423.8625,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY058"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D059",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 423.8625,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL10",
+      "2": "KEY058"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED059",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 423.8625,
+    "y": 62.230000000000004,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_040",
+      "1": "GND",
+      "2": "RGB_039"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C159",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 429.6625,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW060",
+    "kind": "MX",
+    "value": "+",
+    "x": 442.9125,
+    "y": 66.675,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY059"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D060",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 442.9125,
+    "y": 58.425,
+    "pins": {
+      "1": "COL11",
+      "2": "KEY059"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED060",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 442.9125,
+    "y": 71.755,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_039",
+      "1": "GND",
+      "2": "RGB_038"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C160",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 448.71250000000003,
+    "y": 71.755,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW061",
+    "kind": "MX",
+    "value": "M3",
+    "x": 9.525,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY060"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D061",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 9.525,
+    "y": 67.95,
+    "pins": {
+      "1": "COL12",
+      "2": "KEY060"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED061",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 9.525,
+    "y": 81.28,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_061",
+      "1": "GND",
+      "2": "RGB_060"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C161",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 15.325,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW062",
+    "kind": "MX",
+    "value": "Caps Lock",
+    "x": 40.48125,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY061"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D062",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 40.48125,
+    "y": 67.95,
+    "pins": {
+      "1": "COL13",
+      "2": "KEY061"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED062",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 40.48125,
+    "y": 81.28,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_062",
+      "1": "GND",
+      "2": "RGB_061"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C162",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 46.28125,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW063",
+    "kind": "MX",
+    "value": "A",
+    "x": 66.675,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY062"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D063",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 66.675,
+    "y": 67.95,
+    "pins": {
+      "1": "COL14",
+      "2": "KEY062"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED063",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 66.675,
+    "y": 81.28,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_063",
+      "1": "GND",
+      "2": "RGB_062"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C163",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 72.475,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW064",
+    "kind": "MX",
+    "value": "S",
+    "x": 85.72500000000001,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY063"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D064",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 85.72500000000001,
+    "y": 67.95,
+    "pins": {
+      "1": "COL15",
+      "2": "KEY063"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED064",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 85.72500000000001,
+    "y": 81.28,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_064",
+      "1": "GND",
+      "2": "RGB_063"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C164",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 91.525,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW065",
+    "kind": "MX",
+    "value": "D",
+    "x": 104.775,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY064"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D065",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 104.775,
+    "y": 67.95,
+    "pins": {
+      "1": "COL00",
+      "2": "KEY064"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED065",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 104.775,
+    "y": 81.28,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_065",
+      "1": "GND",
+      "2": "RGB_064"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C165",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 110.575,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW066",
+    "kind": "MX",
+    "value": "F",
+    "x": 123.825,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY065"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D066",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 123.825,
+    "y": 67.95,
+    "pins": {
+      "1": "COL01",
+      "2": "KEY065"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED066",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 123.825,
+    "y": 81.28,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_066",
+      "1": "GND",
+      "2": "RGB_065"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C166",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 129.625,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW067",
+    "kind": "MX",
+    "value": "G",
+    "x": 142.875,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY066"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D067",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 142.875,
+    "y": 67.95,
+    "pins": {
+      "1": "COL02",
+      "2": "KEY066"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED067",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 142.875,
+    "y": 81.28,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_067",
+      "1": "GND",
+      "2": "RGB_066"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C167",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 148.675,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW068",
+    "kind": "MX",
+    "value": "H",
+    "x": 161.925,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY067"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D068",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 161.925,
+    "y": 67.95,
+    "pins": {
+      "1": "COL03",
+      "2": "KEY067"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED068",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 161.925,
+    "y": 81.28,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_068",
+      "1": "GND",
+      "2": "RGB_067"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C168",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 167.72500000000002,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW069",
+    "kind": "MX",
+    "value": "J",
+    "x": 180.975,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY068"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D069",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 180.975,
+    "y": 67.95,
+    "pins": {
+      "1": "COL04",
+      "2": "KEY068"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED069",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 180.975,
+    "y": 81.28,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_069",
+      "1": "GND",
+      "2": "RGB_068"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C169",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 186.775,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW070",
+    "kind": "MX",
+    "value": "K",
+    "x": 200.025,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY069"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D070",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 200.025,
+    "y": 67.95,
+    "pins": {
+      "1": "COL05",
+      "2": "KEY069"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED070",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 200.025,
+    "y": 81.28,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_070",
+      "1": "GND",
+      "2": "RGB_069"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C170",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 205.82500000000002,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW071",
+    "kind": "MX",
+    "value": "L",
+    "x": 219.07500000000002,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY070"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D071",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 219.07500000000002,
+    "y": 67.95,
+    "pins": {
+      "1": "COL06",
+      "2": "KEY070"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED071",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 219.07500000000002,
+    "y": 81.28,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_071",
+      "1": "GND",
+      "2": "RGB_070"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C171",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 224.87500000000003,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW072",
+    "kind": "MX",
+    "value": ":/;",
+    "x": 238.125,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY071"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D072",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 238.125,
+    "y": 67.95,
+    "pins": {
+      "1": "COL07",
+      "2": "KEY071"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED072",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 238.125,
+    "y": 81.28,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_072",
+      "1": "GND",
+      "2": "RGB_071"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C172",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 243.925,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW073",
+    "kind": "MX",
+    "value": "\"/'",
+    "x": 257.175,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY072"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D073",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 257.175,
+    "y": 67.95,
+    "pins": {
+      "1": "COL08",
+      "2": "KEY072"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED073",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 257.175,
+    "y": 81.28,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_073",
+      "1": "GND",
+      "2": "RGB_072"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C173",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 262.975,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW074",
+    "kind": "MX",
+    "value": "Enter",
+    "x": 288.13125,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY073"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D074",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 288.13125,
+    "y": 67.95,
+    "pins": {
+      "1": "COL09",
+      "2": "KEY073"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED074",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 288.13125,
+    "y": 81.28,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_074",
+      "1": "GND",
+      "2": "RGB_073"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C174",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 293.93125000000003,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW075",
+    "kind": "MX",
+    "value": "4/\u2190",
+    "x": 385.7625,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY074"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D075",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 385.7625,
+    "y": 67.95,
+    "pins": {
+      "1": "COL10",
+      "2": "KEY074"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED075",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 385.7625,
+    "y": 81.28,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_075",
+      "1": "GND",
+      "2": "RGB_074"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C175",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 391.5625,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW076",
+    "kind": "MX",
+    "value": "5",
+    "x": 404.8125,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY075"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D076",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 404.8125,
+    "y": 67.95,
+    "pins": {
+      "1": "COL11",
+      "2": "KEY075"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED076",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 404.8125,
+    "y": 81.28,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_076",
+      "1": "GND",
+      "2": "RGB_075"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C176",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 410.6125,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW077",
+    "kind": "MX",
+    "value": "6/\u2192",
+    "x": 423.8625,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY076"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D077",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 423.8625,
+    "y": 67.95,
+    "pins": {
+      "1": "COL12",
+      "2": "KEY076"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED077",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 423.8625,
+    "y": 81.28,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_077",
+      "1": "GND",
+      "2": "RGB_076"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C177",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 429.6625,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW078",
+    "kind": "MX",
+    "value": "M4",
+    "x": 9.525,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY077"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D078",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 9.525,
+    "y": 87.0,
+    "pins": {
+      "1": "COL13",
+      "2": "KEY077"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED078",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 9.525,
+    "y": 100.33,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_097",
+      "1": "GND",
+      "2": "RGB_096"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C178",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 15.325,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW079",
+    "kind": "MX",
+    "value": "Shift",
+    "x": 45.24375,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY078"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D079",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 45.24375,
+    "y": 87.0,
+    "pins": {
+      "1": "COL14",
+      "2": "KEY078"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED079",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 45.24375,
+    "y": 100.33,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_096",
+      "1": "GND",
+      "2": "RGB_095"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C179",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 51.043749999999996,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW080",
+    "kind": "MX",
+    "value": "Z",
+    "x": 76.2,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY079"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D080",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 76.2,
+    "y": 87.0,
+    "pins": {
+      "1": "COL15",
+      "2": "KEY079"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED080",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 76.2,
+    "y": 100.33,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_095",
+      "1": "GND",
+      "2": "RGB_094"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C180",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 82.0,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW081",
+    "kind": "MX",
+    "value": "X",
+    "x": 95.25,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY080"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D081",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 95.25,
+    "y": 87.0,
+    "pins": {
+      "1": "COL00",
+      "2": "KEY080"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED081",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 95.25,
+    "y": 100.33,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_094",
+      "1": "GND",
+      "2": "RGB_093"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C181",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 101.05,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW082",
+    "kind": "MX",
+    "value": "C",
+    "x": 114.30000000000001,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY081"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D082",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 114.30000000000001,
+    "y": 87.0,
+    "pins": {
+      "1": "COL01",
+      "2": "KEY081"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED082",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 114.30000000000001,
+    "y": 100.33,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_093",
+      "1": "GND",
+      "2": "RGB_092"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C182",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 120.10000000000001,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW083",
+    "kind": "MX",
+    "value": "V",
+    "x": 133.35,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY082"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D083",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 133.35,
+    "y": 87.0,
+    "pins": {
+      "1": "COL02",
+      "2": "KEY082"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED083",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 133.35,
+    "y": 100.33,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_092",
+      "1": "GND",
+      "2": "RGB_091"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C183",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 139.15,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW084",
+    "kind": "MX",
+    "value": "B",
+    "x": 152.4,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY083"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D084",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 152.4,
+    "y": 87.0,
+    "pins": {
+      "1": "COL03",
+      "2": "KEY083"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED084",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 152.4,
+    "y": 100.33,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_091",
+      "1": "GND",
+      "2": "RGB_090"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C184",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 158.20000000000002,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW085",
+    "kind": "MX",
+    "value": "N",
+    "x": 171.45000000000002,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY084"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D085",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 171.45000000000002,
+    "y": 87.0,
+    "pins": {
+      "1": "COL04",
+      "2": "KEY084"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED085",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 171.45000000000002,
+    "y": 100.33,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_090",
+      "1": "GND",
+      "2": "RGB_089"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C185",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 177.25000000000003,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW086",
+    "kind": "MX",
+    "value": "M",
+    "x": 190.5,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY085"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D086",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 190.5,
+    "y": 87.0,
+    "pins": {
+      "1": "COL05",
+      "2": "KEY085"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED086",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 190.5,
+    "y": 100.33,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_089",
+      "1": "GND",
+      "2": "RGB_088"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C186",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 196.3,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW087",
+    "kind": "MX",
+    "value": "</,",
+    "x": 209.55,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY086"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D087",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 209.55,
+    "y": 87.0,
+    "pins": {
+      "1": "COL06",
+      "2": "KEY086"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED087",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 209.55,
+    "y": 100.33,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_088",
+      "1": "GND",
+      "2": "RGB_087"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C187",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 215.35000000000002,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW088",
+    "kind": "MX",
+    "value": ">/.",
+    "x": 228.60000000000002,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY087"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D088",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 228.60000000000002,
+    "y": 87.0,
+    "pins": {
+      "1": "COL07",
+      "2": "KEY087"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED088",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 228.60000000000002,
+    "y": 100.33,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_087",
+      "1": "GND",
+      "2": "RGB_086"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C188",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 234.40000000000003,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW089",
+    "kind": "MX",
+    "value": "?//",
+    "x": 247.65,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY088"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D089",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 247.65,
+    "y": 87.0,
+    "pins": {
+      "1": "COL08",
+      "2": "KEY088"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED089",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 247.65,
+    "y": 100.33,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_086",
+      "1": "GND",
+      "2": "RGB_085"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C189",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 253.45000000000002,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW090",
+    "kind": "MX",
+    "value": "Shift",
+    "x": 283.36875000000003,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY089"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D090",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 283.36875000000003,
+    "y": 87.0,
+    "pins": {
+      "1": "COL09",
+      "2": "KEY089"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED090",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 283.36875000000003,
+    "y": 100.33,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_085",
+      "1": "GND",
+      "2": "RGB_084"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C190",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 289.16875000000005,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW091",
+    "kind": "MX",
+    "value": "M12",
+    "x": 323.85,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY090"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D091",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 323.85,
+    "y": 87.0,
+    "pins": {
+      "1": "COL10",
+      "2": "KEY090"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED091",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 323.85,
+    "y": 100.33,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_084",
+      "1": "GND",
+      "2": "RGB_083"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C191",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 329.65000000000003,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW092",
+    "kind": "MX",
+    "value": "\u2191",
+    "x": 342.90000000000003,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY091"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D092",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 342.90000000000003,
+    "y": 87.0,
+    "pins": {
+      "1": "COL11",
+      "2": "KEY091"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED092",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 342.90000000000003,
+    "y": 100.33,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_083",
+      "1": "GND",
+      "2": "RGB_082"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C192",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 348.70000000000005,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW093",
+    "kind": "MX",
+    "value": "M13",
+    "x": 361.95,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY092"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D093",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 361.95,
+    "y": 87.0,
+    "pins": {
+      "1": "COL12",
+      "2": "KEY092"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED093",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 361.95,
+    "y": 100.33,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_082",
+      "1": "GND",
+      "2": "RGB_081"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C193",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 367.75,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW094",
+    "kind": "MX",
+    "value": "1/End",
+    "x": 385.7625,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY093"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D094",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 385.7625,
+    "y": 87.0,
+    "pins": {
+      "1": "COL13",
+      "2": "KEY093"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED094",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 385.7625,
+    "y": 100.33,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_081",
+      "1": "GND",
+      "2": "RGB_080"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C194",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 391.5625,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW095",
+    "kind": "MX",
+    "value": "2/\u2193",
+    "x": 404.8125,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY094"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D095",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 404.8125,
+    "y": 87.0,
+    "pins": {
+      "1": "COL14",
+      "2": "KEY094"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED095",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 404.8125,
+    "y": 100.33,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_080",
+      "1": "GND",
+      "2": "RGB_079"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C195",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 410.6125,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW096",
+    "kind": "MX",
+    "value": "3/PgDn",
+    "x": 423.8625,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY095"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D096",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 423.8625,
+    "y": 87.0,
+    "pins": {
+      "1": "COL15",
+      "2": "KEY095"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED096",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 423.8625,
+    "y": 100.33,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_079",
+      "1": "GND",
+      "2": "RGB_078"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C196",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 429.6625,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW097",
+    "kind": "MX",
+    "value": "Enter",
+    "x": 442.9125,
+    "y": 104.775,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY096"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D097",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 442.9125,
+    "y": 96.525,
+    "pins": {
+      "1": "COL00",
+      "2": "KEY096"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED097",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 442.9125,
+    "y": 109.855,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_078",
+      "1": "GND",
+      "2": "RGB_077"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C197",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 448.71250000000003,
+    "y": 109.855,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW098",
+    "kind": "MX",
+    "value": "M5",
+    "x": 9.525,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY097"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D098",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 9.525,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL01",
+      "2": "KEY097"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED098",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 9.525,
+    "y": 119.38000000000001,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_098",
+      "1": "GND",
+      "2": "RGB_097"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C198",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 15.325,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW099",
+    "kind": "MX",
+    "value": "Ctrl",
+    "x": 35.71875,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY098"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D099",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 35.71875,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL02",
+      "2": "KEY098"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED099",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 35.71875,
+    "y": 119.38000000000001,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_099",
+      "1": "GND",
+      "2": "RGB_098"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C199",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 41.51875,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW100",
+    "kind": "MX",
+    "value": "Win",
+    "x": 59.53125,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY099"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D100",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 59.53125,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL03",
+      "2": "KEY099"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED100",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 59.53125,
+    "y": 119.38000000000001,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_100",
+      "1": "GND",
+      "2": "RGB_099"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C200",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 65.33125,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW101",
+    "kind": "MX",
+    "value": "Alt",
+    "x": 83.34375,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY100"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D101",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 83.34375,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL04",
+      "2": "KEY100"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED101",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 83.34375,
+    "y": 119.38000000000001,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_101",
+      "1": "GND",
+      "2": "RGB_100"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C201",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 89.14375,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW102",
+    "kind": "MX",
+    "value": "Space",
+    "x": 154.78125,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY101"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D102",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 154.78125,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL05",
+      "2": "KEY101"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED102",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 154.78125,
+    "y": 119.38000000000001,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_102",
+      "1": "GND",
+      "2": "RGB_101"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C202",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 160.58125,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW103",
+    "kind": "MX",
+    "value": "Alt",
+    "x": 226.21875,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY102"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D103",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 226.21875,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL06",
+      "2": "KEY102"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED103",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 226.21875,
+    "y": 119.38000000000001,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_103",
+      "1": "GND",
+      "2": "RGB_102"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C203",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 232.01875,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW104",
+    "kind": "MX",
+    "value": "Win",
+    "x": 250.03125,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY103"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D104",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 250.03125,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL07",
+      "2": "KEY103"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED104",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 250.03125,
+    "y": 119.38000000000001,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_104",
+      "1": "GND",
+      "2": "RGB_103"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C204",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 255.83125,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW105",
+    "kind": "MX",
+    "value": "Menu",
+    "x": 273.84375,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY104"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D105",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 273.84375,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL08",
+      "2": "KEY104"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED105",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 273.84375,
+    "y": 119.38000000000001,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_105",
+      "1": "GND",
+      "2": "RGB_104"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C205",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 279.64375,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW106",
+    "kind": "MX",
+    "value": "Ctrl",
+    "x": 297.65625,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY105"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D106",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 297.65625,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL09",
+      "2": "KEY105"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED106",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 297.65625,
+    "y": 119.38000000000001,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_106",
+      "1": "GND",
+      "2": "RGB_105"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C206",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 303.45625,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW107",
+    "kind": "MX",
+    "value": "\u2190",
+    "x": 323.85,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY106"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D107",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 323.85,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL10",
+      "2": "KEY106"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED107",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 323.85,
+    "y": 119.38000000000001,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_107",
+      "1": "GND",
+      "2": "RGB_106"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C207",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 329.65000000000003,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW108",
+    "kind": "MX",
+    "value": "\u2193",
+    "x": 342.90000000000003,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY107"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D108",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 342.90000000000003,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL11",
+      "2": "KEY107"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED108",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 342.90000000000003,
+    "y": 119.38000000000001,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_108",
+      "1": "GND",
+      "2": "RGB_107"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C208",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 348.70000000000005,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW109",
+    "kind": "MX",
+    "value": "\u2192",
+    "x": 361.95,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY108"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D109",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 361.95,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL12",
+      "2": "KEY108"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED109",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 361.95,
+    "y": 119.38000000000001,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_109",
+      "1": "GND",
+      "2": "RGB_108"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C209",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 367.75,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW110",
+    "kind": "MX",
+    "value": "0/Ins",
+    "x": 395.2875,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY109"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D110",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 395.2875,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL13",
+      "2": "KEY109"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED110",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 395.2875,
+    "y": 119.38000000000001,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_110",
+      "1": "GND",
+      "2": "RGB_109"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C210",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 401.08750000000003,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW111",
+    "kind": "MX",
+    "value": "./Del",
+    "x": 423.8625,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY110"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D111",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 423.8625,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL14",
+      "2": "KEY110"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED111",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 423.8625,
+    "y": 119.38000000000001,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_111",
+      "1": "GND",
+      "2": "RGB_110"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C211",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 429.6625,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW112",
+    "kind": "MX",
+    "value": "M6",
+    "x": 135.255,
+    "y": 138.1125,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY111"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D112",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 135.255,
+    "y": 129.8625,
+    "pins": {
+      "1": "COL15",
+      "2": "KEY111"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED112",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 135.255,
+    "y": 143.19250000000002,
+    "pins": {
+      "3": "LED_5V",
+      "4": null,
+      "1": "GND",
+      "2": "RGB_116"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C212",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 141.055,
+    "y": 143.19250000000002,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW113",
+    "kind": "MX",
+    "value": "M7",
+    "x": 154.305,
+    "y": 138.1125,
+    "pins": {
+      "1": "ROW7",
+      "2": "KEY112"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D113",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 154.305,
+    "y": 129.8625,
+    "pins": {
+      "1": "COL00",
+      "2": "KEY112"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED113",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 154.305,
+    "y": 143.19250000000002,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_116",
+      "1": "GND",
+      "2": "RGB_115"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C213",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 160.10500000000002,
+    "y": 143.19250000000002,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW114",
+    "kind": "MX",
+    "value": "M8",
+    "x": 173.355,
+    "y": 138.1125,
+    "pins": {
+      "1": "ROW7",
+      "2": "KEY113"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D114",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 173.355,
+    "y": 129.8625,
+    "pins": {
+      "1": "COL01",
+      "2": "KEY113"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED114",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 173.355,
+    "y": 143.19250000000002,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_115",
+      "1": "GND",
+      "2": "RGB_114"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C214",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 179.155,
+    "y": 143.19250000000002,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW115",
+    "kind": "MX",
+    "value": "M9",
+    "x": 281.94,
+    "y": 138.1125,
+    "pins": {
+      "1": "ROW7",
+      "2": "KEY114"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D115",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 281.94,
+    "y": 129.8625,
+    "pins": {
+      "1": "COL02",
+      "2": "KEY114"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED115",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 281.94,
+    "y": 143.19250000000002,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_114",
+      "1": "GND",
+      "2": "RGB_113"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C215",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 287.74,
+    "y": 143.19250000000002,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW116",
+    "kind": "MX",
+    "value": "M10",
+    "x": 300.99,
+    "y": 138.1125,
+    "pins": {
+      "1": "ROW7",
+      "2": "KEY115"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D116",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 300.99,
+    "y": 129.8625,
+    "pins": {
+      "1": "COL03",
+      "2": "KEY115"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED116",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 300.99,
+    "y": 143.19250000000002,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_113",
+      "1": "GND",
+      "2": "RGB_112"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C216",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 306.79,
+    "y": 143.19250000000002,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW117",
+    "kind": "MX",
+    "value": "M11",
+    "x": 320.04,
+    "y": 138.1125,
+    "pins": {
+      "1": "ROW7",
+      "2": "KEY116"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "D117",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 320.04,
+    "y": 129.8625,
+    "pins": {
+      "1": "COL04",
+      "2": "KEY116"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED117",
+    "kind": "MINI_E",
+    "value": "SK6812MINI-E C5149201",
+    "x": 320.04,
+    "y": 143.19250000000002,
+    "pins": {
+      "3": "LED_5V",
+      "4": "RGB_112",
+      "1": "GND",
+      "2": "RGB_111"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C217",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 325.84000000000003,
+    "y": 143.19250000000002,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "F1",
+    "kind": "PTC_1206",
+    "value": "1206L050YR 0.50A hold",
+    "x": 393,
+    "y": 4.5,
+    "pins": {
+      "1": "RAW_USB_5V",
+      "2": "FUSED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "U3",
+    "kind": "TPS2553",
+    "value": "TPS2553DBVR",
+    "x": 390,
+    "y": 14,
+    "pins": {
+      "1": "FUSED_5V",
+      "2": "GND",
+      "3": "LED_EN",
+      "4": null,
+      "5": "CURRENT_LIMIT",
+      "6": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "U2",
+    "kind": "LV1T125",
+    "value": "SN74LV1T125DBVR",
+    "x": 382,
+    "y": 19,
+    "pins": {
+      "1": "GND",
+      "2": "RGB_DATA",
+      "3": "GND",
+      "4": "RGB_BUFFERED",
+      "5": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "R1",
+    "kind": "R_0805",
+    "value": "330R",
+    "x": 375,
+    "y": 21,
+    "pins": {
+      "1": "RGB_BUFFERED",
+      "2": "RGB_000"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "R2",
+    "kind": "R_0805",
+    "value": "100k",
+    "x": 384,
+    "y": 10,
+    "pins": {
+      "1": "LED_EN",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "R3",
+    "kind": "R_0805",
+    "value": "100k",
+    "x": 377,
+    "y": 25,
+    "pins": {
+      "1": "RGB_DATA",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C1",
+    "kind": "C_0805",
+    "value": "1uF 50V X7R",
+    "x": 394,
+    "y": 8,
+    "pins": {
+      "1": "FUSED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C2",
+    "kind": "C_0805",
+    "value": "22uF 10V X5R",
+    "x": 395,
+    "y": 14,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C3",
+    "kind": "C_0805",
+    "value": "100nF 50V X7R",
+    "x": 386,
+    "y": 23,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "R4",
+    "kind": "R_0805",
+    "value": "75k 1%",
+    "x": 393,
+    "y": 17,
+    "pins": {
+      "1": "CURRENT_LIMIT",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C5",
+    "kind": "C_Radial8",
+    "value": "470uF 10V EEU-FR1A471",
+    "x": 377,
+    "y": 6,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": false,
+    "angle": 0
+  },
+  {
+    "ref": "TP2",
+    "kind": "TestPad",
+    "value": "GND",
+    "x": 410,
+    "y": 27,
+    "pins": {
+      "1": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "TP3",
+    "kind": "TestPad",
+    "value": "RAW_USB_5V",
+    "x": 418,
+    "y": 27,
+    "pins": {
+      "1": "RAW_USB_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "TP4",
+    "kind": "TestPad",
+    "value": "LED_5V",
+    "x": 426,
+    "y": 27,
+    "pins": {
+      "1": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "TP5",
+    "kind": "TestPad",
+    "value": "LED_EN",
+    "x": 434,
+    "y": 27,
+    "pins": {
+      "1": "LED_EN"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "TP6",
+    "kind": "TestPad",
+    "value": "RGB_BUFFERED",
+    "x": 402,
+    "y": 27,
+    "pins": {
+      "1": "RGB_BUFFERED"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "U1",
+    "kind": "RP2040",
+    "value": "RP2040",
+    "x": 428,
+    "y": 11,
+    "pins": {
+      "1": "3V3",
+      "10": "3V3",
+      "19": "GND",
+      "20": "XIN",
+      "21": "XOUT",
+      "22": "3V3",
+      "23": "1V1",
+      "24": "SWCLK",
+      "25": "SWDIO",
+      "26": "RUN",
+      "33": "3V3",
+      "42": "3V3",
+      "43": "3V3",
+      "44": "3V3",
+      "45": "1V1",
+      "46": "USB_DM",
+      "47": "USB_DP",
+      "48": "3V3",
+      "49": "3V3",
+      "50": "1V1",
+      "51": "QSPI_SD3",
+      "52": "QSPI_SCLK",
+      "53": "QSPI_SD0",
+      "54": "QSPI_SD2",
+      "55": "QSPI_SD1",
+      "56": "QSPI_SS",
+      "57": "GND",
+      "2": "ROW0",
+      "3": "ROW1",
+      "4": "ROW2",
+      "5": "ROW3",
+      "6": "ROW4",
+      "7": "ROW5",
+      "8": "ROW6",
+      "9": "ROW7",
+      "11": "COL00",
+      "12": "COL01",
+      "13": "COL02",
+      "14": "COL03",
+      "15": "COL04",
+      "16": "COL05",
+      "17": "COL06",
+      "18": "COL07",
+      "27": "COL08",
+      "28": "COL09",
+      "29": "COL10",
+      "30": "COL11",
+      "31": "COL12",
+      "32": "COL13",
+      "34": "COL14",
+      "35": null,
+      "36": null,
+      "37": null,
+      "38": "COL15",
+      "39": "RGB_DATA",
+      "40": "LED_EN",
+      "41": null
+    },
+    "back": true,
+    "angle": -90
+  },
+  {
+    "ref": "U4",
+    "kind": "Flash",
+    "value": "W25Q32JVSSIQ 4MB",
+    "x": 435,
+    "y": 20,
+    "pins": {
+      "1": "QSPI_SS",
+      "2": "QSPI_SD1",
+      "3": "QSPI_SD2",
+      "4": "GND",
+      "5": "QSPI_SD0",
+      "6": "QSPI_SCLK",
+      "7": "QSPI_SD3",
+      "8": "3V3"
+    },
+    "back": true,
+    "angle": 90
+  },
+  {
+    "ref": "U5",
+    "kind": "AP2112",
+    "value": "AP2112K-3.3TRG1",
+    "x": 443,
+    "y": 22,
+    "pins": {
+      "1": "RAW_USB_5V",
+      "2": "GND",
+      "3": "RAW_USB_5V",
+      "4": null,
+      "5": "3V3"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "J1",
+    "kind": "USB_C",
+    "value": "HRO TYPE-C-31-M-12",
+    "x": 449,
+    "y": 13,
+    "pins": {
+      "A1": "GND",
+      "A4": "RAW_USB_5V",
+      "A5": "CC1",
+      "A6": "USB_P",
+      "A7": "USB_N",
+      "A8": null,
+      "A9": "RAW_USB_5V",
+      "A12": "GND",
+      "B1": "GND",
+      "B4": "RAW_USB_5V",
+      "B5": "CC2",
+      "B6": "USB_P",
+      "B7": "USB_N",
+      "B8": null,
+      "B9": "RAW_USB_5V",
+      "B12": "GND",
+      "S1": "GND"
+    },
+    "back": true,
+    "angle": 90
+  },
+  {
+    "ref": "U6",
+    "kind": "USBLC6",
+    "value": "USBLC6-2SC6",
+    "x": 441.5,
+    "y": 12.7,
+    "pins": {
+      "1": "USB_P",
+      "2": "GND",
+      "3": "USB_N",
+      "4": "USB_N",
+      "5": "RAW_USB_5V",
+      "6": "USB_P"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "Y1",
+    "kind": "Crystal",
+    "value": "ABM8-272-T3 12MHz",
+    "x": 419.8,
+    "y": 11.7,
+    "pins": {
+      "1": "XIN",
+      "2": "GND",
+      "3": "XTAL_OUT",
+      "4": "GND"
+    },
+    "back": true,
+    "angle": 180
+  },
+  {
+    "ref": "R10",
+    "kind": "R_0402",
+    "value": "27R 1%",
+    "x": 433.2,
+    "y": 10.3,
+    "pins": {
+      "1": "USB_DP",
+      "2": "USB_P"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "R11",
+    "kind": "R_0402",
+    "value": "27R 1%",
+    "x": 433.2,
+    "y": 9.3,
+    "pins": {
+      "1": "USB_DM",
+      "2": "USB_N"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "R12",
+    "kind": "R_0402",
+    "value": "5.1k 1%",
+    "x": 443.2,
+    "y": 7,
+    "pins": {
+      "1": "CC1",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "R13",
+    "kind": "R_0402",
+    "value": "5.1k 1%",
+    "x": 442.5,
+    "y": 18.4,
+    "pins": {
+      "1": "CC2",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "R14",
+    "kind": "R_0402",
+    "value": "1k 1%",
+    "x": 422,
+    "y": 9.3,
+    "pins": {
+      "1": "XOUT",
+      "2": "XTAL_OUT"
+    },
+    "back": true,
+    "angle": 180
+  },
+  {
+    "ref": "R15",
+    "kind": "R_0402",
+    "value": "1k 1%",
+    "x": 418,
+    "y": 20,
+    "pins": {
+      "1": "QSPI_SS",
+      "2": "BOOT_SW"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "R16",
+    "kind": "R_0402",
+    "value": "10k 1%",
+    "x": 431,
+    "y": 18,
+    "pins": {
+      "1": "QSPI_SS",
+      "2": "3V3"
+    },
+    "back": true,
+    "angle": 90
+  },
+  {
+    "ref": "R17",
+    "kind": "R_0402",
+    "value": "10k 1%",
+    "x": 417,
+    "y": 21,
+    "pins": {
+      "1": "RUN",
+      "2": "3V3"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "BTN1",
+    "kind": "Button",
+    "value": "PTS636 SK25 SMTR LFS BOOTSEL",
+    "x": 405,
+    "y": 5,
+    "pins": {
+      "1": "BOOT_SW",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "BTN2",
+    "kind": "Button",
+    "value": "PTS636 SK25 SMTR LFS RESET",
+    "x": 405,
+    "y": 20,
+    "pins": {
+      "1": "RUN",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C10",
+    "kind": "C_0402",
+    "value": "15pF C0G 50V",
+    "x": 420.5,
+    "y": 14.5,
+    "pins": {
+      "1": "XIN",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 90
+  },
+  {
+    "ref": "C11",
+    "kind": "C_0402",
+    "value": "15pF C0G 50V",
+    "x": 416.6,
+    "y": 10.85,
+    "pins": {
+      "1": "XTAL_OUT",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 180
+  },
+  {
+    "ref": "C12",
+    "kind": "C_0805_Controller",
+    "value": "1uF X7R 50V",
+    "x": 447,
+    "y": 23,
+    "pins": {
+      "1": "RAW_USB_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C13",
+    "kind": "C_0805_Controller",
+    "value": "1uF X7R 50V",
+    "x": 439.8,
+    "y": 24.8,
+    "pins": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C14",
+    "kind": "C_0402",
+    "value": "100nF X7R 16V",
+    "x": 430.5,
+    "y": 23.7,
+    "pins": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C15",
+    "kind": "C_0402",
+    "value": "100nF X7R 16V",
+    "x": 440,
+    "y": 15.8,
+    "pins": {
+      "1": "RAW_USB_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C20",
+    "kind": "C_0402",
+    "value": "100nF X7R 16V",
+    "x": 430.6,
+    "y": 16,
+    "pins": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 90
+  },
+  {
+    "ref": "C21",
+    "kind": "C_0402",
+    "value": "100nF X7R 16V",
+    "x": 427,
+    "y": 16,
+    "pins": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 90
+  },
+  {
+    "ref": "C22",
+    "kind": "C_0402",
+    "value": "100nF X7R 16V",
+    "x": 423,
+    "y": 10.8,
+    "pins": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 180
+  },
+  {
+    "ref": "C23",
+    "kind": "C_0402",
+    "value": "100nF X7R 16V",
+    "x": 427,
+    "y": 6,
+    "pins": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": -90
+  },
+  {
+    "ref": "C24",
+    "kind": "C_0402",
+    "value": "100nF X7R 16V",
+    "x": 430.6,
+    "y": 6,
+    "pins": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": -90
+  },
+  {
+    "ref": "C25",
+    "kind": "C_0402",
+    "value": "100nF X7R 16V",
+    "x": 435,
+    "y": 11.4,
+    "pins": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C26",
+    "kind": "C_0402",
+    "value": "100nF X7R 16V",
+    "x": 433,
+    "y": 7.3,
+    "pins": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C27",
+    "kind": "C_0402",
+    "value": "100nF X7R 16V",
+    "x": 433,
+    "y": 11.4,
+    "pins": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C28",
+    "kind": "C_0402",
+    "value": "100nF X7R 16V",
+    "x": 423,
+    "y": 8.3,
+    "pins": {
+      "1": "1V1",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 180
+  },
+  {
+    "ref": "C29",
+    "kind": "C_0402",
+    "value": "100nF X7R 16V",
+    "x": 435,
+    "y": 12.4,
+    "pins": {
+      "1": "1V1",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C30",
+    "kind": "C_0402",
+    "value": "1uF X5R 10V",
+    "x": 435,
+    "y": 7.3,
+    "pins": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C31",
+    "kind": "C_0402",
+    "value": "1uF X5R 10V",
+    "x": 433,
+    "y": 8.3,
+    "pins": {
+      "1": "1V1",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "TP10",
+    "kind": "TestPad",
+    "value": "SWCLK",
+    "x": 410,
+    "y": 24,
+    "pins": {
+      "1": "SWCLK"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "TP11",
+    "kind": "TestPad",
+    "value": "SWDIO",
+    "x": 413,
+    "y": 24,
+    "pins": {
+      "1": "SWDIO"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "TP12",
+    "kind": "TestPad",
+    "value": "GND",
+    "x": 416,
+    "y": 24,
+    "pins": {
+      "1": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "TP13",
+    "kind": "TestPad",
+    "value": "3V3",
+    "x": 419,
+    "y": 24,
+    "pins": {
+      "1": "3V3"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "TP14",
+    "kind": "TestPad",
+    "value": "1V1",
+    "x": 422,
+    "y": 24,
+    "pins": {
+      "1": "1V1"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "TP15",
+    "kind": "TestPad",
+    "value": "RUN",
+    "x": 425,
+    "y": 24,
+    "pins": {
+      "1": "RUN"
+    },
+    "back": true,
+    "angle": 0
+  }
+]

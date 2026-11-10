@@ -1,0 +1,37 @@
+{
+  "kicad": "10.0.8",
+  "erc": 0,
+  "drc": 0,
+  "unconnected": 0,
+  "schematic_parity": 0,
+  "assertion_issues": [],
+  "hashes": {
+    "Cleaver-Embedded.kicad_pcb": "7df049a1b58404fc65e2fb25e4e2a0dc903e9bba429da0daee80960eff07797a",
+    "Cleaver-Embedded.kicad_sch": "8b63eebc8a8744bf1d1223ea52dc63a122de62494568c0fd872a5da21ec22c4b",
+    "Cleaver-Embedded.kicad_pro": "380f7b2bc799f979bf860b1aa95c73595c965e43553e54b6fec0491bd5e21ff3"
+  },
+  "fabrication_ready": false,
+  "assembly": {
+    "side": "B",
+    "top_smd_pads": [],
+    "top_paste_pads": [],
+    "bottom_smd_pads": 1363,
+    "checked_controller_courtyards": 34,
+    "checked_controller_bodies": 34,
+    "off_ep_ground_vias": 4,
+    "ep_bottom_paste_windows": 4
+  },
+  "ignored_drc_categories": [
+    "footprint_filters_mismatch",
+    "footprint_type_mismatch",
+    "missing_courtyard",
+    "track_not_centered_on_via",
+    "tuning_profile_track_geometries"
+  ],
+  "electrical_checks_pass": true,
+  "release_blockers": [
+    "Inherited LED aperture corner/tolerance fit not qualified",
+    "Factory DFM and stackup/USB signal integrity review",
+    "Physical case/plate fit and assembled-board USB/power/functional tests"
+  ]
+}

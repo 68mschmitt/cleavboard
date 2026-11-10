@@ -1,0 +1,15 @@
+{
+  "recorded": "2026-11-09",
+  "files": {
+    "ABM8-272-T3.pdf": "67e1db6220709b732c2a713e37fe57318a4c3d380f34e9425e5704c4003cac79",
+    "AP2112.pdf": "21598dc13f91a235ab6f49a24aa4235c31f0c487d6068bb733f5f026f42b35b6",
+    "Crystal_SMD_3225-4Pin_3.2x2.5mm.kicad_mod": "722a1d0007cf01a90193cc8d4b087cfad24fde51f5504b9f5f4da52579642052",
+    "PTS636.pdf": "2ddcffa7352327a3caa8c80394c9d188b13aa3630035ce294a9d692d1ca93af8",
+    "SOIC-8W_5.3x5.3mm_P1.27mm.kicad_mod": "fe481855997135ae251649d4568e47cd1f75455da1a1d0ac6b46b587fa6aa746",
+    "SOT-23-5.kicad_mod": "559f4c60fd9a2f3b575b5c4efb9bcb51863ea2c8e3837c27504059c8fa704827",
+    "USB_C_Receptacle_HRO_TYPE-C-31-M-12.kicad_mod": "fb2f6f4612d3328c13dac718ce742ee6c5a88847b8a1b440b83032bfb8879edd",
+    "W25Q32JV.pdf": "d4213ea0965d6464c420ad34741dca79439ba69db8412440c3cdbd0051e19c45",
+    "hardware-design-with-rp2040.pdf": "2a768e78bf8a8d7ffae11398f4bef7a5cfc508a41df10d0f291ce5f4a9c6fc34",
+    "rp2040-datasheet.pdf": "b35844f0b1d1d85ac9280c5e43cd5248c1e37463b0242c81959be876c2f55ef4"
+  }
+}

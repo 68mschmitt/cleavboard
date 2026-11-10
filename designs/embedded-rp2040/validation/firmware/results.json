@@ -1,0 +1,51 @@
+{
+  "vial_qmk_commit": "dd43959ae5c08d8a28d38a1acf7b04e86b14a344",
+  "compiler": "arm-none-eabi-gcc (Arch Repository) 16.2.0\nCopyright (C) 2026 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+  "submodules": "8bd61b804303f1614d574546c2dd735eeabb09f5 lib/chibios (8bd61b8)\n 3ac181e4ca5cafddaf8b472baa1d09c2b24c77b6 lib/chibios-contrib (3ac181e)\n e2239ee6043f73722e7aa812a459f54a28552929 lib/googletest (e2239ee)\n 549b97320d515bfca2f95c145a67bd13be968faa lib/lufa (breakpoint_2021_08_28-16-g549b973)\n e19410f8f8a256609da72cff549598e0df6fa4cf lib/lvgl (heads/qmk-master)\n d0c5cac430cc955b65efa0e899748853d9a80928 lib/pico-sdk (heads/qmk-master)\n c2e3b4e10d281e7f0f694d3ecbd9f320977288cc lib/printf (heads/qmk-master)\n 819dbc1e5d5926b17e27e00ca6d3d2988adae04e lib/vusb (releases/20121206-24-g819dbc1)",
+  "source_sha256": {
+    "cleaver_embedded.c": "2a1e7aed4b824dbcfc0d8533543655b38464491cea177c388eea9ef73fb66a2d",
+    "config.h": "1e5d91c0173a0f79547d707774fa9a5ee6c7332380267a57b15c775d3d303f9f",
+    "key_matrix.csv": "5319b9b90231dec1e49dc531ba64ed880fe381aca48f29b662239494da2ea02c",
+    "keyboard.json": "efe2f00db51a004044b35400498d1d16af7ebdf05afbcb387cb433f6af4e2504",
+    "keymaps/default/keymap.c": "6ad3a87e32c963c2e6d2e2608e1e9a2ad8e08d57d045d7ac8be9e8f26a80f6cb",
+    "keymaps/vial/config.h": "facecb95e0607357be40ef2842bc99560dd78fd680c37d3498a9ec3aa99c6fe2",
+    "keymaps/vial/keymap.c": "6ad3a87e32c963c2e6d2e2608e1e9a2ad8e08d57d045d7ac8be9e8f26a80f6cb",
+    "keymaps/vial/rules.mk": "dacb01359b7158160688217bf89c79a0dfcd01c9467ff916a053adb6cc41e89a",
+    "keymaps/vial/vial.json": "af56ba013257a1236ebc3aac43f426699e496a81318f57eb298c8b0d39f6d1b1",
+    "rules.mk": "50f8fa06503321f092449eeebfab9b1e58048f9cd3b0b5235201cadb4bb1ef22"
+  },
+  "builds": {
+    "default": {
+      "command": "make cleaver_embedded:default -j4",
+      "success": true,
+      "uf2_bytes": 74752,
+      "uf2_sha256": "aad36e6d2e4fa28c8a66f4e8e93ce671456b8650cc866af3c3f9ab24146ed7a9",
+      "elf_sha256": "6fa6819302c7d665f205c06256aecf1d2bfaf09ed31a28125ea7da8d6c1de311",
+      "strong_hooks": {
+        "keyboard_pre_init_kb": "10000404 T keyboard_pre_init_kb",
+        "housekeeping_task_kb": "10000438 T housekeeping_task_kb",
+        "suspend_power_down_kb": "10000490 T suspend_power_down_kb",
+        "suspend_wakeup_init_kb": "100004ac T suspend_wakeup_init_kb",
+        "rgb_matrix_indicators_advanced_kb": "100004b4 T rgb_matrix_indicators_advanced_kb"
+      },
+      "eeprom_mapped_base": "0x103fe000"
+    },
+    "vial": {
+      "command": "make cleaver_embedded:vial -j4",
+      "success": true,
+      "uf2_bytes": 111616,
+      "uf2_sha256": "4123bcfc9f7578fcfcc6cfb94e4e184005a759ccb778c8cb17c9053c952a6724",
+      "elf_sha256": "a5b58825f1b69730463b1d1cc20220b92f00073c96f5f9d7491f55d903aa4d05",
+      "strong_hooks": {
+        "keyboard_pre_init_kb": "10000404 T keyboard_pre_init_kb",
+        "housekeeping_task_kb": "10000438 T housekeeping_task_kb",
+        "suspend_power_down_kb": "10000490 T suspend_power_down_kb",
+        "suspend_wakeup_init_kb": "100004ac T suspend_wakeup_init_kb",
+        "rgb_matrix_indicators_advanced_kb": "100004b4 T rgb_matrix_indicators_advanced_kb"
+      },
+      "eeprom_mapped_base": "0x103fe000",
+      "vial_and_vialrgb_linked": true
+    }
+  },
+  "hardware_tested": false
+}
