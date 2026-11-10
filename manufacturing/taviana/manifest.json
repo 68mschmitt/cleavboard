@@ -1,0 +1,10 @@
+{
+  "pcb": "kicad/Cleaver.kicad_pcb",
+  "pcb_sha256": "3162da8dc8897e24715c910bcc1e8b770b6e2543280759030dceb511ce1237c2",
+  "fabrication_zip": "Cleaver-rev0.4-taviana-fabrication.zip",
+  "fabrication_zip_sha256": "edc835d32817b750f16386ec613b3a2455a4fb4dc74ae6351e99d347429c7a70",
+  "artwork_source_sha256": "c95da5f1f830fd4528713350d247731098475a4040065b2b0a7f06e6b2808628",
+  "artwork_layer": "F.Silkscreen",
+  "kicad": "10.0.8",
+  "drc_report": "artwork/taviana/module-drc.json"
+}

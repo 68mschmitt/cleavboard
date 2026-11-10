@@ -2,7 +2,7 @@
 
 ## Original module-based design
 
-Revision 0.4 remains at the repository's original paths:
+Revision 0.5 remains at the repository's original paths:
 
 - [`../kicad/`](../kicad/): schematic, routed PCB, libraries, firmware, reports.
 - [`../mechanical/`](../mechanical/): plate, mounting references, fit models.
@@ -21,6 +21,15 @@ design files with that baseline, from any working directory run:
 ```sh
 python3 /path/to/cleaver-keyboard/tools/verify_legacy.py
 ```
+
+The later [Taviana artwork addition](../artwork/taviana/README.md) intentionally
+updates both active boards and their artwork-generation support. The historical
+baseline comparison will therefore report those changes.
+
+The module-based revision 0.5 additionally updates `kicad/` and its root tools
+for bottom-only factory SMT assembly, available HanElectricity sockets and an
+SMD bulk capacitor. Its current handoff is [`../manufacturing/rev0.5/`](../manufacturing/rev0.5/);
+see the [component review](../kicad/references/COMPONENT-REVIEW.md).
 
 The checker is read-only. It excludes the nested `kicad/.history` Git working
 tree, which already had local changes when the new variant was started, and

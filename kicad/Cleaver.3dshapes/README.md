@@ -20,14 +20,14 @@ reload it from disk after preserving any intentional unsaved edits.
 
 | Footprint(s) | Model | Limitations |
 | --- | --- | --- |
-| SW001–SW117 | KiSwitch Cherry MX plate-mount switch + Kailh MX socket | Representative MX switch, not a statement about the purchased switch's color, housing, or exact dimensions |
+| SW001–SW117 | KiSwitch MX switch + socket envelope normalized to bottom anchor | Socket envelope approximates HanElectricity CPG151101S11-16; not a supplier-qualified model |
 | LED001–LED117 | Marbastlib SK6812MINI-E, recentered for reverse mounting | Package/lead geometry; installed height and solder fillets remain approximate |
 | D001–D117 | KiCad SOD-123 | Generic package, with cathode band |
 | C101–C217 and C1–C3 | KiCad 0805 capacitor | Generic body height/material, not value-specific |
 | R1–R4 | KiCad 0805 resistor | Generic package |
 | F1 | KiCad 1206 fuse | Representative 3.2 × 1.6 × 0.55 mm PTC body |
 | U2 / U3 | KiCad SOT-23-5 / SOT-23-6 | Generic package, not manufacturer marking |
-| C5 | Custom 8 mm-diameter, 11.5 mm nominal-body radial capacitor | Simplified EEU-FR1A471 envelope; 3.5 mm pitch; negative stripe faces circular pad 2; not a maximum-tolerance model |
+| C5 | Custom Ø10 mm, 10 mm SMD polymer capacitor | Simplified Nichicon PCF1A471MCL1GS; 10.3 mm platform, negative mark toward pad 2; not a tolerance model |
 | U1 | **Custom approximate YD-RP2040 assembly** | 53.34 × 22.86 mm PCB, 17.78 mm header spacing, USB-C facing right; see below |
 
 The controller model assumes **direct male headers**: 2.54 mm clearance from the
@@ -38,8 +38,10 @@ button/IC locations, and small parts are **visual approximations**, not verified
 against the actual board. Optional female sockets are not shown. Changing the
 real header/socket stack changes the installed height.
 
-The socket source model already sits below a **1.6 mm carrier**. Do not flip the
-entire switch footprint just to move its socket model. The reverse-mount LED
+Revision 0.5 uses true bottom-side socket footprints. The legacy mixed-side
+switch/socket models were rotated 180° about X and translated Z=−1.6 mm into
+their new bottom-anchor coordinate system. KiCad's normal bottom transform now
+places the switch above and socket below the **1.6 mm carrier**. The reverse-mount LED
 model is likewise normalized for KiCad's normal bottom-side footprint transform;
 its emitter faces into the board opening. Its actual leads extend onto the
 existing lands without stretching the package to the pad centers.
@@ -104,6 +106,12 @@ conversion inputs, and modifications. Licenses are bundled in `licenses/`.
   dedicated to the public domain under **CC0-1.0**, to the extent copyright
   applies; see `licenses/CC0-1.0.txt`. This dedication does not relicense any
   third-party model or the rest of the keyboard design.
+- Revision 0.5 `C_PCF_D10_H10` is also **CC0-1.0**. The two `BottomAnchor` /
+  `HanElectricity_Approx` models are transformations of the MIT KiSwitch STEP
+  sources above; VRML wraps the original meshes and preserves their colors.
+  `generated-rev05.json` records
+  their envelopes. Rebuild these additions using
+  `python3 -B scripts/build_3d_models.py --rev05-only`.
 
 To rebuild the custom models and adapted LED, with FreeCAD's Python modules
 available:

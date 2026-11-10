@@ -1,0 +1,38 @@
+{
+  "C_PCF_D10_H10": {
+    "bounds_mm": [
+      -5.5,
+      -5.15,
+      0.0,
+      5.5,
+      5.15,
+      9.92
+    ],
+    "solids": 5,
+    "description": "Nominal Nichicon PCF1A471MCL1GS visualization, not tolerance geometry. CC0-1.0."
+  },
+  "SW_Cherry_MX_BottomAnchor": {
+    "bounds_mm": [
+      -7.80709,
+      -7.79291,
+      -17.04252,
+      7.79291,
+      7.80709,
+      1.55748
+    ],
+    "solids": 7,
+    "description": "KiSwitch MX switch transformed for bottom socket footprint anchor. See bundled license."
+  },
+  "SW_Hotswap_HanElectricity_Approx": {
+    "bounds_mm": [
+      -7.86,
+      -6.99718,
+      -1.22,
+      6.66,
+      -0.7794,
+      2.00001
+    ],
+    "solids": 3,
+    "description": "KiSwitch Kailh envelope used as APPROXIMATION of HanElectricity socket; not a supplier model. See bundled license."
+  }
+}

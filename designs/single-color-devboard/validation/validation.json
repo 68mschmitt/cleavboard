@@ -1,0 +1,33 @@
+{
+  "kicad": "10.0.8",
+  "erc": 0,
+  "drc": 0,
+  "unconnected": 0,
+  "schematic_parity": 0,
+  "assertion_count": 235115,
+  "assertion_issues": [],
+  "ignored_baseline_categories": [
+    "footprint_filters_mismatch",
+    "footprint_type_mismatch",
+    "missing_courtyard",
+    "track_not_centered_on_via",
+    "tuning_profile_track_geometries"
+  ],
+  "custom_rules": [
+    "Only LED solder lands: edge clearance 0.1mm, nominal 0.15mm"
+  ],
+  "assembly": {
+    "top_paste": [],
+    "top_smd": [],
+    "through_hole_electronic_pads": 40,
+    "checked_bottom_bodies": 476
+  },
+  "fabrication_ready": false,
+  "electrical_checks_pass": true,
+  "hashes": {
+    "Cleaver-White.kicad_pcb": "4ae6010f6d895b57b8652a6d52079ca4564dea4926bc12e6d7756fb2bea22067",
+    "Cleaver-White.kicad_sch": "f192b2a0deef1ef7f2027090ea658d4a67401ff9e6a140eea97e45722a7fb519",
+    "Cleaver-White.kicad_pro": "e04f82c7b2890a79365791e125dfcb1db4aab6ad0d553c898a44e4273dd27d0f",
+    "Cleaver-White.kicad_dru": "7cfa3e9294e856ee6e0cc0721c6c6b62304cb3bf589b2dc103671a3c8d31552c"
+  }
+}

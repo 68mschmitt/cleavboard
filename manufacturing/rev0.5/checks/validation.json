@@ -1,0 +1,26 @@
+{
+  "revision": "0.5",
+  "matrix": "8x16",
+  "unique_switches": 117,
+  "rgb_leds": 117,
+  "bottom_factory_placements": 479,
+  "pth_pads": 40,
+  "front_paste_pads": 0,
+  "pcb_sha256": "1a54257496d568c2bc183e506c86cd3747b9588f89a96b58a05f2656cfa43b96",
+  "schematic_sha256": "eb96509f43dfd85b6bc806b9b107d6e976d7c5245368e33e2fd4ddc6bf823ee2",
+  "erc": "pass",
+  "drc": "pass",
+  "schematic_pcb_firmware_mapping": "pass",
+  "models_3d": {
+    "populated_footprints": 480,
+    "model_instances": 597,
+    "unique_models": 11,
+    "intentionally_unmodeled": [
+      "TP1: wire pad",
+      "TP2-TP6: probe pads",
+      "H*: mounting holes",
+      "FID*: bare copper fiducials",
+      "LOGO1: silkscreen artwork"
+    ]
+  }
+}

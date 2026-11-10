@@ -150,6 +150,45 @@ def reverse_led(folder):
     return pieces
 
 
+def smd_capacitor():
+    """Nominal PCF D10 platform and can, + on left, negative stripe right."""
+    app, part = freecad()
+    pieces = [('Platform',part.makeBox(10.3,10.3,.6,app.Vector(-5.15,-5.15,.1)),(.06,.06,.06)),
+              ('Can',part.makeCylinder(5,9.2,app.Vector(0,0,.7)),(.72,.74,.76))]
+    stripe = part.makeCylinder(4.95,.02,app.Vector(0,0,9.9)).common(
+        part.makeBox(3,10,.1,app.Vector(2,-5,9.88)))
+    pieces.append(('Negative mark',stripe,(.05,.07,.13)))
+    for x in (-5.5,2.3):
+        pieces.append(('SMD terminal',part.makeBox(3.2,1,.15,app.Vector(x,-.5,0)),(.7,.72,.74)))
+    return pieces
+
+
+def bottom_anchor_model(folder, name):
+    """Normalize legacy mixed-side MX visualization to a B.Cu footprint anchor."""
+    app, part = freecad()
+    shape = part.read(str(folder/(name+'.step')))
+    shape.rotate(app.Vector(),app.Vector(1,0,0),180)
+    shape.translate(app.Vector(0,0,-1.6))
+    return [('Approximate envelope',shape,(.12,.12,.14))]
+
+
+def export_bottom_anchor(name, source, folder, note):
+    # Preserve the original optimized mesh/materials. Retessellating the STEP
+    # assembly produces millions of unnecessary triangles in the viewer.
+    shape = bottom_anchor_model(folder, source)[0][1]
+    assert not shape.isNull() and shape.isValid(), name
+    shape.exportStep(str(folder/(name+'.step')))
+    original = (folder/(source+'.wrl')).read_text().split('\n',1)[1]
+    (folder/(name+'.wrl')).write_text(
+        '#VRML V2.0 utf8\n# '+note+'\nTransform {\n'
+        f'  translation 0 0 {-1.6/2.54:.10f}\n'
+        '  rotation 1 0 0 3.141592653589793\n  children [\n'+original+'\n  ]\n}\n')
+    box = shape.BoundBox
+    return dict(bounds_mm=[round(v,5) for v in (box.XMin,box.YMin,box.ZMin,
+                                               box.XMax,box.YMax,box.ZMax)],
+                solids=len(shape.Solids),description=note)
+
+
 def export_keyswitch_sources(source_dir, folder):
     app, part = freecad()
     for name in ('SW_Cherry_MX_Plate','SW_Hotswap_Kailh_MX'):
@@ -168,9 +207,21 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--keyswitch-sources',type=Path,
                         help='Optional directory containing the pinned KiSwitch FCStd sources')
+    parser.add_argument('--rev05-only',action='store_true',help='Build only new bottom-assembly models')
     args = parser.parse_args()
     folder = ROOT/'kicad/Cleaver.3dshapes'
     results = {}
+    if args.rev05_only:
+        results['C_PCF_D10_H10'] = export_model('C_PCF_D10_H10',smd_capacitor(),folder,
+            'Nominal Nichicon PCF1A471MCL1GS visualization, not tolerance geometry. CC0-1.0.')
+        for name,source,note in [
+            ('SW_Cherry_MX_BottomAnchor','SW_Cherry_MX_Plate',
+             'KiSwitch MX switch transformed for bottom socket footprint anchor. See bundled license.'),
+            ('SW_Hotswap_HanElectricity_Approx','SW_Hotswap_Kailh_MX',
+             'KiSwitch Kailh envelope used as APPROXIMATION of HanElectricity socket; not a supplier model. See bundled license.')]:
+            results[name] = export_bottom_anchor(name,source,folder,note)
+        (folder/'generated-rev05.json').write_text(json.dumps(results,indent=2)+'\n')
+        return
     for name,pieces,note in (
             ('YD_RP2040_Approx',controller(),
              'Simplified YD-RP2040 / direct male headers; visual approximation, not mechanical sign-off. CC0-1.0.'),

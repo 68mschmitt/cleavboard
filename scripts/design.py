@@ -109,8 +109,9 @@ def components(keys, leds):
     add("U1", "YD_RP2040", "YD-RP2040 4MB USB-C", MODULE_X, MODULE_Y, module, angle=-90)
     for k in keys:
         x, y = k["x"], k["y"]
-        add(k["ref"], "MX", k["legend"], x, y,
-            {1: f"ROW{k['matrix_row']}", 2: k["key_net"]})
+        add(k["ref"], "MX", "CPG151101S11-16", x, y,
+            {1: f"ROW{k['matrix_row']}", 2: k["key_net"]}, back=True)
+        result[-1]['key_label'] = k['legend']
         # Standard SOD-123 numbering: 1=cathode, 2=anode.
         # Leave ~0.36 mm nominal body gap to the socket (was only ~0.11 mm).
         add(k["diode"], "D_SOD123", "1N4148W", x, y - 8.25,
@@ -121,7 +122,7 @@ def components(keys, leds):
             {1: "LED_5V", 2: "GND"}, back=True)
     # User-approved short wire from raw USB VBUS, BEFORE the module's BAT54C.
     # Pin 40 stays unused: never send the RGB load through that small diode.
-    add("TP1", "WirePad", "USB VBUS TAP +5V", 446, 27, {1: "RAW_USB_5V"})
+    add("TP1", "WirePad", "USB VBUS TAP +5V", 446, 27, {1: "RAW_USB_5V"}, back=True)
     # No mechanical switch. GP28 controls the protected RGB branch in firmware.
     add("F1", "PTC_1206", "1206L050YR 0.50A hold", 393, 4.5,
         {1: "RAW_USB_5V", 2: "FUSED_5V"})
@@ -138,8 +139,8 @@ def components(keys, leds):
     add("R4", "R_0805", "75k 1%", 393, 17, {1: "CURRENT_LIMIT", 2: "GND"})
     # Downstream of the current limiter, not directly across USB: absorbs
     # coincident LED PWM pulses without tripping the 350mA input-current limit.
-    add("C5", "C_Radial8", "470uF 10V EEU-FR1A471", 377, 6,
-        {1: "LED_5V", 2: "GND"})
+    add("C5", "C_PCF_D10", "470uF 10V PCF1A471MCL1GS", 377, 6,
+        {1: "LED_5V", 2: "GND"}, back=True)
     for part in result:
         if part['ref'] in ('F1', 'U2', 'U3', 'R1', 'R2', 'R3', 'R4', 'C1', 'C2', 'C3'):
             part['back'] = True

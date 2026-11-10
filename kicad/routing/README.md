@@ -1,9 +1,9 @@
-# Accepted revision 0.4 routing
+# Accepted revision 0.5 routing
 
 `Cleaver.ses` contains **all routed copper**, including the power/ground fanouts,
-bulk-capacitor connection and underside rerouting. It carries no placement
+SMD bulk-capacitor and underside wire-pad connections. It carries no placement
 instructions; the schematic/shared design is authoritative for placement.
-Do not apply revision 0.3 sessions to revision 0.4 placement.
+Do not apply older sessions to revision 0.5 placement.
 
 ## Restore
 
@@ -23,7 +23,13 @@ zero unconnected items and zero schematic/PCB parity issues.
 
 ## Provenance
 
-Revision 0.3's Freerouting 1.9.0 route was the starting point. Revision 0.4
+Revision 0.5 retains revision 0.4 copper except for two ROW1 segments next to
+the enlarged C5 lands, replaced with a short bottom detour, and five new power
+segments / three off-pad vias for C5 and TP1. `scripts/upgrade_rev05_routing.py`
+records that one-time migration. Socket hole/pad positions and all net mappings
+are retained. Normal restoration only needs the current complete session.
+
+Earlier history: revision 0.3's Freerouting 1.9.0 route was the starting point. Revision 0.4
 reuses unaffected copper and reroutes connections displaced by underside power
 components, mounting-hole keepouts, test pads, fiducials and increased diode/
 socket body clearance. Completion used clearance-aware grid routing followed

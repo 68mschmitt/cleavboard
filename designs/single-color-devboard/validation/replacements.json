@@ -1,0 +1,19 @@
+{
+  "socket": "HanElectricity CPG151101S11-16 / C41430893",
+  "led": "BrtLed BL-HZ333H-L21-TRE / C5123487",
+  "socket_count": 117,
+  "led_count": 117,
+  "minimum_lens_edge_margin_mm": 0.11006748339818094,
+  "minimum_unrotated_substrate_overlap_mm": 0.25,
+  "minimum_body_gap_mm": 0.4199999999999946,
+  "worst_resistor_only_branch_current_mA": 1.3597513597513597,
+  "assumptions": {
+    "aperture_size_tolerance_mm": 0.05,
+    "aperture_registration_mm": 0.025,
+    "max_internal_corner_radius_mm": 0.25,
+    "placement_xy_mm": 0.1,
+    "led_rotation_degrees": 3
+  },
+  "physical_reflow_and_brightness_tested": false,
+  "jlcpcb_rotation_mapping_confirmed": false
+}

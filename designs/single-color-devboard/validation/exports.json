@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "placements": 476,
+  "socket_centroids": 117,
+  "pad_references": 957,
+  "owner_module_excluded": true,
+  "manufacturing_hashes_match": true,
+  "fabrication_zip_matches": true,
+  "firmware_sources_and_binaries_match": true
+}

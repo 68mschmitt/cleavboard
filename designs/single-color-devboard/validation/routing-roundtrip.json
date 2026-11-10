@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "resolution_mm": 0.0001,
+  "before_items": 3384,
+  "after_items": 3384,
+  "missing_items": 0,
+  "added_items": 0,
+  "scope": "All track/via net names, layers, endpoints, widths and via drills; zones independently refilled and DRC checked",
+  "before_sha256": "b85431ed1c518baf1019e73cb1fe7cc6eff5c48a32e78076c75eba1bfbd088fd",
+  "after_sha256": "4ae6010f6d895b57b8652a6d52079ca4564dea4926bc12e6d7756fb2bea22067"
+}

@@ -14,6 +14,7 @@ import pcbnew
 
 from design import ROOT, MODULE_X, MODULE_Y, ROW_GPIOS, COL_GPIOS, read_keys, components, MOUNTING_HOLES, FIDUCIALS
 from models_3d import validate_models
+from assembly_parts import fields, purchase
 
 
 def main():
@@ -32,10 +33,17 @@ def main():
     board = pcbnew.LoadBoard(str(pcb))
     models = validate_models(board)
     footprints = {fp.GetReference():fp for fp in board.GetFootprints()}
-    assert len(footprints)==len(parts)+len(MOUNTING_HOLES)+len(FIDUCIALS), 'Unexpected/missing board components'
+    logo = footprints['LOGO1']
+    assert not list(logo.Pads()) and logo.GetAttributes() & pcbnew.FP_BOARD_ONLY
+    assert all(s.GetLayer()==pcbnew.F_SilkS for s in logo.GraphicalItems())
+    assert len(footprints)==len(parts)+len(MOUNTING_HOLES)+len(FIDUCIALS)+1, 'Unexpected/missing board components'
     for part in parts:
         ref = part['ref']
         fp = footprints[ref]
+        for name,value in fields(part).items():
+            assert fp.GetField(name).GetText()==value, f'{ref}: purchasing field {name}'
+        if purchase(part):
+            assert fp.GetAttributes() & pcbnew.FP_SMD, f'{ref}: not SMD'
         assert fp.GetLayer()==(pcbnew.B_Cu if part['back'] else pcbnew.F_Cu), f'{ref}: wrong assembly side'
         assert abs(pcbnew.ToMM(fp.GetPosition().x)-part['x'])<.001, f'{ref} moved in X'
         assert abs(pcbnew.ToMM(fp.GetPosition().y)-part['y'])<.001, f'{ref} moved in Y'
@@ -73,7 +81,11 @@ def main():
     assert any(pcbnew.F_Cu in list(z.GetLayerSet().Seq()) and z.GetNetname()=='/LED_5V'
                and z.HasFilledPolysForLayer(pcbnew.F_Cu) for z in board.Zones()), 'Missing switched RGB supply pour'
     smd_pads = [p for fp in board.GetFootprints() for p in fp.Pads()
-                if p.GetAttribute()==pcbnew.PAD_ATTRIB_SMD]
+                 if p.GetAttribute()==pcbnew.PAD_ATTRIB_SMD]
+    pth = [p for fp in board.GetFootprints() for p in fp.Pads() if p.GetAttribute()==pcbnew.PAD_ATTRIB_PTH]
+    assert len(pth)==40 and all(p.GetParentFootprint().GetReference()=='U1' for p in pth)
+    assert all(p.IsOnLayer(pcbnew.B_Cu) and not p.IsOnLayer(pcbnew.F_Cu) for p in smd_pads)
+    assert not any(p.IsOnLayer(pcbnew.F_Paste) for fp in board.GetFootprints() for p in fp.Pads())
     for via in (t for t in board.GetTracks() if t.GetClass()=='PCB_VIA'):
         for pad in smd_pads:
             if pad.GetNetCode()!=via.GetNetCode():
@@ -111,7 +123,8 @@ def main():
             assert not data['violations'] and not data['unconnected_items'] and not data.get('schematic_parity',[]), 'DRC report is not clean'
         else:
             assert not any(sheet['violations'] for sheet in data['sheets']), 'ERC report is not clean'
-    report = dict(revision='0.4',matrix='8x16',unique_switches=len(keys),rgb_leds=len(leds),
+    report = dict(revision='0.5',matrix='8x16',unique_switches=len(keys),rgb_leds=len(leds),
+                  bottom_factory_placements=479,pth_pads=40,front_paste_pads=0,
                   pcb_sha256=hashlib.sha256(pcb.read_bytes()).hexdigest(),
                   schematic_sha256=hashlib.sha256(sch.read_bytes()).hexdigest(),
                   erc='pass',drc='pass',schematic_pcb_firmware_mapping='pass',models_3d=models)

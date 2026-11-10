@@ -1,0 +1,61 @@
+{
+  "recorded_utc": "2026-11-10T23:03:30.041326+00:00",
+  "pcb_revision": "0.5",
+  "keyboard": "cleaver",
+  "repository": "https://github.com/vial-kb/vial-qmk",
+  "commit": "dd43959ae5c08d8a28d38a1acf7b04e86b14a344",
+  "toolchain": "arm-none-eabi-gcc (Arch Repository) 16.2.0",
+  "commands": [
+    "make cleaver:default:clean",
+    "make cleaver:default -j4",
+    "make cleaver:vial:clean",
+    "make cleaver:vial -j4"
+  ],
+  "source_tree_sha256": "10cc32c3f1f1f64b33f590bc6fb55d52830b95dc118e6e70a04969f2fca290e6",
+  "source_hash_method": "Sorted relative POSIX file path + NUL + file bytes, concatenated for all files in kicad/firmware",
+  "source_files_sha256": {
+    "kicad/firmware/cleaver.c": "f7a5c8daba1710fd302b775add87235aa4c61d55300cfaf673a9dda0785a4b7c",
+    "kicad/firmware/config.h": "d55cc1bdf1f9069d4277c773c239daeb1c5be7c1b3e2861cd25276a840adb141",
+    "kicad/firmware/key_matrix.csv": "5319b9b90231dec1e49dc531ba64ed880fe381aca48f29b662239494da2ea02c",
+    "kicad/firmware/keyboard.json": "acdca7ca9b220ac285c11e71d24fce41e84886ce2c7cb5b64c84d005597ac584",
+    "kicad/firmware/keymaps/default/keymap.c": "6ad3a87e32c963c2e6d2e2608e1e9a2ad8e08d57d045d7ac8be9e8f26a80f6cb",
+    "kicad/firmware/keymaps/vial/config.h": "8e2ed30fbf35fdf0306cc484d672a541bdecaefa2d1e50791eef30f0c333c7f4",
+    "kicad/firmware/keymaps/vial/keymap.c": "6ad3a87e32c963c2e6d2e2608e1e9a2ad8e08d57d045d7ac8be9e8f26a80f6cb",
+    "kicad/firmware/keymaps/vial/rules.mk": "dacb01359b7158160688217bf89c79a0dfcd01c9467ff916a053adb6cc41e89a",
+    "kicad/firmware/keymaps/vial/vial.json": "157c1729c1db6fa62a8924cb2108fd97dec0f3657f368840b4ba554dc858dd91",
+    "kicad/firmware/rules.mk": "50f8fa06503321f092449eeebfab9b1e58048f9cd3b0b5235201cadb4bb1ef22"
+  },
+  "submodules": {
+    "lib/chibios": "8bd61b804303f1614d574546c2dd735eeabb09f5",
+    "lib/chibios-contrib": "3ac181e4ca5cafddaf8b472baa1d09c2b24c77b6",
+    "lib/googletest": "e2239ee6043f73722e7aa812a459f54a28552929",
+    "lib/lufa": "549b97320d515bfca2f95c145a67bd13be968faa",
+    "lib/lvgl": "e19410f8f8a256609da72cff549598e0df6fa4cf",
+    "lib/pico-sdk": "d0c5cac430cc955b65efa0e899748853d9a80928",
+    "lib/printf": "c2e3b4e10d281e7f0f694d3ecbd9f320977288cc",
+    "lib/vusb": "819dbc1e5d5926b17e27e00ca6d3d2988adae04e"
+  },
+  "uf2": {
+    "Cleaver-rev0.5-default.uf2": {
+      "bytes": 74240,
+      "sha256": "2112ffa4ae360cc183a090c86b0ae1c36a782043403b3f0ba5ef1a96ba8a692c",
+      "blocks": 145,
+      "family": "RP2040 (0xe48bff56)",
+      "flash_start": "0x10000000",
+      "flash_end_exclusive": "0x10009100",
+      "format_validation": "pass",
+      "build_log": "manufacturing/rev0.5/firmware/build-default.log"
+    },
+    "Cleaver-rev0.5-vial.uf2": {
+      "bytes": 111616,
+      "sha256": "f8494e50a955fd3265c1f9ca19b0425be3d2812e113625f19efc89892e1e89ec",
+      "blocks": 218,
+      "family": "RP2040 (0xe48bff56)",
+      "flash_start": "0x10000000",
+      "flash_end_exclusive": "0x1000da00",
+      "format_validation": "pass",
+      "build_log": "manufacturing/rev0.5/firmware/build-vial.log"
+    }
+  },
+  "physical_hardware_tested": false
+}

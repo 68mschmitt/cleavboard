@@ -1,0 +1,77 @@
+(footprint "C_0805"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Cleaver verified geometry: C_0805")
+	(property "Reference" "REF**"
+		(at 0 -1.825 0)
+		(layer "F.SilkS")
+		(uuid "c10b9e2d-d619-4252-a010-7a848468c0f7")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Value" "C_0805"
+		(at 0 1.825 0)
+		(layer "F.Fab")
+		(uuid "690db991-a8d2-4040-b4a8-ca5566601aa5")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "689e9e14-cfc8-4409-b146-f44f2557051d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fea973ad-f0d1-43f7-ae95-0f31edf3fa94")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -1 -0.625)
+		(end 1 0.625)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "d3e59353-e38e-41e4-860f-3b852a2c37fa")
+	)
+	(pad "1" smd rect
+		(at -0.95 0)
+		(size 1.1 1.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "03773273-bf51-440f-9c2b-6f55662ccdb2")
+	)
+	(pad "2" smd rect
+		(at 0.95 0)
+		(size 1.1 1.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "e66672c5-7f76-45c4-8093-d1934fcec0b1")
+	)
+	(embedded_fonts no)
+(model "${KIPRJMOD}/Cleaver-White.3dshapes/C_0805_2012Metric.wrl" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0))))

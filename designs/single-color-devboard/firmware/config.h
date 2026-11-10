@@ -1,0 +1,6 @@
+#pragma once
+#define PICO_FLASH_SIZE_BYTES (4 * 1024 * 1024)
+#define LED_POWER_PIN GP28
+#define WHITE_PWM_PIN GP27
+#define BACKLIGHT_DEFAULT_LEVEL 0
+#define BACKLIGHT_DEFAULT_ON false

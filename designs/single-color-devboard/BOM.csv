@@ -1,0 +1,477 @@
+Reference,Value,Manufacturer,MPN,LCSC Part #,Package,Assembly Side,X_top_view_mm,Y_down_mm,Source
+SW001,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,32.702500,5.715000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D001,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,33.337500,1.275000,https://www.lcsc.com/product-detail/C81598.html
+SW002,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,70.802500,5.715000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D002,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,71.437500,1.275000,https://www.lcsc.com/product-detail/C81598.html
+SW003,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,89.852500,5.715000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D003,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,90.487500,1.275000,https://www.lcsc.com/product-detail/C81598.html
+SW004,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,108.902500,5.715000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D004,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,109.537500,1.275000,https://www.lcsc.com/product-detail/C81598.html
+SW005,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,127.952500,5.715000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D005,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,128.587500,1.275000,https://www.lcsc.com/product-detail/C81598.html
+SW006,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,156.527500,5.715000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D006,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,157.162500,1.275000,https://www.lcsc.com/product-detail/C81598.html
+SW007,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,175.577500,5.715000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D007,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,176.212500,1.275000,https://www.lcsc.com/product-detail/C81598.html
+SW008,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,194.627500,5.715000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D008,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,195.262500,1.275000,https://www.lcsc.com/product-detail/C81598.html
+SW009,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,213.677500,5.715000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D009,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,214.312500,1.275000,https://www.lcsc.com/product-detail/C81598.html
+SW010,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,242.252500,5.715000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D010,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,242.887500,1.275000,https://www.lcsc.com/product-detail/C81598.html
+SW011,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,261.302500,5.715000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D011,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,261.937500,1.275000,https://www.lcsc.com/product-detail/C81598.html
+SW012,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,280.352500,5.715000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D012,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,280.987500,1.275000,https://www.lcsc.com/product-detail/C81598.html
+SW013,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,299.402500,5.715000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D013,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,300.037500,1.275000,https://www.lcsc.com/product-detail/C81598.html
+SW014,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,323.215000,5.715000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D014,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,323.850000,1.275000,https://www.lcsc.com/product-detail/C81598.html
+SW015,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,342.265000,5.715000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D015,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,342.900000,1.275000,https://www.lcsc.com/product-detail/C81598.html
+SW016,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,361.315000,5.715000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D016,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,361.950000,1.275000,https://www.lcsc.com/product-detail/C81598.html
+SW017,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,8.890000,34.290000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D017,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,9.525000,29.850000,https://www.lcsc.com/product-detail/C81598.html
+SW018,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,32.702500,34.290000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D018,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,33.337500,29.850000,https://www.lcsc.com/product-detail/C81598.html
+SW019,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,51.752500,34.290000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D019,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,52.387500,29.850000,https://www.lcsc.com/product-detail/C81598.html
+SW020,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,70.802500,34.290000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D020,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,71.437500,29.850000,https://www.lcsc.com/product-detail/C81598.html
+SW021,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,89.852500,34.290000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D021,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,90.487500,29.850000,https://www.lcsc.com/product-detail/C81598.html
+SW022,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,108.902500,34.290000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D022,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,109.537500,29.850000,https://www.lcsc.com/product-detail/C81598.html
+SW023,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,127.952500,34.290000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D023,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,128.587500,29.850000,https://www.lcsc.com/product-detail/C81598.html
+SW024,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,147.002500,34.290000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D024,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,147.637500,29.850000,https://www.lcsc.com/product-detail/C81598.html
+SW025,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,166.052500,34.290000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D025,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,166.687500,29.850000,https://www.lcsc.com/product-detail/C81598.html
+SW026,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,185.102500,34.290000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D026,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,185.737500,29.850000,https://www.lcsc.com/product-detail/C81598.html
+SW027,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,204.152500,34.290000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D027,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,204.787500,29.850000,https://www.lcsc.com/product-detail/C81598.html
+SW028,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,223.202500,34.290000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D028,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,223.837500,29.850000,https://www.lcsc.com/product-detail/C81598.html
+SW029,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,242.252500,34.290000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D029,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,242.887500,29.850000,https://www.lcsc.com/product-detail/C81598.html
+SW030,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,261.302500,34.290000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D030,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,261.937500,29.850000,https://www.lcsc.com/product-detail/C81598.html
+SW031,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,289.877500,34.290000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D031,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,290.512500,29.850000,https://www.lcsc.com/product-detail/C81598.html
+SW032,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,323.215000,34.290000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D032,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,323.850000,29.850000,https://www.lcsc.com/product-detail/C81598.html
+SW033,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,342.265000,34.290000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D033,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,342.900000,29.850000,https://www.lcsc.com/product-detail/C81598.html
+SW034,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,361.315000,34.290000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D034,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,361.950000,29.850000,https://www.lcsc.com/product-detail/C81598.html
+SW035,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,385.127500,34.290000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D035,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,385.762500,29.850000,https://www.lcsc.com/product-detail/C81598.html
+SW036,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,404.177500,34.290000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D036,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,404.812500,29.850000,https://www.lcsc.com/product-detail/C81598.html
+SW037,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,423.227500,34.290000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D037,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,423.862500,29.850000,https://www.lcsc.com/product-detail/C81598.html
+SW038,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,442.277500,34.290000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D038,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,442.912500,29.850000,https://www.lcsc.com/product-detail/C81598.html
+SW039,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,8.890000,53.340000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D039,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,9.525000,48.900000,https://www.lcsc.com/product-detail/C81598.html
+SW040,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,37.465000,53.340000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D040,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,38.100000,48.900000,https://www.lcsc.com/product-detail/C81598.html
+SW041,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,61.277500,53.340000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D041,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,61.912500,48.900000,https://www.lcsc.com/product-detail/C81598.html
+SW042,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,80.327500,53.340000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D042,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,80.962500,48.900000,https://www.lcsc.com/product-detail/C81598.html
+SW043,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,99.377500,53.340000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D043,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,100.012500,48.900000,https://www.lcsc.com/product-detail/C81598.html
+SW044,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,118.427500,53.340000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D044,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,119.062500,48.900000,https://www.lcsc.com/product-detail/C81598.html
+SW045,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,137.477500,53.340000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D045,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,138.112500,48.900000,https://www.lcsc.com/product-detail/C81598.html
+SW046,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,156.527500,53.340000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D046,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,157.162500,48.900000,https://www.lcsc.com/product-detail/C81598.html
+SW047,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,175.577500,53.340000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D047,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,176.212500,48.900000,https://www.lcsc.com/product-detail/C81598.html
+SW048,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,194.627500,53.340000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D048,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,195.262500,48.900000,https://www.lcsc.com/product-detail/C81598.html
+SW049,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,213.677500,53.340000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D049,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,214.312500,48.900000,https://www.lcsc.com/product-detail/C81598.html
+SW050,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,232.727500,53.340000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D050,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,233.362500,48.900000,https://www.lcsc.com/product-detail/C81598.html
+SW051,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,251.777500,53.340000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D051,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,252.412500,48.900000,https://www.lcsc.com/product-detail/C81598.html
+SW052,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,270.827500,53.340000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D052,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,271.462500,48.900000,https://www.lcsc.com/product-detail/C81598.html
+SW053,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,294.640000,53.340000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D053,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,295.275000,48.900000,https://www.lcsc.com/product-detail/C81598.html
+SW054,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,323.215000,53.340000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D054,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,323.850000,48.900000,https://www.lcsc.com/product-detail/C81598.html
+SW055,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,342.265000,53.340000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D055,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,342.900000,48.900000,https://www.lcsc.com/product-detail/C81598.html
+SW056,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,361.315000,53.340000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D056,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,361.950000,48.900000,https://www.lcsc.com/product-detail/C81598.html
+SW057,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,385.127500,53.340000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D057,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,385.762500,48.900000,https://www.lcsc.com/product-detail/C81598.html
+SW058,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,404.177500,53.340000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D058,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,404.812500,48.900000,https://www.lcsc.com/product-detail/C81598.html
+SW059,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,423.227500,53.340000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D059,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,423.862500,48.900000,https://www.lcsc.com/product-detail/C81598.html
+SW060,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,442.277500,62.865000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D060,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,442.912500,58.425000,https://www.lcsc.com/product-detail/C81598.html
+SW061,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,8.890000,72.390000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D061,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,9.525000,67.950000,https://www.lcsc.com/product-detail/C81598.html
+SW062,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,39.846250,72.390000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D062,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,40.481250,67.950000,https://www.lcsc.com/product-detail/C81598.html
+SW063,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,66.040000,72.390000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D063,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,66.675000,67.950000,https://www.lcsc.com/product-detail/C81598.html
+SW064,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,85.090000,72.390000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D064,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,85.725000,67.950000,https://www.lcsc.com/product-detail/C81598.html
+SW065,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,104.140000,72.390000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D065,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,104.775000,67.950000,https://www.lcsc.com/product-detail/C81598.html
+SW066,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,123.190000,72.390000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D066,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,123.825000,67.950000,https://www.lcsc.com/product-detail/C81598.html
+SW067,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,142.240000,72.390000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D067,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,142.875000,67.950000,https://www.lcsc.com/product-detail/C81598.html
+SW068,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,161.290000,72.390000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D068,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,161.925000,67.950000,https://www.lcsc.com/product-detail/C81598.html
+SW069,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,180.340000,72.390000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D069,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,180.975000,67.950000,https://www.lcsc.com/product-detail/C81598.html
+SW070,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,199.390000,72.390000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D070,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,200.025000,67.950000,https://www.lcsc.com/product-detail/C81598.html
+SW071,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,218.440000,72.390000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D071,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,219.075000,67.950000,https://www.lcsc.com/product-detail/C81598.html
+SW072,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,237.490000,72.390000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D072,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,238.125000,67.950000,https://www.lcsc.com/product-detail/C81598.html
+SW073,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,256.540000,72.390000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D073,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,257.175000,67.950000,https://www.lcsc.com/product-detail/C81598.html
+SW074,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,287.496250,72.390000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D074,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,288.131250,67.950000,https://www.lcsc.com/product-detail/C81598.html
+SW075,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,385.127500,72.390000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D075,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,385.762500,67.950000,https://www.lcsc.com/product-detail/C81598.html
+SW076,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,404.177500,72.390000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D076,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,404.812500,67.950000,https://www.lcsc.com/product-detail/C81598.html
+SW077,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,423.227500,72.390000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D077,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,423.862500,67.950000,https://www.lcsc.com/product-detail/C81598.html
+SW078,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,8.890000,91.440000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D078,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,9.525000,87.000000,https://www.lcsc.com/product-detail/C81598.html
+SW079,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,44.608750,91.440000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D079,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,45.243750,87.000000,https://www.lcsc.com/product-detail/C81598.html
+SW080,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,75.565000,91.440000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D080,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,76.200000,87.000000,https://www.lcsc.com/product-detail/C81598.html
+SW081,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,94.615000,91.440000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D081,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,95.250000,87.000000,https://www.lcsc.com/product-detail/C81598.html
+SW082,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,113.665000,91.440000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D082,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,114.300000,87.000000,https://www.lcsc.com/product-detail/C81598.html
+SW083,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,132.715000,91.440000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D083,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,133.350000,87.000000,https://www.lcsc.com/product-detail/C81598.html
+SW084,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,151.765000,91.440000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D084,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,152.400000,87.000000,https://www.lcsc.com/product-detail/C81598.html
+SW085,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,170.815000,91.440000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D085,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,171.450000,87.000000,https://www.lcsc.com/product-detail/C81598.html
+SW086,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,189.865000,91.440000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D086,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,190.500000,87.000000,https://www.lcsc.com/product-detail/C81598.html
+SW087,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,208.915000,91.440000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D087,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,209.550000,87.000000,https://www.lcsc.com/product-detail/C81598.html
+SW088,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,227.965000,91.440000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D088,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,228.600000,87.000000,https://www.lcsc.com/product-detail/C81598.html
+SW089,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,247.015000,91.440000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D089,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,247.650000,87.000000,https://www.lcsc.com/product-detail/C81598.html
+SW090,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,282.733750,91.440000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D090,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,283.368750,87.000000,https://www.lcsc.com/product-detail/C81598.html
+SW091,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,323.215000,91.440000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D091,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,323.850000,87.000000,https://www.lcsc.com/product-detail/C81598.html
+SW092,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,342.265000,91.440000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D092,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,342.900000,87.000000,https://www.lcsc.com/product-detail/C81598.html
+SW093,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,361.315000,91.440000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D093,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,361.950000,87.000000,https://www.lcsc.com/product-detail/C81598.html
+SW094,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,385.127500,91.440000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D094,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,385.762500,87.000000,https://www.lcsc.com/product-detail/C81598.html
+SW095,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,404.177500,91.440000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D095,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,404.812500,87.000000,https://www.lcsc.com/product-detail/C81598.html
+SW096,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,423.227500,91.440000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D096,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,423.862500,87.000000,https://www.lcsc.com/product-detail/C81598.html
+SW097,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,442.277500,100.965000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D097,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,442.912500,96.525000,https://www.lcsc.com/product-detail/C81598.html
+SW098,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,8.890000,110.490000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D098,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,9.525000,106.050000,https://www.lcsc.com/product-detail/C81598.html
+SW099,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,35.083750,110.490000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D099,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,35.718750,106.050000,https://www.lcsc.com/product-detail/C81598.html
+SW100,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,58.896250,110.490000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D100,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,59.531250,106.050000,https://www.lcsc.com/product-detail/C81598.html
+SW101,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,82.708750,110.490000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D101,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,83.343750,106.050000,https://www.lcsc.com/product-detail/C81598.html
+SW102,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,154.146250,110.490000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D102,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,154.781250,106.050000,https://www.lcsc.com/product-detail/C81598.html
+SW103,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,225.583750,110.490000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D103,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,226.218750,106.050000,https://www.lcsc.com/product-detail/C81598.html
+SW104,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,249.396250,110.490000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D104,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,250.031250,106.050000,https://www.lcsc.com/product-detail/C81598.html
+SW105,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,273.208750,110.490000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D105,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,273.843750,106.050000,https://www.lcsc.com/product-detail/C81598.html
+SW106,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,297.021250,110.490000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D106,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,297.656250,106.050000,https://www.lcsc.com/product-detail/C81598.html
+SW107,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,323.215000,110.490000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D107,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,323.850000,106.050000,https://www.lcsc.com/product-detail/C81598.html
+SW108,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,342.265000,110.490000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D108,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,342.900000,106.050000,https://www.lcsc.com/product-detail/C81598.html
+SW109,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,361.315000,110.490000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D109,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,361.950000,106.050000,https://www.lcsc.com/product-detail/C81598.html
+SW110,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,394.652500,110.490000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D110,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,395.287500,106.050000,https://www.lcsc.com/product-detail/C81598.html
+SW111,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,423.227500,110.490000,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D111,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,423.862500,106.050000,https://www.lcsc.com/product-detail/C81598.html
+SW112,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,134.620000,134.302500,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D112,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,135.255000,129.862500,https://www.lcsc.com/product-detail/C81598.html
+SW113,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,153.670000,134.302500,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D113,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,154.305000,129.862500,https://www.lcsc.com/product-detail/C81598.html
+SW114,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,172.720000,134.302500,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D114,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,173.355000,129.862500,https://www.lcsc.com/product-detail/C81598.html
+SW115,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,281.305000,134.302500,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D115,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,281.940000,129.862500,https://www.lcsc.com/product-detail/C81598.html
+SW116,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,300.355000,134.302500,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D116,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,300.990000,129.862500,https://www.lcsc.com/product-detail/C81598.html
+SW117,CPG151101S11-16,HanElectricity,CPG151101S11-16,C41430893,MX hot-swap socket,bottom,319.405000,134.302500,https://jlcpcb.com/partdetail/HanElectricity-CPG151101S1116/C41430893
+D117,1N4148W,Semtech,1N4148W,C81598,SOD-123,bottom,320.040000,129.862500,https://www.lcsc.com/product-detail/C81598.html
+LED001,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,33.337500,14.605000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL001,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,39.137499,14.605000,https://www.lcsc.com/product-detail/C17614.html
+LED002,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,71.437500,14.605000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL002,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,77.237500,14.605000,https://www.lcsc.com/product-detail/C17614.html
+LED003,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,90.487500,14.605000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL003,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,96.287500,14.605000,https://www.lcsc.com/product-detail/C17614.html
+LED004,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,109.537500,14.605000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL004,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,115.337500,14.605000,https://www.lcsc.com/product-detail/C17614.html
+LED005,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,128.587500,14.605000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL005,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,134.387500,14.605000,https://www.lcsc.com/product-detail/C17614.html
+LED006,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,157.162500,14.605000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL006,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,162.962500,14.605000,https://www.lcsc.com/product-detail/C17614.html
+LED007,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,176.212500,14.605000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL007,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,182.012500,14.605000,https://www.lcsc.com/product-detail/C17614.html
+LED008,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,195.262500,14.605000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL008,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,201.062500,14.605000,https://www.lcsc.com/product-detail/C17614.html
+LED009,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,214.312500,14.605000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL009,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,220.112500,14.605000,https://www.lcsc.com/product-detail/C17614.html
+LED010,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,242.887500,14.605000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL010,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,248.687500,14.605000,https://www.lcsc.com/product-detail/C17614.html
+LED011,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,261.937500,14.605000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL011,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,267.737500,14.605000,https://www.lcsc.com/product-detail/C17614.html
+LED012,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,280.987500,14.605000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL012,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,286.787500,14.605000,https://www.lcsc.com/product-detail/C17614.html
+LED013,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,300.037500,14.605000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL013,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,305.837500,14.605000,https://www.lcsc.com/product-detail/C17614.html
+LED014,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,323.850000,14.605000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL014,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,329.650000,14.605000,https://www.lcsc.com/product-detail/C17614.html
+LED015,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,342.900000,14.605000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL015,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,348.700000,14.605000,https://www.lcsc.com/product-detail/C17614.html
+LED016,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,361.950000,14.605000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL016,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,367.750000,14.605000,https://www.lcsc.com/product-detail/C17614.html
+LED017,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,9.525000,43.180000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL017,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,15.325000,43.180000,https://www.lcsc.com/product-detail/C17614.html
+LED018,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,33.337500,43.180000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL018,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,39.137499,43.180000,https://www.lcsc.com/product-detail/C17614.html
+LED019,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,52.387500,43.180000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL019,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,58.187500,43.180000,https://www.lcsc.com/product-detail/C17614.html
+LED020,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,71.437500,43.180000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL020,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,77.237500,43.180000,https://www.lcsc.com/product-detail/C17614.html
+LED021,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,90.487500,43.180000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL021,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,96.287500,43.180000,https://www.lcsc.com/product-detail/C17614.html
+LED022,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,109.537500,43.180000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL022,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,115.337500,43.180000,https://www.lcsc.com/product-detail/C17614.html
+LED023,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,128.587500,43.180000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL023,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,134.387500,43.180000,https://www.lcsc.com/product-detail/C17614.html
+LED024,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,147.637500,43.180000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL024,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,153.437500,43.180000,https://www.lcsc.com/product-detail/C17614.html
+LED025,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,166.687500,43.180000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL025,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,172.487500,43.180000,https://www.lcsc.com/product-detail/C17614.html
+LED026,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,185.737500,43.180000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL026,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,191.537500,43.180000,https://www.lcsc.com/product-detail/C17614.html
+LED027,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,204.787500,43.180000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL027,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,210.587500,43.180000,https://www.lcsc.com/product-detail/C17614.html
+LED028,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,223.837500,43.180000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL028,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,229.637500,43.180000,https://www.lcsc.com/product-detail/C17614.html
+LED029,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,242.887500,43.180000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL029,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,248.687500,43.180000,https://www.lcsc.com/product-detail/C17614.html
+LED030,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,261.937500,43.180000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL030,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,267.737500,43.180000,https://www.lcsc.com/product-detail/C17614.html
+LED031,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,290.512500,43.180000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL031,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,296.312500,43.180000,https://www.lcsc.com/product-detail/C17614.html
+LED032,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,323.850000,43.180000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL032,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,329.650000,43.180000,https://www.lcsc.com/product-detail/C17614.html
+LED033,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,342.900000,43.180000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL033,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,348.700000,43.180000,https://www.lcsc.com/product-detail/C17614.html
+LED034,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,361.950000,43.180000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL034,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,367.750000,43.180000,https://www.lcsc.com/product-detail/C17614.html
+LED035,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,385.762500,43.180000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL035,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,391.562500,43.180000,https://www.lcsc.com/product-detail/C17614.html
+LED036,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,404.812500,43.180000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL036,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,410.612500,43.180000,https://www.lcsc.com/product-detail/C17614.html
+LED037,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,423.862500,43.180000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL037,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,429.662500,43.180000,https://www.lcsc.com/product-detail/C17614.html
+LED038,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,442.912500,43.180000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL038,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,448.712500,43.180000,https://www.lcsc.com/product-detail/C17614.html
+LED039,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,9.525000,62.230000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL039,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,15.325000,62.230000,https://www.lcsc.com/product-detail/C17614.html
+LED040,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,38.100000,62.230000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL040,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,43.900000,62.230000,https://www.lcsc.com/product-detail/C17614.html
+LED041,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,61.912500,62.230000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL041,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,67.712500,62.230000,https://www.lcsc.com/product-detail/C17614.html
+LED042,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,80.962500,62.230000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL042,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,86.762500,62.230000,https://www.lcsc.com/product-detail/C17614.html
+LED043,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,100.012500,62.230000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL043,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,105.812500,62.230000,https://www.lcsc.com/product-detail/C17614.html
+LED044,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,119.062500,62.230000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL044,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,124.862500,62.230000,https://www.lcsc.com/product-detail/C17614.html
+LED045,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,138.112500,62.230000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL045,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,143.912500,62.230000,https://www.lcsc.com/product-detail/C17614.html
+LED046,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,157.162500,62.230000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL046,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,162.962500,62.230000,https://www.lcsc.com/product-detail/C17614.html
+LED047,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,176.212500,62.230000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL047,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,182.012500,62.230000,https://www.lcsc.com/product-detail/C17614.html
+LED048,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,195.262500,62.230000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL048,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,201.062500,62.230000,https://www.lcsc.com/product-detail/C17614.html
+LED049,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,214.312500,62.230000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL049,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,220.112500,62.230000,https://www.lcsc.com/product-detail/C17614.html
+LED050,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,233.362500,62.230000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL050,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,239.162500,62.230000,https://www.lcsc.com/product-detail/C17614.html
+LED051,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,252.412500,62.230000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL051,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,258.212500,62.230000,https://www.lcsc.com/product-detail/C17614.html
+LED052,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,271.462500,62.230000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL052,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,277.262500,62.230000,https://www.lcsc.com/product-detail/C17614.html
+LED053,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,295.275000,62.230000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL053,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,301.075000,62.230000,https://www.lcsc.com/product-detail/C17614.html
+LED054,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,323.850000,62.230000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL054,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,329.650000,62.230000,https://www.lcsc.com/product-detail/C17614.html
+LED055,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,342.900000,62.230000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL055,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,348.700000,62.230000,https://www.lcsc.com/product-detail/C17614.html
+LED056,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,361.950000,62.230000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL056,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,367.750000,62.230000,https://www.lcsc.com/product-detail/C17614.html
+LED057,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,385.762500,62.230000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL057,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,391.562500,62.230000,https://www.lcsc.com/product-detail/C17614.html
+LED058,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,404.812500,62.230000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL058,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,410.612500,62.230000,https://www.lcsc.com/product-detail/C17614.html
+LED059,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,423.862500,62.230000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL059,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,429.662500,62.230000,https://www.lcsc.com/product-detail/C17614.html
+LED060,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,442.912500,71.755000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL060,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,448.712500,71.755000,https://www.lcsc.com/product-detail/C17614.html
+LED061,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,9.525000,81.280000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL061,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,15.325000,81.280000,https://www.lcsc.com/product-detail/C17614.html
+LED062,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,40.481250,81.280000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL062,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,46.281250,81.280000,https://www.lcsc.com/product-detail/C17614.html
+LED063,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,66.675000,81.280000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL063,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,72.475000,81.280000,https://www.lcsc.com/product-detail/C17614.html
+LED064,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,85.725000,81.280000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL064,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,91.525000,81.280000,https://www.lcsc.com/product-detail/C17614.html
+LED065,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,104.775000,81.280000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL065,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,110.575000,81.280000,https://www.lcsc.com/product-detail/C17614.html
+LED066,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,123.825000,81.280000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL066,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,129.625000,81.280000,https://www.lcsc.com/product-detail/C17614.html
+LED067,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,142.875000,81.280000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL067,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,148.675000,81.280000,https://www.lcsc.com/product-detail/C17614.html
+LED068,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,161.925000,81.280000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL068,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,167.725000,81.280000,https://www.lcsc.com/product-detail/C17614.html
+LED069,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,180.975000,81.280000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL069,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,186.775000,81.280000,https://www.lcsc.com/product-detail/C17614.html
+LED070,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,200.025000,81.280000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL070,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,205.825000,81.280000,https://www.lcsc.com/product-detail/C17614.html
+LED071,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,219.075000,81.280000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL071,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,224.875000,81.280000,https://www.lcsc.com/product-detail/C17614.html
+LED072,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,238.125000,81.280000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL072,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,243.925000,81.280000,https://www.lcsc.com/product-detail/C17614.html
+LED073,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,257.175000,81.280000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL073,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,262.975000,81.280000,https://www.lcsc.com/product-detail/C17614.html
+LED074,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,288.131250,81.280000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL074,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,293.931250,81.280000,https://www.lcsc.com/product-detail/C17614.html
+LED075,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,385.762500,81.280000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL075,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,391.562500,81.280000,https://www.lcsc.com/product-detail/C17614.html
+LED076,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,404.812500,81.280000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL076,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,410.612500,81.280000,https://www.lcsc.com/product-detail/C17614.html
+LED077,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,423.862500,81.280000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL077,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,429.662500,81.280000,https://www.lcsc.com/product-detail/C17614.html
+LED078,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,9.525000,100.330000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL078,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,15.325000,100.330000,https://www.lcsc.com/product-detail/C17614.html
+LED079,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,45.243750,100.330000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL079,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,51.043749,100.330000,https://www.lcsc.com/product-detail/C17614.html
+LED080,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,76.200000,100.330000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL080,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,82.000000,100.330000,https://www.lcsc.com/product-detail/C17614.html
+LED081,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,95.250000,100.330000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL081,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,101.050000,100.330000,https://www.lcsc.com/product-detail/C17614.html
+LED082,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,114.300000,100.330000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL082,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,120.100000,100.330000,https://www.lcsc.com/product-detail/C17614.html
+LED083,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,133.350000,100.330000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL083,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,139.150000,100.330000,https://www.lcsc.com/product-detail/C17614.html
+LED084,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,152.400000,100.330000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL084,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,158.200000,100.330000,https://www.lcsc.com/product-detail/C17614.html
+LED085,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,171.450000,100.330000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL085,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,177.250000,100.330000,https://www.lcsc.com/product-detail/C17614.html
+LED086,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,190.500000,100.330000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL086,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,196.300000,100.330000,https://www.lcsc.com/product-detail/C17614.html
+LED087,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,209.550000,100.330000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL087,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,215.350000,100.330000,https://www.lcsc.com/product-detail/C17614.html
+LED088,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,228.600000,100.330000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL088,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,234.400000,100.330000,https://www.lcsc.com/product-detail/C17614.html
+LED089,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,247.650000,100.330000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL089,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,253.450000,100.330000,https://www.lcsc.com/product-detail/C17614.html
+LED090,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,283.368750,100.330000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL090,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,289.168750,100.330000,https://www.lcsc.com/product-detail/C17614.html
+LED091,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,323.850000,100.330000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL091,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,329.650000,100.330000,https://www.lcsc.com/product-detail/C17614.html
+LED092,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,342.900000,100.330000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL092,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,348.700000,100.330000,https://www.lcsc.com/product-detail/C17614.html
+LED093,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,361.950000,100.330000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL093,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,367.750000,100.330000,https://www.lcsc.com/product-detail/C17614.html
+LED094,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,385.762500,100.330000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL094,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,391.562500,100.330000,https://www.lcsc.com/product-detail/C17614.html
+LED095,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,404.812500,100.330000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL095,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,410.612500,100.330000,https://www.lcsc.com/product-detail/C17614.html
+LED096,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,423.862500,100.330000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL096,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,429.662500,100.330000,https://www.lcsc.com/product-detail/C17614.html
+LED097,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,442.912500,109.855000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL097,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,448.712500,109.855000,https://www.lcsc.com/product-detail/C17614.html
+LED098,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,9.525000,119.380000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL098,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,15.325000,119.380000,https://www.lcsc.com/product-detail/C17614.html
+LED099,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,35.718750,119.380000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL099,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,41.518750,119.380000,https://www.lcsc.com/product-detail/C17614.html
+LED100,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,59.531250,119.380000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL100,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,65.331250,119.380000,https://www.lcsc.com/product-detail/C17614.html
+LED101,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,83.343750,119.380000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL101,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,89.143750,119.380000,https://www.lcsc.com/product-detail/C17614.html
+LED102,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,154.781250,119.380000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL102,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,160.581250,119.380000,https://www.lcsc.com/product-detail/C17614.html
+LED103,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,226.218750,119.380000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL103,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,232.018750,119.380000,https://www.lcsc.com/product-detail/C17614.html
+LED104,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,250.031250,119.380000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL104,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,255.831250,119.380000,https://www.lcsc.com/product-detail/C17614.html
+LED105,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,273.843750,119.380000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL105,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,279.643750,119.380000,https://www.lcsc.com/product-detail/C17614.html
+LED106,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,297.656250,119.380000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL106,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,303.456250,119.380000,https://www.lcsc.com/product-detail/C17614.html
+LED107,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,323.850000,119.380000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL107,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,329.650000,119.380000,https://www.lcsc.com/product-detail/C17614.html
+LED108,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,342.900000,119.380000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL108,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,348.700000,119.380000,https://www.lcsc.com/product-detail/C17614.html
+LED109,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,361.950000,119.380000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL109,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,367.750000,119.380000,https://www.lcsc.com/product-detail/C17614.html
+LED110,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,395.287500,119.380000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL110,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,401.087500,119.380000,https://www.lcsc.com/product-detail/C17614.html
+LED111,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,423.862500,119.380000,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL111,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,429.662500,119.380000,https://www.lcsc.com/product-detail/C17614.html
+LED112,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,135.255000,143.192500,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL112,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,141.055000,143.192500,https://www.lcsc.com/product-detail/C17614.html
+LED113,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,154.305000,143.192500,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL113,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,160.105000,143.192500,https://www.lcsc.com/product-detail/C17614.html
+LED114,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,173.355000,143.192500,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL114,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,179.155000,143.192500,https://www.lcsc.com/product-detail/C17614.html
+LED115,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,281.940000,143.192500,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL115,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,287.740000,143.192500,https://www.lcsc.com/product-detail/C17614.html
+LED116,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,300.990000,143.192500,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL116,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,306.790000,143.192500,https://www.lcsc.com/product-detail/C17614.html
+LED117,BL-HZ333H-L21-TRE,BrtLed,BL-HZ333H-L21-TRE,C5123487,1206 reverse-mount white LED,bottom,320.040000,143.192500,https://jlcpcb.com/partdetail/5717311-BL_HZ333H_L21TRE/C5123487
+RL117,3.9k 1%,UNI-ROYAL,0805W8F3901T5E,C17614,0805 1%,bottom,325.840000,143.192500,https://www.lcsc.com/product-detail/C17614.html
+F1,1206L020YR 0.20A hold,Littelfuse,1206L020YR,C207035,1206,bottom,393.000000,4.500000,https://www.lcsc.com/product-detail/C207035.html
+U3,TPS2553DBVR,Texas Instruments,TPS2553DBVR,C55266,SOT-23-6,bottom,390.000000,14.000000,https://www.lcsc.com/product-detail/C55266.html
+R2,100k 1%,UNI-ROYAL,0805W8F1003T5E,C149504,0805 1%,bottom,384.000000,10.000000,https://www.lcsc.com/product-detail/C149504.html
+C1,1uF 50V X7R,Samsung Electro-Mechanics,CL21B105KBFNNNE,C28323,0805,bottom,394.000000,8.000000,https://www.lcsc.com/product-detail/C28323.html
+C2,22uF 10V X5R,Samsung Electro-Mechanics,CL21A226MPQNNNE,C29277,0805,bottom,395.000000,14.000000,https://www.lcsc.com/product-detail/C29277.html
+Q1,AO3400A,Alpha & Omega Semiconductor,AO3400A,C20917,SOT-23,bottom,382.000000,19.000000,https://www.lcsc.com/product-detail/C20917.html
+R1,330R 1%,UNI-ROYAL,0805W8F3300T5E,C17630,0805 1%,bottom,378.000000,19.000000,https://www.lcsc.com/product-detail/C17630.html
+R3,100k 1%,UNI-ROYAL,0805W8F1003T5E,C149504,0805 1%,bottom,382.000000,23.000000,https://www.lcsc.com/product-detail/C149504.html

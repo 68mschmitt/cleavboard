@@ -1,10 +1,13 @@
 {
-  "revision": "0.4",
+  "revision": "0.5",
   "matrix": "8x16",
   "unique_switches": 117,
   "rgb_leds": 117,
-  "pcb_sha256": "7b83a48035d38c427af6c47ff20fb311b552b90ad182bab0faea532f9db61585",
-  "schematic_sha256": "32951b4035d1ef8033b916ab0a030c1abf94100735da2ab19039d0a18f786065",
+  "bottom_factory_placements": 479,
+  "pth_pads": 40,
+  "front_paste_pads": 0,
+  "pcb_sha256": "1a54257496d568c2bc183e506c86cd3747b9588f89a96b58a05f2656cfa43b96",
+  "schematic_sha256": "eb96509f43dfd85b6bc806b9b107d6e976d7c5245368e33e2fd4ddc6bf823ee2",
   "erc": "pass",
   "drc": "pass",
   "schematic_pcb_firmware_mapping": "pass",
@@ -16,7 +19,8 @@
       "TP1: wire pad",
       "TP2-TP6: probe pads",
       "H*: mounting holes",
-      "FID*: bare copper fiducials"
+      "FID*: bare copper fiducials",
+      "LOGO1: silkscreen artwork"
     ]
   }
 }

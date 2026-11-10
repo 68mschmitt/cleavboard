@@ -12,6 +12,7 @@ PREFIX = '${KIPRJMOD}/Cleaver.3dshapes/'
 # do NOT flip the whole mixed front-switch/back-socket footprint.
 MODELS = {
     'Kailh_socket_MX': ('SW_Cherry_MX_Plate.wrl','SW_Hotswap_Kailh_MX.wrl'),
+    'HanElectricity_CPG151101S11-16': ('SW_Cherry_MX_BottomAnchor.wrl','SW_Hotswap_HanElectricity_Approx.wrl'),
     'C_0805': ('C_0805_2012Metric.wrl',),
     'R_0805': ('R_0805_2012Metric.wrl',),
     'D_SOD123': ('D_SOD-123.wrl',),
@@ -21,11 +22,13 @@ MODELS = {
     'MINI_E': ('LED_SK6812MINI-E_Reverse.wrl',),
     'YD_RP2040': ('YD_RP2040_Approx.wrl',),
     'C_Radial8': ('C_Radial_D8_H11.5_P3.5.wrl',),
+    'C_PCF_D10': ('C_PCF_D10_H10.wrl',),
     # TP1 is an exposed wire-soldering pad, not a mounted connector/component.
     'WirePad': (),
     'TestPad': (),
     'MountingHole_M2': (),
     'Fiducial': (),
+    'TavianaTactical_34mm': (),
 }
 
 
@@ -113,7 +116,7 @@ def update_board_models(path):
         # every non-model byte survive insertion verbatim.
         start = text.rfind('\n',0,start)+1
         spans.append((start,end,name))
-    expected = len(components(*read_keys())) + len(MOUNTING_HOLES) + len(FIDUCIALS)
+    expected = len(components(*read_keys())) + len(MOUNTING_HOLES) + len(FIDUCIALS) + 1
     if len(spans)!=expected:
         raise ValueError(f'Expected {expected} footprints, found {len(spans)}')
     for start,end,name in reversed(spans):
@@ -125,10 +128,12 @@ def update_board_models(path):
 
 def validate_models(board):
     populated = count = 0
+    used_models = set()
     for fp in board.GetFootprints():
         name = str(fp.GetFPID().GetLibItemName())
         expected = [PREFIX+filename for filename in MODELS[name]]
         actual = list(fp.Models())
+        used_models.update(model.m_Filename for model in actual)
         assert [model.m_Filename for model in actual]==expected, f'{fp.GetReference()}: incorrect/missing models'
         for model in actual:
             assert model.m_Show, f'{fp.GetReference()}: hidden model'
@@ -139,9 +144,10 @@ def validate_models(board):
             assert path.with_suffix('.step').is_file(), f'Missing STEP counterpart: {path}'
         count += len(actual)
         populated += bool(actual)
-    assert len(list(board.GetFootprints()))==len(components(*read_keys())) + len(MOUNTING_HOLES) + len(FIDUCIALS)
+    assert len(list(board.GetFootprints()))==len(components(*read_keys())) + len(MOUNTING_HOLES) + len(FIDUCIALS) + 1
     assert (populated,count)==(480,597), (populated,count)
     return dict(populated_footprints=populated,model_instances=count,
-                unique_models=len({name for names in MODELS.values() for name in names}),
+                unique_models=len(used_models),
                 intentionally_unmodeled=['TP1: wire pad', 'TP2-TP6: probe pads',
-                                        'H*: mounting holes', 'FID*: bare copper fiducials'])
+                                        'H*: mounting holes', 'FID*: bare copper fiducials',
+                                        'LOGO1: silkscreen artwork'])

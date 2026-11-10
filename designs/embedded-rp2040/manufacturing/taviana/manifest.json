@@ -1,0 +1,10 @@
+{
+  "pcb": "designs/embedded-rp2040/Cleaver-Embedded.kicad_pcb",
+  "pcb_sha256": "357e0ca3d780ee3b8c7c09bdc43270fd4f5d984d9f17b663b548ab756e2fbd72",
+  "fabrication_zip": "Cleaver-Embedded-0.2-taviana-fabrication.zip",
+  "fabrication_zip_sha256": "665cbcdc106be84d92a5dc5b963befc755045e38f99b871d859fa50f03a7a8a4",
+  "artwork_source_sha256": "c95da5f1f830fd4528713350d247731098475a4040065b2b0a7f06e6b2808628",
+  "artwork_layer": "F.Silkscreen",
+  "kicad": "10.0.8",
+  "drc_report": "artwork/taviana/embedded-drc.json"
+}

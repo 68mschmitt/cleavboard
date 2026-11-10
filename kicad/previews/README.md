@@ -1,6 +1,6 @@
 # Populated KiCad previews
 
-These are KiCad 10.0.8 raytraced views of `../Cleaver.kicad_pcb`, including the
+These are KiCad 10.0.8 raytraced views of revision 0.5 `../Cleaver.kicad_pcb`, including the
 bundled component models. They are not separate artistic renders or mechanical
 clearance approvals. See [model limitations](../Cleaver.3dshapes/README.md).
 

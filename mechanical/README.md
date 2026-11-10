@@ -1,5 +1,12 @@
 # Cleaver revision 0.4 — case and plate interface
 
+**Revision 0.5 PCB:** switch centres, outline and mounting holes are compatible,
+but C5 is now underneath at `(377, 6)` mm. Provide **11 mm clear case depth below
+the PCB there** for its 10 mm maximum-height SMD can. The old top capacitor
+opening may remain unused. TP1 is now an underside wire land: allow the USB tap
+wire to pass around the board edge with case strain relief. These historical
+rev0.4 mockups do not represent the new capacitor or wire-pad geometry.
+
 Use these files with the revision 0.4 PCB. The original supplied plate remains
 in its original directory as an input/reference; it does not include these mounts.
 

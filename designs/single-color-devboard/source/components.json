@@ -1,0 +1,6423 @@
+[
+  {
+    "ref": "U1",
+    "kind": "YD_RP2040",
+    "value": "YD-RP2040 4MB USB-C",
+    "x": 425.7675,
+    "y": 13.39,
+    "pins": {
+      "1": "ROW0",
+      "2": "ROW1",
+      "3": "GND",
+      "4": "ROW2",
+      "5": "ROW3",
+      "6": "ROW4",
+      "7": "ROW5",
+      "8": "GND",
+      "9": "ROW6",
+      "10": "ROW7",
+      "11": "COL00",
+      "12": "COL01",
+      "13": "GND",
+      "14": "COL02",
+      "15": "COL03",
+      "16": "COL04",
+      "17": "COL05",
+      "18": "GND",
+      "19": "COL06",
+      "20": "COL07",
+      "21": "COL08",
+      "22": "COL09",
+      "23": "GND",
+      "24": "COL10",
+      "25": "COL11",
+      "26": "COL12",
+      "27": "COL13",
+      "28": "GND",
+      "29": "COL14",
+      "30": null,
+      "31": "COL15",
+      "32": "BL_PWM",
+      "33": "GND",
+      "34": "LED_EN",
+      "35": null,
+      "36": null,
+      "37": null,
+      "38": "GND",
+      "39": null,
+      "40": "MODULE_VOUT"
+    },
+    "back": false,
+    "angle": -90
+  },
+  {
+    "ref": "SW001",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 33.3375,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY000"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Esc"
+  },
+  {
+    "ref": "D001",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 33.3375,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL00",
+      "2": "KEY000"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW002",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 71.4375,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY001"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "F1"
+  },
+  {
+    "ref": "D002",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 71.4375,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL01",
+      "2": "KEY001"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW003",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 90.4875,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY002"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "F2"
+  },
+  {
+    "ref": "D003",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 90.4875,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL02",
+      "2": "KEY002"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW004",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 109.53750000000001,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY003"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "F3"
+  },
+  {
+    "ref": "D004",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 109.53750000000001,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL03",
+      "2": "KEY003"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW005",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 128.5875,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY004"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "F4"
+  },
+  {
+    "ref": "D005",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 128.5875,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL04",
+      "2": "KEY004"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW006",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 157.1625,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY005"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "F5"
+  },
+  {
+    "ref": "D006",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 157.1625,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL05",
+      "2": "KEY005"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW007",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 176.2125,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY006"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "F6"
+  },
+  {
+    "ref": "D007",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 176.2125,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL06",
+      "2": "KEY006"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW008",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 195.26250000000002,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY007"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "F7"
+  },
+  {
+    "ref": "D008",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 195.26250000000002,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL07",
+      "2": "KEY007"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW009",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 214.3125,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY008"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "F8"
+  },
+  {
+    "ref": "D009",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 214.3125,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL08",
+      "2": "KEY008"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW010",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 242.88750000000002,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY009"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "F9"
+  },
+  {
+    "ref": "D010",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 242.88750000000002,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL09",
+      "2": "KEY009"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW011",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 261.9375,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY010"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "F10"
+  },
+  {
+    "ref": "D011",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 261.9375,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL10",
+      "2": "KEY010"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW012",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 280.9875,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY011"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "F11"
+  },
+  {
+    "ref": "D012",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 280.9875,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL11",
+      "2": "KEY011"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW013",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 300.0375,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY012"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "F12"
+  },
+  {
+    "ref": "D013",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 300.0375,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL12",
+      "2": "KEY012"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW014",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 323.85,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY013"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "PrtSc"
+  },
+  {
+    "ref": "D014",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 323.85,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL13",
+      "2": "KEY013"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW015",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 342.90000000000003,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY014"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Scroll Lock"
+  },
+  {
+    "ref": "D015",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 342.90000000000003,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL14",
+      "2": "KEY014"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW016",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 361.95,
+    "y": 9.525,
+    "pins": {
+      "1": "ROW0",
+      "2": "KEY015"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Pause/Break"
+  },
+  {
+    "ref": "D016",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 361.95,
+    "y": 1.2750000000000004,
+    "pins": {
+      "1": "COL15",
+      "2": "KEY015"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW017",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 9.525,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY016"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "M1"
+  },
+  {
+    "ref": "D017",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 9.525,
+    "y": 29.85,
+    "pins": {
+      "1": "COL00",
+      "2": "KEY016"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW018",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 33.3375,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY017"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "~/`"
+  },
+  {
+    "ref": "D018",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 33.3375,
+    "y": 29.85,
+    "pins": {
+      "1": "COL01",
+      "2": "KEY017"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW019",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 52.3875,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY018"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "!/1"
+  },
+  {
+    "ref": "D019",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 52.3875,
+    "y": 29.85,
+    "pins": {
+      "1": "COL02",
+      "2": "KEY018"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW020",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 71.4375,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY019"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "@/2"
+  },
+  {
+    "ref": "D020",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 71.4375,
+    "y": 29.85,
+    "pins": {
+      "1": "COL03",
+      "2": "KEY019"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW021",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 90.4875,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY020"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "#/3"
+  },
+  {
+    "ref": "D021",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 90.4875,
+    "y": 29.85,
+    "pins": {
+      "1": "COL04",
+      "2": "KEY020"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW022",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 109.53750000000001,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY021"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "$/4"
+  },
+  {
+    "ref": "D022",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 109.53750000000001,
+    "y": 29.85,
+    "pins": {
+      "1": "COL05",
+      "2": "KEY021"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW023",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 128.5875,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY022"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "%/5"
+  },
+  {
+    "ref": "D023",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 128.5875,
+    "y": 29.85,
+    "pins": {
+      "1": "COL06",
+      "2": "KEY022"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW024",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 147.63750000000002,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY023"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "^/6"
+  },
+  {
+    "ref": "D024",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 147.63750000000002,
+    "y": 29.85,
+    "pins": {
+      "1": "COL07",
+      "2": "KEY023"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW025",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 166.6875,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY024"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "&/7"
+  },
+  {
+    "ref": "D025",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 166.6875,
+    "y": 29.85,
+    "pins": {
+      "1": "COL08",
+      "2": "KEY024"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW026",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 185.7375,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY025"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "*/8"
+  },
+  {
+    "ref": "D026",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 185.7375,
+    "y": 29.85,
+    "pins": {
+      "1": "COL09",
+      "2": "KEY025"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW027",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 204.7875,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY026"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "(/9"
+  },
+  {
+    "ref": "D027",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 204.7875,
+    "y": 29.85,
+    "pins": {
+      "1": "COL10",
+      "2": "KEY026"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW028",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 223.8375,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY027"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": ")/0"
+  },
+  {
+    "ref": "D028",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 223.8375,
+    "y": 29.85,
+    "pins": {
+      "1": "COL11",
+      "2": "KEY027"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW029",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 242.88750000000002,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY028"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "_/-"
+  },
+  {
+    "ref": "D029",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 242.88750000000002,
+    "y": 29.85,
+    "pins": {
+      "1": "COL12",
+      "2": "KEY028"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW030",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 261.9375,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY029"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "+/="
+  },
+  {
+    "ref": "D030",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 261.9375,
+    "y": 29.85,
+    "pins": {
+      "1": "COL13",
+      "2": "KEY029"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW031",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 290.5125,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY030"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Backspace"
+  },
+  {
+    "ref": "D031",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 290.5125,
+    "y": 29.85,
+    "pins": {
+      "1": "COL14",
+      "2": "KEY030"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW032",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 323.85,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW1",
+      "2": "KEY031"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Insert"
+  },
+  {
+    "ref": "D032",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 323.85,
+    "y": 29.85,
+    "pins": {
+      "1": "COL15",
+      "2": "KEY031"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW033",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 342.90000000000003,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY032"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Home"
+  },
+  {
+    "ref": "D033",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 342.90000000000003,
+    "y": 29.85,
+    "pins": {
+      "1": "COL00",
+      "2": "KEY032"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW034",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 361.95,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY033"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "PgUp"
+  },
+  {
+    "ref": "D034",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 361.95,
+    "y": 29.85,
+    "pins": {
+      "1": "COL01",
+      "2": "KEY033"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW035",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 385.7625,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY034"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Num Lock"
+  },
+  {
+    "ref": "D035",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 385.7625,
+    "y": 29.85,
+    "pins": {
+      "1": "COL02",
+      "2": "KEY034"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW036",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 404.8125,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY035"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "/"
+  },
+  {
+    "ref": "D036",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 404.8125,
+    "y": 29.85,
+    "pins": {
+      "1": "COL03",
+      "2": "KEY035"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW037",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 423.8625,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY036"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "*"
+  },
+  {
+    "ref": "D037",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 423.8625,
+    "y": 29.85,
+    "pins": {
+      "1": "COL04",
+      "2": "KEY036"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW038",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 442.9125,
+    "y": 38.1,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY037"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "-"
+  },
+  {
+    "ref": "D038",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 442.9125,
+    "y": 29.85,
+    "pins": {
+      "1": "COL05",
+      "2": "KEY037"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW039",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 9.525,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY038"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "M2"
+  },
+  {
+    "ref": "D039",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 9.525,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL06",
+      "2": "KEY038"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW040",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 38.1,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY039"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Tab"
+  },
+  {
+    "ref": "D040",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 38.1,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL07",
+      "2": "KEY039"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW041",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 61.9125,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY040"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Q"
+  },
+  {
+    "ref": "D041",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 61.9125,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL08",
+      "2": "KEY040"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW042",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 80.9625,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY041"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "W"
+  },
+  {
+    "ref": "D042",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 80.9625,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL09",
+      "2": "KEY041"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW043",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 100.0125,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY042"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "E"
+  },
+  {
+    "ref": "D043",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 100.0125,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL10",
+      "2": "KEY042"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW044",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 119.0625,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY043"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "R"
+  },
+  {
+    "ref": "D044",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 119.0625,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL11",
+      "2": "KEY043"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW045",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 138.1125,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY044"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "T"
+  },
+  {
+    "ref": "D045",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 138.1125,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL12",
+      "2": "KEY044"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW046",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 157.1625,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY045"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Y"
+  },
+  {
+    "ref": "D046",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 157.1625,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL13",
+      "2": "KEY045"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW047",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 176.2125,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY046"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "U"
+  },
+  {
+    "ref": "D047",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 176.2125,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL14",
+      "2": "KEY046"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW048",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 195.26250000000002,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW2",
+      "2": "KEY047"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "I"
+  },
+  {
+    "ref": "D048",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 195.26250000000002,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL15",
+      "2": "KEY047"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW049",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 214.3125,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY048"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "O"
+  },
+  {
+    "ref": "D049",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 214.3125,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL00",
+      "2": "KEY048"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW050",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 233.3625,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY049"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "P"
+  },
+  {
+    "ref": "D050",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 233.3625,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL01",
+      "2": "KEY049"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW051",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 252.41250000000002,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY050"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "{/["
+  },
+  {
+    "ref": "D051",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 252.41250000000002,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL02",
+      "2": "KEY050"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW052",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 271.46250000000003,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY051"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "}/]"
+  },
+  {
+    "ref": "D052",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 271.46250000000003,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL03",
+      "2": "KEY051"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW053",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 295.27500000000003,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY052"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "|/\\"
+  },
+  {
+    "ref": "D053",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 295.27500000000003,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL04",
+      "2": "KEY052"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW054",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 323.85,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY053"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Delete"
+  },
+  {
+    "ref": "D054",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 323.85,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL05",
+      "2": "KEY053"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW055",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 342.90000000000003,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY054"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "End"
+  },
+  {
+    "ref": "D055",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 342.90000000000003,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL06",
+      "2": "KEY054"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW056",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 361.95,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY055"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "PgDn"
+  },
+  {
+    "ref": "D056",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 361.95,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL07",
+      "2": "KEY055"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW057",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 385.7625,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY056"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "7/Home"
+  },
+  {
+    "ref": "D057",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 385.7625,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL08",
+      "2": "KEY056"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW058",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 404.8125,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY057"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "8/\u2191"
+  },
+  {
+    "ref": "D058",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 404.8125,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL09",
+      "2": "KEY057"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW059",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 423.8625,
+    "y": 57.150000000000006,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY058"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "9/PgUp"
+  },
+  {
+    "ref": "D059",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 423.8625,
+    "y": 48.900000000000006,
+    "pins": {
+      "1": "COL10",
+      "2": "KEY058"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW060",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 442.9125,
+    "y": 66.675,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY059"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "+"
+  },
+  {
+    "ref": "D060",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 442.9125,
+    "y": 58.425,
+    "pins": {
+      "1": "COL11",
+      "2": "KEY059"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW061",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 9.525,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY060"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "M3"
+  },
+  {
+    "ref": "D061",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 9.525,
+    "y": 67.95,
+    "pins": {
+      "1": "COL12",
+      "2": "KEY060"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW062",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 40.48125,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY061"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Caps Lock"
+  },
+  {
+    "ref": "D062",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 40.48125,
+    "y": 67.95,
+    "pins": {
+      "1": "COL13",
+      "2": "KEY061"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW063",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 66.675,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY062"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "A"
+  },
+  {
+    "ref": "D063",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 66.675,
+    "y": 67.95,
+    "pins": {
+      "1": "COL14",
+      "2": "KEY062"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW064",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 85.72500000000001,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW3",
+      "2": "KEY063"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "S"
+  },
+  {
+    "ref": "D064",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 85.72500000000001,
+    "y": 67.95,
+    "pins": {
+      "1": "COL15",
+      "2": "KEY063"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW065",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 104.775,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY064"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "D"
+  },
+  {
+    "ref": "D065",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 104.775,
+    "y": 67.95,
+    "pins": {
+      "1": "COL00",
+      "2": "KEY064"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW066",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 123.825,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY065"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "F"
+  },
+  {
+    "ref": "D066",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 123.825,
+    "y": 67.95,
+    "pins": {
+      "1": "COL01",
+      "2": "KEY065"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW067",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 142.875,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY066"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "G"
+  },
+  {
+    "ref": "D067",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 142.875,
+    "y": 67.95,
+    "pins": {
+      "1": "COL02",
+      "2": "KEY066"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW068",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 161.925,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY067"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "H"
+  },
+  {
+    "ref": "D068",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 161.925,
+    "y": 67.95,
+    "pins": {
+      "1": "COL03",
+      "2": "KEY067"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW069",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 180.975,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY068"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "J"
+  },
+  {
+    "ref": "D069",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 180.975,
+    "y": 67.95,
+    "pins": {
+      "1": "COL04",
+      "2": "KEY068"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW070",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 200.025,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY069"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "K"
+  },
+  {
+    "ref": "D070",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 200.025,
+    "y": 67.95,
+    "pins": {
+      "1": "COL05",
+      "2": "KEY069"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW071",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 219.07500000000002,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY070"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "L"
+  },
+  {
+    "ref": "D071",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 219.07500000000002,
+    "y": 67.95,
+    "pins": {
+      "1": "COL06",
+      "2": "KEY070"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW072",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 238.125,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY071"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": ":/;"
+  },
+  {
+    "ref": "D072",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 238.125,
+    "y": 67.95,
+    "pins": {
+      "1": "COL07",
+      "2": "KEY071"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW073",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 257.175,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY072"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "\"/'"
+  },
+  {
+    "ref": "D073",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 257.175,
+    "y": 67.95,
+    "pins": {
+      "1": "COL08",
+      "2": "KEY072"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW074",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 288.13125,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY073"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Enter"
+  },
+  {
+    "ref": "D074",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 288.13125,
+    "y": 67.95,
+    "pins": {
+      "1": "COL09",
+      "2": "KEY073"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW075",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 385.7625,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY074"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "4/\u2190"
+  },
+  {
+    "ref": "D075",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 385.7625,
+    "y": 67.95,
+    "pins": {
+      "1": "COL10",
+      "2": "KEY074"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW076",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 404.8125,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY075"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "5"
+  },
+  {
+    "ref": "D076",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 404.8125,
+    "y": 67.95,
+    "pins": {
+      "1": "COL11",
+      "2": "KEY075"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW077",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 423.8625,
+    "y": 76.2,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY076"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "6/\u2192"
+  },
+  {
+    "ref": "D077",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 423.8625,
+    "y": 67.95,
+    "pins": {
+      "1": "COL12",
+      "2": "KEY076"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW078",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 9.525,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY077"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "M4"
+  },
+  {
+    "ref": "D078",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 9.525,
+    "y": 87.0,
+    "pins": {
+      "1": "COL13",
+      "2": "KEY077"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW079",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 45.24375,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY078"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Shift"
+  },
+  {
+    "ref": "D079",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 45.24375,
+    "y": 87.0,
+    "pins": {
+      "1": "COL14",
+      "2": "KEY078"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW080",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 76.2,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW4",
+      "2": "KEY079"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Z"
+  },
+  {
+    "ref": "D080",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 76.2,
+    "y": 87.0,
+    "pins": {
+      "1": "COL15",
+      "2": "KEY079"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW081",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 95.25,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY080"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "X"
+  },
+  {
+    "ref": "D081",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 95.25,
+    "y": 87.0,
+    "pins": {
+      "1": "COL00",
+      "2": "KEY080"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW082",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 114.30000000000001,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY081"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "C"
+  },
+  {
+    "ref": "D082",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 114.30000000000001,
+    "y": 87.0,
+    "pins": {
+      "1": "COL01",
+      "2": "KEY081"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW083",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 133.35,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY082"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "V"
+  },
+  {
+    "ref": "D083",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 133.35,
+    "y": 87.0,
+    "pins": {
+      "1": "COL02",
+      "2": "KEY082"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW084",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 152.4,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY083"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "B"
+  },
+  {
+    "ref": "D084",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 152.4,
+    "y": 87.0,
+    "pins": {
+      "1": "COL03",
+      "2": "KEY083"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW085",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 171.45000000000002,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY084"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "N"
+  },
+  {
+    "ref": "D085",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 171.45000000000002,
+    "y": 87.0,
+    "pins": {
+      "1": "COL04",
+      "2": "KEY084"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW086",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 190.5,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY085"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "M"
+  },
+  {
+    "ref": "D086",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 190.5,
+    "y": 87.0,
+    "pins": {
+      "1": "COL05",
+      "2": "KEY085"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW087",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 209.55,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY086"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "</,"
+  },
+  {
+    "ref": "D087",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 209.55,
+    "y": 87.0,
+    "pins": {
+      "1": "COL06",
+      "2": "KEY086"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW088",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 228.60000000000002,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY087"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": ">/."
+  },
+  {
+    "ref": "D088",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 228.60000000000002,
+    "y": 87.0,
+    "pins": {
+      "1": "COL07",
+      "2": "KEY087"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW089",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 247.65,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY088"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "?//"
+  },
+  {
+    "ref": "D089",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 247.65,
+    "y": 87.0,
+    "pins": {
+      "1": "COL08",
+      "2": "KEY088"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW090",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 283.36875000000003,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY089"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Shift"
+  },
+  {
+    "ref": "D090",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 283.36875000000003,
+    "y": 87.0,
+    "pins": {
+      "1": "COL09",
+      "2": "KEY089"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW091",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 323.85,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY090"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "M12"
+  },
+  {
+    "ref": "D091",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 323.85,
+    "y": 87.0,
+    "pins": {
+      "1": "COL10",
+      "2": "KEY090"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW092",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 342.90000000000003,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY091"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "\u2191"
+  },
+  {
+    "ref": "D092",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 342.90000000000003,
+    "y": 87.0,
+    "pins": {
+      "1": "COL11",
+      "2": "KEY091"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW093",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 361.95,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY092"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "M13"
+  },
+  {
+    "ref": "D093",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 361.95,
+    "y": 87.0,
+    "pins": {
+      "1": "COL12",
+      "2": "KEY092"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW094",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 385.7625,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY093"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "1/End"
+  },
+  {
+    "ref": "D094",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 385.7625,
+    "y": 87.0,
+    "pins": {
+      "1": "COL13",
+      "2": "KEY093"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW095",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 404.8125,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY094"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "2/\u2193"
+  },
+  {
+    "ref": "D095",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 404.8125,
+    "y": 87.0,
+    "pins": {
+      "1": "COL14",
+      "2": "KEY094"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW096",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 423.8625,
+    "y": 95.25,
+    "pins": {
+      "1": "ROW5",
+      "2": "KEY095"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "3/PgDn"
+  },
+  {
+    "ref": "D096",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 423.8625,
+    "y": 87.0,
+    "pins": {
+      "1": "COL15",
+      "2": "KEY095"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW097",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 442.9125,
+    "y": 104.775,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY096"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Enter"
+  },
+  {
+    "ref": "D097",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 442.9125,
+    "y": 96.525,
+    "pins": {
+      "1": "COL00",
+      "2": "KEY096"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW098",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 9.525,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY097"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "M5"
+  },
+  {
+    "ref": "D098",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 9.525,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL01",
+      "2": "KEY097"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW099",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 35.71875,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY098"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Ctrl"
+  },
+  {
+    "ref": "D099",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 35.71875,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL02",
+      "2": "KEY098"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW100",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 59.53125,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY099"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Win"
+  },
+  {
+    "ref": "D100",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 59.53125,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL03",
+      "2": "KEY099"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW101",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 83.34375,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY100"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Alt"
+  },
+  {
+    "ref": "D101",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 83.34375,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL04",
+      "2": "KEY100"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW102",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 154.78125,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY101"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Space"
+  },
+  {
+    "ref": "D102",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 154.78125,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL05",
+      "2": "KEY101"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW103",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 226.21875,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY102"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Alt"
+  },
+  {
+    "ref": "D103",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 226.21875,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL06",
+      "2": "KEY102"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW104",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 250.03125,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY103"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Win"
+  },
+  {
+    "ref": "D104",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 250.03125,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL07",
+      "2": "KEY103"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW105",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 273.84375,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY104"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Menu"
+  },
+  {
+    "ref": "D105",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 273.84375,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL08",
+      "2": "KEY104"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW106",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 297.65625,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY105"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "Ctrl"
+  },
+  {
+    "ref": "D106",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 297.65625,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL09",
+      "2": "KEY105"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW107",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 323.85,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY106"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "\u2190"
+  },
+  {
+    "ref": "D107",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 323.85,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL10",
+      "2": "KEY106"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW108",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 342.90000000000003,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY107"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "\u2193"
+  },
+  {
+    "ref": "D108",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 342.90000000000003,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL11",
+      "2": "KEY107"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW109",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 361.95,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY108"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "\u2192"
+  },
+  {
+    "ref": "D109",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 361.95,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL12",
+      "2": "KEY108"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW110",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 395.2875,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY109"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "0/Ins"
+  },
+  {
+    "ref": "D110",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 395.2875,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL13",
+      "2": "KEY109"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW111",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 423.8625,
+    "y": 114.30000000000001,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY110"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "./Del"
+  },
+  {
+    "ref": "D111",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 423.8625,
+    "y": 106.05000000000001,
+    "pins": {
+      "1": "COL14",
+      "2": "KEY110"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW112",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 135.255,
+    "y": 138.1125,
+    "pins": {
+      "1": "ROW6",
+      "2": "KEY111"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "M6"
+  },
+  {
+    "ref": "D112",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 135.255,
+    "y": 129.8625,
+    "pins": {
+      "1": "COL15",
+      "2": "KEY111"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW113",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 154.305,
+    "y": 138.1125,
+    "pins": {
+      "1": "ROW7",
+      "2": "KEY112"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "M7"
+  },
+  {
+    "ref": "D113",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 154.305,
+    "y": 129.8625,
+    "pins": {
+      "1": "COL00",
+      "2": "KEY112"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW114",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 173.355,
+    "y": 138.1125,
+    "pins": {
+      "1": "ROW7",
+      "2": "KEY113"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "M8"
+  },
+  {
+    "ref": "D114",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 173.355,
+    "y": 129.8625,
+    "pins": {
+      "1": "COL01",
+      "2": "KEY113"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW115",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 281.94,
+    "y": 138.1125,
+    "pins": {
+      "1": "ROW7",
+      "2": "KEY114"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "M9"
+  },
+  {
+    "ref": "D115",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 281.94,
+    "y": 129.8625,
+    "pins": {
+      "1": "COL02",
+      "2": "KEY114"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW116",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 300.99,
+    "y": 138.1125,
+    "pins": {
+      "1": "ROW7",
+      "2": "KEY115"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "M10"
+  },
+  {
+    "ref": "D116",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 300.99,
+    "y": 129.8625,
+    "pins": {
+      "1": "COL03",
+      "2": "KEY115"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "SW117",
+    "kind": "MX",
+    "value": "CPG151101S11-16",
+    "x": 320.04,
+    "y": 138.1125,
+    "pins": {
+      "1": "ROW7",
+      "2": "KEY116"
+    },
+    "back": false,
+    "angle": 0,
+    "key_label": "M11"
+  },
+  {
+    "ref": "D117",
+    "kind": "D_SOD123",
+    "value": "1N4148W",
+    "x": 320.04,
+    "y": 129.8625,
+    "pins": {
+      "1": "COL04",
+      "2": "KEY116"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED001",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 33.3375,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE001"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL001",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 39.137499999999996,
+    "y": 14.605,
+    "pins": {
+      "1": "ANODE001",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED002",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 71.4375,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE002"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL002",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 77.2375,
+    "y": 14.605,
+    "pins": {
+      "1": "ANODE002",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED003",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 90.4875,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE003"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL003",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 96.2875,
+    "y": 14.605,
+    "pins": {
+      "1": "ANODE003",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED004",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 109.53750000000001,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE004"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL004",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 115.3375,
+    "y": 14.605,
+    "pins": {
+      "1": "ANODE004",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED005",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 128.5875,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE005"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL005",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 134.38750000000002,
+    "y": 14.605,
+    "pins": {
+      "1": "ANODE005",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED006",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 157.1625,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE006"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL006",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 162.9625,
+    "y": 14.605,
+    "pins": {
+      "1": "ANODE006",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED007",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 176.2125,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE007"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL007",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 182.01250000000002,
+    "y": 14.605,
+    "pins": {
+      "1": "ANODE007",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED008",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 195.26250000000002,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE008"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL008",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 201.06250000000003,
+    "y": 14.605,
+    "pins": {
+      "1": "ANODE008",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED009",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 214.3125,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE009"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL009",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 220.1125,
+    "y": 14.605,
+    "pins": {
+      "1": "ANODE009",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED010",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 242.88750000000002,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE010"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL010",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 248.68750000000003,
+    "y": 14.605,
+    "pins": {
+      "1": "ANODE010",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED011",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 261.9375,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE011"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL011",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 267.7375,
+    "y": 14.605,
+    "pins": {
+      "1": "ANODE011",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED012",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 280.9875,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE012"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL012",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 286.7875,
+    "y": 14.605,
+    "pins": {
+      "1": "ANODE012",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED013",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 300.0375,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE013"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL013",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 305.83750000000003,
+    "y": 14.605,
+    "pins": {
+      "1": "ANODE013",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED014",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 323.85,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE014"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL014",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 329.65000000000003,
+    "y": 14.605,
+    "pins": {
+      "1": "ANODE014",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED015",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 342.90000000000003,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE015"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL015",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 348.70000000000005,
+    "y": 14.605,
+    "pins": {
+      "1": "ANODE015",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED016",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 361.95,
+    "y": 14.605,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE016"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL016",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 367.75,
+    "y": 14.605,
+    "pins": {
+      "1": "ANODE016",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED017",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 9.525,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE017"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL017",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 15.325,
+    "y": 43.18,
+    "pins": {
+      "1": "ANODE017",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED018",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 33.3375,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE018"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL018",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 39.137499999999996,
+    "y": 43.18,
+    "pins": {
+      "1": "ANODE018",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED019",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 52.3875,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE019"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL019",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 58.1875,
+    "y": 43.18,
+    "pins": {
+      "1": "ANODE019",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED020",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 71.4375,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE020"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL020",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 77.2375,
+    "y": 43.18,
+    "pins": {
+      "1": "ANODE020",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED021",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 90.4875,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE021"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL021",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 96.2875,
+    "y": 43.18,
+    "pins": {
+      "1": "ANODE021",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED022",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 109.53750000000001,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE022"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL022",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 115.3375,
+    "y": 43.18,
+    "pins": {
+      "1": "ANODE022",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED023",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 128.5875,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE023"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL023",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 134.38750000000002,
+    "y": 43.18,
+    "pins": {
+      "1": "ANODE023",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED024",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 147.63750000000002,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE024"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL024",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 153.43750000000003,
+    "y": 43.18,
+    "pins": {
+      "1": "ANODE024",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED025",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 166.6875,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE025"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL025",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 172.4875,
+    "y": 43.18,
+    "pins": {
+      "1": "ANODE025",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED026",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 185.7375,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE026"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL026",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 191.53750000000002,
+    "y": 43.18,
+    "pins": {
+      "1": "ANODE026",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED027",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 204.7875,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE027"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL027",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 210.5875,
+    "y": 43.18,
+    "pins": {
+      "1": "ANODE027",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED028",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 223.8375,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE028"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL028",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 229.63750000000002,
+    "y": 43.18,
+    "pins": {
+      "1": "ANODE028",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED029",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 242.88750000000002,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE029"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL029",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 248.68750000000003,
+    "y": 43.18,
+    "pins": {
+      "1": "ANODE029",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED030",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 261.9375,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE030"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL030",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 267.7375,
+    "y": 43.18,
+    "pins": {
+      "1": "ANODE030",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED031",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 290.5125,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE031"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL031",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 296.3125,
+    "y": 43.18,
+    "pins": {
+      "1": "ANODE031",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED032",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 323.85,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE032"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL032",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 329.65000000000003,
+    "y": 43.18,
+    "pins": {
+      "1": "ANODE032",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED033",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 342.90000000000003,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE033"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL033",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 348.70000000000005,
+    "y": 43.18,
+    "pins": {
+      "1": "ANODE033",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED034",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 361.95,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE034"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL034",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 367.75,
+    "y": 43.18,
+    "pins": {
+      "1": "ANODE034",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED035",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 385.7625,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE035"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL035",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 391.5625,
+    "y": 43.18,
+    "pins": {
+      "1": "ANODE035",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED036",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 404.8125,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE036"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL036",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 410.6125,
+    "y": 43.18,
+    "pins": {
+      "1": "ANODE036",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED037",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 423.8625,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE037"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL037",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 429.6625,
+    "y": 43.18,
+    "pins": {
+      "1": "ANODE037",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED038",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 442.9125,
+    "y": 43.18,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE038"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL038",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 448.71250000000003,
+    "y": 43.18,
+    "pins": {
+      "1": "ANODE038",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED039",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 9.525,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE039"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL039",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 15.325,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "ANODE039",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED040",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 38.1,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE040"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL040",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 43.9,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "ANODE040",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED041",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 61.9125,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE041"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL041",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 67.7125,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "ANODE041",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED042",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 80.9625,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE042"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL042",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 86.7625,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "ANODE042",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED043",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 100.0125,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE043"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL043",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 105.8125,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "ANODE043",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED044",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 119.0625,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE044"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL044",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 124.8625,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "ANODE044",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED045",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 138.1125,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE045"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL045",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 143.91250000000002,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "ANODE045",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED046",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 157.1625,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE046"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL046",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 162.9625,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "ANODE046",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED047",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 176.2125,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE047"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL047",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 182.01250000000002,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "ANODE047",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED048",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 195.26250000000002,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE048"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL048",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 201.06250000000003,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "ANODE048",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED049",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 214.3125,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE049"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL049",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 220.1125,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "ANODE049",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED050",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 233.3625,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE050"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL050",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 239.16250000000002,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "ANODE050",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED051",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 252.41250000000002,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE051"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL051",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 258.21250000000003,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "ANODE051",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED052",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 271.46250000000003,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE052"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL052",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 277.26250000000005,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "ANODE052",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED053",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 295.27500000000003,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE053"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL053",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 301.07500000000005,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "ANODE053",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED054",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 323.85,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE054"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL054",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 329.65000000000003,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "ANODE054",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED055",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 342.90000000000003,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE055"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL055",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 348.70000000000005,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "ANODE055",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED056",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 361.95,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE056"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL056",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 367.75,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "ANODE056",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED057",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 385.7625,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE057"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL057",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 391.5625,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "ANODE057",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED058",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 404.8125,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE058"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL058",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 410.6125,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "ANODE058",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED059",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 423.8625,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE059"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL059",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 429.6625,
+    "y": 62.230000000000004,
+    "pins": {
+      "1": "ANODE059",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED060",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 442.9125,
+    "y": 71.755,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE060"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL060",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 448.71250000000003,
+    "y": 71.755,
+    "pins": {
+      "1": "ANODE060",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED061",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 9.525,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE061"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL061",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 15.325,
+    "y": 81.28,
+    "pins": {
+      "1": "ANODE061",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED062",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 40.48125,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE062"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL062",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 46.28125,
+    "y": 81.28,
+    "pins": {
+      "1": "ANODE062",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED063",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 66.675,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE063"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL063",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 72.475,
+    "y": 81.28,
+    "pins": {
+      "1": "ANODE063",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED064",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 85.72500000000001,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE064"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL064",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 91.525,
+    "y": 81.28,
+    "pins": {
+      "1": "ANODE064",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED065",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 104.775,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE065"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL065",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 110.575,
+    "y": 81.28,
+    "pins": {
+      "1": "ANODE065",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED066",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 123.825,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE066"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL066",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 129.625,
+    "y": 81.28,
+    "pins": {
+      "1": "ANODE066",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED067",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 142.875,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE067"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL067",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 148.675,
+    "y": 81.28,
+    "pins": {
+      "1": "ANODE067",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED068",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 161.925,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE068"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL068",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 167.72500000000002,
+    "y": 81.28,
+    "pins": {
+      "1": "ANODE068",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED069",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 180.975,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE069"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL069",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 186.775,
+    "y": 81.28,
+    "pins": {
+      "1": "ANODE069",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED070",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 200.025,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE070"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL070",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 205.82500000000002,
+    "y": 81.28,
+    "pins": {
+      "1": "ANODE070",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED071",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 219.07500000000002,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE071"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL071",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 224.87500000000003,
+    "y": 81.28,
+    "pins": {
+      "1": "ANODE071",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED072",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 238.125,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE072"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL072",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 243.925,
+    "y": 81.28,
+    "pins": {
+      "1": "ANODE072",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED073",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 257.175,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE073"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL073",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 262.975,
+    "y": 81.28,
+    "pins": {
+      "1": "ANODE073",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED074",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 288.13125,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE074"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL074",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 293.93125000000003,
+    "y": 81.28,
+    "pins": {
+      "1": "ANODE074",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED075",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 385.7625,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE075"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL075",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 391.5625,
+    "y": 81.28,
+    "pins": {
+      "1": "ANODE075",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED076",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 404.8125,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE076"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL076",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 410.6125,
+    "y": 81.28,
+    "pins": {
+      "1": "ANODE076",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED077",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 423.8625,
+    "y": 81.28,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE077"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL077",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 429.6625,
+    "y": 81.28,
+    "pins": {
+      "1": "ANODE077",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED078",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 9.525,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE078"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL078",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 15.325,
+    "y": 100.33,
+    "pins": {
+      "1": "ANODE078",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED079",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 45.24375,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE079"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL079",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 51.043749999999996,
+    "y": 100.33,
+    "pins": {
+      "1": "ANODE079",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED080",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 76.2,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE080"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL080",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 82.0,
+    "y": 100.33,
+    "pins": {
+      "1": "ANODE080",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED081",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 95.25,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE081"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL081",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 101.05,
+    "y": 100.33,
+    "pins": {
+      "1": "ANODE081",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED082",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 114.30000000000001,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE082"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL082",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 120.10000000000001,
+    "y": 100.33,
+    "pins": {
+      "1": "ANODE082",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED083",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 133.35,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE083"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL083",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 139.15,
+    "y": 100.33,
+    "pins": {
+      "1": "ANODE083",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED084",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 152.4,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE084"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL084",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 158.20000000000002,
+    "y": 100.33,
+    "pins": {
+      "1": "ANODE084",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED085",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 171.45000000000002,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE085"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL085",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 177.25000000000003,
+    "y": 100.33,
+    "pins": {
+      "1": "ANODE085",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED086",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 190.5,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE086"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL086",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 196.3,
+    "y": 100.33,
+    "pins": {
+      "1": "ANODE086",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED087",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 209.55,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE087"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL087",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 215.35000000000002,
+    "y": 100.33,
+    "pins": {
+      "1": "ANODE087",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED088",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 228.60000000000002,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE088"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL088",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 234.40000000000003,
+    "y": 100.33,
+    "pins": {
+      "1": "ANODE088",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED089",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 247.65,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE089"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL089",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 253.45000000000002,
+    "y": 100.33,
+    "pins": {
+      "1": "ANODE089",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED090",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 283.36875000000003,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE090"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL090",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 289.16875000000005,
+    "y": 100.33,
+    "pins": {
+      "1": "ANODE090",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED091",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 323.85,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE091"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL091",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 329.65000000000003,
+    "y": 100.33,
+    "pins": {
+      "1": "ANODE091",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED092",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 342.90000000000003,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE092"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL092",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 348.70000000000005,
+    "y": 100.33,
+    "pins": {
+      "1": "ANODE092",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED093",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 361.95,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE093"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL093",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 367.75,
+    "y": 100.33,
+    "pins": {
+      "1": "ANODE093",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED094",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 385.7625,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE094"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL094",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 391.5625,
+    "y": 100.33,
+    "pins": {
+      "1": "ANODE094",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED095",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 404.8125,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE095"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL095",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 410.6125,
+    "y": 100.33,
+    "pins": {
+      "1": "ANODE095",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED096",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 423.8625,
+    "y": 100.33,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE096"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL096",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 429.6625,
+    "y": 100.33,
+    "pins": {
+      "1": "ANODE096",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED097",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 442.9125,
+    "y": 109.855,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE097"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL097",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 448.71250000000003,
+    "y": 109.855,
+    "pins": {
+      "1": "ANODE097",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED098",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 9.525,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE098"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL098",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 15.325,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "ANODE098",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED099",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 35.71875,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE099"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL099",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 41.51875,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "ANODE099",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED100",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 59.53125,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE100"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL100",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 65.33125,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "ANODE100",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED101",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 83.34375,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE101"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL101",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 89.14375,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "ANODE101",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED102",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 154.78125,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE102"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL102",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 160.58125,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "ANODE102",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED103",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 226.21875,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE103"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL103",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 232.01875,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "ANODE103",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED104",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 250.03125,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE104"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL104",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 255.83125,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "ANODE104",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED105",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 273.84375,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE105"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL105",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 279.64375,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "ANODE105",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED106",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 297.65625,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE106"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL106",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 303.45625,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "ANODE106",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED107",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 323.85,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE107"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL107",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 329.65000000000003,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "ANODE107",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED108",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 342.90000000000003,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE108"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL108",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 348.70000000000005,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "ANODE108",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED109",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 361.95,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE109"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL109",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 367.75,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "ANODE109",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED110",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 395.2875,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE110"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL110",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 401.08750000000003,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "ANODE110",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED111",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 423.8625,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE111"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL111",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 429.6625,
+    "y": 119.38000000000001,
+    "pins": {
+      "1": "ANODE111",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED112",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 135.255,
+    "y": 143.19250000000002,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE112"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL112",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 141.055,
+    "y": 143.19250000000002,
+    "pins": {
+      "1": "ANODE112",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED113",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 154.305,
+    "y": 143.19250000000002,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE113"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL113",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 160.10500000000002,
+    "y": 143.19250000000002,
+    "pins": {
+      "1": "ANODE113",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED114",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 173.355,
+    "y": 143.19250000000002,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE114"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL114",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 179.155,
+    "y": 143.19250000000002,
+    "pins": {
+      "1": "ANODE114",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED115",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 281.94,
+    "y": 143.19250000000002,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE115"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL115",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 287.74,
+    "y": 143.19250000000002,
+    "pins": {
+      "1": "ANODE115",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED116",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 300.99,
+    "y": 143.19250000000002,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE116"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL116",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 306.79,
+    "y": 143.19250000000002,
+    "pins": {
+      "1": "ANODE116",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "LED117",
+    "kind": "WhiteLED",
+    "value": "BL-HZ333H-L21-TRE",
+    "x": 320.04,
+    "y": 143.19250000000002,
+    "pins": {
+      "1": "LED_RETURN",
+      "2": "ANODE117"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "RL117",
+    "kind": "R_0805",
+    "value": "3.9k 1%",
+    "x": 325.84000000000003,
+    "y": 143.19250000000002,
+    "pins": {
+      "1": "ANODE117",
+      "2": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "F1",
+    "kind": "PTC_1206",
+    "value": "1206L020YR 0.20A hold",
+    "x": 393,
+    "y": 4.5,
+    "pins": {
+      "1": "MODULE_VOUT",
+      "2": "FUSED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "U3",
+    "kind": "TPS2553",
+    "value": "TPS2553DBVR",
+    "x": 390,
+    "y": 14,
+    "pins": {
+      "1": "FUSED_5V",
+      "2": "GND",
+      "3": "LED_EN",
+      "4": null,
+      "5": "FUSED_5V",
+      "6": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "R2",
+    "kind": "R_0805",
+    "value": "100k 1%",
+    "x": 384,
+    "y": 10,
+    "pins": {
+      "1": "LED_EN",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C1",
+    "kind": "C_0805",
+    "value": "1uF 50V X7R",
+    "x": 394,
+    "y": 8,
+    "pins": {
+      "1": "FUSED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "C2",
+    "kind": "C_0805",
+    "value": "22uF 10V X5R",
+    "x": 395,
+    "y": 14,
+    "pins": {
+      "1": "LED_5V",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "Q1",
+    "kind": "NMOS",
+    "value": "AO3400A",
+    "x": 382,
+    "y": 19,
+    "pins": {
+      "1": "GATE",
+      "2": "GND",
+      "3": "LED_RETURN"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "R1",
+    "kind": "R_0805",
+    "value": "330R 1%",
+    "x": 378,
+    "y": 19,
+    "pins": {
+      "1": "BL_PWM",
+      "2": "GATE"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "R3",
+    "kind": "R_0805",
+    "value": "100k 1%",
+    "x": 382,
+    "y": 23,
+    "pins": {
+      "1": "GATE",
+      "2": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "TP2",
+    "kind": "TestPad",
+    "value": "GND",
+    "x": 410,
+    "y": 27,
+    "pins": {
+      "1": "GND"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "TP3",
+    "kind": "TestPad",
+    "value": "MODULE_VOUT",
+    "x": 418,
+    "y": 27,
+    "pins": {
+      "1": "MODULE_VOUT"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "TP4",
+    "kind": "TestPad",
+    "value": "LED_5V",
+    "x": 426,
+    "y": 27,
+    "pins": {
+      "1": "LED_5V"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "TP5",
+    "kind": "TestPad",
+    "value": "LED_EN",
+    "x": 434,
+    "y": 27,
+    "pins": {
+      "1": "LED_EN"
+    },
+    "back": true,
+    "angle": 0
+  },
+  {
+    "ref": "TP6",
+    "kind": "TestPad",
+    "value": "LED_RETURN",
+    "x": 402,
+    "y": 27,
+    "pins": {
+      "1": "LED_RETURN"
+    },
+    "back": true,
+    "angle": 0
+  }
+]

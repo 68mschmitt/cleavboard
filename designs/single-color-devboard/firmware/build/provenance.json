@@ -1,0 +1,31 @@
+{
+  "checkout": "dd43959ae5c08d8a28d38a1acf7b04e86b14a344",
+  "compiler": "arm-none-eabi-gcc (Arch Repository) 16.2.0",
+  "hardware_tested": false,
+  "commands": [
+    "make cleaver_white:default -j4",
+    "make cleaver_white:vial -j4 -B"
+  ],
+  "default": {
+    "bytes": 58880,
+    "sha256": "04222c35a8708cb79eb51a8b5d47a0022f556a696a392b4d1c26e4ac2cde93a9"
+  },
+  "vial": {
+    "bytes": 95232,
+    "sha256": "b0252e382cf32718d22705b851ff2f763a46e80ee1edc85b2e7c4d67d75236cb"
+  },
+  "source_sha256": {
+    "cleaver_white.c": "a77bc75f255490082ecd3b9469055c73804db2e7d478266db673c1ddca2a3d8a",
+    "config.h": "e0e293568cfe48c3858134f358c7e667b31b4ab58424bf14417d865414d6e00e",
+    "halconf.h": "3a0b2a1883684cea74edf9a4c7f7f1d606e9e3ce7c1a431c24586022f50a0a43",
+    "key_matrix.csv": "26493de8ee8dc75b806c174ac8a0f9e47204c9dbf3942bc0ed9196b6d71ff3dd",
+    "keyboard.json": "97aa2723b0949caa9c63bb899266fde35dcab621f5971204cb34be17a2533bc4",
+    "keymaps/default/keymap.c": "3bc8ab99b42bd77278fce777bb4eb7649cbcf2a6ba56d6d3004098c9c6673650",
+    "keymaps/vial/config.h": "9c5c0b21b81cf0beb2d55c4c262a7bfbfa4a2c4617e449e3a4ea41180ebc06fa",
+    "keymaps/vial/keymap.c": "3bc8ab99b42bd77278fce777bb4eb7649cbcf2a6ba56d6d3004098c9c6673650",
+    "keymaps/vial/rules.mk": "209a5cf059306af5092121fe6f8f2c2d00b0fb51cdcdee7006554cd3764baa05",
+    "keymaps/vial/vial.json": "90001d268eebf228a0c1fe0d4b53b62b3ec8266c5b8ce3705491ad2a6de37a70",
+    "mcuconf.h": "1da2e2a7a199839b3dd575006f6bcc0cb945c1e513b9bb7a34f2b32edde8eb72",
+    "rules.mk": "4ccd4fa47ecb530443af4713916550188614f03858240e2035fff681346ecf85"
+  }
+}

@@ -544,10 +544,6 @@
     "netclass_patterns": [
       {
         "netclass": "USB_LED_Power",
-        "pattern": "/MODULE_VOUT"
-      },
-      {
-        "netclass": "USB_LED_Power",
         "pattern": "/FUSED_5V"
       },
       {

@@ -1,0 +1,7 @@
+Item,Quantity,Mounting,Description
+U1,1,top,YD-RP2040 4MB USB-C DWEII/VCC-GND module
+U1 headers,2,top,"1x20 2.54mm male headers, 17.78mm row spacing"
+MX switches,117,plate,Clip into plate and hot-swap sockets; no solder
+2u stabilizers,7,plate,Cherry-style plate mount
+6.25u stabilizer,1,plate,Cherry-style plate mount
+M2 mounting hardware,11,case,2.2mm holes; 6mm diameter reserved

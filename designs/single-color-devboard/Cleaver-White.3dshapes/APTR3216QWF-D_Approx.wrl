@@ -1,0 +1,22 @@
+#VRML V2.0 utf8
+# CC0-1.0 nominal reverse LED envelope; not vendor CAD
+Transform { translation 0.0 0.0 0.049212598425196846 children [ Shape {
+      appearance Appearance { material Material { diffuseColor .88 .87 .82 } }
+      geometry Box { size 1.2598425196850394 0.6299212598425197 0.09842519685039369 }
+    } ] }
+Transform { translation 0.0 0.0 -0.15748031496062992 children [ Shape {
+      appearance Appearance { material Material { diffuseColor .95 .86 .35 } }
+      geometry Box { size 0.5511811023622046 0.6299212598425197 0.31496062992125984 }
+    } ] }
+Transform { translation -0.5511811023622046 0.0 0.00984251968503937 children [ Shape {
+      appearance Appearance { material Material { diffuseColor .7 .7 .73 } }
+      geometry Box { size 0.15748031496062992 0.6299212598425197 0.01968503937007874 }
+    } ] }
+Transform { translation 0.5511811023622046 0.0 0.00984251968503937 children [ Shape {
+      appearance Appearance { material Material { diffuseColor .7 .7 .73 } }
+      geometry Box { size 0.15748031496062992 0.6299212598425197 0.01968503937007874 }
+    } ] }
+Transform { translation -0.41338582677165353 0.0 0.10039370078740158 children [ Shape {
+      appearance Appearance { material Material { diffuseColor .18 .18 .18 } }
+      geometry Box { size 0.047244094488188976 0.47244094488188976 0.003937007874015748 }
+    } ] }

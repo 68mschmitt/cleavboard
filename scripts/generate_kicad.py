@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build Cleaver revision 0.4; import a complete-copper Specctra routing session.
+"""Build Cleaver revision 0.5; import a complete-copper Specctra routing session.
 
 The electrical model is in design.py. No geometry-only wiring guesses are made:
 the PCB takes its pad nets from KiCad's exported schematic netlist. Project rules
@@ -23,11 +23,12 @@ from design import (ROOT, INPUT, U, BOARD_W, BOARD_H, ROW_GPIOS, COL_GPIOS,
                     MODULE_PINS, RGB_GPIO, POWER_GPIO, read_keys, components,
                     default_keycodes, MOUNTING_HOLES, FIDUCIALS, TEST_POINTS)
 from models_3d import update_library_models
+from assembly_parts import fields
 
 OUT = ROOT / "kicad"
 PRETTY = OUT / "Cleaver.pretty"
 ROOT_ID = str(uuid.uuid5(uuid.NAMESPACE_URL, "cleaver:schematic:0.3"))
-FP_NAMES = {"MX": "Kailh_socket_MX"}
+FP_NAMES = {"MX": "HanElectricity_CPG151101S11-16"}
 
 
 def ident(name):
@@ -78,7 +79,7 @@ def symbol_pins():
         "WirePad": [pin(1, "VBUS", "passive", 5.08, 0, 180)],
         "TestPad": [pin(1, "TEST", "passive", 5.08, 0, 180)],
         "R_0805": two, "C_0805": two, "PTC_1206": two,
-        "C_Radial8": [pin(1, "+", "passive", -5.08, 0), pin(2, "-", "passive", 5.08, 0, 180)],
+        "C_PCF_D10": [pin(1, "+", "passive", -5.08, 0), pin(2, "-", "passive", 5.08, 0, 180)],
         "PowerFlag": [pin(1, "pwr", "power_out", 0, 0)],
     }
 
@@ -111,6 +112,19 @@ def write_footprints():
     PRETTY.mkdir(exist_ok=True)
     if not (PRETTY / "Kailh_socket_MX.kicad_mod").exists():
         raise FileNotFoundError("The vendored, licensed Kailh MX socket footprint is required")
+    # Normalize the legacy mixed-side footprint to a true bottom socket.
+    # SetLayer alone changes the anchor, then Flip mirrors the library geometry;
+    # the normal placement flip below restores ALL existing hole/pad positions.
+    socket = pcbnew.FootprintLoad(str(PRETTY), 'Kailh_socket_MX')
+    holder = pcbnew.BOARD()
+    holder.Add(socket)
+    socket.Models().clear()
+    socket.SetLayer(pcbnew.B_Cu)
+    socket.Flip(socket.GetPosition(), pcbnew.FLIP_DIRECTION_TOP_BOTTOM)
+    socket.SetFPID(pcbnew.LIB_ID('Cleaver', FP_NAMES['MX']))
+    socket.SetValue('CPG151101S11-16')
+    socket.SetLibDescription('HanElectricity CPG151101S11-16 C41430893; vendor-recommended MX socket holes and lands')
+    pcbnew.FootprintSave(str(PRETTY), socket)
     definitions = {}
     for kind in ("R_0805", "C_0805"):
         definitions[kind] = footprint(kind, smd(1, -.95, 0, 1.1, 1.4) + smd(2, .95, 0, 1.1, 1.4), (1, .625))
@@ -146,8 +160,8 @@ def write_footprints():
         (fp_text user "USB-C -> EDGE" (at 0 -17) (layer F.SilkS)
           (effects (font (size 1 1) (thickness 0.15))))''', through=True)
     definitions["WirePad"] = footprint("WirePad",
-        '(pad 1 thru_hole circle (at 0 0) (size 2.4 2.4) (drill 1.0) (layers *.Cu *.Mask))',
-        (1.2, 1.2), through=True)
+        '(pad 1 smd circle (at 0 0) (size 2.4 2.4) (layers F.Cu F.Mask))',
+        (1.2, 1.2))
     definitions['TestPad'] = footprint('TestPad',
         '(pad 1 smd circle (at 0 0) (size 1.5 1.5) (layers F.Cu F.Mask))', (.75,.75))
     definitions['MountingHole_M2'] = footprint('MountingHole_M2',
@@ -155,13 +169,14 @@ def write_footprints():
         (3,3), '(fp_circle (center 0 0) (end 3 0) (layer Dwgs.User) (width 0.1))', through=True)
     definitions['Fiducial'] = footprint('Fiducial',
         '(pad "" smd circle (at 0 0) (size 1 1) (layers F.Cu F.Mask) (solder_mask_margin 1))', (.5,.5))
-    definitions["C_Radial8"] = footprint("C_Radial8", '''
-        (pad 1 thru_hole rect (at -1.75 0) (size 1.8 1.8) (drill 0.8) (layers *.Cu *.Mask))
-        (pad 2 thru_hole circle (at 1.75 0) (size 1.8 1.8) (drill 0.8) (layers *.Cu *.Mask))''',
-        (4,4), '''
-        (fp_circle (center 0 0) (end 4 0) (layer F.SilkS) (width 0.12))
-        (fp_text user "+" (at -4.8 0) (layer F.SilkS)
-          (effects (font (size 1 1) (thickness 0.15))))''', through=True)
+    # Nichicon polymer D10 recommendation: 4 x 2 lands, 4 mm inner gap.
+    # Positive left / negative right; 10.3 +/- .2 mm platform, D10 +/- .5 can.
+    definitions['C_PCF_D10'] = footprint('C_PCF_D10',
+        smd(1,-4,0,4,2) + smd(2,4,0,4,2), (5.15,5.15), '''
+        (fp_circle (center 0 0) (end 5 0) (layer F.Fab) (width 0.1))
+        (fp_rect (start -6.25 -5.5) (end 6.25 5.5) (layer F.CrtYd) (width 0.05))
+        (fp_text user "+" (at -4 -2.2) (layer F.SilkS)
+          (effects (font (size 1 1) (thickness 0.15))))''')
     for kind, text in definitions.items():
         (PRETTY / f"{kind}.kicad_mod").write_text(text + "\n")
     update_library_models(PRETTY)
@@ -184,7 +199,7 @@ def symbol_definition(kind, qualified):
         (polyline (pts (xy 1.5 1.5) (xy 1.5 -1.5)) (stroke (width 0.15)) (fill (type none)))
         (polyline (pts (xy -2.54 0) (xy -1.5 0)) (stroke (width 0.15)) (fill (type none)))
         (polyline (pts (xy 1.5 0) (xy 2.54 0)) (stroke (width 0.15)) (fill (type none)))'''
-    elif kind in ("C_0805", "C_Radial8"):
+    elif kind in ("C_0805", "C_PCF_D10"):
         graphic = '''(polyline (pts (xy -0.6 2) (xy -0.6 -2)) (stroke (width 0.15)) (fill (type none)))
         (polyline (pts (xy 0.6 2) (xy 0.6 -2)) (stroke (width 0.15)) (fill (type none)))
         (polyline (pts (xy -2.54 0) (xy -0.6 0)) (stroke (width 0.15)) (fill (type none)))
@@ -201,7 +216,7 @@ def symbol_definition(kind, qualified):
         graphic = '''(circle (center 0 0) (radius 1.27) (stroke (width 0.15)) (fill (type none)))
         (polyline (pts (xy 1.27 0) (xy 2.54 0)) (stroke (width 0.15)) (fill (type none)))'''
     fp = "" if kind == "PowerFlag" else f"Cleaver:{FP_NAMES.get(kind, kind)}"
-    hide = '' if kind in ('YD_RP2040','MINI_E','TPS2553','LV1T125','C_Radial8') else ' hide'
+    hide = '' if kind in ('YD_RP2040','MINI_E','TPS2553','LV1T125','C_PCF_D10') else ' hide'
     return f'''(symbol {q(name)} (pin_names (offset 0.7){hide}) (in_bom yes) (on_board yes)
       (property "Reference" "U" (at 0 5 0) (effects (font (size 1 1))))
       (property "Value" {q(kind)} (at 0 -5 0) (effects (font (size 1 1))))
@@ -244,12 +259,14 @@ def generate_schematic(parts, keys, leds):
         on_board = "no" if kind == "PowerFlag" else "yes"
         ref_y = y - (29.21 if kind == 'YD_RP2040' else 8.89 if kind in ('TPS2553','LV1T125') else 5.08)
         value_y = y + (29.21 if kind == 'YD_RP2040' else 8.89 if kind in ('TPS2553','LV1T125') else 6.35)
+        properties = ''.join(f'(property {q(k)} {q(v)} (at {x:.4f} {y:.4f} 0) (effects (font (size 1 1)) hide))'
+                             for k,v in fields(part).items())
         body.append(f'''(symbol (lib_id "Cleaver:{kind}") (at {x:.4f} {y:.4f} 0) (unit 1)
           (in_bom {on_board}) (on_board {on_board}) (dnp no) (uuid {cid})
           (property "Reference" {q(ref)} (at {x:.4f} {ref_y:.4f} 0) (effects (font (size 0.8 0.8))))
           (property "Value" {q(part['value'])} (at {x:.4f} {value_y:.4f} 0) (effects (font (size 0.7 0.7))))
           (property "Footprint" {q(fp)} (at {x:.4f} {y:.4f} 0) (effects (font (size 1 1)) hide))
-          {' '.join(f'(pin {q(p[0])} (uuid {ident(ref + ":pin:" + p[0])}))' for p in PINS[kind])})''')
+          {properties}{' '.join(f'(pin {q(p[0])} (uuid {ident(ref + ":pin:" + p[0])}))' for p in PINS[kind])})''')
         instances.append(f'(path "/{cid}" (reference {q(ref)}) (unit 1) (value {q(part["value"])}) (footprint {q(fp)}))')
         for n, name, typ, px, py, angle in PINS[kind]:
             lx, ly = x + px, y - py
@@ -279,7 +296,7 @@ def generate_schematic(parts, keys, leds):
     wire('RGB_BUFFERED',[(x+7.62,y+2.54),(rx-7.62,y+2.54),(rx-7.62,ry),(rx-5.08,ry)],'RGB-buffer')
     header = f'''(kicad_sch (version 20250114) (generator "eeschema") (generator_version "10.0")
       (uuid {ROOT_ID}) (paper "A0")
-      (title_block (title "Cleaver - YD-RP2040 USB-C") (date "2026-11-08") (rev "0.4"))
+      (title_block (title "Cleaver - YD-RP2040 USB-C / bottom SMT") (date "2026-11-10") (rev "0.5"))
       (lib_symbols {' '.join(symbol_definition(k, True) for k in PINS)})
       (text "117 UNIQUE KEYS - 8x16 ROW2COL - USB POWER ONLY - NO POWER SWITCH" (at 30 20 0)
         (effects (font (size 2 2)) (justify left)))
@@ -509,8 +526,8 @@ def generate_board(parts, keys, nets, report_dir, ses=None):
     board.GetDesignSettings().SetCopperLayerCount(4)
     board.GetDesignSettings().SetAuxOrigin(mm(0,BOARD_H))
     board.GetTitleBlock().SetTitle("Cleaver - YD-RP2040 USB-C / 117 keys")
-    board.GetTitleBlock().SetDate("2026-11-08")
-    board.GetTitleBlock().SetRevision("0.4")
+    board.GetTitleBlock().SetDate("2026-11-10")
+    board.GetTitleBlock().SetRevision("0.5")
     ni = {}
     for name in sorted(set(nets.values())):
         item = pcbnew.NETINFO_ITEM(board, name)
@@ -524,6 +541,8 @@ def generate_board(parts, keys, nets, report_dir, ses=None):
         fp = pcbnew.FootprintLoad(str(PRETTY), fname)
         fp.SetFPID(pcbnew.LIB_ID("Cleaver", fname))
         fp.SetReference(ref); fp.SetValue(part["value"])
+        for name,value in fields(part).items():
+            fp.SetField(name,value); fp.GetField(name).SetVisible(False)
         fp.SetPath(pcbnew.KIID_PATH("/" + ident(ref)))
         fp.SetPosition(mm(part["x"], part["y"])); fp.SetOrientationDegrees(part["angle"])
         board.Add(fp)
@@ -536,7 +555,7 @@ def generate_board(parts, keys, nets, report_dir, ses=None):
             fp.Reference().SetTextSize(mm(.8,.8)); fp.Reference().SetTextThickness(pcbnew.FromMM(.12))
         elif ref == "U1":
             fp.Reference().SetPosition(mm(part["x"],part["y"]))
-        elif kind == 'TestPad':
+        elif kind in ('TestPad','WirePad'):
             fp.Reference().SetVisible(False)
         for pad in fp.Pads():
             key = (ref, str(pad.GetNumber()))
@@ -545,6 +564,10 @@ def generate_board(parts, keys, nets, report_dir, ses=None):
                 if expected is not None and nets[key].lstrip("/") != expected:
                     raise ValueError(f"Schematic net mismatch: {key} {expected} vs {nets[key]}")
                 pad.SetNet(ni[nets[key]])
+    logo = pcbnew.FootprintLoad(str(PRETTY), "TavianaTactical_34mm")
+    logo.SetFPID(pcbnew.LIB_ID("Cleaver", "TavianaTactical_34mm"))
+    logo.SetReference("LOGO1"); logo.SetPosition(mm(199, 122)); board.Add(logo)
+    logo.SetLocked(True)
     add_mechanics(board)
     for ref, net, x, y in TEST_POINTS:
         label = pcbnew.PCB_TEXT(board)
@@ -556,10 +579,11 @@ def generate_board(parts, keys, nets, report_dir, ses=None):
         for a,b in [((x-7,y-7),(x+7,y-7)),((x+7,y-7),(x+7,y+7)),
                     ((x+7,y+7),(x-7,y+7)),((x-7,y+7),(x-7,y-7))]:
             line(board,a,b,pcbnew.Dwgs_User)
-    for text,x,y,layer in [("USB 5V TAP +",435,27,pcbnew.F_SilkS),
-                           ("CLEAVER rev0.4 | USB-C | TP1: RAW USB VBUS",46,144.9,pcbnew.F_SilkS)]:
+    for text,x,y,layer in [("TP1 USB 5V TAP +",442,24.7,pcbnew.B_SilkS),
+                           ("CLEAVER rev0.5 | USB-C | BOTTOM SMT",46,144.9,pcbnew.F_SilkS)]:
         label = pcbnew.PCB_TEXT(board)
         label.SetText(text); label.SetPosition(mm(x,y)); label.SetLayer(layer)
+        label.SetMirrored(layer == pcbnew.B_SilkS)
         label.SetTextSize(mm(.8,.8)); label.SetTextThickness(pcbnew.FromMM(.12)); board.Add(label)
     zone = pcbnew.ZONE(board)
     zone.SetLayer(pcbnew.In1_Cu); zone.SetNet(ni["/GND"])
@@ -579,7 +603,7 @@ def generate_board(parts, keys, nets, report_dir, ses=None):
     if ses:
         if not pcbnew.ImportSpecctraSES(board, str(ses)):
             raise RuntimeError("Failed to import routing session")
-    # Revision 0.4 sessions contain ALL copper, including power/ground fanouts.
+    # Revision 0.5 sessions contain ALL copper, including power/ground fanouts.
     pcbnew.ZONE_FILLER(board).Fill(board.Zones())
     pcbnew.SaveBoard(str(path), board)
     if not ses:
@@ -668,8 +692,8 @@ def main():
         parser.error("Choose --placement-only or --ses FILE; never silently replace a routed board with an unrouted one")
     if args.ses and not args.ses.is_file():
         parser.error("Routing session does not exist")
-    if args.ses and not args.ses.read_text().startswith('(session Cleaver_rev0.4_complete_copper'):
-        parser.error('Use a revision 0.4 complete-copper session; older sessions omit required fanouts')
+    if args.ses and not args.ses.read_text().startswith('(session Cleaver_rev0.5_complete_copper'):
+        parser.error('Use a revision 0.5 complete-copper session; older sessions have different C5/TP1 connections')
     args.reports.mkdir(parents=True, exist_ok=True)
     keys, leds = read_keys()
     parts = components(keys, leds)
@@ -678,11 +702,13 @@ def main():
     generate_board(parts, keys, nets, args.reports, args.ses)
     generate_firmware(keys, leds)
     with (OUT / "BOM.csv").open("w",newline="") as file:
-        writer = csv.writer(file, lineterminator="\n"); writer.writerow(["reference","value","footprint","x_mm","y_mm","side"])
+        writer = csv.writer(file, lineterminator="\n"); writer.writerow(["reference","value","footprint","x_mm","y_mm","side","Manufacturer","MPN","LCSC","Key"])
         for p in parts:
-            side = "F switch / B socket" if p["kind"]=="MX" else "B" if p["back"] else "F"
-            writer.writerow([p["ref"],p["value"],FP_NAMES.get(p["kind"],p["kind"]),p["x"],p["y"],side])
-    print(f"Generated revision 0.4: {len(keys)} unique keys, 8x16, 117 LEDs; " + ("session imported" if args.ses else "UNROUTED placement/DSN only"))
+            side = "B" if p["back"] else "F"
+            data = fields(p)
+            writer.writerow([p["ref"],p["value"],FP_NAMES.get(p["kind"],p["kind"]),p["x"],p["y"],side,
+                             *[data.get(k,'') for k in ('Manufacturer','MPN','LCSC','Key')]])
+    print(f"Generated revision 0.5: {len(keys)} unique keys, 8x16, 117 LEDs; " + ("session imported" if args.ses else "UNROUTED placement/DSN only"))
 
 
 if __name__ == "__main__":

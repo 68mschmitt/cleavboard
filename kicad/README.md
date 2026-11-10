@@ -1,4 +1,7 @@
-# Cleaver PCB — revision 0.4
+# Cleaver PCB — revision 0.5
+
+**Taviana Tactical artwork:** the active PCB includes a 34 mm-wide top-side logo.
+Use the current [revision 0.5 fabrication files](../manufacturing/rev0.5/).
 
 117 MX hot-swap switches, 117 reverse-mount RGB LEDs, and the **DWEII / VCC-GND
 YD-RP2040 4MB USB-C module** identified in your supplied manual. The keyboard is
@@ -9,13 +12,17 @@ tests. The old [DESIGN_REVIEW.md](DESIGN_REVIEW.md) describes revision 0.2, not 
 replacement design. Electrical checks do not substitute for a physical prototype
 or final plate/case checks.
 
-**Revision 0.4 manufacturing:** all 478 factory-populated SMD parts are on the
-underside. MCU/headers and C5 stay on top for owner soldering. There are 11 M2
+**Revision 0.5 manufacturing:** all **479 factory-populated parts are underside
+SMD**, including C5 and the HanElectricity hot-swap sockets. Only the MCU/headers
+remain on top for owner soldering. TP1 is now a bare underside SMD wire pad.
+There are 11 M2
 mounting holes, five labelled underside probe pads and three bottom fiducials.
-Use [`../manufacturing/rev0.4/`](../manufacturing/rev0.4/) for the purchasing BOM,
+Use [`../manufacturing/rev0.5/`](../manufacturing/rev0.5/) for the purchasing BOM,
 corrected socket placement data and fabrication package; use
 [`../mechanical/`](../mechanical/) for the matching stabilizer/switch plate and
-case mounting references. Older loose Gerbers are not this revision.
+case mounting references. **Allow 11 mm clearance under C5**; the old case-depth
+assumption no longer applies there. Older loose Gerbers and artwork exports are
+not this revision. See the [complete live JLCPCB review](references/COMPONENT-REVIEW.md).
 
 ## Important: the approved USB power tap is required
 
@@ -24,9 +31,10 @@ USB 5 V supply. It is deliberately **unconnected** on this PCB. Do not power all
 117 LEDs through that pin, VIN, 3V3, or a GPIO.
 
 Add **one short insulated wire** from the module's **raw USB VBUS, before the
-BAT54C diode**, to the through-hole pad marked **TP1 / USB 5V TAP +** at `(446, 27)`
+BAT54C diode**, to the underside SMD pad marked **TP1 / USB 5V TAP +** at `(446, 27)`
 mm. Ground returns through the module's ordinary GND header pins; no second wire
-is needed. The single USB-C cable still powers everything.
+is needed. Route the wire around the board edge and strain-relieve it to the case.
+The single USB-C cable still powers everything.
 
 On the published YD-RP2040 V1.1 schematic, raw USB VBUS is the USB-fed anode of D2
 (BAT54C, pin 1); pin 3 is the diode-combined output, **not** the tap. Your listing
@@ -58,7 +66,7 @@ Module GPIO27 → U2 level translator → R1 (330 Ω) → first LED DIN
 - Every LED has its own 100 nF capacitor. C2 is 22 µF; **C5 is a low-impedance
   470 µF reservoir after the current limiter**, to supply coincident LED PWM pulses.
   It is not attached directly across USB at cable insertion. Fit its polarity
-  correctly: square pad 1 is positive, and the can's negative stripe goes to pad 2.
+  correctly: pad 1 / `+` is positive, and the can's negative mark goes to pad 2.
 - U2 is **SN74LV1T125DBVR**, not an arbitrary 74LVC/HC/AHCT substitute. Its
   reduced input thresholds translate 3.3 V data to the LED supply, and its input
   tolerates the GPIO while the LED supply is off.
@@ -127,10 +135,10 @@ through the switch to the diode anode; the cathode connects to the column.
 - `firmware/key_matrix.csv` gives switch, matrix cell, position, and RGB index.
   `BOM.csv` lists exact references, values, board side, and placement coordinates.
   SWxxx, Dxxx, and LEDxxx refer to the same physical key; C101 belongs to SW001.
-  Each SW footprint combines a **front-side MX switch with a back-side Kailh
-  socket**. Do not use its top-level footprint side as an automated assembly
-  instruction. The revision-specific factory CPL corrects both side and socket
-  centre. The owner provides two 1×20 headers (and optional mating sockets) and
+  Each SW footprint is a **B.Cu HanElectricity CPG151101S11-16 / C41430893 socket**.
+  The switch plugs in from above. Its origin is still the switch centre; use the
+  revision-specific factory CPL for the actual socket placement centre. The owner
+  provides two 1×20 headers (and optional mating sockets) and
   the insulated USB tap wire.
 - Caps/Num/Scroll lock are indicated using their **own keys' RGB LEDs**. The three
   decorative KLE circles above the numpad do not represent additional components
@@ -145,9 +153,10 @@ Signals use F.Cu/In2.Cu/B.Cu. Preferred track widths are
 Ordinary through-vias are used; filled/capped via-in-pad fabrication is not needed.
 
 The power/buffer circuit and bulk capacitor occupy the empty region **left of
-the MCU**, rather than overlapping its body or headers. C5 is an 8 mm-diameter
-Panasonic **EEU-FR1A471**, with 3.5 mm lead pitch and an approximately 11.5 mm body
-height (allow the manufacturer's maximum installed height in the case).
+the MCU**, rather than overlapping its body or headers. C5 is a bottom-mounted
+**Nichicon PCF1A471MCL1GS / C3275369**, 470 µF/10 V SMD polymer, Ø10 mm and
+10 mm maximum height, centred at `(377, 6)` mm. Allow **11 mm free case depth
+below the PCB at C5**. The old top capacitor plate opening can remain unused.
 
 **Mechanical interface:** switch centres and board outline are retained. The
 new plate in `../mechanical/` includes matching M2 holes and Cherry-style
@@ -173,6 +182,9 @@ plate, stabilizers, and case are not modeled. These views do not replace the
 physical fit checks above. Model assignments are preserved by the generator.
 
 ## Vial-QMK firmware
+
+Ready-to-flash revision 0.5 builds and instructions are in
+[`../manufacturing/rev0.5/firmware/`](../manufacturing/rev0.5/firmware/).
 
 Copy `firmware/` to `keyboards/cleaver/` in a **vial-qmk** checkout. From that
 checkout run:
@@ -228,7 +240,8 @@ KiCad's edge clearances and power widths into the router; a router reporting
   [established MX MINI-E footprint](https://github.com/ebastler/kicad-keyboard-parts.pretty/blob/master/MX_SK6812MINI-E.kicad_mod).
 - [SN74LV1T125](https://www.ti.com/lit/ds/symlink/sn74lv1t125.pdf),
   [TPS2553](https://www.ti.com/lit/ds/symlink/tps2553.pdf), and
-  [EEU-FR1A471 mechanical/electrical specification](https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFR1A471).
+  [Nichicon PCF capacitor specification](references/Nichicon-PCF.pdf).
+- [Exact-part JLCPCB review and socket compatibility](references/COMPONENT-REVIEW.md).
 
 Bring up the prototype on current-limited USB power: check supply polarity/shorts,
 test the module and one key first, then one LED, all 117 keys (including chords),

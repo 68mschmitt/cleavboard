@@ -1,0 +1,22 @@
+{
+  "populated_footprints": 477,
+  "model_instances": 594,
+  "non_model_pcb_sha256": "87fed4432ddef7608b577cc16990fd0f7a7f4ae74628fe68ef6875451d0417cd",
+  "pcb_sha256": "e8aaa0864f61b0a074955f838ead9893a352f028f1da838e0171aafe5bf8aea8",
+  "non_model_content_preserved": true,
+  "footprints": {
+    "BL-HZ333H-L21-TRE_Reverse": 117,
+    "R_0805": 120,
+    "D_SOD123": 117,
+    "Fiducial": 3,
+    "SOT-23": 1,
+    "TPS2553": 1,
+    "PTC_1206": 1,
+    "C_0805": 2,
+    "TestPad": 5,
+    "HanElectricity_CPG151101S11-16": 117,
+    "MountingHole_M2": 11,
+    "YD_RP2040": 1,
+    "TavianaTactical_34mm": 1
+  }
+}

@@ -1,4 +1,4 @@
-# Revision 0.4 validation
+# Revision 0.5 validation
 
 **Electrical/layout checks pass, including complete copper connectivity.**
 The archived routing was imported into a freshly regenerated board and checked
@@ -9,13 +9,13 @@ The schematic and placement target the DWEII / VCC-GND YD-RP2040 USB-C module,
 117 unique keys, and 117 reverse-mounted OPSCO SK6812MINI-E C5149201 LEDs. No physical
 prototype has been assembled or tested by this agent.
 
-## Checks recorded on 2026-11-08
+## Checks recorded on 2026-11-10
 
 | Check | Result |
 | --- | --- |
 | KiCad version | 10.0.8 |
 | Schematic ERC, meaningful electrical pin types | 0 violations |
-| Shared-design/geometry/router-boundary/model/assembly/routing unit tests | 25 passed (Shapely enabled) |
+| Shared-design/geometry/router-boundary/model/assembly/routing unit tests | 29 passed (Shapely enabled) |
 | Schematic/PCB net assignments | Pass |
 | 8×16 matrix, 117 unique addresses | Pass |
 | QMK and Vial matrix/RGB-order parity | Pass |
@@ -26,15 +26,18 @@ prototype has been assembled or tested by this agent.
 | Schematic/PCB parity issues | **0** |
 | Same-net via holes outside exposed SMD solder lands | Pass |
 | Regeneration from archived `routing/Cleaver.ses` | Pass; fresh ERC/DRC/connectivity checks repeated |
-| Factory assembly | 478 SMD placements, all bottom; socket origins corrected |
+| Factory assembly | 479 SMD placements, all bottom; socket origins corrected |
+| Purchasing review | All 13 exact factory purchasing groups have positive JLCPCB SMT stock; dated evidence retained |
+| Through-hole component pins / front paste pads | Only U1's 40 PTH pins / zero front paste pads |
 | Mechanical mounting | 11 M2 holes, 6 mm copper-free hardware envelopes |
 | Plate generation | Connected plate, matching holes, 7 × 2u + 1 × 6.25u stabilizers |
-| Trace cleanup | 7,895 → 4,058 segments; sub-0.3 mm segments 2,835 → 575; 667 vias retained |
+| Routed copper | 4,065 track segments and 670 vias; all 4,735 items preserved through regeneration |
 | Bundled 3D models | 597 placements / 480 populated footprints; pads/holes/fiducials bare |
-| `default` firmware build | Previously succeeded; firmware unchanged in PCB revision 0.4 |
-| `vial` firmware build, including VialRGB | Previously succeeded; firmware unchanged |
+| `default` firmware build | Fresh clean revision 0.5 build passed; RP2040 UF2 validated |
+| `vial` firmware build, including VialRGB | Fresh clean revision 0.5 build passed; RP2040 UF2 validated |
 
-Firmware was built with `make cleaver:default -j4` and `make cleaver:vial -j4`
+Firmware was freshly rebuilt on 2026-11-10, after target-specific clean commands,
+with `make cleaver:default -j4` and `make cleaver:vial -j4`
 against **vial-qmk `dd43959ae5c08d8a28d38a1acf7b04e86b14a344`**, using
 `arm-none-eabi-gcc 16.2.0`. The checked firmware includes secure Esc + main Enter
 Vial unlock, VialRGB, lock-key indicators, the 8/255 brightness cap, and USB-aware
@@ -49,31 +52,32 @@ GP28 power control. Build success does not establish hardware operation.
 - [`validation/manifest.json`](validation/manifest.json): SHA-256 hashes of the
   electrical files, active libraries/models, previews, firmware source, routing
   archive, checker, and tests; also firmware build provenance and UF2 hashes.
-- [`routing/Cleaver.ses`](routing/Cleaver.ses): all accepted revision 0.4 copper,
-  including the underside reroute. See `routing/README.md`.
+- [`routing/Cleaver.ses`](routing/Cleaver.ses): all accepted revision 0.5 copper,
+  including the C5/TP1 connections and local ROW1 reroute. See `routing/README.md`.
 - [`Cleaver.3dshapes/README.md`](Cleaver.3dshapes/README.md): model sources,
   licenses, and approximation limits; previews in [`previews/`](previews/).
 
-Revision 0.4 changes placement, routing and mechanical features. It is not a
-model-only change. The OPSCO purchasing part's pin numbering is aligned with
-its catalog datasheet; physical LED signal locations and firmware remain the
-same. The 100 nF and 1 µF purchasing capacitors are rated 50 V instead of the
-previous 10 V minimum. All project electrical DRC rules remain in effect.
+Revision 0.5 replaces all 117 sockets with HanElectricity CPG151101S11-16 /
+C41430893 and normalizes their bottom anchors without moving holes or lands.
+C5 is now bottom SMD Nichicon PCF1A471MCL1GS / C3275369, and TP1 is a bare
+bottom SMD wire pad. All other purchasing identities, LED pinout and firmware
+are retained. See the [complete component review](references/COMPONENT-REVIEW.md).
+All project electrical DRC rules remain in effect.
 
 The manufacturing package and its independent SHA-256 manifest are under
-[`../manufacturing/rev0.4/`](../manufacturing/rev0.4/). That package includes fresh
+[`../manufacturing/rev0.5/`](../manufacturing/rev0.5/). That package includes fresh
 checks, exact purchasing BOM, bottom CPL, pad-orientation data, assembly drawing,
-Gerbers, separate PTH/NPTH drills, and sourcing references. JLCPCB catalog support
-is established for sockets/LEDs; order-specific stock and DFM acceptance are not.
+Gerbers and separate PTH/NPTH drills. Sourcing evidence is under `references/`.
+All 13 selected factory groups had positive, purchasable SMT stock on 2026-11-10;
+C5 had 103 pieces. Stock is not reserved and order-specific DFM is unverified.
 
-The accepted routing cleanup replaces grid staircases and redundant pad-approach
-jogs with straight/45-degree runs. Two 0.4 mm inner-layer LED-supply connections
-restore continuity across regions separated by the refilled front power pour.
-Pad/via locations, track widths, layer assignments and circuit mapping are
-preserved. See `routing/cleanup.json` for before/after metrics and source hashes.
+The earlier routing cleanup is recorded in `routing/cleanup.json`. Revision 0.5
+adds off-pad power/ground vias for C5 and the bottom TP1 pad, with a local ROW1
+detour around the wider capacitor lands. Deterministically archived per-net
+tracks/vias match exactly before and after fresh generator import.
 
-The build logs and UF2 outputs remain in the working environment under
-`/tmp/opencode/cleaver-revision/` and `/tmp/opencode/cleaver-vial/`; they are not
+The build logs, UF2 outputs and detailed build provenance are retained in
+[`../manufacturing/rev0.5/firmware/`](../manufacturing/rev0.5/firmware/); they are not
 required to regenerate the KiCad board. Hashes identify the supplied artifact
 versions. Regeneration preserves the electrical/physical design, not necessarily
 byte-identical KiCad UUIDs or compiler timestamps.
@@ -96,8 +100,9 @@ The pre-existing project disables missing-courtyard, track-end-centering, tuning
 profile, and footprint-filter/type checks. These settings were not relaxed to
 accept routing. In particular, a clean electrical DRC is not a component-body or
 case-fit guarantee; the physical prototype checks below are still required.
-The project comparison confirms that only netclass preferences were changed;
-manufacturing minima, DRC/ERC severity settings, and exclusions remain unchanged.
+Comparison with the pre-edit project confirms only a stale `/MODULE_VOUT`
+netclass assignment was removed; manufacturing minima, DRC/ERC severity settings,
+and exclusions remain unchanged.
 
 ## Physical checks still required
 
@@ -110,8 +115,9 @@ manufacturing minima, DRC/ERC severity settings, and exclusions remain unchanged
 3. Print the new stabilizer/switch fit coupon in `../mechanical/`, check clip fit
    with the actual plate-mount stabilizers, and confirm plate spacing. The case
    uses the 11 supplied M2 axes. Confirm LED polarity, lead overlap and emitter
-   height on the assembled prototype. The MCU/capacitor plate openings and
-   approximate models do not establish maximum-tolerance fit.
+   height on the assembled prototype. Reserve **11 mm clear underside case depth
+   beneath C5**. The old top capacitor plate opening is unused; the MCU opening
+   and approximate models do not establish maximum-tolerance fit.
 4. Measure total USB current, the limited LED-branch current, pre-configuration
    and suspend current, startup behavior,
    and full-white rail ripple/voltage at the farthest LEDs at **8/255** brightness.

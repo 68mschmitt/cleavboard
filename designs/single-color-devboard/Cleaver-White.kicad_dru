@@ -1,0 +1,7 @@
+(version 1)
+# Short reverse-LED carrier requires lands beside its optical aperture.
+# Only these pads get 0.1mm; tracks/vias retain baseline 0.5mm edge clearance.
+# Nominal pad/aperture gap = 0.15mm. See MECHANICAL.md for tolerances.
+(rule "Reverse LED solder lands at optical aperture"
+  (condition "A.Type == 'Pad' && A.memberOfFootprint('LED*')")
+  (constraint edge_clearance (min 0.1mm)))

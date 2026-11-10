@@ -255,6 +255,10 @@ def board(parts,nets,route=None):
     b.Add(z)
     # Adjacent ground reference; route.py reserves USB/clock ground corridors.
     inner=z.Duplicate(False);inner.SetLayer(pcbnew.In2_Cu);b.Add(inner)
+    logo=pcbnew.FootprintLoad(str(LIB),'TavianaTactical_34mm')
+    logo.SetFPID(pcbnew.LIB_ID(NAME,'TavianaTactical_34mm'))
+    logo.SetReference('LOGO1');logo.SetPosition(mm(199,122));b.Add(logo)
+    logo.SetLocked(True)
     labels(b)
     for zone in b.Zones():
         if not zone.GetIsRuleArea():zone.SetIslandRemovalMode(pcbnew.ISLAND_REMOVAL_MODE_ALWAYS)

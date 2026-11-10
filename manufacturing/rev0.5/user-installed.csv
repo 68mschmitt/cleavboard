@@ -1,0 +1,8 @@
+Item,Quantity,Mounting,Description
+U1,1,top,User supplied YD-RP2040 4MB USB-C module
+U1 headers,2,top,1x20 male 2.54mm headers; 17.78mm between rows
+TP1 wire,1,bottom pad / top module,Short insulated raw USB VBUS tap wire; strain relieve to case
+MX switches,117,top,Plate-mounted MX-compatible switches
+2u stabilizers,7,plate,"Cherry-style plate mount, 23.8mm stem spacing"
+6.25u stabilizer,1,plate,"Cherry-style plate mount, 100mm stem spacing"
+Mounting screws,11,case/plate,M2; choose lengths for your printed case; 6mm reserved diameter

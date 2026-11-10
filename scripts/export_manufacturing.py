@@ -16,7 +16,7 @@ import pcbnew
 from design import ROOT, BOARD_W, BOARD_H, MOUNTING_HOLES, FIDUCIALS, components, read_keys
 from assembly_parts import purchase
 
-OUT = ROOT/'manufacturing/rev0.4'
+OUT = ROOT/'manufacturing/rev0.5'
 
 
 def write_csv(path, header, rows):
@@ -46,7 +46,7 @@ def assembly_rows(board):
             px,py=pcbnew.ToMM(pad.GetPosition())
             pad_rows.append([ref,pad.GetNumber(),pad.GetNetname(),f'{px:.6f}',f'{BOARD_H-py:.6f}',
                              f'{px-x:.6f}',f'{y-py:.6f}'])
-    assert len(placements)==478
+    assert len(placements)==479
     return groups,placements,pad_rows
 
 
@@ -89,8 +89,7 @@ def main():
     write_csv(OUT/'user-installed.csv',['Item','Quantity','Mounting','Description'],[
         ['U1',1,'top','User supplied YD-RP2040 4MB USB-C module'],
         ['U1 headers',2,'top','1x20 male 2.54mm headers; 17.78mm between rows'],
-        ['C5',1,'top','Panasonic EEU-FR1A471 470uF 10V radial; 8mm diameter, 3.5mm pitch'],
-        ['TP1 wire',1,'top','Short insulated raw USB VBUS tap wire'],
+        ['TP1 wire',1,'bottom pad / top module','Short insulated raw USB VBUS tap wire; strain relieve to case'],
         ['MX switches',117,'top','Plate-mounted MX-compatible switches'],
         ['2u stabilizers',7,'plate','Cherry-style plate mount, 23.8mm stem spacing'],
         ['6.25u stabilizer',1,'plate','Cherry-style plate mount, 100mm stem spacing'],
@@ -102,13 +101,13 @@ def main():
         '-o',str(fab)+'/',str(pcb)],check=True)
     subprocess.run(['kicad-cli','pcb','export','drill','--drill-origin','plot','--excellon-separate-th',
         '--generate-map','--map-format','pdf','--generate-report','-o',str(fab)+'/',str(pcb)],check=True)
-    with zipfile.ZipFile(OUT/'Cleaver-rev0.4-fabrication.zip','w',zipfile.ZIP_DEFLATED) as z:
+    with zipfile.ZipFile(OUT/'Cleaver-rev0.5-fabrication.zip','w',zipfile.ZIP_DEFLATED) as z:
         for path in sorted(fab.iterdir()):z.write(path,path.name)
     manifest={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest()
               for p in [pcb,ROOT/'kicad/Cleaver.kicad_sch',ROOT/'kicad/routing/Cleaver.ses',
                         *sorted(OUT.rglob('*'))] if p.is_file() and p.name!='SHA256.json'}
     (OUT/'SHA256.json').write_text(json.dumps(manifest,indent=2)+'\n')
-    print('Exported 478 bottom placements, 12 purchasing groups, fabrication/drill files and manifest.')
+    print('Exported 479 bottom placements, 13 purchasing groups, fabrication/drill files and manifest.')
 
 
 if __name__=='__main__':main()

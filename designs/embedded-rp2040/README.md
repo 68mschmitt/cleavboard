@@ -1,5 +1,8 @@
 # Cleaver-Embedded — embedded-0.2
 
+**Taviana Tactical artwork:** the active PCB includes a 34 mm-wide top-side logo.
+See [previews and logo-inclusive fabrication files](../../artwork/taviana/README.md).
+
 Open **[Cleaver-Embedded.kicad_pro](Cleaver-Embedded.kicad_pro)** in KiCad 10.
 This is a separate, editable project with a bare RP2040 and on-board USB-C.
 The original Cleaver project is not its output directory or a build dependency.
