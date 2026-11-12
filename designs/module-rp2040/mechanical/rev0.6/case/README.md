@@ -17,6 +17,7 @@ The rear is raised **5°**; the keys slope down towards the user.
 | [FreeCAD assembly](Cleaver-case-assembly-rev0.6.FCStd) | Named solid parts; hide the cover/keycap references to inspect the interior |
 | [Plan drawing](case-plan.svg) | Cover openings and labelled internal mounting bosses |
 | [3D preview](assembly-preview.png) | Rendered tray and assembled enclosure; keycaps are simplified references |
+| [Fully assembled product rendering](renderings/README.md) | Ray-traced actual case/PCB/plate with switches, modeled keycaps and assembly hardware |
 | [Parameters](parameters.json) / [validation](validation.json) | Rebuild settings / measured geometry and checks |
 
 Each printable part also has an identically named **STEP** file. The main base

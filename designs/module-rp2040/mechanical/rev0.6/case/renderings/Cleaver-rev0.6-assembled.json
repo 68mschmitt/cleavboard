@@ -1,0 +1,47 @@
+{
+  "render": "Cleaver-rev0.6-assembled.png",
+  "blender": "5.2.3 LTS",
+  "engine": "Cycles CPU",
+  "resolution_px": [
+    3000,
+    1875
+  ],
+  "samples": 128,
+  "exact_cad_inputs_sha256": {
+    "Cleaver.kicad_pcb": "ef3861a1ef8af3c5df8d144602258be144826655f0da92272ff08b4d68257609",
+    "mechanical/rev0.6/case/parameters.json": "c8f695775348bbd9aa2a5f8b0fd98e095b17c4cddf1aa046582c993814079dd9",
+    "mechanical/rev0.6/case/validation.json": "eb37b9cbb67f8debebd6421d0f712dcc2ee751ef4f6d54cbe2fe9477fa421f79",
+    "mechanical/rev0.6/Cleaver-top-plate-rev0.6.stl": "fad751d9ca07e6e41e55a58dba80a7ea3eab72d00b6bac370139b7d16ef084be"
+  },
+  "geometry": {
+    "pcb": {
+      "meshes": 603,
+      "model_instances": 597,
+      "populated_footprints": 480,
+      "switch_models": 117,
+      "switch_socket_models": 117,
+      "source_glb_sha256": "a33a9776612fdb04d27ab3f795de8c4597d28409e8eada7496d20142b56f996e",
+      "switch_assembly_nodes": 234
+    },
+    "caps": {
+      "keycaps": 117,
+      "legends": 116,
+      "profile": "Generic rounded/dished sculpted MX, not a purchased keycap specification"
+    },
+    "hardware": {
+      "pcb_to_plate_spacers": 11,
+      "pcb_screws": 11,
+      "cover_screws": 8,
+      "heat_set_inserts": 19,
+      "plate_mount_stabilizers": 8
+    }
+  },
+  "appearance": "Illustrative charcoal enclosure, ivory/stone keycaps and muted red accents; unpowered RGB",
+  "limitations": [
+    "Keycap profiles and materials are illustrative, not purchased-part CAD",
+    "Stabilizers and threaded hardware are visual approximations",
+    "Bundled PCB component model approximations still apply",
+    "Internal parts are present in the scene but normally hidden by the opaque closed case"
+  ],
+  "image_sha256": "be6de3e39d9e0555c8f2e0a69bd7b965c2da0571b7b6bf5fab924a72898eea57"
+}
