@@ -1,0 +1,13 @@
+{
+  "revision": "0.6",
+  "prior_copper_items": 4735,
+  "retained_copper_items": 4735,
+  "added_track_segments": 2,
+  "added_net": "RAW_USB_5V",
+  "added_width_mm": 0.6,
+  "tracks": 4067,
+  "vias": 670,
+  "session_roundtrip": "exact match",
+  "project_settings": "byte-identical to baseline",
+  "session_sha256": "e3d9b92355c250fd5c397cc4ff2fffdb6bd8fcf3fb3da791a71c6f6e69844f2d"
+}

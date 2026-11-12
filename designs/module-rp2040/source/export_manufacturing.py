@@ -16,7 +16,7 @@ import pcbnew
 from design import ROOT, BOARD_W, BOARD_H, MOUNTING_HOLES, FIDUCIALS, components, read_keys
 from assembly_parts import purchase
 
-OUT = ROOT/'manufacturing/rev0.5'
+OUT = ROOT/'manufacturing/rev0.6'
 
 
 def write_csv(path, header, rows):
@@ -87,9 +87,8 @@ def main():
     write_csv(OUT/'fiducials.csv',['Designator','X_mm','Y_mm','Side','Copper_diameter_mm','Mask_opening_mm'],
               [[f'FID{i}',x,BOARD_H-y,'bottom',1,3] for i,(x,y) in enumerate(FIDUCIALS,1)])
     write_csv(OUT/'user-installed.csv',['Item','Quantity','Mounting','Description'],[
-        ['U1',1,'top','User supplied YD-RP2040 4MB USB-C module'],
+        ['U1',1,'top','Waveshare RP2040-Plus 4MB USB-C module (SKU 20290 or pre-headered 20808)'],
         ['U1 headers',2,'top','1x20 male 2.54mm headers; 17.78mm between rows'],
-        ['TP1 wire',1,'bottom pad / top module','Short insulated raw USB VBUS tap wire; strain relieve to case'],
         ['MX switches',117,'top','Plate-mounted MX-compatible switches'],
         ['2u stabilizers',7,'plate','Cherry-style plate mount, 23.8mm stem spacing'],
         ['6.25u stabilizer',1,'plate','Cherry-style plate mount, 100mm stem spacing'],
@@ -101,7 +100,7 @@ def main():
         '-o',str(fab)+'/',str(pcb)],check=True)
     subprocess.run(['kicad-cli','pcb','export','drill','--drill-origin','plot','--excellon-separate-th',
         '--generate-map','--map-format','pdf','--generate-report','-o',str(fab)+'/',str(pcb)],check=True)
-    with zipfile.ZipFile(OUT/'Cleaver-rev0.5-fabrication.zip','w',zipfile.ZIP_DEFLATED) as z:
+    with zipfile.ZipFile(OUT/'Cleaver-rev0.6-fabrication.zip','w',zipfile.ZIP_DEFLATED) as z:
         for path in sorted(fab.iterdir()):z.write(path,path.name)
     manifest={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest()
               for p in [pcb,ROOT/'Cleaver.kicad_sch',ROOT/'routing/Cleaver.ses',

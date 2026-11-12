@@ -21,9 +21,10 @@ MODELS = {
     'TPS2553': ('SOT-23-6.wrl',),
     'MINI_E': ('LED_SK6812MINI-E_Reverse.wrl',),
     'YD_RP2040': ('YD_RP2040_Approx.wrl',),
+    'Waveshare_RP2040_Plus': ('Waveshare_RP2040_Plus_Approx.wrl',),
     'C_Radial8': ('C_Radial_D8_H11.5_P3.5.wrl',),
     'C_PCF_D10': ('C_PCF_D10_H10.wrl',),
-    # TP1 is an exposed wire-soldering pad, not a mounted connector/component.
+    # TP1 is a bare VBUS test pad, not a mounted connector/component.
     'WirePad': (),
     'TestPad': (),
     'MountingHole_M2': (),
@@ -148,6 +149,6 @@ def validate_models(board):
     assert (populated,count)==(480,597), (populated,count)
     return dict(populated_footprints=populated,model_instances=count,
                 unique_models=len(used_models),
-                intentionally_unmodeled=['TP1: wire pad', 'TP2-TP6: probe pads',
+                intentionally_unmodeled=['TP1: VBUS test pad', 'TP2-TP6: probe pads',
                                         'H*: mounting holes', 'FID*: bare copper fiducials',
                                         'LOGO1: silkscreen artwork'])

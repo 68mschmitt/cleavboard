@@ -1,13 +1,36 @@
-# Cleaver revision 0.4 — case and plate interface
+# Cleaver — case and plate interface
 
-**Revision 0.5 PCB:** switch centres, outline and mounting holes are compatible,
+## Revision 0.6 enclosure
+
+[Case and removable top cover](rev0.6/case/README.md): a **5° rear-raised tray**
+with 11 matching PCB standoffs, separate key-cluster bezel, right-side USB-C
+opening and 3.5 mm plate spacers. Includes printable STLs, STEP/FreeCAD assembly,
+an actual-size USB/seat fit coupon and adjustable fit parameters. These full-size
+parts need approximately a **466 × 164 mm** bed plus brim allowance; physical
+fit testing is still required.
+
+## Print-ready revision 0.6 top plate
+
+Use **[Cleaver-top-plate-rev0.6.stl](rev0.6/Cleaver-top-plate-rev0.6.stl)** for the
+current PCB: 117 MX switch openings, seven 2u and one 6.25u plate-mount stabilizer
+sets, and all 11 matching M2 through-holes. It is **452.4375 × 147.6375 × 1.5 mm**.
+[Printing/assembly instructions and fit-test STLs](rev0.6/README.md) include both
+stabilizer sizes. The rev0.6 plate omits the unused top capacitor hole; the
+historical references below remain unchanged.
+
+## Historical references and PCB compatibility
+
+**Revision 0.6 PCB:** switch centres, outline and mounting holes are compatible,
 but C5 is now underneath at `(377, 6)` mm. Provide **11 mm clear case depth below
 the PCB there** for its 10 mm maximum-height SMD can. The old top capacitor
-opening may remain unused. TP1 is now an underside wire land: allow the USB tap
-wire to pass around the board edge with case strain relief. These historical
-rev0.4 mockups do not represent the new capacitor or wire-pad geometry.
+opening may remain unused. The Waveshare RP2040-Plus is **51 x 21 mm**, inside
+the existing controller opening, with the same header centres. Its USB-side
+PCB edge is 1.17 mm inside the carrier edge; verify actual USB plug/case access.
+TP1 is a bare underside VBUS test pad; no tap wire is required. These historical
+rev0.4 mockups do not represent the current capacitor or test-pad geometry.
 
-Use these files with the revision 0.4 PCB. The original supplied plate remains
+These plate and mounting references remain compatible with revision 0.6 as
+described above; the printed PCB mockups record revision 0.4. The original supplied plate remains
 in its original directory as an input/reference; it does not include these mounts.
 
 For a full-size printed PCB mockup, use the four interlocking STL sections in

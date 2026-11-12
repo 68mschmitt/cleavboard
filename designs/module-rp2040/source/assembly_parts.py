@@ -18,7 +18,7 @@ PARTS = {
     'TPS2553': ('Texas Instruments', 'TPS2553DBVR', 'C55266', 'SOT-23-6'),
     'C_PCF_D10': ('Nichicon', 'PCF1A471MCL1GS', 'C3275369', 'SMD D10x10mm polymer'),
 }
-USER_ASSEMBLED = {'YD_RP2040', 'WirePad', 'TestPad'}
+USER_ASSEMBLED = {'Waveshare_RP2040_Plus', 'WirePad', 'TestPad'}
 
 
 def purchase(part):

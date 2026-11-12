@@ -1,9 +1,9 @@
-# Accepted revision 0.5 routing
+# Accepted revision 0.6 routing
 
 `Cleaver.ses` contains **all routed copper**, including the power/ground fanouts,
-SMD bulk-capacitor and underside wire-pad connections. It carries no placement
+SMD bulk-capacitor, VBUS test pads, and **U1 pin-40 VBUS feed**. It carries no placement
 instructions; the schematic/shared design is authoritative for placement.
-Do not apply older sessions to revision 0.5 placement.
+Do not apply older sessions to revision 0.6 placement: they omit the VBUS feed.
 
 ## Restore
 
@@ -22,6 +22,13 @@ fanouts after import. Round-trip validation requires zero ERC/DRC violations,
 zero unconnected items and zero schematic/PCB parity issues.
 
 ## Provenance
+
+Revision 0.6 adds two 0.6 mm front-copper segments from Waveshare RP2040-Plus
+pin 40 `(449.8975, 22.28)` to the existing TP1 off-pad via `(446, 24.8)`.
+All 4,735 prior copper items remain; the new total is **4,067 tracks / 670 vias**.
+`source/upgrade_rev06_routing.py` records the migration. Header holes and all
+carrier GPIO mappings are retained. The complete-copper archive round-trips
+exactly through fresh generation.
 
 Revision 0.5 retains revision 0.4 copper except for two ROW1 segments next to
 the enlarged C5 lands, replaced with a short bottom detour, and five new power

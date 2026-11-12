@@ -143,6 +143,12 @@
     }
   ],
   "generated_files": {
+    "Waveshare_RP2040_Plus_Approx.step/.wrl": {
+      "source": "source/build_3d_models.py --waveshare-only",
+      "dimensions_source": "https://docs.waveshare.com/assets/images/RP2040-Plus-details-size-6c1430864c01e95cbf22c9d4c128e82c.webp",
+      "modification": "2026-11-11: original 51x21mm PCB and 17.78mm header-spacing visualization; module thickness, connector projection and package details approximate.",
+      "license": "CC0-1.0"
+    },
     "SW_Cherry_MX_Plate.step": {
       "source": "SW_Cherry_MX_Plate.FCStd",
       "modification": "FreeCAD root assembly exported to STEP with original placements; geometry only."

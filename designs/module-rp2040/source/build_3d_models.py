@@ -135,6 +135,44 @@ def capacitor():
     return pieces
 
 
+def waveshare_controller():
+    """51 x 21 mm RP2040-Plus with 17.78 mm headers; package details approximate."""
+    app, part = freecad()
+    pieces = []
+    black, metal, gold = (.045,.05,.055), (.72,.74,.76), (.83,.65,.24)
+    pcb_bottom, pcb_top = 2.54, 4.14
+
+    def box(label, x, y, z, dx, dy, dz, color):
+        shape = part.makeBox(dx,dy,dz,app.Vector(x,y,z))
+        pieces.append((label,shape,color))
+
+    pcb = part.makeBox(21,51,1.6,app.Vector(-10.5,-25.5,pcb_bottom))
+    for x in (-8.89,8.89):
+        box('Direct male header insulator',x-1.27,-25.4,0,2.54,50.8,2.54,black)
+        for i in range(20):
+            y = 24.13-2.54*i
+            pcb = pcb.cut(part.makeCylinder(.5,1.6,app.Vector(x,y,pcb_bottom)))
+            ring = part.makeCylinder(.9,.04,app.Vector(x,y,pcb_top)).cut(
+                part.makeCylinder(.5,.04,app.Vector(x,y,pcb_top)))
+            pieces.append(('Header annulus',ring,gold))
+            box('Header pin',x-.32,y-.32,-2.7,.64,.64,7.6,gold)
+    pieces.append(('51 x 21 mm module PCB',pcb,(.04,.18,.42)))
+    box('RP2040 package',-3.5,-15,pcb_top,7,7,1.1,black)
+    box('W25Q32 flash package',-2.7,-2.5,pcb_top,5.4,5.4,1.7,black)
+    box('Crystal',-3.5,-20,pcb_top,3.2,2.5,.9,metal)
+    for x in (-4.5,4.5):
+        box('BOOT / RESET button',x-1.5,2.2,pcb_top,3,4,1.6,metal)
+    box('Battery connector approximation',-4,-25.2,pcb_top,8,4.5,3.5,(.9,.87,.77))
+    box('GP25 status LED',-6.8,20,pcb_top,1.6,3.2,.7,(.85,.84,.75))
+    box('Power components envelope',-4,7,pcb_top,8,9,1.8,black)
+    # Only USB width is dimensioned by Waveshare; projection/height approximate.
+    shell = part.makeBox(8.95,8.5,3.2,app.Vector(-4.475,19,pcb_top))
+    opening = part.makeBox(8.2,8.5,2.5,app.Vector(-4.1,19.3,pcb_top+.35))
+    pieces.append(('USB-C shell approximation',shell.cut(opening),metal))
+    box('USB-C tongue',-3.3,23,pcb_top+1.35,6.6,4,.5,black)
+    return pieces
+
+
 def reverse_led(folder):
     app, part = freecad()
     original = part.read(str(folder/'LED_SK6812MINI-E.step'))
@@ -208,9 +246,16 @@ def main():
     parser.add_argument('--keyswitch-sources',type=Path,
                         help='Optional directory containing the pinned KiSwitch FCStd sources')
     parser.add_argument('--rev05-only',action='store_true',help='Build only new bottom-assembly models')
+    parser.add_argument('--waveshare-only',action='store_true',help='Build only the RP2040-Plus module model')
     args = parser.parse_args()
     folder = ROOT/'Cleaver.3dshapes'
     results = {}
+    if args.waveshare_only:
+        name = 'Waveshare_RP2040_Plus_Approx'
+        results[name] = export_model(name,waveshare_controller(),folder,
+            'Waveshare RP2040-Plus 51x21mm, direct male headers; connector and package envelopes approximate. CC0-1.0.')
+        (folder/'generated-rp2040-plus.json').write_text(json.dumps(results,indent=2)+'\n')
+        return
     if args.rev05_only:
         results['C_PCF_D10_H10'] = export_model('C_PCF_D10_H10',smd_capacitor(),folder,
             'Nominal Nichicon PCF1A471MCL1GS visualization, not tolerance geometry. CC0-1.0.')

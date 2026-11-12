@@ -1,0 +1,479 @@
+{
+  "revision": "0.6",
+  "source_pcb": "../../../Cleaver.kicad_pcb",
+  "source_sha256": "ef3861a1ef8af3c5df8d144602258be144826655f0da92272ff08b4d68257609",
+  "matching_plate": "../Cleaver-top-plate-rev0.6.stl",
+  "matching_plate_sha256": "fad751d9ca07e6e41e55a58dba80a7ea3eab72d00b6bac370139b7d16ef084be",
+  "parameters": {
+    "typing_angle_deg": 5.0,
+    "pcb_edge_clearance_mm": 0.25,
+    "wall_mm": 6.5,
+    "floor_mm": 2.8,
+    "front_under_pcb_clearance_mm": 6.0,
+    "outer_corner_radius_mm": 4.0,
+    "cover_underside_above_pcb_mm": 8.4,
+    "cover_thickness_mm": 2.4,
+    "cover_lip_depth_mm": 2.0,
+    "cover_lip_wall_mm": 1.0,
+    "cover_lip_inner_offset_mm": 0.5,
+    "cover_lip_clearance_mm": 0.25,
+    "key_aperture_extra_per_side_mm": 0.15,
+    "insert_bore_mm": 3.0,
+    "insert_pocket_depth_mm": 4.5,
+    "cover_insert_pocket_depth_mm": 5.0,
+    "cover_screw_clearance_mm": 2.2,
+    "cover_head_recess_diameter_mm": 4.2,
+    "cover_head_recess_depth_mm": 1.0,
+    "usb_opening_width_mm": 16.0,
+    "usb_opening_height_mm": 7.2,
+    "usb_center_above_pcb_mm": 5.74
+  },
+  "source_checks": {
+    "revision": "0.6",
+    "outline_matches": true,
+    "switch_centres_matched": 117,
+    "mounting_holes": [
+      {
+        "reference": "H1",
+        "x_mm": 4,
+        "y_mm": 4,
+        "drill_mm": 2.2
+      },
+      {
+        "reference": "H2",
+        "x_mm": 110,
+        "y_mm": 23.8,
+        "drill_mm": 2.2
+      },
+      {
+        "reference": "H3",
+        "x_mm": 220,
+        "y_mm": 23.8,
+        "drill_mm": 2.2
+      },
+      {
+        "reference": "H4",
+        "x_mm": 330,
+        "y_mm": 23.8,
+        "drill_mm": 2.2
+      },
+      {
+        "reference": "H5",
+        "x_mm": 395,
+        "y_mm": 26,
+        "drill_mm": 2.2
+      },
+      {
+        "reference": "H6",
+        "x_mm": 313,
+        "y_mm": 70,
+        "drill_mm": 2.2
+      },
+      {
+        "reference": "H7",
+        "x_mm": 4,
+        "y_mm": 143,
+        "drill_mm": 2.2
+      },
+      {
+        "reference": "H8",
+        "x_mm": 90,
+        "y_mm": 138,
+        "drill_mm": 2.2
+      },
+      {
+        "reference": "H9",
+        "x_mm": 220,
+        "y_mm": 138,
+        "drill_mm": 2.2
+      },
+      {
+        "reference": "H10",
+        "x_mm": 365,
+        "y_mm": 138,
+        "drill_mm": 2.2
+      },
+      {
+        "reference": "H11",
+        "x_mm": 448,
+        "y_mm": 138,
+        "drill_mm": 2.2
+      }
+    ],
+    "controller_body_clear": true,
+    "capacitor_on_underside": true,
+    "pcb_thickness_mm": 1.6,
+    "capacitor_position_matches": true,
+    "controller_position_and_orientation_match": true,
+    "existing_plate_stl_matches": true
+  },
+  "fit_checks": {
+    "intersection_volumes_mm3": {
+      "tray_pcb": 0.0,
+      "tray_plate": 0.0,
+      "cover_pcb": 0.0,
+      "cover_plate": 0.0,
+      "tray_cover": 0.0
+    },
+    "mounting_standoffs": [
+      {
+        "reference": "H1",
+        "pcb_xy_mm": [
+          4,
+          4
+        ],
+        "support_face_center_assembly_mm": [
+          4,
+          143.23036513554933,
+          21.31883299891675
+        ]
+      },
+      {
+        "reference": "H2",
+        "pcb_xy_mm": [
+          110,
+          23.8
+        ],
+        "support_face_center_assembly_mm": [
+          110,
+          123.50571011333278,
+          19.593149292513118
+        ]
+      },
+      {
+        "reference": "H3",
+        "pcb_xy_mm": [
+          220,
+          23.8
+        ],
+        "support_face_center_assembly_mm": [
+          220,
+          123.50571011333278,
+          19.593149292513118
+        ]
+      },
+      {
+        "reference": "H4",
+        "pcb_xy_mm": [
+          330,
+          23.8
+        ],
+        "support_face_center_assembly_mm": [
+          330,
+          123.50571011333278,
+          19.593149292513118
+        ]
+      },
+      {
+        "reference": "H5",
+        "pcb_xy_mm": [
+          395,
+          26
+        ],
+        "support_face_center_assembly_mm": [
+          395,
+          121.31408177753094,
+          19.40140665846827
+        ]
+      },
+      {
+        "reference": "H6",
+        "pcb_xy_mm": [
+          313,
+          70
+        ],
+        "support_face_center_assembly_mm": [
+          313,
+          77.48151506149414,
+          15.56655397757131
+        ]
+      },
+      {
+        "reference": "H7",
+        "pcb_xy_mm": [
+          4,
+          143
+        ],
+        "support_face_center_assembly_mm": [
+          4,
+          4.759302100796712,
+          9.204184756992264
+        ]
+      },
+      {
+        "reference": "H8",
+        "pcb_xy_mm": [
+          90,
+          138
+        ],
+        "support_face_center_assembly_mm": [
+          90,
+          9.740275591255438,
+          9.639963470730555
+        ]
+      },
+      {
+        "reference": "H9",
+        "pcb_xy_mm": [
+          220,
+          138
+        ],
+        "support_face_center_assembly_mm": [
+          220,
+          9.740275591255438,
+          9.639963470730555
+        ]
+      },
+      {
+        "reference": "H10",
+        "pcb_xy_mm": [
+          365,
+          138
+        ],
+        "support_face_center_assembly_mm": [
+          365,
+          9.740275591255438,
+          9.639963470730555
+        ]
+      },
+      {
+        "reference": "H11",
+        "pcb_xy_mm": [
+          448,
+          138
+        ],
+        "support_face_center_assembly_mm": [
+          448,
+          9.740275591255438,
+          9.639963470730555
+        ]
+      }
+    ],
+    "standoff_outer_diameter_mm": 6.0,
+    "standoff_axes_normal_to_pcb": true,
+    "keycap_sweeps_clear": 117,
+    "keycap_envelope": "each KLE width/height times 19.05 mm minus 1 mm; vertical swept prism",
+    "key_aperture_clusters": 12,
+    "minimum_c5_clear_depth_normal_to_pcb_mm": 17.9334,
+    "c5_11mm_keepout_clear": true,
+    "controller_direct_header_envelope_clear": true,
+    "usb_tunnel_clear": true,
+    "pcb_plate_edge_clearance_per_side_mm": 0.25,
+    "cover_lip_clearance_per_side_mm": 0.25
+  },
+  "stack_mm": {
+    "pcb_underside": -1.6,
+    "pcb_top": 0,
+    "plate_bottom": 3.5,
+    "plate_top": 5,
+    "cover_underside": 8.4,
+    "cover_top": 10.8
+  },
+  "pcb_front_to_rear_rise_mm": 12.8675,
+  "cover_screws_pcb_xy_mm": [
+    [
+      10,
+      -4.25
+    ],
+    [
+      145,
+      -4.25
+    ],
+    [
+      300,
+      -4.25
+    ],
+    [
+      442.4375,
+      -4.25
+    ],
+    [
+      10,
+      151.8875
+    ],
+    [
+      145,
+      151.8875
+    ],
+    [
+      300,
+      151.8875
+    ],
+    [
+      442.4375,
+      151.8875
+    ]
+  ],
+  "spacer_quantity": 11,
+  "insert_quantity": 19,
+  "pcb_screw": "11 x M2x10 mm",
+  "cover_screw": "8 x M2x6 mm",
+  "intended_insert": "M2, approximately 3.2 mm OD x 4 mm long; 3.0 mm pilot MUST be coupon-tested",
+  "physical_fit_tested": false,
+  "assumptions": [
+    "Direct-soldered 2.54 mm male controller headers, not tall mating sockets",
+    "Standard MX keycap plan size: KLE pitch minus 1 mm",
+    "USB shell projection and height are approximate; test actual cable/module",
+    "Hardware, switch/stabilizer clip fit, material stiffness and shrinkage require physical testing"
+  ],
+  "coordinates": "CAD/assembly: PCB (x,y,z) -> (x,147.6375-y,z), then rotate +5 degrees about X and raise PCB front; STL parts independently normalized to bed",
+  "tools": {
+    "freecad": "1.1.4",
+    "occ": "7.9.3",
+    "kicad": "10.0.8",
+    "shapely": "2.2.0",
+    "trimesh": "5.2.0"
+  },
+  "parts": [
+    {
+      "file": "Cleaver-case-base-rev0.6.stl",
+      "step_file": "Cleaver-case-base-rev0.6.step",
+      "size_mm": [
+        465.9375,
+        163.343,
+        32.2177
+      ],
+      "triangles": 13650,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 388674.2133,
+      "stl_volume_mm3": 388673.0745,
+      "step_roundtrip_valid": true,
+      "stl_face_down": false,
+      "stl_translation_after_optional_x_flip_mm": [
+        6.7500000000000036,
+        7.456422451199612,
+        7.105427357601002e-15
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -3.552713678800501e-15,
+        -0.0,
+        -7.105427357601002e-15
+      ],
+      "sha256": "892233470487cb163a771883506e010cf7241b59ff4c60c27915ac83570059cc",
+      "step_sha256": "6623476af7192becc8372d8be895bd1b5509ff74a85be3bcb52f52d02161e81d"
+    },
+    {
+      "file": "Cleaver-case-top-cover-rev0.6.stl",
+      "step_file": "Cleaver-case-top-cover-rev0.6.step",
+      "size_mm": [
+        465.9375,
+        161.1375,
+        4.4
+      ],
+      "triangles": 7324,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 64516.0826,
+      "stl_volume_mm3": 64516.1631,
+      "step_roundtrip_valid": true,
+      "stl_face_down": true,
+      "stl_translation_after_optional_x_flip_mm": [
+        6.75,
+        154.3875,
+        10.800000000000002
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -0.0,
+        -1.7763568394002505e-15
+      ],
+      "sha256": "b7fa6c00aa31bc446dcb0820e04a94c4b92d952d73618000e52eeaef104e9ee2",
+      "step_sha256": "96f6a676f7c8b59c43fa723db02e948ee24c8aad0b7683753913bfbb85f07c10"
+    },
+    {
+      "file": "PCB-to-plate-spacer-3.5mm.stl",
+      "step_file": "PCB-to-plate-spacer-3.5mm.step",
+      "size_mm": [
+        5.9987,
+        5.9993,
+        3.5
+      ],
+      "triangles": 840,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 85.6555,
+      "stl_volume_mm3": 85.6044,
+      "step_roundtrip_valid": true,
+      "stl_face_down": false,
+      "stl_translation_after_optional_x_flip_mm": [
+        3.0,
+        -144.6375,
+        -0.0
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0013427031226456165,
+        -0.0003356945817358792,
+        -0.0
+      ],
+      "sha256": "401571234b8f5a3273528530b5fe17a4cf1a442efa9cc23e12f05be11ea5362c",
+      "step_sha256": "35ea610eed0d12e1e33f47aaf8d3214e2b19731a7136ee03caae1e737fa456ae"
+    },
+    {
+      "file": "USB-and-seat-fit-coupon-base.stl",
+      "step_file": "USB-and-seat-fit-coupon-base.step",
+      "size_mm": [
+        71.75,
+        42.4174,
+        32.2177
+      ],
+      "triangles": 1450,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 26965.056,
+      "stl_volume_mm3": 26964.9125,
+      "step_roundtrip_valid": true,
+      "stl_face_down": false,
+      "stl_translation_after_optional_x_flip_mm": [
+        -387.4375,
+        -113.46916146341212,
+        -0.0
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -1.4210854715202004e-14,
+        -0.0
+      ],
+      "sha256": "0760802ecea0ed5642077e8243de9a6f4efe769e605e291aaf5ad084c02dbc01",
+      "step_sha256": "a5980f29ff2c32ae14d8f137af59d2405e107bb1f9d730bfa511951b29984956"
+    },
+    {
+      "file": "USB-and-seat-fit-coupon-cover.stl",
+      "step_file": "USB-and-seat-fit-coupon-cover.step",
+      "size_mm": [
+        71.75,
+        39.75,
+        4.4
+      ],
+      "triangles": 984,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 6123.4976,
+      "stl_volume_mm3": 6123.5091,
+      "step_roundtrip_valid": true,
+      "stl_face_down": true,
+      "stl_translation_after_optional_x_flip_mm": [
+        -387.4375,
+        154.3875,
+        10.799999999999986
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -0.0,
+        1.7763568394002505e-15
+      ],
+      "sha256": "a1b889cc02be444c9e5ce2357485c8a3cfd60044ed9610a9f317cfcec29240db",
+      "step_sha256": "349cefd2c51f369713f7e8c4417debac885b139c76101547f4aa747835e958d8"
+    }
+  ]
+}

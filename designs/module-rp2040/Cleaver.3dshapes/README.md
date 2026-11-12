@@ -7,9 +7,7 @@ needed: all assignments use `${KIPRJMOD}/Cleaver.3dshapes/`.
 The board includes **597 model placements across 480 component footprints**.
 Each switch footprint has both a front-side switch and a back-side socket.
 **TP1–TP6, mounting holes and fiducials are intentionally bare**. TP1 is a
-wire-soldering pad, not a connector. The
-USB tap wire is not modeled because its actual module attachment point and
-routing must be established on the purchased module.
+VBUS test pad, not a connector. LED power is routed through header pin 40.
 
 Enable **SMD**, **through-hole**, and **unspecified** models in the viewer's
 appearance controls. Flip the board with **F** to see the sockets, LEDs, diodes,
@@ -28,7 +26,7 @@ reload it from disk after preserving any intentional unsaved edits.
 | F1 | KiCad 1206 fuse | Representative 3.2 × 1.6 × 0.55 mm PTC body |
 | U2 / U3 | KiCad SOT-23-5 / SOT-23-6 | Generic package, not manufacturer marking |
 | C5 | Custom Ø10 mm, 10 mm SMD polymer capacitor | Simplified Nichicon PCF1A471MCL1GS; 10.3 mm platform, negative mark toward pad 2; not a tolerance model |
-| U1 | **Custom approximate YD-RP2040 assembly** | 53.34 × 22.86 mm PCB, 17.78 mm header spacing, USB-C facing right; see below |
+| U1 | **Custom approximate Waveshare RP2040-Plus assembly** | 51 × 21 mm PCB, 17.78 mm header spacing, USB-C facing right; see below |
 
 The controller model assumes **direct male headers**: 2.54 mm clearance from the
 carrier's top surface to the module PCB's underside, then a 1.6 mm module PCB.
@@ -112,6 +110,11 @@ conversion inputs, and modifications. Licenses are bundled in `licenses/`.
   `generated-rev05.json` records
   their envelopes. Rebuild these additions using
   `python3 -B designs/module-rp2040/source/build_3d_models.py --rev05-only`.
+- Revision 0.6 `Waveshare_RP2040_Plus_Approx` is **CC0-1.0**. Its nominal PCB and
+  header geometry follows the [Waveshare drawing](../references/RP2040-Plus-dimensions.webp).
+  USB-C projection/height, battery connector, buttons, and IC bodies are visual
+  approximations. `generated-rp2040-plus.json` records its envelope. Rebuild with
+  `python3 -B designs/module-rp2040/source/build_3d_models.py --waveshare-only`.
 
 To rebuild the custom models and adapted LED, with FreeCAD's Python modules
 available:

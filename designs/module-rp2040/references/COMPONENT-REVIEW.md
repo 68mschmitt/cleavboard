@@ -1,5 +1,10 @@
 # Revision 0.5 component review — 2026-11-10
 
+**Revision 0.6:** the 479 factory SMD parts below are retained. The owner-installed
+controller is now Waveshare RP2040-Plus, and TP1 is a VBUS test pad with no tap
+wire. See [the RP2040-Plus review](RP2040-Plus.md) and the current BOM; the owner
+assembly entries below record revision 0.5 only.
+
 All **13 factory purchasing groups / 479 placements** have an exact, purchasable
 JLCPCB SMT listing with positive stock. Every factory schematic/PCB component has
 its manufacturer, MPN and LCSC/JLCPCB code embedded; switch legends use `Key`.

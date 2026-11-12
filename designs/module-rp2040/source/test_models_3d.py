@@ -56,10 +56,10 @@ class ModelTests(unittest.TestCase):
 
     def test_generated_model_envelopes(self):
         data = json.loads((ROOT/'Cleaver.3dshapes/generated.json').read_text())
-        module = data['YD_RP2040_Approx']['bounds_mm']
-        self.assertAlmostEqual(module[3]-module[0],22.86,places=4)
-        self.assertAlmostEqual(module[1],-26.67,places=4)
-        self.assertGreater(module[4],26.67)  # USB shell projects out of the PCB.
+        module = json.loads((ROOT/'Cleaver.3dshapes/generated-rp2040-plus.json').read_text())['Waveshare_RP2040_Plus_Approx']['bounds_mm']
+        self.assertAlmostEqual(module[3]-module[0],21,places=4)
+        self.assertAlmostEqual(module[1],-25.5,places=4)
+        self.assertGreater(module[4],25.5)  # USB shell projects out of the PCB.
         led = data['LED_SK6812MINI-E_Reverse']['bounds_mm']
         self.assertAlmostEqual(led[3]-led[0],5.88,places=4)
         self.assertLess(led[2],0)  # Emitter is inside the board opening, not upside down.

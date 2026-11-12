@@ -1,10 +1,10 @@
-# Cleaver PCB — revision 0.5
+# Cleaver PCB — revision 0.6
 
 **Taviana Tactical artwork:** the active PCB includes a 34 mm-wide top-side logo.
-Use the current [revision 0.5 fabrication files](manufacturing/rev0.5/).
+Use the current [revision 0.6 fabrication files](manufacturing/rev0.6/).
 
-117 MX hot-swap switches, 117 reverse-mount RGB LEDs, and the **DWEII / VCC-GND
-YD-RP2040 4MB USB-C module** identified in your supplied manual. The keyboard is
+117 MX hot-swap switches, 117 reverse-mount RGB LEDs, and the **Waveshare
+RP2040-Plus 4MB USB-C module** (SKU 20290 / pre-headered 20808). The keyboard is
 USB-powered, with **no mechanical power switch** and no separate power supply.
 
 Read [VALIDATION.md](VALIDATION.md) for the recorded checks and remaining prototype
@@ -12,44 +12,34 @@ tests. The old [DESIGN_REVIEW.md](DESIGN_REVIEW.md) describes revision 0.2, not 
 replacement design. Electrical checks do not substitute for a physical prototype
 or final plate/case checks.
 
-**Revision 0.5 manufacturing:** all **479 factory-populated parts are underside
+**Revision 0.6 manufacturing:** all **479 factory-populated parts are underside
 SMD**, including C5 and the HanElectricity hot-swap sockets. Only the MCU/headers
-remain on top for owner soldering. TP1 is now a bare underside SMD wire pad.
+remain on top for owner soldering. TP1 is a bare underside VBUS test pad.
 There are 11 M2
 mounting holes, five labelled underside probe pads and three bottom fiducials.
-Use [`manufacturing/rev0.5/`](manufacturing/rev0.5/) for the purchasing BOM,
+Use [`manufacturing/rev0.6/`](manufacturing/rev0.6/) for the purchasing BOM,
 corrected socket placement data and fabrication package; use
 [`mechanical/`](mechanical/) for the matching stabilizer/switch plate and
 case mounting references. **Allow 11 mm clearance under C5**; the old case-depth
 assumption no longer applies there. Older loose Gerbers and artwork exports are
 not this revision. See the [complete live JLCPCB review](references/COMPONENT-REVIEW.md).
 
-## Important: the approved USB power tap is required
+## USB LED power through pin 40
 
-The module's **pin 40 is Vout behind its small BAT54C diode**, not an unrestricted
-USB 5 V supply. It is deliberately **unconnected** on this PCB. Do not power all
-117 LEDs through that pin, VIN, 3V3, or a GPIO.
+The Waveshare **pin 40 is raw USB VBUS**, connected directly to the USB-C power
+pins ahead of its VSYS isolation diode. A **0.6 mm PCB trace** connects U1.40 to
+the existing protected LED branch. **No module modification or tap wire is needed.**
+TP1 at `(446, 27)` mm is retained as a VBUS test pad; TP3 measures the same net.
+Ground returns through the module's ordinary GND header pins.
 
-Add **one short insulated wire** from the module's **raw USB VBUS, before the
-BAT54C diode**, to the underside SMD pad marked **TP1 / USB 5V TAP +** at `(446, 27)`
-mm. Ground returns through the module's ordinary GND header pins; no second wire
-is needed. Route the wire around the board edge and strain-relieve it to the case.
-The single USB-C cable still powers everything.
-
-On the published YD-RP2040 V1.1 schematic, raw USB VBUS is the USB-fed anode of D2
-(BAT54C, pin 1); pin 3 is the diode-combined output, **not** the tap. Your listing
-shows a V1.3 board, so **identify the raw VBUS point by continuity to the USB
-connector's VBUS with power disconnected**, rather than trusting a reference
-designator or a photo. A USB breakout makes this check easier. Then verify about
-5 V relative to GND with the module alone powered. Disconnect power before
-soldering the wire, insulate it, and provide strain relief. Do not attach to USB
-data, CC, shell mounting tabs, or the diode's output. If the point cannot be
-identified confidently, stop rather than bridging the diode or guessing.
+Use an RP2040-Plus for this revision: the former YD-RP2040 has diode-fed Vout at
+pin 40 and is not a suitable substitute. Leave the Waveshare battery connector
+unused for this USB-only keyboard.
 
 LED power path:
 
 ```text
-Module USB VBUS tap → TP1 → F1 (0.50 A PTC) → U3 (TPS2553) → LED_5V
+Module USB VBUS pin 40 → carrier copper → F1 (0.50 A PTC) → U3 (TPS2553) → LED_5V
 Module GPIO28 → U3 enable (100 kΩ default-off pull-down)
 Module GPIO27 → U2 level translator → R1 (330 Ω) → first LED DIN
 ```
@@ -70,27 +60,27 @@ Module GPIO27 → U2 level translator → R1 (330 Ω) → first LED DIN
 - U2 is **SN74LV1T125DBVR**, not an arbitrary 74LVC/HC/AHCT substitute. Its
   reduced input thresholds translate 3.3 V data to the LED supply, and its input
   tolerates the GPIO while the LED supply is off.
-- Do not connect a second external 5 V supply at TP1 while USB is connected. This
-  design is for a tap from the same module's USB input, not power-source selection.
+- TP1 is connected to USB VBUS, not a separate power input.
 
 ## Controller placement and pinout
 
 The module uses two 20-pin, 2.54 mm-pitch headers **17.78 mm apart**. Its body is
-**53.34 × 22.86 mm**, based on the YD manufacturer's mechanical drawing. It sits
-top-right, USB-C facing the right edge. The body ends at the board edge and the
-receptacle mouth can project slightly past it. Use headers/sockets with sufficient
+**51 × 21 mm**, based on Waveshare's mechanical drawing. It sits
+top-right, USB-C facing the right edge. Header centres are retained from rev0.5;
+the smaller body ends **1.17 mm inside** the carrier edge, with the USB-C shell
+projecting beyond the module body. Use headers/sockets with sufficient
 underside clearance, and confirm the actual purchased board against a 1:1 print.
 
-This is **not a Pico symbol or an alternating-numbered 2×20 connector**:
+The headers use **Pico-compatible numbering**, not alternating 2×20 numbering:
 
-| Module pin | YD-RP2040 function | Carrier use |
+| Module pin | RP2040-Plus function | Carrier use |
 | --- | --- | --- |
-| 35 | GP29 | Unconnected/spare |
+| 35 | ADC_VREF | Unconnected |
 | 36 | 3V3_OUT | Unconnected |
-| 37 | GP23 / onboard RGB | Unconnected |
+| 37 | 3V3_EN | Unconnected; module pull-up keeps regulator enabled |
 | 38 | GND | Ground plane |
-| 39 | VIN | Unconnected |
-| 40 | Diode-protected Vout | Unconnected |
+| 39 | VSYS | Unconnected |
+| 40 | USB VBUS | RAW_USB_5V → F1 → U3 → LED_5V |
 
 The module's BOOT and RESET buttons remain accessible in the upper-right area.
 No separate USB connector or USB data traces are required on the carrier.
@@ -138,8 +128,8 @@ through the switch to the diode anode; the cathode connects to the column.
   Each SW footprint is a **B.Cu HanElectricity CPG151101S11-16 / C41430893 socket**.
   The switch plugs in from above. Its origin is still the switch centre; use the
   revision-specific factory CPL for the actual socket placement centre. The owner
-  provides two 1×20 headers (and optional mating sockets) and
-  the insulated USB tap wire.
+  provides two 1×20 headers (and optional mating sockets), or the pre-headered
+  RP2040-Plus-M variant.
 - Caps/Num/Scroll lock are indicated using their **own keys' RGB LEDs**. The three
   decorative KLE circles above the numpad do not represent additional components
 hidden beneath the MCU.
@@ -169,7 +159,7 @@ plate spacing, clip thickness, controller/capacitor openings and a fit coupon.
 
 Open **Cleaver.kicad_pcb → View → 3D Viewer (Alt+3)**. The project includes local
 models for **all 480 component footprints**, including front-side MX switches,
-back-side sockets, LEDs/passives, and a simplified YD-RP2040 with headers/USB-C.
+back-side sockets, LEDs/passives, and a simplified RP2040-Plus with headers/USB-C.
 No extra model-library installation is needed. Flip the view with **F** to see
 the underside. TP1–TP6, mounting holes and fiducials intentionally have no models.
 
@@ -183,8 +173,8 @@ physical fit checks above. Model assignments are preserved by the generator.
 
 ## Vial-QMK firmware
 
-Ready-to-flash revision 0.5 builds and instructions are in
-[`manufacturing/rev0.5/firmware/`](manufacturing/rev0.5/firmware/).
+Ready-to-flash revision 0.6 builds and instructions are in
+[`manufacturing/rev0.6/firmware/`](manufacturing/rev0.6/firmware/).
 
 Copy `firmware/` to `keyboards/cleaver/` in a **vial-qmk** checkout. From that
 checkout run:
@@ -197,8 +187,14 @@ make cleaver:vial
 The Vial keymap includes its own UID, physical `vial.json`, VIA/Vial/VialRGB rules,
 and a secure **Esc + main Enter** unlock combination. No insecure-unlock option is
 enabled. The RP2040 vendor/PIO WS2812 driver uses GRB data and explicit timings.
-The module's onboard RGB LED is not included in the keyboard's 117-LED chain.
+The module's onboard GP25 status LED is not included in the keyboard's 117-LED chain.
 Default macro-key assignments can be changed in Vial.
+
+All 26 carrier GPIOs retain their physical pin numbers. The Vial UID, VID/PID,
+layout, unlock combination, RGB chain and USB-aware GP28 power control are
+retained. QMK's default W25Q080-compatible boot stage supports the module's
+W25Q32JV flash. EEPROM remains explicitly within the first 2MB, also valid on
+the 16MB RP2040-Plus variant. See [`firmware/README.md`](firmware/README.md).
 
 Build provenance and the tested vial-qmk commit belong in [VALIDATION.md](VALIDATION.md).
 Compiled firmware has not been exercised on a physical keyboard by this agent.
@@ -233,10 +229,10 @@ KiCad's edge clearances and power widths into the router; a router reporting
 
 ## Hardware sources
 
-- [Your supplied module manual and listing photographs](https://manuals.plus/asin/B0CG9BY48X).
-- [YD-RP2040 manufacturer drawing, pinout, and schematic mirror](https://github.com/initdc/YD-RP2040).
-  The listing photo is V1.3; the available schematic is V1.1. Verify the USB tap on
-  the actual board as described above.
+- [Waveshare RP2040-Plus documentation](https://docs.waveshare.com/RP2040-Plus).
+- [Archived module schematic](references/RP2040-Plus-schematic.pdf),
+  [dimension drawing](references/RP2040-Plus-dimensions.webp), and
+  [source/pinout review](references/RP2040-Plus.md).
 - [OPSCO C5149201 datasheet](https://datasheet.lcsc.com/datasheet/pdf/0907a34a701b4aef568078003f6e9eae.pdf).
   Physical reverse-mount signal orientation also agrees with the
   [established MX MINI-E footprint](https://github.com/ebastler/kicad-keyboard-parts.pretty/blob/master/MX_SK6812MINI-E.kicad_mod).

@@ -27,7 +27,7 @@ def stabilizer_cutout(size):
     return unary_union(shapes)
 
 
-def geometry():
+def geometry(*, top_capacitor_opening=True):
     keys,_ = read_keys()
     cuts, stabs = [], []
     for key in keys:
@@ -46,7 +46,9 @@ def geometry():
         cuts.append(translate(shape,key['x'],key['y']))
     # The tall user-installed parts pass through the plate rather than collide
     # with it. The USB/module opening reaches the right and top edges.
-    cuts.extend([box(398,-1,BOARD_W+1,25.5),Point(377,6).buffer(5,quad_segs=64)])
+    cuts.append(box(398,-1,BOARD_W+1,25.5))
+    if top_capacitor_opening:
+        cuts.append(Point(377,6).buffer(5,quad_segs=64))
     for index,(x,y) in enumerate(MOUNTING_HOLES,1):
         reserve = Point(x,y).buffer(3,quad_segs=64)
         for cut in cuts:

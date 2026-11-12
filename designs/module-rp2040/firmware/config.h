@@ -1,6 +1,10 @@
 #pragma once
 
-// LED power MUST come from the raw USB VBUS tap at TP1, not module Vout.
+// Waveshare RP2040-Plus: USB VBUS pin 40 -> F1 -> TPS2553 -> LED_5V.
+// W25Q32JV (4MB) uses QMK's default W25Q080-compatible stage-2 bootloader.
+// Keep EEPROM in the first 2MB, also valid on the 16MB variant and compatible
+// with earlier Cleaver builds' persistent Vial settings.
+#define WEAR_LEVELING_RP2040_FLASH_SIZE (2 * 1024 * 1024)
 // Keep the 8/255 cap until total current and rail voltage are measured.
 #define RGB_MATRIX_DEFAULT_VAL 8
 #define RGB_MATRIX_LED_COUNT 117

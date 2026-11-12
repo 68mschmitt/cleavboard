@@ -2,7 +2,7 @@
 
 Source paths and commands in this historical review refer to the original
 checkout. See the [path migration guide](../../docs/REPOSITORY.md#path-migration)
-and [current design documentation](README.md) for revision 0.5.
+and [current design documentation](README.md) for revision 0.6.
 
 > **Historical review of revision 0.2.** The user subsequently selected the
 > DWEII/VCC-GND YD-RP2040, removed the power-switch requirement, and approved a

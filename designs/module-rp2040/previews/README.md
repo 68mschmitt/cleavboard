@@ -1,6 +1,6 @@
 # Populated KiCad previews
 
-These are KiCad 10.0.8 raytraced views of revision 0.5 `../Cleaver.kicad_pcb`, including the
+These are KiCad 10.0.8 raytraced views of revision 0.6 `../Cleaver.kicad_pcb`, including the
 bundled component models. They are not separate artistic renders or mechanical
 clearance approvals. See [model limitations](../Cleaver.3dshapes/README.md).
 
@@ -15,5 +15,5 @@ kicad-cli pcb render --output designs/module-rp2040/previews/Cleaver-bottom.png 
 ```
 
 The interactive **Alt+3** viewer lets you rotate/zoom further. No keycaps, plate,
-stabilizers, case, USB cable, or TP1 wire are modeled. The YD module assembly and
+stabilizers, case, or USB cable are modeled. The RP2040-Plus module assembly and
 header stack are explicitly approximate.

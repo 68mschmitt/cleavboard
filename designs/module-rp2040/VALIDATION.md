@@ -1,133 +1,99 @@
-# Revision 0.5 validation
+# Revision 0.6 validation — Waveshare RP2040-Plus
 
-**Electrical/layout checks pass, including complete copper connectivity.**
-The archived routing was imported into a freshly regenerated board and checked
-again. Physical fit, assembly, USB power measurements, and hardware operation
-remain unverified; complete the prototype checks below before a production run.
+Recorded **2026-11-11**, KiCad **10.0.8**. Electrical/layout checks and both
+firmware builds pass. Physical hardware operation and mechanical fit remain
+unverified.
 
-The schematic and placement target the DWEII / VCC-GND YD-RP2040 USB-C module,
-117 unique keys, and 117 reverse-mounted OPSCO SK6812MINI-E C5149201 LEDs. No physical
-prototype has been assembled or tested by this agent.
-
-## Checks recorded on 2026-11-10
+## Results
 
 | Check | Result |
 | --- | --- |
-| KiCad version | 10.0.8 |
-| Schematic ERC, meaningful electrical pin types | 0 violations |
-| Shared-design/geometry/router-boundary/model/assembly/routing unit tests | 29 passed (Shapely enabled) |
-| Schematic/PCB net assignments | Pass |
-| 8×16 matrix, 117 unique addresses | Pass |
-| QMK and Vial matrix/RGB-order parity | Pass |
-| YD module header position and pin numbering | Pass |
-| Reverse-mount LED pad positions and 117 actual openings | Pass |
-| Final routed-board DRC, all severities and all track errors, zones refilled | **0 violations** |
-| Unconnected copper items | **0** |
-| Schematic/PCB parity issues | **0** |
-| Same-net via holes outside exposed SMD solder lands | Pass |
-| Regeneration from archived `routing/Cleaver.ses` | Pass; fresh ERC/DRC/connectivity checks repeated |
-| Factory assembly | 479 SMD placements, all bottom; socket origins corrected |
-| Purchasing review | All 13 exact factory purchasing groups have positive JLCPCB SMT stock; dated evidence retained |
-| Through-hole component pins / front paste pads | Only U1's 40 PTH pins / zero front paste pads |
-| Mechanical mounting | 11 M2 holes, 6 mm copper-free hardware envelopes |
-| Plate generation | Connected plate, matching holes, 7 × 2u + 1 × 6.25u stabilizers |
-| Routed copper | 4,065 track segments and 670 vias; all 4,735 items preserved through regeneration |
-| Bundled 3D models | 597 placements / 480 populated footprints; pads/holes/fiducials bare |
-| `default` firmware build | Fresh clean revision 0.5 build passed; RP2040 UF2 validated |
-| `vial` firmware build, including VialRGB | Fresh clean revision 0.5 build passed; RP2040 UF2 validated |
+| Unit tests, including Shapely routing checks | **31 passed, none skipped** |
+| Schematic ERC, all severities | **0 violations** |
+| PCB DRC, all track errors, refilled zones | **0 violations** |
+| Unconnected copper / schematic parity issues | **0 / 0** |
+| U1 pin 40 → RAW_USB_5V → F1 → U3 → LED_5V | Pass; routed copper |
+| Waveshare header mapping, including pins 35–40 | Pass |
+| Independent firmware GPIO-to-Waveshare-header check | Pass |
+| 8x16 ROW2COL matrix / unique keys / RGB LEDs | 8x16 / 117 / 117 |
+| Vial layout, UID, VID/PID, secure unlock, VialRGB | Pass |
+| Complete-copper archive regeneration | Exact match, **4,067 tracks + 670 vias** |
+| Factory assembly | 479 bottom SMD placements, 13 purchasing groups |
+| Through-hole component pads / front paste pads | 40 U1 pads / 0 |
+| SMD via holes outside exposed solder lands | Pass |
+| Local 3D coverage | 597 instances across 480 populated footprints |
+| Updated populated top/bottom previews | Exported |
+| Default / Vial firmware builds | **Pass / pass** |
+| UF2 format, RP2040 family, flash/EEPROM bounds | Pass |
 
-Firmware was freshly rebuilt on 2026-11-10, after target-specific clean commands,
-with `make cleaver:default -j4` and `make cleaver:vial -j4`
-against **vial-qmk `dd43959ae5c08d8a28d38a1acf7b04e86b14a344`**, using
-`arm-none-eabi-gcc 16.2.0`. The checked firmware includes secure Esc + main Enter
-Vial unlock, VialRGB, lock-key indicators, the 8/255 brightness cap, and USB-aware
-GP28 power control. Build success does not establish hardware operation.
+Revision 0.6 adds two 0.6 mm front-copper segments from U1.40 to the existing
+RAW_USB_5V branch. All 4,735 prior tracks/vias remain. The schematic, symbol,
+footprint, nominal 51 x 21 mm module model, BOM, silkscreen and assembly
+instructions now identify Waveshare RP2040-Plus. TP1 remains as a VBUS test
+pad. No tap wire is needed.
 
-## Recorded artifacts
+The header positions, 117 switch centres, matrix GPIOs, GP27 RGB data, GP28
+LED enable, and RGB chain are retained. Vial identity/unlock are retained;
+firmware explicitly keeps EEPROM within the first 2MB, suitable for both 4MB
+and 16MB RP2040-Plus variants. The USB device version is 0.6.0.
 
-- [`validation/erc.json`](validation/erc.json) and
-  [`validation/drc.json`](validation/drc.json): the fresh KiCad reports.
-- [`validation/validation.json`](validation/validation.json): checked PCB and
-  schematic hashes and integration-check result.
-- [`validation/manifest.json`](validation/manifest.json): SHA-256 hashes of the
-  electrical files, active libraries/models, previews, firmware source, routing
-  archive, checker, and tests; also firmware build provenance and UF2 hashes.
-- [`routing/Cleaver.ses`](routing/Cleaver.ses): all accepted revision 0.5 copper,
-  including the C5/TP1 connections and local ROW1 reroute. See `routing/README.md`.
-- [`Cleaver.3dshapes/README.md`](Cleaver.3dshapes/README.md): model sources,
-  licenses, and approximation limits; previews in [`previews/`](previews/).
+## Firmware build
 
-Revision 0.5 replaces all 117 sockets with HanElectricity CPG151101S11-16 /
-C41430893 and normalizes their bottom anchors without moving holes or lands.
-C5 is now bottom SMD Nichicon PCF1A471MCL1GS / C3275369, and TP1 is a bare
-bottom SMD wire pad. All other purchasing identities, LED pinout and firmware
-are retained. See the [complete component review](references/COMPONENT-REVIEW.md).
-All project electrical DRC rules remain in effect.
+Built in a fresh checkout of **vial-qmk
+`dd43959ae5c08d8a28d38a1acf7b04e86b14a344`**, with its pinned submodules and
+**arm-none-eabi-gcc 16.2.0**:
 
-The manufacturing package and its independent SHA-256 manifest are under
-[`manufacturing/rev0.5/`](manufacturing/rev0.5/). That package includes fresh
-checks, exact purchasing BOM, bottom CPL, pad-orientation data, assembly drawing,
-Gerbers and separate PTH/NPTH drills. Sourcing evidence is under `references/`.
-All 13 selected factory groups had positive, purchasable SMT stock on 2026-11-10;
-C5 had 103 pieces. Stock is not reserved and order-specific DFM is unverified.
+```sh
+make cleaver:default -j4
+make cleaver:vial -j4
+```
 
-The earlier routing cleanup is recorded in `routing/cleanup.json`. Revision 0.5
-adds off-pad power/ground vias for C5 and the bottom TP1 pad, with a local ROW1
-detour around the wider capacitor lands. Deterministically archived per-net
-tracks/vias match exactly before and after fresh generator import.
+Both UF2 images start at `0x10000000`; the Vial image ends at `0x1000da00`,
+well below the EEPROM region. The builds include GP28 USB-aware power control,
+the 8/255 brightness ceiling, lock-key indicators and secure Esc + main Enter
+unlock. Logs, images, exact input hashes and provenance are in
+[`manufacturing/rev0.6/firmware/`](manufacturing/rev0.6/firmware/).
 
-The build logs, UF2 outputs and detailed build provenance are retained in
-[`manufacturing/rev0.5/firmware/`](manufacturing/rev0.5/firmware/); they are not
-required to regenerate the KiCad board. Hashes identify the supplied artifact
-versions. Regeneration preserves the electrical/physical design, not necessarily
-byte-identical KiCad UUIDs or compiler timestamps.
+## Evidence and reproduction
 
-Run the read-only integration checker from the repository root:
+- [`validation/`](validation/): ERC/DRC, fresh netlist, integration result and
+  SHA-256 manifest for the active design.
+- [`manufacturing/rev0.6/`](manufacturing/rev0.6/): fabrication ZIP, BOM/CPL,
+  assembly drawing, orientation reference, drills, checks and firmware.
+- [`routing/Cleaver.ses`](routing/Cleaver.ses): checked complete-copper archive.
+- [`references/RP2040-Plus.md`](references/RP2040-Plus.md): vendor pinout,
+  VBUS circuit and nominal geometry review with archived source documents.
+- [`previews/`](previews/): populated KiCad renderings. Module connector/package
+  details are approximations; see the local model README.
+
+From the repository root, with KiCad Python and Shapely >=2:
 
 ```sh
 python3 -B -m unittest discover -s designs/module-rp2040/source -p 'test_*.py'
 python3 -B designs/module-rp2040/source/check_kicad.py
 ```
 
-The checker exports a fresh schematic netlist, verifies actual pad nets and
-module/LED geometry, checks QMK/Vial/CSV mapping and local model coverage, runs
-ERC, and runs DRC with zone refill, all track errors, schematic parity, and all
-severities. It does not
-save or alter the board. Success requires no violations and no unconnected items;
-the supplied routed board passes those conditions.
+To regenerate intentionally, import the matching revision 0.6 archive:
 
-The pre-existing project disables missing-courtyard, track-end-centering, tuning
-profile, and footprint-filter/type checks. These settings were not relaxed to
-accept routing. In particular, a clean electrical DRC is not a component-body or
-case-fit guarantee; the physical prototype checks below are still required.
-Comparison with the pre-edit project confirms only a stale `/MODULE_VOUT`
-netclass assignment was removed; manufacturing minima, DRC/ERC severity settings,
-and exclusions remain unchanged.
+```sh
+python3 -B designs/module-rp2040/source/generate_kicad.py --ses designs/module-rp2040/routing/Cleaver.ses
+python3 -B designs/module-rp2040/source/check_kicad.py
+```
 
-## Physical checks still required
+The fresh generated board and in-place migrated board were compared by their
+deterministic complete-copper archives and matched exactly. All project
+fabrication minima, DRC/ERC severities and exclusions are retained.
 
-1. Compare the actual module with a 1:1 print: body/header dimensions, numbering,
-   USB-C plug access, and underside spacing. The published drawing/schematic is
-   not proof that every seller revision matches.
-2. Identify **raw USB VBUS before the module's diode** on the actual board and
-   install the approved wire to TP1. Do not guess from a V1.1 reference designator
-   when using a V1.3 module. Follow `README.md`.
-3. Print the new stabilizer/switch fit coupon in `mechanical/`, check clip fit
-   with the actual plate-mount stabilizers, and confirm plate spacing. The case
-   uses the 11 supplied M2 axes. Confirm LED polarity, lead overlap and emitter
-   height on the assembled prototype. Reserve **11 mm clear underside case depth
-   beneath C5**. The old top capacitor plate opening is unused; the MCU opening
-   and approximate models do not establish maximum-tolerance fit.
-4. Measure total USB current, the limited LED-branch current, pre-configuration
-   and suspend current, startup behavior,
-   and full-white rail ripple/voltage at the farthest LEDs at **8/255** brightness.
-   The current limit is approximately 353 mA nominal, with 311–401 mA calculated
-   bounds; the module draws additional current. Do not increase brightness without
-   measurements. Check the 470 µF capacitor's polarity and installed height.
-5. Test every key and multi-key chords, the complete RGB chain, Caps/Num/Scroll
-   indicators, Vial unlock/remapping/persistence, USB suspend/resume, and both
-   USB-A-to-C and C-to-C enumeration.
+## Prototype checks
 
-The historical revision 0.2 findings in `DESIGN_REVIEW.md` are not a substitute for
-this revision's results. No autorouter timeout or “0 violations” router summary is
-accepted as a fabrication check.
+Confirm the actual module/header stack and USB plug/case access against a 1:1
+print. The smaller module fits inside the existing controller plate opening;
+its USB-side PCB edge is 1.17 mm inside the carrier edge. Leave the battery
+connector unused for USB-only operation. Allow 11 mm free depth below C5.
+
+Test all keys/chords, RGB chain, lock indicators, Vial unlock/remapping and
+persistence, suspend/resume and USB-A-to-C/C-to-C enumeration. Measure USB
+startup/suspend/full-white current and LED rail ripple at the retained 8/255
+ceiling. The TPS2553 branch limit remains approximately 353 mA nominal
+(311–401 mA calculated bounds), plus module consumption. No physical prototype
+has been tested as part of this change.

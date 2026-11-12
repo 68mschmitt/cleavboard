@@ -60,8 +60,10 @@ def main():
     for n,(dx,dy) in {'1':(24.13,-8.89),'2':(21.59,-8.89),'20':(-24.13,-8.89),
                       '21':(-24.13,8.89),'40':(24.13,8.89)}.items():
         point = pads[n].GetPosition()
-        assert abs(pcbnew.ToMM(point.x)-MODULE_X-dx)<.001, f'Wrong YD pin {n} X'
-        assert abs(pcbnew.ToMM(point.y)-MODULE_Y-dy)<.001, f'Wrong YD pin {n} Y'
+        assert abs(pcbnew.ToMM(point.x)-MODULE_X-dx)<.001, f'Wrong RP2040-Plus pin {n} X'
+        assert abs(pcbnew.ToMM(point.y)-MODULE_Y-dy)<.001, f'Wrong RP2040-Plus pin {n} Y'
+    assert str(u1.GetFPID().GetLibItemName())=='Waveshare_RP2040_Plus'
+    assert pads['40'].GetNetname()==footprints['F1'].FindPadByNumber('1').GetNetname()=='/RAW_USB_5V'
     openings = sum(item.GetLayer()==pcbnew.Edge_Cuts for fp in board.GetFootprints() for item in fp.GraphicalItems())
     assert openings==117, 'Expected one actual LED opening per key'
     # Check the real reverse-mounted pad geometry, not just net names. In top
@@ -123,13 +125,13 @@ def main():
             assert not data['violations'] and not data['unconnected_items'] and not data.get('schematic_parity',[]), 'DRC report is not clean'
         else:
             assert not any(sheet['violations'] for sheet in data['sheets']), 'ERC report is not clean'
-    report = dict(revision='0.5',matrix='8x16',unique_switches=len(keys),rgb_leds=len(leds),
+    report = dict(revision='0.6',controller='Waveshare RP2040-Plus',matrix='8x16',unique_switches=len(keys),rgb_leds=len(leds),
                   bottom_factory_placements=479,pth_pads=40,front_paste_pads=0,
                   pcb_sha256=hashlib.sha256(pcb.read_bytes()).hexdigest(),
                   schematic_sha256=hashlib.sha256(sch.read_bytes()).hexdigest(),
                   erc='pass',drc='pass',schematic_pcb_firmware_mapping='pass',models_3d=models)
     (args.reports/'validation.json').write_text(json.dumps(report,indent=2)+'\n')
-    print('PASS: 117 unique keys, 117 RGB LEDs, YD pinout, netlist/PCB/Vial parity, 597 local 3D models, ERC and DRC.')
+    print('PASS: 117 unique keys, 117 RGB LEDs, RP2040-Plus pinout/VBUS feed, netlist/PCB/Vial parity, 597 local 3D models, ERC and DRC.')
 
 
 if __name__=='__main__':

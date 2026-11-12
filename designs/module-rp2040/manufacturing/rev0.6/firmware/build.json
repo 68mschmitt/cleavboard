@@ -1,0 +1,64 @@
+{
+  "recorded_utc": "2026-11-11T16:14:50.902789+00:00",
+  "pcb_revision": "0.6",
+  "controller": "Waveshare RP2040-Plus 4MB / 16MB",
+  "keyboard": "cleaver",
+  "repository": "https://github.com/vial-kb/vial-qmk",
+  "commit": "dd43959ae5c08d8a28d38a1acf7b04e86b14a344",
+  "toolchain": "arm-none-eabi-gcc (Arch Repository) 16.2.0",
+  "commands": [
+    "make cleaver:default -j4",
+    "make cleaver:vial -j4"
+  ],
+  "build_environment": "fresh checkout and empty .build directory",
+  "source_tree_sha256": "dfab5196b3e8e406546cce4eb3636c6623cdb0b2eb906c9d08d555b3159a04e0",
+  "source_hash_method": "Sorted firmware-relative POSIX path + NUL + file bytes for all firmware files",
+  "source_files_sha256": {
+    "firmware/README.md": "cd4fdc722be190f9d59e55ea35729ef618b2e1538eec7c65626dbd62a73fbed5",
+    "firmware/cleaver.c": "f7a5c8daba1710fd302b775add87235aa4c61d55300cfaf673a9dda0785a4b7c",
+    "firmware/config.h": "90f3d9139350926fafd07d1c5b2bd6bb5e7fe509433428825d1f40cf2db65925",
+    "firmware/key_matrix.csv": "5319b9b90231dec1e49dc531ba64ed880fe381aca48f29b662239494da2ea02c",
+    "firmware/keyboard.json": "8f7c2e88a9c4f5e689bbfe2fa0a7622facc4358d074913616e6c0824e5a1c7dd",
+    "firmware/keymaps/default/keymap.c": "6ad3a87e32c963c2e6d2e2608e1e9a2ad8e08d57d045d7ac8be9e8f26a80f6cb",
+    "firmware/keymaps/vial/config.h": "8e2ed30fbf35fdf0306cc484d672a541bdecaefa2d1e50791eef30f0c333c7f4",
+    "firmware/keymaps/vial/keymap.c": "6ad3a87e32c963c2e6d2e2608e1e9a2ad8e08d57d045d7ac8be9e8f26a80f6cb",
+    "firmware/keymaps/vial/rules.mk": "dacb01359b7158160688217bf89c79a0dfcd01c9467ff916a053adb6cc41e89a",
+    "firmware/keymaps/vial/vial.json": "157c1729c1db6fa62a8924cb2108fd97dec0f3657f368840b4ba554dc858dd91",
+    "firmware/rules.mk": "50f8fa06503321f092449eeebfab9b1e58048f9cd3b0b5235201cadb4bb1ef22"
+  },
+  "submodules": {
+    "lib/chibios": "8bd61b804303f1614d574546c2dd735eeabb09f5",
+    "lib/chibios-contrib": "3ac181e4ca5cafddaf8b472baa1d09c2b24c77b6",
+    "lib/googletest": "e2239ee6043f73722e7aa812a459f54a28552929",
+    "lib/lufa": "549b97320d515bfca2f95c145a67bd13be968faa",
+    "lib/lvgl": "e19410f8f8a256609da72cff549598e0df6fa4cf",
+    "lib/pico-sdk": "d0c5cac430cc955b65efa0e899748853d9a80928",
+    "lib/printf": "c2e3b4e10d281e7f0f694d3ecbd9f320977288cc",
+    "lib/vusb": "819dbc1e5d5926b17e27e00ca6d3d2988adae04e"
+  },
+  "uf2": {
+    "Cleaver-rev0.6-default.uf2": {
+      "bytes": 74240,
+      "sha256": "748ac80c6c6b64636afca5a87572f9ccfbe7edd3c793933543d196547b4ac690",
+      "blocks": 145,
+      "family": "RP2040 (0xe48bff56)",
+      "flash_start": "0x10000000",
+      "flash_end_exclusive": "0x10009100",
+      "format_validation": "pass",
+      "eeprom_region_overlap": false,
+      "build_log": "manufacturing/rev0.6/firmware/build-default.log"
+    },
+    "Cleaver-rev0.6-vial.uf2": {
+      "bytes": 111616,
+      "sha256": "5504cae5e30806cddb04d40d60cc051a535a4ddd4321febdcd608768900f666e",
+      "blocks": 218,
+      "family": "RP2040 (0xe48bff56)",
+      "flash_start": "0x10000000",
+      "flash_end_exclusive": "0x1000da00",
+      "format_validation": "pass",
+      "eeprom_region_overlap": false,
+      "build_log": "manufacturing/rev0.6/firmware/build-vial.log"
+    }
+  },
+  "physical_hardware_tested": false
+}

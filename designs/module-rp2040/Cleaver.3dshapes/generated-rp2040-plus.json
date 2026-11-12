@@ -1,0 +1,14 @@
+{
+  "Waveshare_RP2040_Plus_Approx": {
+    "bounds_mm": [
+      -10.5,
+      -25.5,
+      -2.7,
+      10.5,
+      27.5,
+      7.64
+    ],
+    "solids": 93,
+    "description": "Waveshare RP2040-Plus 51x21mm, direct male headers; connector and package envelopes approximate. CC0-1.0."
+  }
+}

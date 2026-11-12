@@ -1,7 +1,7 @@
 """Single source of truth for the Cleaver electrical and physical mapping.
 
-YD-RP2040 pin numbers follow the manufacturer's 40-pin drawing, NOT a Pico
-symbol. Pin 40 is diode-protected Vout; 35 and 37 are GP29 and GP23.
+Waveshare RP2040-Plus uses the Pico-compatible 40-pin header pinout.
+Pin 40 is raw USB VBUS; 35 and 37 are ADC_VREF and 3V3_EN.
 """
 from __future__ import annotations
 
@@ -16,6 +16,9 @@ ROW_GPIOS = [f"GP{i}" for i in range(8)]
 COL_GPIOS = [f"GP{i}" for i in range(8, 23)] + ["GP26"]
 RGB_GPIO, POWER_GPIO = "GP27", "GP28"
 MODULE_X, MODULE_Y = BOARD_W - 26.67, 13.39
+# Retain the existing header centres; the 51 x 21 mm Waveshare PCB is inset
+# 1.17 mm from the carrier's right edge. Its USB-C shell projects past the PCB.
+MODULE_W, MODULE_H = 21.0, 51.0
 # M2 clearance holes; reserve a 6 mm diameter for heads, washers and standoffs.
 # Coordinates are top-view millimetres from the PCB's upper-left corner.
 MOUNTING_HOLES = [(4, 4), (110, 23.8), (220, 23.8), (330, 23.8),
@@ -32,8 +35,8 @@ MODULE_PINS = {
     18: "GND", 19: "GP14", 20: "GP15", 21: "GP16", 22: "GP17",
     23: "GND", 24: "GP18", 25: "GP19", 26: "GP20", 27: "GP21",
     28: "GND", 29: "GP22", 30: "RUN", 31: "GP26", 32: "GP27",
-    33: "GND", 34: "GP28", 35: "GP29", 36: "3V3_OUT", 37: "GP23",
-    38: "GND", 39: "VIN", 40: "VOUT",
+    33: "GND", 34: "GP28", 35: "ADC_VREF", 36: "3V3_OUT", 37: "3V3_EN",
+    38: "GND", 39: "VSYS", 40: "VBUS",
 }
 GPIO_PIN = {name: pin for pin, name in MODULE_PINS.items() if name.startswith("GP")}
 
@@ -84,7 +87,7 @@ def validate_keys(keys, leds):
         raise ValueError("Matrix address outside 8x16")
     gpios = ROW_GPIOS + COL_GPIOS + [RGB_GPIO, POWER_GPIO]
     if len(gpios) != len(set(gpios)) or any(g not in GPIO_PIN for g in gpios):
-        raise ValueError("GPIO conflict or pin absent from YD-RP2040 headers")
+        raise ValueError("GPIO conflict or pin absent from RP2040-Plus headers")
     if {k["ref"] for k in keys} != {k["ref"] for k in leds}:
         raise ValueError("RGB chain does not cover every key exactly once")
     if sorted(k["led_index"] for k in leds) != list(range(117)):
@@ -106,7 +109,8 @@ def components(keys, leds):
         module[GPIO_PIN[gpio]] = f"COL{c:02d}"
     module.update({p: "GND" for p, name in MODULE_PINS.items() if name == "GND"})
     module.update({GPIO_PIN[RGB_GPIO]: "RGB_DATA", GPIO_PIN[POWER_GPIO]: "LED_EN"})
-    add("U1", "YD_RP2040", "YD-RP2040 4MB USB-C", MODULE_X, MODULE_Y, module, angle=-90)
+    module[40] = "RAW_USB_5V"
+    add("U1", "Waveshare_RP2040_Plus", "Waveshare RP2040-Plus 4MB", MODULE_X, MODULE_Y, module, angle=-90)
     for k in keys:
         x, y = k["x"], k["y"]
         add(k["ref"], "MX", "CPG151101S11-16", x, y,
@@ -120,9 +124,8 @@ def components(keys, leds):
             {3: "LED_5V", 4: k["rgb_out"], 1: "GND", 2: k["rgb_in"]}, back=True)
         add(k["cap_ref"], "C_0805", "100nF 50V X7R", x + 5.8, y + 5.08,
             {1: "LED_5V", 2: "GND"}, back=True)
-    # User-approved short wire from raw USB VBUS, BEFORE the module's BAT54C.
-    # Pin 40 stays unused: never send the RGB load through that small diode.
-    add("TP1", "WirePad", "USB VBUS TAP +5V", 446, 27, {1: "RAW_USB_5V"}, back=True)
+    # Pin 40 feeds F1 through carrier copper. Retain TP1 as a bare VBUS probe pad.
+    add("TP1", "WirePad", "USB VBUS TEST +5V", 446, 27, {1: "RAW_USB_5V"}, back=True)
     # No mechanical switch. GP28 controls the protected RGB branch in firmware.
     add("F1", "PTC_1206", "1206L050YR 0.50A hold", 393, 4.5,
         {1: "RAW_USB_5V", 2: "FUSED_5V"})

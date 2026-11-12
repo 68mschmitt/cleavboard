@@ -1,4 +1,4 @@
-(session Cleaver_rev0.5_complete_copper (base_design Cleaver) (placement (resolution um 10))
+(session Cleaver_rev0.6_complete_copper (base_design Cleaver) (placement (resolution um 10))
 (routes (resolution um 10) (parser (host_cad "KiCad's Pcbnew") (host_version 10.0.8))
 (library_out
 (padstack "Via[0-3]_600:300_um" (shape (circle F.Cu 6000 0 0))(shape (circle In1.Cu 6000 0 0))(shape (circle In2.Cu 6000 0 0))(shape (circle B.Cu 6000 0 0)) (attach off))
@@ -3019,7 +3019,9 @@
 (wire (path F.Cu 6000 4122000 -237000 4126000 -241000))
 (wire (path F.Cu 6000 4126000 -241000 4127000 -242000))
 (wire (path F.Cu 6000 4246000 -270000 4460000 -270000))
-(wire (path F.Cu 6000 4460000 -270000 4460000 -248000)))
+(wire (path F.Cu 6000 4460000 -270000 4460000 -248000))
+(wire (path F.Cu 6000 4473775 -248000 4460000 -248000))
+(wire (path F.Cu 6000 4498975 -222800 4473775 -248000)))
 (net /RGB_000
 (via "Via[0-3]_600:300_um" 3659000 -131500)
 (via "Via[0-3]_600:300_um" 3752000 -220500)
