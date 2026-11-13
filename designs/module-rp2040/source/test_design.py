@@ -35,7 +35,7 @@ class DesignTests(unittest.TestCase):
             self.assertEqual(parts[k['diode']]['pins']['1'], f"COL{k['matrix_col']:02d}")
             self.assertEqual(parts[k['diode']]['pins']['2'], k['key_net'])
         self.assertEqual(parts['U1']['pins'][str(GPIO_PIN['GP27'])], 'RGB_DATA')
-        self.assertEqual(parts['U1']['pins']['36'], None)
+        self.assertEqual(parts['U1']['pins']['36'], 'MODULE_3V3_OUT')
         self.assertEqual(parts['U1']['pins']['38'], 'GND')
 
     def test_rgb_chain(self):
@@ -47,7 +47,7 @@ class DesignTests(unittest.TestCase):
         parts = {p['ref']:p for p in components(self.keys,self.leds)}
         self.assertEqual(parts['U1']['pins']['40'], 'RAW_USB_5V')
         for n in ('35','36','37','39'):
-            self.assertIsNone(parts['U1']['pins'][n])
+            self.assertEqual(parts['U1']['pins'][n], 'MODULE_'+MODULE_PINS[int(n)])
         self.assertEqual(parts['TP1']['pins']['1'], 'RAW_USB_5V')
         self.assertEqual(parts['F1']['pins']['1'], 'RAW_USB_5V')
         self.assertEqual(parts['U3']['pins']['1'], 'FUSED_5V')

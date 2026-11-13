@@ -1,0 +1,23 @@
+{
+  "baseline_revision": "0.6",
+  "revision": "0.7",
+  "baseline_pcb_sha256": "ef3861a1ef8af3c5df8d144602258be144826655f0da92272ff08b4d68257609",
+  "pcb_sha256": "c3fc62a6c67d5bb2ccf690aa6f937d139ce1a54bff259a238a39aefbe3f1ca06",
+  "unchanged_noncontroller_footprints": 500,
+  "new_factory_references": [
+    "J1",
+    "J2"
+  ],
+  "project_settings_rules_and_exclusions_unchanged": true,
+  "retained_copper_item_identities": 4670,
+  "tracks": 4652,
+  "vias": 704,
+  "copper_outside_controller_unchanged": true,
+  "controller_area_pcb_xy_mm": [
+    398,
+    0,
+    452.4375,
+    29
+  ],
+  "geometric_comparison_tolerance_mm": 0.0002
+}

@@ -1,4 +1,4 @@
-"""Rev0.6 top-plate alignment, stabilizer clearance and serialized STL regressions."""
+"""Top-plate alignment, stabilizer clearance and serialized STL regressions."""
 import hashlib
 import importlib.util
 import json
@@ -7,7 +7,7 @@ from unittest.mock import patch
 
 import pcbnew
 
-from design import ROOT, BOARD_W, BOARD_H
+from design import ROOT, BOARD_W, BOARD_H, REVISION
 
 HAS_MESH_TOOLS = all(importlib.util.find_spec(name) is not None
                      for name in ['numpy', 'scipy', 'shapely', 'trimesh'])
@@ -27,13 +27,13 @@ class TopPlateTests(unittest.TestCase):
         cls.board = pcbnew.LoadBoard(str(cls.source))
         cls.plate, _, cls.stabs = geometry(top_capacitor_opening=False)
         cls.report = json.loads((OUT/'validation.json').read_text())
-        cls.mesh = trimesh.load_mesh(OUT/'Cleaver-top-plate-rev0.6.stl')
+        cls.mesh = trimesh.load_mesh(OUT/f'Cleaver-top-plate-rev{REVISION}.stl')
         cls.surface = top_surface(cls.mesh, THICKNESS)
         cls.openings = [Polygon(ring) for ring in cls.surface.interiors]
 
     def test_saved_pcb_alignment_and_revision(self):
         checks = validate_pcb(self.source, self.plate)
-        self.assertEqual(checks['revision'], '0.6')
+        self.assertEqual(checks['revision'], REVISION)
         self.assertEqual(checks['switch_centres_matched'], 117)
         self.assertEqual(len(checks['mounting_holes']), 11)
         self.assertTrue(checks['controller_body_clear'])

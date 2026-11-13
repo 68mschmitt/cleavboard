@@ -1,4 +1,4 @@
-"""Read-only regressions for the revision 0.6 printed case and its CAD exports."""
+"""Read-only regressions for the current printed case and its CAD exports."""
 import importlib.util
 import json
 import math
@@ -7,7 +7,7 @@ from unittest.mock import patch
 
 import pcbnew
 
-from design import BOARD_H, BOARD_W, MOUNTING_HOLES, ROOT, read_keys
+from design import BOARD_H, BOARD_W, MOUNTING_HOLES, ROOT, read_keys, REVISION
 
 HAS_CASE_TOOLS = all(importlib.util.find_spec(name) is not None
                      for name in ['numpy', 'scipy', 'shapely', 'trimesh'])
@@ -52,7 +52,7 @@ class CaseTests(unittest.TestCase):
         self.assertEqual(self.report['parameters'], json.loads((OUT/'parameters.json').read_text()))
         self.assertEqual(self.report['source_sha256'], digest(ROOT/'Cleaver.kicad_pcb'))
         self.assertEqual(self.report['matching_plate_sha256'],
-                         digest(ROOT/'mechanical/rev0.6/Cleaver-top-plate-rev0.6.stl'))
+                         digest(ROOT/f'mechanical/rev{REVISION}/Cleaver-top-plate-rev{REVISION}.stl'))
         plate, _, _ = geometry(top_capacitor_opening=False)
         checks = validate_source(self.p, plate)
         self.assertTrue(checks['existing_plate_stl_matches'])
@@ -68,7 +68,7 @@ class CaseTests(unittest.TestCase):
                 validate_source(self.p, plate)
 
     def test_serialized_standoffs_match_all_pcb_holes(self):
-        mesh = self.pcb_coordinates(self.unprinted('Cleaver-case-base-rev0.6.stl'))
+        mesh = self.pcb_coordinates(self.unprinted(f'Cleaver-case-base-rev{REVISION}.stl'))
         material = top_surface(mesh, -1.6)
         self.assertEqual(material.geom_type, 'MultiPolygon')
         self.assertEqual(len(material.geoms), 11)
@@ -82,7 +82,7 @@ class CaseTests(unittest.TestCase):
             np.testing.assert_allclose(found[0].bounds, expected.bounds, rtol=0, atol=.005)
 
     def test_case_floor_is_flat_and_unpierced(self):
-        mesh = self.unprinted('Cleaver-case-base-rev0.6.stl')
+        mesh = self.unprinted(f'Cleaver-case-base-rev{REVISION}.stl')
         floor = top_surface(mesh, 0)
         self.assertTrue(floor.is_valid)
         self.assertEqual(floor.geom_type, 'Polygon')
@@ -90,7 +90,7 @@ class CaseTests(unittest.TestCase):
         self.assertGreater(floor.area, BOARD_W*BOARD_H)
 
     def test_cover_serialized_material_and_all_keycap_apertures(self):
-        mesh = self.unprinted('Cleaver-case-top-cover-rev0.6.stl')
+        mesh = self.unprinted(f'Cleaver-case-top-cover-rev{REVISION}.stl')
         actual = affine_transform(top_surface(mesh, self.p.cover_top), [1, 0, 0, -1, 0, BOARD_H])
         _, _, apertures, deck = outlines(self.p)
         holes = unary_union([Point(x, y).buffer(self.p.cover_head_recess_diameter_mm/2,
@@ -114,8 +114,8 @@ class CaseTests(unittest.TestCase):
             _, part = freecad()
         except ImportError:
             self.skipTest('CAD collision checks require FreeCAD')
-        base = part.read(str(OUT/'Cleaver-case-base-rev0.6.step'))
-        cover = assembled(part.read(str(OUT/'Cleaver-case-top-cover-rev0.6.step')), self.p)
+        base = part.read(str(OUT/f'Cleaver-case-base-rev{REVISION}.step'))
+        cover = assembled(part.read(str(OUT/f'Cleaver-case-top-cover-rev{REVISION}.step')), self.p)
         self.assertLess(base.common(cover).Volume, 1e-6)
         # Independently construct a plug gauge in the documented side opening.
         gauge = prism(box(BOARD_W-2.9, 13.39-7.9, BOARD_W+self.p.margin+.5, 13.39+7.9),
@@ -136,7 +136,7 @@ class CaseTests(unittest.TestCase):
         self.assertGreater(self.report['fit_checks']['minimum_c5_clear_depth_normal_to_pcb_mm'], 11)
 
     def test_all_exported_stls_are_single_watertight_parts(self):
-        self.assertEqual(len(self.records), 5)
+        self.assertEqual(len(self.records), 10)
         for name, item in self.records.items():
             mesh = trimesh.load_mesh(OUT/name)
             self.assertEqual(digest(OUT/name), item['sha256'])
@@ -147,8 +147,16 @@ class CaseTests(unittest.TestCase):
             np.testing.assert_allclose(mesh.bounds[0], [0, 0, 0], rtol=0, atol=2e-5)
             np.testing.assert_allclose(mesh.extents, item['size_mm'], rtol=0, atol=.0001)
             self.assertLess(abs(mesh.volume-item['cad_volume_mm3'])/mesh.volume, .002)
-        for name in ['Cleaver-case-assembly-rev0.6.FCStd', 'Cleaver-case-assembly-rev0.6.step', 'case-plan.svg']:
+        for name in [f'Cleaver-case-assembly-rev{REVISION}.FCStd', f'Cleaver-case-assembly-rev{REVISION}.step', 'case-plan.svg']:
             self.assertTrue((OUT/name).is_file(), name)
+
+    def test_socket_backstops_and_clearance_recorded(self):
+        checks=self.report['fit_checks']
+        self.assertTrue(checks['controller_socketed_envelope_clear'])
+        self.assertEqual({s['reference'] for s in checks['controller_sockets']},{'J1','J2'})
+        self.assertTrue(all(s['backstop_present'] and s['nominal_unshimmed_backstop_gap_mm']==.7
+                            and s['minimum_unshimmed_backstop_gap_mm']>=.19
+                            for s in checks['controller_sockets']))
 
 
 if __name__ == '__main__':

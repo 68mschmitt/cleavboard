@@ -21,7 +21,8 @@ MODELS = {
     'TPS2553': ('SOT-23-6.wrl',),
     'MINI_E': ('LED_SK6812MINI-E_Reverse.wrl',),
     'YD_RP2040': ('YD_RP2040_Approx.wrl',),
-    'Waveshare_RP2040_Plus': ('Waveshare_RP2040_Plus_Approx.wrl',),
+    'Waveshare_RP2040_Plus': ('Waveshare_RP2040_Plus_Socketed.wrl',),
+    'Harwin_M20_7862042': ('Harwin_M20_7862042.wrl',),
     'C_Radial8': ('C_Radial_D8_H11.5_P3.5.wrl',),
     'C_PCF_D10': ('C_PCF_D10_H10.wrl',),
     # TP1 is a bare VBUS test pad, not a mounted connector/component.
@@ -146,7 +147,7 @@ def validate_models(board):
         count += len(actual)
         populated += bool(actual)
     assert len(list(board.GetFootprints()))==len(components(*read_keys())) + len(MOUNTING_HOLES) + len(FIDUCIALS) + 1
-    assert (populated,count)==(480,597), (populated,count)
+    assert (populated,count)==(482,599), (populated,count)
     return dict(populated_footprints=populated,model_instances=count,
                 unique_models=len(used_models),
                 intentionally_unmodeled=['TP1: VBUS test pad', 'TP2-TP6: probe pads',

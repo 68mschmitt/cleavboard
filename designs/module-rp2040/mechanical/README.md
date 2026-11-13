@@ -1,22 +1,24 @@
 # Cleaver — case and plate interface
 
-## Revision 0.6 enclosure
+## Revision 0.7 enclosure
 
-[Case and removable top cover](rev0.6/case/README.md): a **5° rear-raised tray**
+[Case and removable top cover](rev0.7/case/README.md): a **5° rear-raised tray**
 with 11 matching PCB standoffs, separate key-cluster bezel, right-side USB-C
 opening and 3.5 mm plate spacers. Includes printable STLs, STEP/FreeCAD assembly,
 an actual-size USB/seat fit coupon and adjustable fit parameters. These full-size
 parts need approximately a **466 × 164 mm** bed plus brim allowance; physical
-fit testing is still required.
+fit testing is still required. The new base adds two backstops beneath the
+controller sockets. The rev0.6 base does **not** have these insertion supports.
 
-## Print-ready revision 0.6 top plate
+## Print-ready revision 0.7 top plate
 
-Use **[Cleaver-top-plate-rev0.6.stl](rev0.6/Cleaver-top-plate-rev0.6.stl)** for the
+Use **[Cleaver-top-plate-rev0.7.stl](rev0.7/Cleaver-top-plate-rev0.7.stl)** for the
 current PCB: 117 MX switch openings, seven 2u and one 6.25u plate-mount stabilizer
 sets, and all 11 matching M2 through-holes. It is **452.4375 × 147.6375 × 1.5 mm**.
-[Printing/assembly instructions and fit-test STLs](rev0.6/README.md) include both
+[Printing/assembly instructions and fit-test STLs](rev0.7/README.md) include both
 stabilizer sizes. The rev0.6 plate omits the unused top capacitor hole; the
-historical references below remain unchanged.
+historical references below remain unchanged. Rev0.7 retains rev0.6 plate geometry;
+the previous plate can be reused.
 
 ## Historical references and PCB compatibility
 

@@ -1,10 +1,11 @@
-# Cleaver PCB — revision 0.6
+# Cleaver PCB — revision 0.7
 
 **Taviana Tactical artwork:** the active PCB includes a 34 mm-wide top-side logo.
-Use the current [revision 0.6 fabrication files](manufacturing/rev0.6/).
+Use the current [revision 0.7 fabrication files](manufacturing/rev0.7/).
 
 117 MX hot-swap switches, 117 reverse-mount RGB LEDs, and the **Waveshare
-RP2040-Plus 4MB USB-C module** (SKU 20290 / pre-headered 20808). The keyboard is
+RP2040-Plus 4MB USB-C module** (bare SKU 20290), plugged into underside SMT
+bottom-entry sockets. The keyboard is
 USB-powered, with **no mechanical power switch** and no separate power supply.
 
 Read [VALIDATION.md](VALIDATION.md) for the recorded checks and remaining prototype
@@ -12,22 +13,28 @@ tests. The old [DESIGN_REVIEW.md](DESIGN_REVIEW.md) describes revision 0.2, not 
 replacement design. Electrical checks do not substitute for a physical prototype
 or final plate/case checks.
 
-**Revision 0.6 manufacturing:** all **479 factory-populated parts are underside
-SMD**, including C5 and the HanElectricity hot-swap sockets. Only the MCU/headers
-remain on top for owner soldering. TP1 is a bare underside VBUS test pad.
+**Revision 0.7 manufacturing:** all **481 factory-populated parts are underside
+SMD**, including C5, the HanElectricity hot-swap sockets and **J1/J2 Harwin
+M20-7862042 controller sockets**. U1 plugs in from above through 40 **NPTH**
+holes. Solder two **Samtec TSW-120-14-G-S** strips to the module only: 8.13 mm
+posts down, 2.79 mm tails through the module. Stock pre-headered SKU 20808 is
+**not qualified**. See the [socket drawing, pin budget and production gates](references/CONTROLLER-SOCKETS-0.7.md).
+TP1 is a bare underside VBUS test pad.
 There are 11 M2
 mounting holes, five labelled underside probe pads and three bottom fiducials.
-Use [`manufacturing/rev0.6/`](manufacturing/rev0.6/) for the purchasing BOM,
+Use [`manufacturing/rev0.7/`](manufacturing/rev0.7/) for the purchasing BOM,
 corrected socket placement data and fabrication package; use
 [`mechanical/`](mechanical/) for the matching stabilizer/switch plate and
 case mounting references. **Allow 11 mm clearance under C5**; the old case-depth
-assumption no longer applies there. Older loose Gerbers and artwork exports are
-not this revision. See the [complete live JLCPCB review](references/COMPONENT-REVIEW.md).
+assumption no longer applies there. Use the [rev0.7 case base](mechanical/rev0.7/case/README.md)
+with socket-insertion backstops. Older Gerbers and placement exports are not
+this revision. Original-part evidence remains in the [component review](references/COMPONENT-REVIEW.md);
+new socket evidence is linked above. Supplier DFM and physical mating remain open.
 
 ## USB LED power through pin 40
 
 The Waveshare **pin 40 is raw USB VBUS**, connected directly to the USB-C power
-pins ahead of its VSYS isolation diode. A **0.6 mm PCB trace** connects U1.40 to
+pins ahead of its VSYS isolation diode. A **0.6 mm PCB route** connects J2.1 (U1.40) to
 the existing protected LED branch. **No module modification or tap wire is needed.**
 TP1 at `(446, 27)` mm is retained as a VBUS test pad; TP3 measures the same net.
 Ground returns through the module's ordinary GND header pins.
@@ -71,7 +78,10 @@ the smaller body ends **1.17 mm inside** the carrier edge, with the USB-C shell
 projecting beyond the module body. Use headers/sockets with sufficient
 underside clearance, and confirm the actual purchased board against a 1:1 print.
 
-The headers use **Pico-compatible numbering**, not alternating 2×20 numbering:
+The module uses **Pico-compatible numbering**, not alternating 2×20 numbering.
+J1.1–20 carry module pins 1–20; **J2.1–20 carry module pins 40–21**, respectively.
+The 7.5 mm female socket bodies sit below the carrier; male-header insulators
+seat on top. The module is not raised by a top-side female header stack.
 
 | Module pin | RP2040-Plus function | Carrier use |
 | --- | --- | --- |
@@ -127,9 +137,10 @@ through the switch to the diode anode; the cathode connects to the column.
   SWxxx, Dxxx, and LEDxxx refer to the same physical key; C101 belongs to SW001.
   Each SW footprint is a **B.Cu HanElectricity CPG151101S11-16 / C41430893 socket**.
   The switch plugs in from above. Its origin is still the switch centre; use the
-  revision-specific factory CPL for the actual socket placement centre. The owner
-  provides two 1×20 headers (and optional mating sockets), or the pre-headered
-  RP2040-Plus-M variant.
+   revision-specific factory CPL for the actual socket placement centre. The owner
+   provides the bare RP2040-Plus and two **TSW-120-14-G-S** male strips, soldered
+   only to the module. J1/J2 female sockets are factory-fitted underneath.
+   Leave all carrier entry holes open and solder-free.
 - Caps/Num/Scroll lock are indicated using their **own keys' RGB LEDs**. The three
   decorative KLE circles above the numpad do not represent additional components
 hidden beneath the MCU.
@@ -158,13 +169,14 @@ plate spacing, clip thickness, controller/capacitor openings and a fit coupon.
 ## Populated 3D view
 
 Open **Cleaver.kicad_pcb → View → 3D Viewer (Alt+3)**. The project includes local
-models for **all 480 component footprints**, including front-side MX switches,
-back-side sockets, LEDs/passives, and a simplified RP2040-Plus with headers/USB-C.
+models for **all 482 populated/modelled footprints**, including front-side MX switches,
+back-side sockets, LEDs/passives, and a simplified RP2040-Plus with long headers/USB-C.
+The controller sockets have nominal supplier-dimensioned STEP/VRML models.
 No extra model-library installation is needed. Flip the view with **F** to see
 the underside. TP1–TP6, mounting holes and fiducials intentionally have no models.
 
-- [Top-side preview](previews/Cleaver-top.png)
-- [Bottom-side preview](previews/Cleaver-bottom.png)
+- [Top-side preview](previews/Cleaver-rev0.7-top.png)
+- [Bottom-side preview](previews/Cleaver-rev0.7-bottom.png)
 - [Model coverage, approximations, licensing, and STEP export](Cleaver.3dshapes/README.md)
 
 The module/header stack and some package details are approximations; keycaps,
@@ -173,7 +185,7 @@ physical fit checks above. Model assignments are preserved by the generator.
 
 ## Vial-QMK firmware
 
-Ready-to-flash revision 0.6 builds and instructions are in
+Pin assignments are unchanged; compatible revision 0.6 builds and instructions are in
 [`manufacturing/rev0.6/firmware/`](manufacturing/rev0.6/firmware/).
 
 Copy `firmware/` to `keyboards/cleaver/` in a **vial-qmk** checkout. From that
@@ -240,6 +252,10 @@ KiCad's edge clearances and power widths into the router; a router reporting
   [TPS2553](https://www.ti.com/lit/ds/symlink/tps2553.pdf), and
   [Nichicon PCF capacitor specification](references/Nichicon-PCF.pdf).
 - [Exact-part JLCPCB review and socket compatibility](references/COMPONENT-REVIEW.md).
+
+Fit the carrier to its socket-support base **before inserting U1**; the 40
+contacts can require substantial force. Withdraw evenly, never by levering the
+USB shell. Print the new USB/seat coupons first.
 
 Bring up the prototype on current-limited USB power: check supply polarity/shorts,
 test the module and one key first, then one LED, all 117 keys (including chords),

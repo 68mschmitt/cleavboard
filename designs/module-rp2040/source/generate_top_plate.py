@@ -14,17 +14,17 @@ import trimesh
 from shapely import Point, Polygon, box, constrained_delaunay_triangles, unary_union
 from shapely.affinity import affine_transform, translate
 
-from design import ROOT, BOARD_W, BOARD_H, MOUNTING_HOLES, read_keys
+from design import ROOT, BOARD_W, BOARD_H, MOUNTING_HOLES, read_keys, REVISION
 from generate_mechanical import export_svg, geometry, stabilizer_cutout
 
-OUT = ROOT/'mechanical/rev0.6'
+OUT = ROOT/f'mechanical/rev{REVISION}'
 THICKNESS = 1.5
 
 
 def validate_pcb(path, plate):
     """Reject a stale plate definition rather than silently misaligning hardware."""
     board = pcbnew.LoadBoard(str(path))
-    assert board.GetTitleBlock().GetRevision() == '0.6', 'Expected revision 0.6 PCB'
+    assert board.GetTitleBlock().GetRevision() == REVISION, f'Expected revision {REVISION} PCB'
     outlines = pcbnew.SHAPE_POLY_SET()
     assert board.GetBoardPolygonOutlines(outlines, False), 'Invalid PCB outline'
     assert outlines.OutlineCount() == 1, 'Expected one PCB outline'
@@ -66,7 +66,7 @@ def validate_pcb(path, plate):
             assert not plate.intersects(box(x0, y0, x1, y1)), 'Plate overlaps controller/USB body'
             body_checks += 1
     assert body_checks >= 2, 'Missing controller/USB body geometry'
-    return dict(revision='0.6', outline_matches=True, switch_centres_matched=len(keys),
+    return dict(revision=REVISION, outline_matches=True, switch_centres_matched=len(keys),
                 mounting_holes=mounts, controller_body_clear=True, capacitor_on_underside=True)
 
 
@@ -129,8 +129,8 @@ def main():
     checks = validate_pcb(source, plate)
     assert len(cuts) == 118 and len(plate.interiors) == 128
     OUT.mkdir(parents=True, exist_ok=True)
-    parts = [export_stl(OUT/'Cleaver-top-plate-rev0.6.stl', plate)]
-    export_svg(OUT/'Cleaver-top-plate-rev0.6.svg', plate, BOARD_W, BOARD_H)
+    parts = [export_stl(OUT/f'Cleaver-top-plate-rev{REVISION}.stl', plate)]
+    export_svg(OUT/f'Cleaver-top-plate-rev{REVISION}.svg', plate, BOARD_W, BOARD_H)
     for size, label in [(2, '2u'), (6.25, '6.25u')]:
         coupon = fit_coupon(size)
         parts.append(export_stl(OUT/f'stabilizer-fit-coupon-{label}.stl', coupon))
@@ -151,7 +151,7 @@ def main():
     (OUT/'validation.json').write_text(json.dumps(report, indent=2)+'\n')
     for part in parts:
         print(f'{part["file"]}: {part["size_mm"]} mm, watertight, {part["through_openings"]} openings')
-    print('Matched rev0.6 PCB: 117 switches, 11 M2 through-holes, 7 x 2u + 1 x 6.25u stabilizers.')
+    print(f'Matched rev{REVISION} PCB: 117 switches, 11 M2 through-holes, 7 x 2u + 1 x 6.25u stabilizers.')
 
 
 if __name__ == '__main__':

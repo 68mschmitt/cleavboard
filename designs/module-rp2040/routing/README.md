@@ -1,9 +1,11 @@
-# Accepted revision 0.6 routing
+# Accepted revision 0.7 routing
 
 `Cleaver.ses` contains **all routed copper**, including the power/ground fanouts,
-SMD bulk-capacitor, VBUS test pads, and **U1 pin-40 VBUS feed**. It carries no placement
+SMD bulk-capacitor, VBUS test pads, and **J1/J2 socket escapes and J2.1 VBUS feed**. It carries no placement
 instructions; the schematic/shared design is authoritative for placement.
-Do not apply older sessions to revision 0.6 placement: they omit the VBUS feed.
+Do not apply older sessions to revision 0.7 placement: they target plated U1
+holes instead of the staggered SMT lands. The old rev0.6 session is retained
+as `archive/Cleaver-rev0.6.ses`; it is not compatible with this placement.
 
 ## Restore
 
@@ -12,6 +14,7 @@ Using KiCad 10.0.8's Python environment, from the repository root:
 ```sh
 python3 -B designs/module-rp2040/source/generate_kicad.py --ses designs/module-rp2040/routing/Cleaver.ses
 python3 -B designs/module-rp2040/source/check_kicad.py
+python3 -B designs/module-rp2040/source/check_routing_roundtrip.py
 python3 -B -m unittest discover -s designs/module-rp2040/source -p 'test_*.py'
 ```
 
@@ -23,9 +26,19 @@ zero unconnected items and zero schematic/PCB parity issues.
 
 ## Provenance
 
-Revision 0.6 adds two 0.6 mm front-copper segments from Waveshare RP2040-Plus
+Revision 0.7 replaces U1's 40 plated pads with 40 NPTH entries and J1/J2 SMT
+lands. `source/upgrade_rev07_routing.py` and `source/finalize_rev07.py` record
+the one-time local migration. The accepted board has **4,652 tracks / 704 vias**,
+retaining 4,670 original copper identities. A geometric audit confirms copper
+outside PCB XY `[398, 0, 452.4375, 29]` mm and all 500 non-controller footprints
+are unchanged. Ground socket contacts use separate through-vias; no pin-entry
+hole is plated. The complete archive round-trips exactly at its 0.0001 mm
+coordinate resolution, and fresh generation passes ERC/DRC/parity. See the
+[migration and round-trip reports](../manufacturing/rev0.7/checks/).
+
+Historical revision 0.6 adds two 0.6 mm front-copper segments from Waveshare RP2040-Plus
 pin 40 `(449.8975, 22.28)` to the existing TP1 off-pad via `(446, 24.8)`.
-All 4,735 prior copper items remain; the new total is **4,067 tracks / 670 vias**.
+All 4,735 prior copper items remained; its total was **4,067 tracks / 670 vias**.
 `source/upgrade_rev06_routing.py` records the migration. Header holes and all
 carrier GPIO mappings are retained. The complete-copper archive round-trips
 exactly through fresh generation.

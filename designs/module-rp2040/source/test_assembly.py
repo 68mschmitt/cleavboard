@@ -15,9 +15,9 @@ class AssemblyTests(unittest.TestCase):
 
     def test_all_populated_smd_bottom_with_socket_centroids(self):
         groups,rows,pads=assembly_rows(self.board)
-        self.assertEqual(len(rows),479)
-        self.assertEqual(len(groups),13)
-        self.assertEqual(sum(len(refs) for refs in groups.values()),479)
+        self.assertEqual(len(rows),481)
+        self.assertEqual(len(groups),14)
+        self.assertEqual(sum(len(refs) for refs in groups.values()),481)
         byref={row[0]:row for row in rows}
         self.assertTrue(all(row[3]=='bottom' for row in rows))
         self.assertFalse(set(byref)&{'U1','TP1','TP2','TP3','TP4','TP5','TP6'})
@@ -28,7 +28,19 @@ class AssemblyTests(unittest.TestCase):
         self.assertEqual(self.footprints['U1'].GetLayer(),pcbnew.F_Cu)
         self.assertEqual(self.footprints['C5'].GetLayer(),pcbnew.B_Cu)
 
-    def test_only_controller_has_plated_through_hole_connections(self):
+    def test_jlc_catalog_rotations_only_correct_u2_and_switch_sockets(self):
+        angles={ref:fp.GetOrientationDegrees() for ref,fp in self.footprints.items()}
+        _,rows,_=assembly_rows(self.board)
+        byref={row[0]:row for row in rows}
+        self.assertEqual(float(byref['U2'][4]),90)
+        for key in read_keys()[0]:
+            self.assertEqual(float(byref[key['ref']][4]),180)
+        for ref,row in byref.items():
+            if ref=='U2' or ref.startswith('SW'):continue
+            self.assertEqual(float(row[4]),angles[ref]%360,ref)
+        self.assertEqual(angles,{ref:fp.GetOrientationDegrees() for ref,fp in self.footprints.items()})
+
+    def test_no_plated_through_hole_component_connections(self):
         holes=[]
         for ref,fp in self.footprints.items():
             for pad in fp.Pads():
@@ -37,8 +49,7 @@ class AssemblyTests(unittest.TestCase):
                 self.assertFalse(pad.IsOnLayer(pcbnew.F_Paste),ref)
                 if pad.GetAttribute()==pcbnew.PAD_ATTRIB_SMD:
                     self.assertTrue(pad.IsOnLayer(pcbnew.B_Cu),ref)
-        self.assertEqual({ref for ref,n in holes},{'U1'})
-        self.assertEqual(len(holes),40)
+        self.assertEqual(holes,[])
 
     def test_socket_replacement_preserves_vendor_holes_and_lands(self):
         for key in read_keys()[0]:
@@ -60,7 +71,8 @@ class AssemblyTests(unittest.TestCase):
                 self.assertEqual(tuple(pcbnew.ToMM(pad.GetDrillSize())),(3.,3.))
 
     def test_every_purchasing_group_has_matching_live_smt_evidence(self):
-        records={r['code']:r for r in json.loads((ROOT/'references/JLCPCB-2026-11-10.json').read_text())}
+        records={r['code']:r for filename in ('JLCPCB-2026-11-10.json','JLCPCB-2026-11-12.json')
+                 for r in json.loads((ROOT/'references'/filename).read_text()) if 'component' in r}
         groups,_,_=assembly_rows(self.board)
         for manufacturer,mpn,code,package in groups:
             record=records[code];info=record['component'];stock=record['inventory']

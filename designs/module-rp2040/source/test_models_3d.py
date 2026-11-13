@@ -13,8 +13,8 @@ class ModelTests(unittest.TestCase):
     def test_board_model_coverage(self):
         board = pcbnew.LoadBoard(str(ROOT/'Cleaver.kicad_pcb'))
         result = validate_models(board)
-        self.assertEqual(result['model_instances'],597)
-        self.assertEqual(result['populated_footprints'],480)
+        self.assertEqual(result['model_instances'],599)
+        self.assertEqual(result['populated_footprints'],482)
 
     def test_library_model_coverage_and_mounting(self):
         for name,files in MODELS.items():
@@ -64,6 +64,15 @@ class ModelTests(unittest.TestCase):
         self.assertAlmostEqual(led[3]-led[0],5.88,places=4)
         self.assertLess(led[2],0)  # Emitter is inside the board opening, not upside down.
         self.assertGreater(led[5],0)
+
+    def test_socketed_models_have_long_posts_and_bottom_entry_body(self):
+        data=json.loads((ROOT/'Cleaver.3dshapes/generated-rev07.json').read_text())
+        module=data['Waveshare_RP2040_Plus_Socketed']['bounds_mm']
+        socket=data['Harwin_M20_7862042']['bounds_mm']
+        self.assertAlmostEqual(module[2],-8.13)
+        self.assertAlmostEqual(socket[3]-socket[0],51)
+        self.assertAlmostEqual(socket[5],7.5)
+        self.assertEqual(MODELS['Waveshare_RP2040_Plus'],('Waveshare_RP2040_Plus_Socketed.wrl',))
 
 
 if __name__=='__main__':

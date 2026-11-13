@@ -8,15 +8,20 @@ import csv
 import hashlib
 import json
 import subprocess
+import sys
 import zipfile
 from collections import defaultdict
 from html import escape
 from pathlib import Path
 import pcbnew
-from design import ROOT, BOARD_W, BOARD_H, MOUNTING_HOLES, FIDUCIALS, components, read_keys
+from design import ROOT, BOARD_W, BOARD_H, MOUNTING_HOLES, FIDUCIALS, components, read_keys, REVISION
 from assembly_parts import purchase
+from socket_interface import write_outputs as write_interface
 
-OUT = ROOT/'manufacturing/rev0.6'
+OUT = ROOT/f'manufacturing/rev{REVISION}'
+# JLCPCB catalog zero-angle corrections from placement review. Positive offsets
+# are counterclockwise. These affect the CPL only, never PCB/pad geometry.
+JLC_ROTATION_OFFSETS = {'SN74LV1T125DBVR':90, 'CPG151101S11-16':180}
 
 
 def write_csv(path, header, rows):
@@ -41,12 +46,13 @@ def assembly_rows(board):
             y=sum(pcbnew.ToMM(p.GetPosition().y) for p in pads)/2
         else:
             x,y=pcbnew.ToMM(fp.GetPosition())
-        placements.append([ref,f'{x:.6f}',f'{BOARD_H-y:.6f}','bottom',f'{fp.GetOrientationDegrees()%360:.3f}'])
+        rotation=(fp.GetOrientationDegrees()+JLC_ROTATION_OFFSETS.get(identity[1],0))%360
+        placements.append([ref,f'{x:.6f}',f'{BOARD_H-y:.6f}','bottom',f'{rotation:.3f}'])
         for pad in pads:
             px,py=pcbnew.ToMM(pad.GetPosition())
             pad_rows.append([ref,pad.GetNumber(),pad.GetNetname(),f'{px:.6f}',f'{BOARD_H-py:.6f}',
                              f'{px-x:.6f}',f'{y-py:.6f}'])
-    assert len(placements)==479
+    assert len(placements)==481
     return groups,placements,pad_rows
 
 
@@ -74,10 +80,11 @@ def drawing(board):
 def main():
     OUT.mkdir(parents=True,exist_ok=True)
     reports=OUT/'checks'
-    subprocess.run(['python3','-B',str(ROOT/'source/check_kicad.py'),'--reports',str(reports)],check=True)
+    subprocess.run([sys.executable,'-B',str(ROOT/'source/check_kicad.py'),'--reports',str(reports)],check=True)
     pcb=ROOT/'Cleaver.kicad_pcb';board=pcbnew.LoadBoard(str(pcb))
     assert pcbnew.ToMM(board.GetDesignSettings().GetAuxOrigin())==(0.0,BOARD_H)
     groups,placements,pads=assembly_rows(board)
+    write_interface(board,OUT)
     rows=[]
     for (manufacturer,mpn,code,package),refs in groups.items():
         rows.append([mpn,','.join(refs),package,code,manufacturer,len(refs)])
@@ -87,8 +94,8 @@ def main():
     write_csv(OUT/'fiducials.csv',['Designator','X_mm','Y_mm','Side','Copper_diameter_mm','Mask_opening_mm'],
               [[f'FID{i}',x,BOARD_H-y,'bottom',1,3] for i,(x,y) in enumerate(FIDUCIALS,1)])
     write_csv(OUT/'user-installed.csv',['Item','Quantity','Mounting','Description'],[
-        ['U1',1,'top','Waveshare RP2040-Plus 4MB USB-C module (SKU 20290 or pre-headered 20808)'],
-        ['U1 headers',2,'top','1x20 male 2.54mm headers; 17.78mm between rows'],
+        ['U1',1,'top plug-in','Waveshare RP2040-Plus 4MB USB-C bare module SKU 20290; pre-headered 20808 NOT qualified'],
+        ['U1 headers',2,'solder to module ONLY','Samtec TSW-120-14-G-S; 8.13mm gold posts DOWN, 2.79mm tails through module; 17.78mm row spacing'],
         ['MX switches',117,'top','Plate-mounted MX-compatible switches'],
         ['2u stabilizers',7,'plate','Cherry-style plate mount, 23.8mm stem spacing'],
         ['6.25u stabilizer',1,'plate','Cherry-style plate mount, 100mm stem spacing'],
@@ -100,13 +107,24 @@ def main():
         '-o',str(fab)+'/',str(pcb)],check=True)
     subprocess.run(['kicad-cli','pcb','export','drill','--drill-origin','plot','--excellon-separate-th',
         '--generate-map','--map-format','pdf','--generate-report','-o',str(fab)+'/',str(pcb)],check=True)
-    with zipfile.ZipFile(OUT/'Cleaver-rev0.6-fabrication.zip','w',zipfile.ZIP_DEFLATED) as z:
+    with zipfile.ZipFile(OUT/f'Cleaver-rev{REVISION}-fabrication.zip','w',zipfile.ZIP_DEFLATED) as z:
         for path in sorted(fab.iterdir()):z.write(path,path.name)
+    inputs=[pcb,ROOT/'Cleaver.kicad_sch',ROOT/'Cleaver.kicad_pro',ROOT/'routing/Cleaver.ses',
+            ROOT/'VALIDATION.md',ROOT/'README.md',ROOT/'routing/README.md',
+            ROOT/'Cleaver.pretty/Harwin_M20_7862042.kicad_mod',ROOT/'Cleaver.pretty/Waveshare_RP2040_Plus.kicad_mod',
+            ROOT/'references/CONTROLLER-SOCKETS-0.7.md',ROOT/'references/Harwin-M20-786.pdf',
+            ROOT/'references/Samtec-TSW.pdf',ROOT/'references/JLCPCB-2026-11-12.json',
+            ROOT/'references/JLCPCB-2026-11-10.json',ROOT/'references/COMPONENT-REVIEW.md',
+            ROOT/'Cleaver.3dshapes/generated-rev07.json',
+            *sorted((ROOT/'source').glob('*.py')),
+            *sorted((ROOT/f'mechanical/rev{REVISION}').rglob('*'))]
+    for name in ('Harwin_M20_7862042','Waveshare_RP2040_Plus_Socketed'):
+        inputs += [ROOT/'Cleaver.3dshapes'/f'{name}.{suffix}' for suffix in ('wrl','step')]
     manifest={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest()
-              for p in [pcb,ROOT/'Cleaver.kicad_sch',ROOT/'routing/Cleaver.ses',
-                        *sorted(OUT.rglob('*'))] if p.is_file() and p.name!='SHA256.json'}
+              for p in [*inputs,
+                         *sorted(OUT.rglob('*'))] if p.is_file() and p.name!='SHA256.json'}
     (OUT/'SHA256.json').write_text(json.dumps(manifest,indent=2)+'\n')
-    print('Exported 479 bottom placements, 13 purchasing groups, fabrication/drill files and manifest.')
+    print('Exported 481 bottom placements, 14 purchasing groups, fabrication/drill files and manifest.')
 
 
 if __name__=='__main__':main()

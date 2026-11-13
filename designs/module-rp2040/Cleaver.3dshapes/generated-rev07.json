@@ -1,0 +1,26 @@
+{
+  "Waveshare_RP2040_Plus_Socketed": {
+    "bounds_mm": [
+      -10.5,
+      -25.5,
+      -8.13,
+      10.5,
+      27.5,
+      7.64
+    ],
+    "solids": 93,
+    "description": "RP2040-Plus with inverted TSW-120-14-G-S male headers: 8.13mm downward posts, 2.54mm insulator. Package/USB envelopes approximate. CC0-1.0."
+  },
+  "Harwin_M20_7862042": {
+    "bounds_mm": [
+      -25.5,
+      -2.0,
+      0.0,
+      25.5,
+      2.0,
+      7.5
+    ],
+    "solids": 21,
+    "description": "Nominal Harwin M20-7862042 dual-entry SMT socket per issue 10 drawing; visualization, not tolerance model. CC0-1.0."
+  }
+}

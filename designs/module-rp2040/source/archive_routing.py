@@ -8,6 +8,7 @@ import argparse
 from collections import defaultdict
 from pathlib import Path
 import pcbnew
+from design import REVISION
 
 
 def archive(board, output):
@@ -27,7 +28,7 @@ def archive(board, output):
         else:
             entry = f'(wire (path {board.GetLayerName(item.GetLayer())} {scalar(item.GetWidth())} {point(item.GetStart())} {point(item.GetEnd())}))'
         nets[item.GetNetname()].append(entry)
-    text = '(session Cleaver_rev0.6_complete_copper (base_design Cleaver) (placement (resolution um 10))\n'
+    text = f'(session Cleaver_rev{REVISION}_complete_copper (base_design Cleaver) (placement (resolution um 10))\n'
     text += '(routes (resolution um 10) (parser (host_cad "KiCad\'s Pcbnew") (host_version 10.0.8))\n(library_out\n'
     for name, width in sorted(vias.items()):
         text += f'(padstack "{name}" '+''.join(f'(shape (circle {layer} {scalar(width)} 0 0))' for layer in ('F.Cu','In1.Cu','In2.Cu','B.Cu'))+' (attach off))\n'

@@ -9,6 +9,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+REVISION = '0.7'
 INPUT = ROOT.parents[1] / "assets/layout"
 U = 19.05
 BOARD_W, BOARD_H = 452.4375, 147.6375
@@ -19,6 +20,9 @@ MODULE_X, MODULE_Y = BOARD_W - 26.67, 13.39
 # Retain the existing header centres; the 51 x 21 mm Waveshare PCB is inset
 # 1.17 mm from the carrier's right edge. Its USB-C shell projects past the PCB.
 MODULE_W, MODULE_H = 21.0, 51.0
+# Bottom-entry sockets: local socket pin 1 is at the USB end on BOTH rows.
+CONTROLLER_SOCKETS = [('J1', MODULE_Y-8.89, list(range(1,21))),
+                      ('J2', MODULE_Y+8.89, list(range(40,20,-1)))]
 # M2 clearance holes; reserve a 6 mm diameter for heads, washers and standoffs.
 # Coordinates are top-view millimetres from the PCB's upper-left corner.
 MOUNTING_HOLES = [(4, 4), (110, 23.8), (220, 23.8), (330, 23.8),
@@ -102,7 +106,9 @@ def components(keys, leds):
         result.append(dict(ref=ref, kind=kind, value=value, x=x, y=y,
                            pins={str(p): n for p, n in pins.items()}, back=back, angle=angle))
 
-    module = {p: None for p in MODULE_PINS}
+    # Unused module functions terminate at their socket contacts, not at a
+    # no-connect on the carrier. They have no other carrier loads/connections.
+    module = {p: 'MODULE_'+name for p,name in MODULE_PINS.items()}
     for r, gpio in enumerate(ROW_GPIOS):
         module[GPIO_PIN[gpio]] = f"ROW{r}"
     for c, gpio in enumerate(COL_GPIOS):
@@ -111,6 +117,10 @@ def components(keys, leds):
     module.update({GPIO_PIN[RGB_GPIO]: "RGB_DATA", GPIO_PIN[POWER_GPIO]: "LED_EN"})
     module[40] = "RAW_USB_5V"
     add("U1", "Waveshare_RP2040_Plus", "Waveshare RP2040-Plus 4MB", MODULE_X, MODULE_Y, module, angle=-90)
+    result[-1]['offboard'] = True  # circuit symbol + board-only visual envelope
+    for ref,y,numbers in CONTROLLER_SOCKETS:
+        add(ref, 'Harwin_M20_7862042', 'M20-7862042', MODULE_X, y,
+            {i:module[n] for i,n in enumerate(numbers,1)}, back=True)
     for k in keys:
         x, y = k["x"], k["y"]
         add(k["ref"], "MX", "CPG151101S11-16", x, y,

@@ -135,7 +135,7 @@ def capacitor():
     return pieces
 
 
-def waveshare_controller():
+def waveshare_controller(socketed=False):
     """51 x 21 mm RP2040-Plus with 17.78 mm headers; package details approximate."""
     app, part = freecad()
     pieces = []
@@ -155,7 +155,9 @@ def waveshare_controller():
             ring = part.makeCylinder(.9,.04,app.Vector(x,y,pcb_top)).cut(
                 part.makeCylinder(.5,.04,app.Vector(x,y,pcb_top)))
             pieces.append(('Header annulus',ring,gold))
-            box('Header pin',x-.32,y-.32,-2.7,.64,.64,7.6,gold)
+            bottom = -8.13 if socketed else -2.7
+            top = 5.33 if socketed else 4.9
+            box('Header pin',x-.32,y-.32,bottom,.64,.64,top-bottom,gold)
     pieces.append(('51 x 21 mm module PCB',pcb,(.04,.18,.42)))
     box('RP2040 package',-3.5,-15,pcb_top,7,7,1.1,black)
     box('W25Q32 flash package',-2.7,-2.5,pcb_top,5.4,5.4,1.7,black)
@@ -171,6 +173,19 @@ def waveshare_controller():
     pieces.append(('USB-C shell approximation',shell.cut(opening),metal))
     box('USB-C tongue',-3.3,23,pcb_top+1.35,6.6,4,.5,black)
     return pieces
+
+
+def controller_socket():
+    """Nominal Harwin M20-7862042, front anchor; KiCad flips it below B.Cu."""
+    app, part = freecad()
+    body = part.makeBox(51,2.5,7.1,app.Vector(-25.5,-1.25,.4))
+    pieces = []
+    for i in range(20):
+        x = 24.13-2.54*i
+        body = body.cut(part.makeBox(1,1,7.3,app.Vector(x-.5,-.5,.3)))
+        y = -2 if i%2==0 else 1
+        pieces.append(('Alternating SMT tail',part.makeBox(.6,1,.15,app.Vector(x-.3,y,0)),(.75,.74,.68)))
+    return [('7.5 mm dual-entry socket body',body,(.045,.05,.055)), *pieces]
 
 
 def reverse_led(folder):
@@ -247,9 +262,19 @@ def main():
                         help='Optional directory containing the pinned KiSwitch FCStd sources')
     parser.add_argument('--rev05-only',action='store_true',help='Build only new bottom-assembly models')
     parser.add_argument('--waveshare-only',action='store_true',help='Build only the RP2040-Plus module model')
+    parser.add_argument('--rev07-only',action='store_true',help='Build bottom-entry controller/socket models')
     args = parser.parse_args()
     folder = ROOT/'Cleaver.3dshapes'
     results = {}
+    if args.rev07_only:
+        for name,pieces,note in [
+            ('Waveshare_RP2040_Plus_Socketed', waveshare_controller(True),
+             'RP2040-Plus with inverted TSW-120-14-G-S male headers: 8.13mm downward posts, 2.54mm insulator. Package/USB envelopes approximate. CC0-1.0.'),
+            ('Harwin_M20_7862042', controller_socket(),
+             'Nominal Harwin M20-7862042 dual-entry SMT socket per issue 10 drawing; visualization, not tolerance model. CC0-1.0.')]:
+            results[name] = export_model(name,pieces,folder,note)
+        (folder/'generated-rev07.json').write_text(json.dumps(results,indent=2)+'\n')
+        return
     if args.waveshare_only:
         name = 'Waveshare_RP2040_Plus_Approx'
         results[name] = export_model(name,waveshare_controller(),folder,

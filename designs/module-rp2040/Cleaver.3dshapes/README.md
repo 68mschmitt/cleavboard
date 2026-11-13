@@ -4,7 +4,7 @@ Open `../Cleaver.kicad_pcb` in KiCad PCB Editor and press **Alt+3**
 (**View → 3D Viewer**). No extra library installation or path configuration is
 needed: all assignments use `${KIPRJMOD}/Cleaver.3dshapes/`.
 
-The board includes **597 model placements across 480 component footprints**.
+The rev0.7 board includes **599 model placements across 482 populated/modelled footprints**.
 Each switch footprint has both a front-side switch and a back-side socket.
 **TP1–TP6, mounting holes and fiducials are intentionally bare**. TP1 is a
 VBUS test pad, not a connector. LED power is routed through header pin 40.
@@ -27,14 +27,22 @@ reload it from disk after preserving any intentional unsaved edits.
 | U2 / U3 | KiCad SOT-23-5 / SOT-23-6 | Generic package, not manufacturer marking |
 | C5 | Custom Ø10 mm, 10 mm SMD polymer capacitor | Simplified Nichicon PCF1A471MCL1GS; 10.3 mm platform, negative mark toward pad 2; not a tolerance model |
 | U1 | **Custom approximate Waveshare RP2040-Plus assembly** | 51 × 21 mm PCB, 17.78 mm header spacing, USB-C facing right; see below |
+| J1 / J2 | Custom Harwin M20-7862042 | Nominal 51 × 2.5 mm body, 7.5 mm total height; alternating SMT tails; bottom-entry orientation; not a tolerance model |
 
-The controller model assumes **direct male headers**: 2.54 mm clearance from the
+The controller model assumes **long male headers into underside female sockets**: 2.54 mm clearance from the
 carrier's top surface to the module PCB's underside, then a 1.6 mm module PCB.
 It includes two header strips/pins, a hollow USB-C shell, buttons, representative
 ICs, and the onboard LED. Connector details, module thickness, header height,
 button/IC locations, and small parts are **visual approximations**, not verified
-against the actual board. Optional female sockets are not shown. Changing the
-real header/socket stack changes the installed height.
+against the actual board. The male posts project **8.13 mm downward**; J1/J2
+model the two female sockets below the carrier. U1 is a pad-free board-only
+visual reference, not a factory placement. Changing the real header/socket
+stack changes the installed height. See the
+[interface qualification](../references/CONTROLLER-SOCKETS-0.7.md).
+
+The new CC0-1.0 STEP/VRML pairs and bounds are recorded in `generated-rev07.json`.
+Rebuild only these with `source/build_3d_models.py --rev07-only`. Historical
+direct-header module models remain available and are not overwritten.
 
 Revision 0.5 uses true bottom-side socket footprints. The legacy mixed-side
 switch/socket models were rotated 180° about X and translated Z=−1.6 mm into

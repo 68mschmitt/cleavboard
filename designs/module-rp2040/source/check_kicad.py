@@ -12,9 +12,10 @@ from pathlib import Path
 
 import pcbnew
 
-from design import ROOT, MODULE_X, MODULE_Y, ROW_GPIOS, COL_GPIOS, read_keys, components, MOUNTING_HOLES, FIDUCIALS
+from design import ROOT, MODULE_X, MODULE_Y, ROW_GPIOS, COL_GPIOS, read_keys, components, MOUNTING_HOLES, FIDUCIALS, REVISION, CONTROLLER_SOCKETS
 from models_3d import validate_models
 from assembly_parts import fields, purchase
+from socket_interface import validate_interface
 
 
 def main():
@@ -33,6 +34,14 @@ def main():
     board = pcbnew.LoadBoard(str(pcb))
     models = validate_models(board)
     footprints = {fp.GetReference():fp for fp in board.GetFootprints()}
+    interface = validate_interface(board)
+    for row in interface['pin_map']:
+        assert nets[('U1',str(row['module_pin']))]==row['net'], 'Offboard module/socket mapping mismatch'
+    for number in (30,35,36,37,39):
+        name=nets[('U1',str(number))]
+        circuit=next(n for n in root.findall('./nets/net') if n.get('name')==name)
+        assert {(n.get('ref'),n.get('pin')) for n in circuit.findall('node')}=={
+            ('U1',str(number)),('J2',str(41-number))}, 'Unused module function has a carrier load'
     logo = footprints['LOGO1']
     assert not list(logo.Pads()) and logo.GetAttributes() & pcbnew.FP_BOARD_ONLY
     assert all(s.GetLayer()==pcbnew.F_SilkS for s in logo.GraphicalItems())
@@ -48,6 +57,9 @@ def main():
         assert abs(pcbnew.ToMM(fp.GetPosition().x)-part['x'])<.001, f'{ref} moved in X'
         assert abs(pcbnew.ToMM(fp.GetPosition().y)-part['y'])<.001, f'{ref} moved in Y'
         pads = {p.GetNumber():p for p in fp.Pads() if p.GetNumber()}
+        if part.get('offboard'):
+            assert not list(fp.Pads()) and fp.GetAttributes() & pcbnew.FP_BOARD_ONLY
+            continue
         for number,expected in part['pins'].items():
             name = nets[(ref,number)]
             assert pads[number].GetNetname()==name, f'{ref}.{number} schematic/PCB mismatch'
@@ -56,12 +68,15 @@ def main():
             else:
                 assert name.startswith('unconnected-'), f'{ref}.{number} should have a no-connect'
     u1 = footprints['U1']
-    pads = {p.GetNumber():p for p in u1.Pads()}
+    pads = {str(n):footprints[ref].FindPadByNumber(str(i))
+            for ref,y,numbers in CONTROLLER_SOCKETS for i,n in enumerate(numbers,1)}
+    # Pin ENTRY holes retain the original module positions; the solder lands
+    # are staggered 1.70mm to either side of those unplated holes.
     for n,(dx,dy) in {'1':(24.13,-8.89),'2':(21.59,-8.89),'20':(-24.13,-8.89),
                       '21':(-24.13,8.89),'40':(24.13,8.89)}.items():
         point = pads[n].GetPosition()
         assert abs(pcbnew.ToMM(point.x)-MODULE_X-dx)<.001, f'Wrong RP2040-Plus pin {n} X'
-        assert abs(pcbnew.ToMM(point.y)-MODULE_Y-dy)<.001, f'Wrong RP2040-Plus pin {n} Y'
+        assert abs(abs(pcbnew.ToMM(point.y)-MODULE_Y-dy)-1.7)<.001, f'Wrong RP2040-Plus pin {n} Y'
     assert str(u1.GetFPID().GetLibItemName())=='Waveshare_RP2040_Plus'
     assert pads['40'].GetNetname()==footprints['F1'].FindPadByNumber('1').GetNetname()=='/RAW_USB_5V'
     openings = sum(item.GetLayer()==pcbnew.Edge_Cuts for fp in board.GetFootprints() for item in fp.GraphicalItems())
@@ -85,7 +100,10 @@ def main():
     smd_pads = [p for fp in board.GetFootprints() for p in fp.Pads()
                  if p.GetAttribute()==pcbnew.PAD_ATTRIB_SMD]
     pth = [p for fp in board.GetFootprints() for p in fp.Pads() if p.GetAttribute()==pcbnew.PAD_ATTRIB_PTH]
-    assert len(pth)==40 and all(p.GetParentFootprint().GetReference()=='U1' for p in pth)
+    assert not pth, 'Controller entry holes must be unplated, not solder barrels'
+    for ref,y,numbers in CONTROLLER_SOCKETS:
+        holes=[p for p in footprints[ref].Pads() if p.GetAttribute()==pcbnew.PAD_ATTRIB_NPTH]
+        assert len(holes)==20 and all(tuple(pcbnew.ToMM(p.GetDrillSize()))==(1.,1.) for p in holes)
     assert all(p.IsOnLayer(pcbnew.B_Cu) and not p.IsOnLayer(pcbnew.F_Cu) for p in smd_pads)
     assert not any(p.IsOnLayer(pcbnew.F_Paste) for fp in board.GetFootprints() for p in fp.Pads())
     for via in (t for t in board.GetTracks() if t.GetClass()=='PCB_VIA'):
@@ -125,13 +143,14 @@ def main():
             assert not data['violations'] and not data['unconnected_items'] and not data.get('schematic_parity',[]), 'DRC report is not clean'
         else:
             assert not any(sheet['violations'] for sheet in data['sheets']), 'ERC report is not clean'
-    report = dict(revision='0.6',controller='Waveshare RP2040-Plus',matrix='8x16',unique_switches=len(keys),rgb_leds=len(leds),
-                  bottom_factory_placements=479,pth_pads=40,front_paste_pads=0,
+    report = dict(revision=REVISION,controller='socketed Waveshare RP2040-Plus',matrix='8x16',unique_switches=len(keys),rgb_leds=len(leds),
+                  bottom_factory_placements=481,pth_pads=0,controller_pin_entry_npth=40,front_paste_pads=0,
                   pcb_sha256=hashlib.sha256(pcb.read_bytes()).hexdigest(),
                   schematic_sha256=hashlib.sha256(sch.read_bytes()).hexdigest(),
-                  erc='pass',drc='pass',schematic_pcb_firmware_mapping='pass',models_3d=models)
+                  erc='pass',drc='pass',schematic_pcb_firmware_mapping='pass',models_3d=models,
+                  controller_interface=interface)
     (args.reports/'validation.json').write_text(json.dumps(report,indent=2)+'\n')
-    print('PASS: 117 unique keys, 117 RGB LEDs, RP2040-Plus pinout/VBUS feed, netlist/PCB/Vial parity, 597 local 3D models, ERC and DRC.')
+    print('PASS: 117 unique keys, 117 RGB LEDs, bottom-entry RP2040-Plus sockets/VBUS, netlist/PCB/Vial parity, 599 local 3D models, ERC and DRC.')
 
 
 if __name__=='__main__':

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the rev0.6 tilted tray, removable key bezel and PCB/plate spacers.
+"""Build the current tilted tray, removable key bezel and PCB/plate spacers.
 
 Reads, but never writes, the saved PCB and existing switch plate. Requires
 FreeCAD, KiCad pcbnew, Shapely >=2.1, NumPy and Trimesh. STL files are oriented
@@ -23,11 +23,11 @@ from shapely.affinity import affine_transform
 import trimesh
 
 from build_3d_models import freecad
-from design import BOARD_H, BOARD_W, MODULE_X, MODULE_Y, MOUNTING_HOLES, ROOT, U, read_keys
+from design import BOARD_H, BOARD_W, MODULE_X, MODULE_Y, MOUNTING_HOLES, ROOT, U, read_keys, REVISION, CONTROLLER_SOCKETS
 from generate_mechanical import geometry, svg_path
 from generate_top_plate import top_surface, validate_pcb
 
-OUT = ROOT/'mechanical/rev0.6/case'
+OUT = ROOT/f'mechanical/rev{REVISION}/case'
 PCB_THICKNESS = 1.6
 PLATE_TOP = 5.0
 PLATE_THICKNESS = 1.5
@@ -59,6 +59,7 @@ class Parameters:
     usb_opening_width_mm: float = 16.0
     usb_opening_height_mm: float = 7.2
     usb_center_above_pcb_mm: float = 5.74
+    socket_support_gap_mm: float = .7
 
     @property
     def margin(self):
@@ -88,7 +89,8 @@ class Parameters:
     def validate(self):
         assert all(math.isfinite(v) and v > 0 for v in asdict(self).values())
         assert 2 <= self.typing_angle_deg <= 10, 'Supported typing angle is 2–10 degrees'
-        assert self.cover_underside_above_pcb_mm >= 8.4, 'Direct-header module needs its headroom'
+        assert self.cover_underside_above_pcb_mm >= 8.4, 'Socketed module needs its headroom'
+        assert .7 <= self.socket_support_gap_mm <= 1.0, 'Unshimmed backstops must clear the full socket height tolerance'
         assert self.cover_lip_inner_offset_mm > self.pcb_edge_clearance_mm
         rim = self.margin-self.rebate_offset
         assert rim >= max(self.insert_bore_mm+2, self.cover_head_recess_diameter_mm+.6), 'Insufficient material around rim inserts/heads'
@@ -186,7 +188,14 @@ def build(p):
     boss_clip = part.makeBox(600, 300, 100, app.Vector(-50, -50, p.floor_mm-.3))
     bosses = [assembled(cylinder(x, y, -60, STANDOFF_DIAMETER, 60-PCB_THICKNESS), p)
               .common(boss_clip) for x, y in MOUNTING_HOLES]
-    tray = tray.multiFuse(bosses)
+    # The 40 SMT contacts must not carry the full insertion load (up to 80N
+    # from Harwin's 2N/contact maximum). Backstops sit 0.70mm below nominal
+    # bottoms, clearing the full +/-0.50mm height tolerance. Select shims
+    # for a MEASURED 0.1–0.3mm gap; never preload a socket.
+    supports = [assembled(prism(box(MODULE_X-25.2,y-1.1,MODULE_X+25.2,y+1.1),
+                                  -60,60-PCB_THICKNESS-7.5-p.socket_support_gap_mm),p).common(boss_clip)
+                for _,y,_ in CONTROLLER_SOCKETS]
+    tray = tray.multiFuse(bosses+supports)
     insert_holes = [cylinder(x, y, -PCB_THICKNESS-p.insert_pocket_depth_mm,
                              p.insert_bore_mm, p.insert_pocket_depth_mm+.1)
                     for x, y in MOUNTING_HOLES]
@@ -230,7 +239,7 @@ def validate_source(p, plate):
     assert np.allclose(pcbnew.ToMM(fps['C5'].GetPosition()), [377, 6], rtol=0, atol=1e-6)
     assert np.allclose(pcbnew.ToMM(fps['U1'].GetPosition()), [MODULE_X, MODULE_Y], rtol=0, atol=1e-6)
     assert math.isclose(fps['U1'].GetOrientationDegrees(), -90), 'USB orientation changed'
-    saved_plate = trimesh.load_mesh(ROOT/'mechanical/rev0.6/Cleaver-top-plate-rev0.6.stl')
+    saved_plate = trimesh.load_mesh(ROOT/f'mechanical/rev{REVISION}/Cleaver-top-plate-rev{REVISION}.stl')
     assert saved_plate.is_watertight and saved_plate.is_volume, 'Invalid existing plate STL'
     assert np.allclose(saved_plate.extents, [BOARD_W, BOARD_H, PLATE_THICKNESS], rtol=0, atol=2e-5)
     actual_plate = affine_transform(top_surface(saved_plate, PLATE_THICKNESS),
@@ -259,12 +268,28 @@ def validate_fit(p, shapes, plate):
     # A 10 mm maximum capacitor plus 1 mm service clearance, over its WHOLE body.
     cap_keepout = assembled(prism(box(371, .5, 383, 11.5), -12.6, 11), p)
     assert tray.common(cap_keepout).Volume < 1e-6, 'C5 clearance is less than 11 mm'
-    # Direct-soldered 2.54 mm headers only. Body includes battery connector.
-    module = prism(box(MODULE_X-25.5, MODULE_Y-10.5, MODULE_X+25.5, MODULE_Y+10.5), 0, 7.64)
+    # Male header insulators seat on the TOP carrier surface. The long posts
+    # enter the underside sockets. Include 0.56mm allowance above the former
+    # nominal 7.64mm module envelope for seating and package variation.
+    module = prism(box(MODULE_X-25.5, MODULE_Y-10.5, MODULE_X+25.5, MODULE_Y+10.5), 0, 8.2)
     shell = prism(box(MODULE_X+19, MODULE_Y-4.475, MODULE_X+27.5, MODULE_Y+4.475), 4.14, 3.2)
     controller = assembled(module.fuse(shell), p)
     assert tray.common(controller).Volume < 1e-6, 'Controller/USB intersects tray'
     assert cover.common(controller).Volume < 1e-6, 'Controller/USB intersects cover'
+    socket_checks=[]
+    for ref,y,_ in CONTROLLER_SOCKETS:
+        socket = assembled(prism(box(MODULE_X-25.65,y-2.125,MODULE_X+25.65,y+2.125),
+                                     -PCB_THICKNESS-8.0,8.0),p)
+        assert tray.common(socket).Volume < 1e-6, f'{ref}: socket intersects tray/backstop'
+        assert cover.common(socket).Volume < 1e-6, f'{ref}: socket intersects cover'
+        face=assembled(prism(box(MODULE_X-25,y-1,MODULE_X+25,y+1),
+                                 -PCB_THICKNESS-7.5-p.socket_support_gap_mm-.1,.05),p)
+        assert abs(tray.common(face).Volume-face.Volume)<1e-6, f'{ref}: insertion backstop missing'
+        socket_checks.append(dict(reference=ref, maximum_envelope_mm=[51.3,4.25,8.0],
+                                  nominal_unshimmed_backstop_gap_mm=p.socket_support_gap_mm,
+                                  minimum_unshimmed_backstop_gap_mm=round(p.socket_support_gap_mm-.5,4),
+                                  shim_options_mm=[.2,.4,.6,.8,1.0], measured_target_gap_mm=[.1,.3],
+                                  backstop_present=True))
     tunnel = assembled(usb_tool(p), p)
     assert tray.common(tunnel).Volume < 1e-6 and cover.common(tunnel).Volume < 1e-6
 
@@ -298,7 +323,8 @@ def validate_fit(p, shapes, plate):
                 keycap_envelope='each KLE width/height times 19.05 mm minus 1 mm; vertical swept prism',
                 key_aperture_clusters=len(shapes['apertures'].geoms),
                 minimum_c5_clear_depth_normal_to_pcb_mm=round(cap_min_depth, 4),
-                c5_11mm_keepout_clear=True, controller_direct_header_envelope_clear=True,
+                c5_11mm_keepout_clear=True, controller_socketed_envelope_clear=True,
+                controller_sockets=socket_checks,
                 usb_tunnel_clear=True, pcb_plate_edge_clearance_per_side_mm=p.pcb_edge_clearance_mm,
                 cover_lip_clearance_per_side_mm=p.cover_lip_clearance_mm)
 
@@ -354,7 +380,7 @@ def export_part(out, name, shape, *, face_down=False):
 
 def save_assembly(out, p, shapes, plate):
     app, part = freecad()
-    doc = app.newDocument('CleaverCaseRev06')
+    doc = app.newDocument('CleaverCaseRev07')
     objects = []
 
     def add(name, label, shape, color, transparency=0):
@@ -378,7 +404,7 @@ def save_assembly(out, p, shapes, plate):
         [Point(x, y).buffer(1.1, quad_segs=16) for x, y in MOUNTING_HOLES]))
     add('PCBEnvelope', 'REFERENCE ONLY: PCB envelope + mounting holes',
         assembled(prism(pcb, -PCB_THICKNESS, PCB_THICKNESS), p), (.07, .40, .22))
-    add('SwitchPlate', 'REFERENCE: rev0.6 1.5 mm switch/stabilizer plate',
+    add('SwitchPlate', f'REFERENCE: rev{REVISION} 1.5 mm switch/stabilizer plate',
         assembled(prism(plate.simplify(.005, preserve_topology=True), SPACER_HEIGHT, PLATE_THICKNESS), p),
         (.43, .46, .50))
     spacers = []
@@ -389,8 +415,11 @@ def save_assembly(out, p, shapes, plate):
     add('PlateSpacers', 'PRINT 11: 3.5 mm PCB-to-plate spacers', part.makeCompound(spacers), (.70, .51, .18))
     module = prism(box(MODULE_X-25.5, MODULE_Y-10.5, MODULE_X+25.5, MODULE_Y+10.5), 2.54, 5.1)
     shell = prism(box(MODULE_X+19, MODULE_Y-4.475, MODULE_X+27.5, MODULE_Y+4.475), 4.14, 3.2)
-    add('ControllerEnvelope', 'REFERENCE ONLY: direct-header controller and USB envelope',
+    add('ControllerEnvelope', 'REFERENCE ONLY: socketed controller and USB envelope',
         assembled(module.fuse(shell), p), (.12, .27, .60))
+    for ref,y,_ in CONTROLLER_SOCKETS:
+        add(ref, f'REFERENCE: {ref} underside Harwin M20-7862042',
+            assembled(prism(box(MODULE_X-25.5,y-1.25,MODULE_X+25.5,y+1.25),-9.1,7.5),p),(.04,.04,.05))
     add('C5Envelope', 'REFERENCE ONLY: C5 maximum 10 mm underside height',
         assembled(cylinder(377, 6, -11.6, 10.3, 10), p), (.45, .45, .48))
     keys, _ = read_keys()
@@ -402,10 +431,10 @@ def save_assembly(out, p, shapes, plate):
     doc.recompute()
     # Avoid creating timestamped FCBak files in this generated artifact folder.
     with tempfile.TemporaryDirectory(prefix='.case-export-', dir=out) as directory:
-        saved = Path(directory)/'Cleaver-case-assembly-rev0.6.FCStd'
+        saved = Path(directory)/f'Cleaver-case-assembly-rev{REVISION}.FCStd'
         doc.saveAs(str(saved))
         saved.replace(out/saved.name)
-    part.export(objects, str(out/'Cleaver-case-assembly-rev0.6.step'))
+    part.export(objects, str(out/f'Cleaver-case-assembly-rev{REVISION}.step'))
     app.closeDocument(doc.Name)
 
 
@@ -416,7 +445,7 @@ def preview(out, p, shapes):
     head = f'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="870" viewBox="{-m-8} {-m-18} {BOARD_W+2*m+16} 335">'
     content = [head, '<rect x="-20" y="-30" width="510" height="390" fill="#f5f7fa"/>',
                '<g font-family="sans-serif" fill="#243244">',
-               '<text x="0" y="-13" font-size="6">Cleaver rev0.6 — removable bezel / base interior</text>',
+               f'<text x="0" y="-13" font-size="6">Cleaver rev{REVISION} — socket supports / removable bezel</text>',
                f'<path d="{svg_path(shapes["deck"])}" fill="#aebac6" stroke="#34465a" stroke-width=".4" fill-rule="evenodd"/>']
     for x, y in cover_screws(p):
         content.append(f'<circle cx="{x}" cy="{y}" r="2.1" fill="#34465a"/>')
@@ -457,7 +486,7 @@ def render_preview(out, p, records):
         return mesh
 
     base, cover = cad_mesh(records[0]), cad_mesh(records[1], tilt=True)
-    plate = trimesh.load_mesh(ROOT/'mechanical/rev0.6/Cleaver-top-plate-rev0.6.stl')
+    plate = trimesh.load_mesh(ROOT/f'mechanical/rev{REVISION}/Cleaver-top-plate-rev{REVISION}.stl')
     plate.apply_translation([0, 0, SPACER_HEIGHT])
     plate.apply_transform(rotation)
     plate.apply_translation([0, 0, p.front_pcb_top])
@@ -499,7 +528,7 @@ def render_preview(out, p, records):
         ax.set_title('Base interior — 11 PCB standoffs' if index == 1 else
                      'Assembled — separate cover with 117 keycap clearances', loc='left',
                      fontsize=16, color='#273747', pad=-6)
-    fig.text(.05, .03, f'Rev 0.6  /  {p.typing_angle_deg:g}° rear-raised  /  right-side USB-C  /  reference keycaps are simplified envelopes',
+    fig.text(.05, .03, f'Rev {REVISION}  /  {p.typing_angle_deg:g}° rear-raised  /  right-side USB-C  /  reference keycaps are simplified envelopes',
              fontsize=11, color='#526375')
     fig.subplots_adjust(left=.03, right=.97, top=.94, bottom=.06, hspace=.04)
     fig.savefig(out/'assembly-preview.png', dpi=140, facecolor=fig.get_facecolor())
@@ -513,7 +542,7 @@ def main():
     args = parser.parse_args()
     p = Parameters(**json.loads(args.parameters.read_text()))
     p.validate()
-    source, plate_file = ROOT/'Cleaver.kicad_pcb', ROOT/'mechanical/rev0.6/Cleaver-top-plate-rev0.6.stl'
+    source, plate_file = ROOT/'Cleaver.kicad_pcb', ROOT/f'mechanical/rev{REVISION}/Cleaver-top-plate-rev{REVISION}.stl'
     original_hashes = {path: digest(path) for path in (source, plate_file)}
     plate, _, _ = geometry(top_capacitor_opening=False)
     source_checks = validate_source(p, plate)
@@ -521,8 +550,8 @@ def main():
     fit = validate_fit(p, shapes, plate)
     out = args.output
     out.mkdir(parents=True, exist_ok=True)
-    parts = [export_part(out, 'Cleaver-case-base-rev0.6', shapes['tray']),
-             export_part(out, 'Cleaver-case-top-cover-rev0.6', shapes['cover'], face_down=True),
+    parts = [export_part(out, f'Cleaver-case-base-rev{REVISION}', shapes['tray']),
+             export_part(out, f'Cleaver-case-top-cover-rev{REVISION}', shapes['cover'], face_down=True),
              export_part(out, 'PCB-to-plate-spacer-3.5mm', shapes['spacer'])]
     # Real rear-right assembly section, not a generic tolerance block. One PCB
     # boss (H5), USB tunnel, locating lip and one cover screw are retained.
@@ -530,15 +559,18 @@ def main():
     coupon_tray = shapes['tray'].common(assembled(prism(crop, -60, 100), p)).removeSplitter()
     coupon_cover = shapes['cover'].common(prism(crop, -20, 60)).removeSplitter()
     parts.extend([export_part(out, 'USB-and-seat-fit-coupon-base', coupon_tray),
-                  export_part(out, 'USB-and-seat-fit-coupon-cover', coupon_cover, face_down=True)])
+                   export_part(out, 'USB-and-seat-fit-coupon-cover', coupon_cover, face_down=True)])
+    for thickness in (.2,.4,.6,.8,1.0):
+        shim=prism(box(0,0,49.6,2.0),0,thickness)
+        parts.append(export_part(out,f'controller-socket-shim-{thickness:.1f}mm',shim))
     save_assembly(out, p, shapes, plate)
     preview(out, p, shapes)
     render_preview(out, p, parts)
     assert all(digest(path) == before for path, before in original_hashes.items()), 'An input was modified'
     app, part = freecad()
-    report = dict(revision='0.6', source_pcb='../../../Cleaver.kicad_pcb',
+    report = dict(revision=REVISION, source_pcb='../../../Cleaver.kicad_pcb',
                   source_sha256=original_hashes[source],
-                  matching_plate='../Cleaver-top-plate-rev0.6.stl',
+                  matching_plate=f'../Cleaver-top-plate-rev{REVISION}.stl',
                   matching_plate_sha256=original_hashes[plate_file], parameters=asdict(p),
                   source_checks=source_checks, fit_checks=fit,
                   stack_mm=dict(pcb_underside=-1.6, pcb_top=0, plate_bottom=3.5, plate_top=5,
@@ -548,7 +580,8 @@ def main():
                   insert_quantity=19, pcb_screw='11 x M2x10 mm', cover_screw='8 x M2x6 mm',
                   intended_insert='M2, approximately 3.2 mm OD x 4 mm long; 3.0 mm pilot MUST be coupon-tested',
                   physical_fit_tested=False,
-                  assumptions=['Direct-soldered 2.54 mm male controller headers, not tall mating sockets',
+                  assumptions=['U1 male insulators seat on carrier; 8.13mm posts into underside Harwin sockets',
+                               'Backstops have 0.70mm nominal unshimmed gap; select shims for measured 0.1–0.3mm clearance before mating',
                                'Standard MX keycap plan size: KLE pitch minus 1 mm',
                                'USB shell projection and height are approximate; test actual cable/module',
                                'Hardware, switch/stabilizer clip fit, material stiffness and shrinkage require physical testing'],
