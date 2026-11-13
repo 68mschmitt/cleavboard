@@ -1,0 +1,88 @@
+{
+  "render": "Cleaver-rev0.9-assembled.png",
+  "revision": "0.9",
+  "blender": "5.2.3 LTS",
+  "engine": "Cycles CPU",
+  "resolution_px": [
+    3000,
+    1875
+  ],
+  "samples": 128,
+  "exact_cad_inputs_sha256": {
+    "Cleaver.kicad_pcb": "46b3962cf9f798c2da7ab25e7bbf7a1b922444d307171be02871dab5283cfff1",
+    "manufacturing/rev0.9/checks/validation.json": "0b1b3bf2154c8eade1a57564f97e5de15cce8633599c05b598649124a04fd6f0",
+    "mechanical/rev0.9/case/parameters.json": "251d560f4fd590cf721e7ffd269e5855d3c27af2cd26a1b3378f4d8d2e1423b3",
+    "mechanical/rev0.9/case/validation.json": "0de3f25d12635247dd6754b2dcc8cd9ac8605af5e3451931458d15f7fd3916bf",
+    "mechanical/rev0.9/validation.json": "25455c338c52373509dd09f3bf978f66c0a6d5535161f77acfcddaf5b7089c71",
+    "mechanical/rev0.9/Cleaver-top-plate-rev0.9.stl": "acb4a9c2fa1f6807236c71c4eac161b909b75dac5d5dce3f1ffe109d2d9d03a8",
+    "mechanical/rev0.9/case/Cleaver-case-base-rev0.9.stl": "147f144861b36251f035346f0b1ed6b242402decfa339a0766e677b5984290ac",
+    "mechanical/rev0.9/case/Cleaver-case-top-cover-rev0.9.stl": "cd1f326fd466a4b1f8eee66711f3496af597d246bea03f039f896e60290f1c14",
+    "mechanical/rev0.9/case/Logo-light-well.stl": "1ba888e8017ad3d8e0f853d9cc03a6ec09b939d05489009ff81e02ec37691f8f",
+    "mechanical/rev0.9/case/Logo-insert-blank.stl": "80ddbf4e4d23d09b7c5fbcd2a423b97a19067fe1f1c104786dba4f369b471718"
+  },
+  "render_recipe_sha256": {
+    "designs/module-rp2040/source/render_assembly.py": "a5c7815d74d5c6572a74a562048ea320fed4a78f6f7df35eed4609204474e763",
+    "designs/module-rp2040/source/design.py": "c753a837a52d1cfc323fb96b822cc925ce433270a34760ea8d5863b55ea7d46e",
+    "designs/module-rp2040/source/logo_interface.py": "b29aed671d0633c0dc6fe0d4c5e5acc81af31c73028d0ed936c37f5d89c28450",
+    "designs/module-rp2040/mechanical/rev0.9/case/Logo-insert-template.scad": "66ed47ba6ae649f8d12ceba369fa29c98528ada396cab45419210b4a74ce4dde",
+    "assets/layout/keyboard-layout.json": "2984f6b8bcc514faa20bcce847ae00927e166befaf0eab3393de04b21a16b726"
+  },
+  "geometry": {
+    "pcb": {
+      "meshes": 613,
+      "model_instances": 607,
+      "populated_footprints": 490,
+      "switch_models": 117,
+      "switch_socket_models": 117,
+      "rgb_led_models": 121,
+      "logo_led_models": 4,
+      "source_glb_sha256": "fab16bc093cce288a081dc7d5918e6e1f6f30de0f00a21ab98fc96137abd7f86",
+      "switch_assembly_nodes": 234
+    },
+    "caps": {
+      "keycaps": 117,
+      "legends": 116,
+      "profile": "Generic rounded/dished sculpted MX, not a purchased keycap specification"
+    },
+    "hardware": {
+      "pcb_to_plate_spacers": 11,
+      "pcb_screws": 11,
+      "cover_screws": 8,
+      "heat_set_inserts": 19,
+      "plate_mount_stabilizers": 8
+    },
+    "logo": {
+      "light_wells": 1,
+      "removable_inserts": 1,
+      "face_mm": [
+        50.8,
+        25.4
+      ],
+      "center_pcb_xy_mm": [
+        227.6475,
+        139.1125
+      ],
+      "led_references": [
+        "LED118",
+        "LED119",
+        "LED120",
+        "LED121"
+      ],
+      "sample_mark": "C",
+      "font": "LiberationSans-Bold.ttf",
+      "font_sha256": "769673c4355020b1e28a14c366a152da410ab6b16239fe883ebc35b73624835b",
+      "appearance": "Cyan emissive C-mask surface on the actual insert; per-key RGB off",
+      "emission_strength": 18,
+      "photometrically_calibrated": false
+    }
+  },
+  "appearance": "Illustrative charcoal enclosure, ivory/stone keycaps and muted red accents; cyan C badge, per-key RGB off",
+  "limitations": [
+    "Keycap profiles and materials are illustrative, not purchased-part CAD",
+    "Stabilizers and threaded hardware are visual approximations",
+    "Logo mask and emitted brightness are illustrative, not a calibrated optical simulation",
+    "Bundled PCB component model approximations still apply",
+    "Internal parts are present in the scene but normally hidden by the opaque closed case"
+  ],
+  "image_sha256": "4f144b36c542e8ec580e4c27834d6019e40e27826564c63a34cd4cab3bbfc112"
+}

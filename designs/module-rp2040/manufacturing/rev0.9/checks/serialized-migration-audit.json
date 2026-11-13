@@ -1,0 +1,11 @@
+{
+  "revision": "0.9",
+  "pcb_sha256": "46b3962cf9f798c2da7ab25e7bbf7a1b922444d307171be02871dab5283cfff1",
+  "pre_badge_copper_exactly_retained": 5356,
+  "footprint_ids_values_orientations_and_pad_nets_retained": 511,
+  "unmoved_footprints": 502,
+  "all_117_key_positions_retained": true,
+  "project_bytes_unchanged": true,
+  "tracks": 4808,
+  "vias": 720
+}

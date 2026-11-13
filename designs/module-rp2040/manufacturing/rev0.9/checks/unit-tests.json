@@ -1,0 +1,10 @@
+{
+  "revision": "0.9",
+  "tests_run": 60,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true,
+  "python": "3.14.10 (main, Nov  4 2026, 18:21:50) [GCC 16.2.1 20260810]",
+  "pcb_sha256": "46b3962cf9f798c2da7ab25e7bbf7a1b922444d307171be02871dab5283cfff1"
+}

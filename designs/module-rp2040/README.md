@@ -1,13 +1,14 @@
-# Cleaver PCB — revision 0.8
+# Cleaver PCB — revision 0.9
 
 **New: [replaceable illuminated logo](LOGO.md)** between M6–M8 and M9–M11.
-Four RGB LEDs illuminate a 16 mm printed badge through matching 16.4 mm square
-plate/cover openings. The supplied light well and flanged insert lift out when
-the cover is removed. H9 moved to `(250,138)` mm: use the **rev0.8 PCB, base,
-plate and cover together**, plus the new 121-pixel firmware.
+Four RGB LEDs illuminate a **50.8 × 25.4 mm (2 × 1 inch)** printed badge through
+matching **51.2 × 25.8 mm** plate/cover openings. The front bezel and plate extend
+8 mm forward, preserving key positions. The light well and flanged insert lift
+out when the cover is removed. H9 moved to `(263,138)` mm: use the **rev0.9 PCB,
+base, plate and cover together**, plus the 121-pixel firmware.
 
 **Taviana Tactical artwork:** the active PCB includes a 34 mm-wide top-side logo.
-Use the current [revision 0.8 fabrication files](manufacturing/rev0.8/).
+Use the current [revision 0.9 fabrication files](manufacturing/rev0.9/).
 
 117 MX hot-swap switches, 121 reverse-mount RGB LEDs, and the **Waveshare
 RP2040-Plus 4MB USB-C module** (bare SKU 20290), plugged into underside SMT
@@ -19,7 +20,7 @@ tests. The old [DESIGN_REVIEW.md](DESIGN_REVIEW.md) describes revision 0.2, not 
 replacement design. Electrical checks do not substitute for a physical prototype
 or final plate/case checks.
 
-**Revision 0.8 manufacturing:** all **489 factory-populated parts are underside
+**Revision 0.9 manufacturing:** all **489 factory-populated parts are underside
 SMD**, including C5, the HanElectricity hot-swap sockets and **J1/J2 Harwin
 M20-7862042 controller sockets**. U1 plugs in from above through 40 **NPTH**
 holes. Solder two **Samtec TSW-120-14-G-S** strips to the module only: 8.13 mm
@@ -28,11 +29,11 @@ posts down, 2.79 mm tails through the module. Stock pre-headered SKU 20808 is
 TP1 is a bare underside VBUS test pad.
 There are 11 M2
 mounting holes, five labelled underside probe pads and three bottom fiducials.
-Use [`manufacturing/rev0.8/`](manufacturing/rev0.8/) for the purchasing BOM,
+Use [`manufacturing/rev0.9/`](manufacturing/rev0.9/) for the purchasing BOM,
 corrected socket placement data and fabrication package; use
 [`mechanical/`](mechanical/) for the matching stabilizer/switch plate and
 case mounting references. **Allow 11 mm clearance under C5**; the old case-depth
-assumption no longer applies there. Use the [rev0.8 case base](mechanical/rev0.8/case/README.md)
+assumption no longer applies there. Use the [rev0.9 case base](mechanical/rev0.9/case/README.md)
 with socket-insertion backstops. Older Gerbers and placement exports are not
 this revision. Original-part evidence remains in the [component review](references/COMPONENT-REVIEW.md);
 new socket evidence is linked above. Supplier DFM and physical mating remain open.
@@ -194,8 +195,8 @@ physical fit checks above. Model assignments are preserved by the generator.
 
 ## Vial-QMK firmware
 
-Pin assignments are unchanged; revision 0.8 builds drive all 121 LEDs. Images and
-instructions are in [`manufacturing/rev0.8/firmware/`](manufacturing/rev0.8/firmware/).
+Pin assignments are unchanged; revision 0.9 builds drive all 121 LEDs. Images and
+instructions are in [`manufacturing/rev0.9/firmware/`](manufacturing/rev0.9/firmware/).
 
 Copy `firmware/` to `keyboards/cleaver/` in a **vial-qmk** checkout. From that
 checkout run:

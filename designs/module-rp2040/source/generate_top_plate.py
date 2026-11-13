@@ -15,8 +15,8 @@ from shapely import Point, Polygon, box, constrained_delaunay_triangles, unary_u
 from shapely.affinity import affine_transform, translate
 
 from design import ROOT, BOARD_W, BOARD_H, MOUNTING_HOLES, read_keys, REVISION
-from generate_mechanical import export_dxf, export_svg, geometry, stabilizer_cutout
-from logo_interface import APERTURE, LOGO_X, LOGO_Y, logo_leds, square
+from generate_mechanical import PLATE_H, export_dxf, export_svg, geometry, stabilizer_cutout
+from logo_interface import APERTURE, LOGO_X, LOGO_Y, logo_leds, rectangle
 
 OUT = ROOT/f'mechanical/rev{REVISION}'
 THICKNESS = 1.5
@@ -56,7 +56,7 @@ def validate_pcb(path, plate):
         mounts.append(dict(reference=ref, x_mm=x, y_mm=y, drill_mm=2.2))
 
     assert footprints['C5'].GetLayer() == pcbnew.B_Cu, 'C5 is no longer underneath'
-    assert not plate.intersects(square(APERTURE).buffer(-.00001)), 'Logo light path blocked'
+    assert not plate.intersects(rectangle(APERTURE).buffer(-.00001)), 'Logo light path blocked'
     for led in logo_leds():
         fp = footprints[led['led_ref']]
         assert np.allclose(pcbnew.ToMM(fp.GetPosition()), [led['x'], led['y']],
@@ -136,7 +136,7 @@ def main():
     assert len(cuts) == 119 and len(plate.interiors) == 129
     OUT.mkdir(parents=True, exist_ok=True)
     parts = [export_stl(OUT/f'Cleaver-top-plate-rev{REVISION}.stl', plate)]
-    export_svg(OUT/f'Cleaver-top-plate-rev{REVISION}.svg', plate, BOARD_W, BOARD_H)
+    export_svg(OUT/f'Cleaver-top-plate-rev{REVISION}.svg', plate, BOARD_W, PLATE_H)
     export_dxf(OUT/f'Cleaver-top-plate-rev{REVISION}.dxf', plate)
     for size, label in [(2, '2u'), (6.25, '6.25u')]:
         coupon = fit_coupon(size)
@@ -151,7 +151,8 @@ def main():
         controller_notch_pcb_xy_mm=[398, 0, BOARD_W, 25.5],
         obsolete_top_capacitor_opening=False,
         logo_aperture_mm=APERTURE, logo_center_pcb_xy_mm=[LOGO_X, LOGO_Y],
-        stl_coordinates='millimetres; X right, Y up, Z=0 underside; PCB (x,y) maps to (x,147.6375-y)',
+        stl_coordinates=f'millimetres; X right, Y up, Z=0 underside; PCB (x,y) maps to (x,{PLATE_H}-y)',
+        plate_front_extension_mm=PLATE_H-BOARD_H,
         physical_fit_tested=False,
         tools=dict(kicad=pcbnew.Version(), shapely=shapely.__version__,
                    geos=shapely.geos_version_string, trimesh=trimesh.__version__),

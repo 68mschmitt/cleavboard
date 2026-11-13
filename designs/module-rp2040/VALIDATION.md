@@ -1,4 +1,45 @@
-# Revision 0.8 validation — illuminated replaceable badge
+# Revision 0.9 validation — 2 × 1 inch illuminated badge
+
+Recorded **2026-11-12 local / 2026-11-13 UTC**, using KiCad 10.0.8, FreeCAD 1.1.4,
+Shapely 2.2.0 and Trimesh 5.2.0. The visible badge is **50.8 × 25.4 mm**, with
+**51.2 × 25.8 mm** plate/cover openings. The plate and case front extend **8 mm**;
+all key positions and the PCB outline are retained. H9 is now **(263,138) mm**.
+
+| Check | Result |
+| --- | --- |
+| Unit / serialized mesh / CAD / firmware callback tests | **60 passed, none skipped** |
+| Schematic ERC / routed PCB DRC, all severities | **0 / 0 violations** |
+| Unconnected copper / schematic parity issues | **0 / 0** |
+| Keys / RGB chain | **117 / 121**, with four badge emitters at 13 mm pitch |
+| Factory assembly / local 3D coverage | **489 placements / 14 purchasing groups; 607 models / 490 footprints** |
+| Serialized migration audit | All **5,356 pre-badge copper items** exactly retained; **172** replacement badge routing items |
+| Footprints | All 511 identities, values, orientations and pad nets retained; only H9 and eight badge components move |
+| Routed copper / project rules | **4,808 tracks / 720 vias**; project bytes unchanged |
+| Complete-copper regeneration | Exact canonical match; fresh ERC/DRC/parity pass |
+| Badge fit | Four clear optical paths; zero badge/PCB/plate/cover/base intersections; captive retention checked |
+| Serialized visible face | **50.8 × 25.4 mm**, independently measured from the exported STL |
+| Mechanical margins | **3.625 mm** plate front web; **0.9375 mm** flange-to-key-aperture clearance |
+| Mesh exports | 14 case/badge/coupon/shim STLs plus plate and two stabilizer coupons; single watertight bodies |
+| Firmware | Default and Vial target builds pass; UF2 headers/address ranges validated; no EEPROM overlap |
+
+Evidence is in [`manufacturing/rev0.9/checks/`](manufacturing/rev0.9/checks/),
+[`mechanical/rev0.9/`](mechanical/rev0.9/README.md) and
+[`manufacturing/rev0.9/firmware/`](manufacturing/rev0.9/firmware/README.md).
+USB device version is **0.9.0**; GPIO mapping, Vial UID/unlock, key LED indices
+and the existing power/brightness limits are retained. Physical fit, diffusion
+and hardware operation remain untested. [Badge dimensions and behavior](LOGO.md).
+
+```sh
+python3 -B designs/module-rp2040/source/check_kicad.py --reports designs/module-rp2040/manufacturing/rev0.9/checks
+python3 -B designs/module-rp2040/source/check_routing_roundtrip.py
+python3 -B -m unittest discover -s designs/module-rp2040/source -p 'test_*.py'
+```
+
+`upgrade_rev09_routing.py` records the one-time migration from explicit rev0.8
+and rev0.7 backups. Normal regeneration uses the committed rev0.9 complete-copper
+archive. Use the matching rev0.9 PCB, plate, base and cover together.
+
+## Historical revision 0.8 — 16 mm square badge
 
 Recorded **2026-11-12 local / 2026-11-13 UTC**, KiCad 10.0.8, FreeCAD 1.1.4,
 Shapely 2.2.0 and Trimesh 5.2.0. This revision adds a four-pixel RGB badge,

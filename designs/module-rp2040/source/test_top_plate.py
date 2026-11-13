@@ -15,7 +15,7 @@ if HAS_MESH_TOOLS:
     import numpy as np
     import trimesh
     from shapely import Point, Polygon, box
-    from generate_mechanical import geometry
+    from generate_mechanical import PLATE_H, geometry
     from generate_top_plate import OUT, THICKNESS, fit_coupon, top_surface, validate_pcb
 
 
@@ -68,7 +68,7 @@ class TopPlateTests(unittest.TestCase):
         stabilized = {stab['ref'] for stab in self.stabs}
         for switch in switches:
             x, pcb_y = pcbnew.ToMM(switch.GetPosition())
-            y = BOARD_H-pcb_y
+            y = PLATE_H-pcb_y
             openings = [hole for hole in self.openings if hole.contains(Point(x, y))]
             self.assertEqual(len(openings), 1, switch.GetReference())
             self.assertTrue(openings[0].covers(box(x-6.9999, y-6.9999, x+6.9999, y+6.9999)))
@@ -84,7 +84,7 @@ class TopPlateTests(unittest.TestCase):
         for mount in mounts:
             pad = list(mount.Pads())[0]
             x, pcb_y = pcbnew.ToMM(pad.GetPosition())
-            y = BOARD_H-pcb_y
+            y = PLATE_H-pcb_y
             holes = [hole for hole in self.openings if hole.contains(Point(x, y))]
             self.assertEqual(len(holes), 1, mount.GetReference())
             np.testing.assert_allclose(holes[0].bounds, [x-1.1, y-1.1, x+1.1, y+1.1], rtol=0, atol=2e-5)
@@ -99,23 +99,23 @@ class TopPlateTests(unittest.TestCase):
             spacing, rotation = expected[stab['ref']]
             self.assertEqual((stab['stem_spacing_mm'], stab['rotation_deg']), (spacing, rotation))
             x, y = stab['x_mm'], stab['y_mm']
-            hole = next(h for h in self.openings if h.contains(Point(x, BOARD_H-y)))
+            hole = next(h for h in self.openings if h.contains(Point(x, PLATE_H-y)))
             samples = [(0, 0), (spacing/4, 0), (-spacing/4, 0)]
             for sign in [-1, 1]:
                 samples.extend([(sign*spacing/2, -5.5), (sign*spacing/2, 7.9),
                                 (sign*(spacing/2+3.7), -1)])
             for u, v in samples:
                 dx, dy = (-v, u) if rotation == 90 else (u, v)
-                self.assertTrue(hole.contains(Point(x+dx, BOARD_H-y-dy)), stab['ref'])
+                self.assertTrue(hole.contains(Point(x+dx, PLATE_H-y-dy)), stab['ref'])
 
     def test_controller_notch_and_no_obsolete_capacitor_hole(self):
-        self.assertFalse(self.surface.intersects(box(398.01, BOARD_H-25.49, BOARD_W, BOARD_H)))
-        self.assertTrue(self.surface.covers(Point(377, BOARD_H-6)))
+        self.assertFalse(self.surface.intersects(box(398.01, PLATE_H-25.49, BOARD_W, PLATE_H)))
+        self.assertTrue(self.surface.covers(Point(377, PLATE_H-6)))
         self.assertEqual(len(self.surface.interiors), 129)
         self.assertEqual(self.mesh.euler_number, 2-2*129)
 
     def test_all_stls_and_report_agree(self):
-        expected_sizes = [[BOARD_W, BOARD_H, THICKNESS], [40, 24, THICKNESS], [120, 24, THICKNESS]]
+        expected_sizes = [[BOARD_W, BOARD_H+8, THICKNESS], [40, 24, THICKNESS], [120, 24, THICKNESS]]
         self.assertEqual(len(self.report['parts']), 3)
         for part, size in zip(self.report['parts'], expected_sizes):
             path = OUT/part['file']

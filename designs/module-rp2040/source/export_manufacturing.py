@@ -102,8 +102,8 @@ def main():
         ['2u stabilizers',7,'plate','Cherry-style plate mount, 23.8mm stem spacing'],
         ['6.25u stabilizer',1,'plate','Cherry-style plate mount, 100mm stem spacing'],
         ['Mounting screws',len(MOUNTING_HOLES),'case/plate','M2; choose lengths for your printed case; 6mm reserved diameter'],
-        ['Logo light well',1,'plate opening','Opaque print; mechanical/rev0.8/case/Logo-light-well.stl'],
-        ['Logo insert',1,'captured beneath cover','Translucent print or custom two-color badge; 16mm body / 19mm flange']])
+        ['Logo light well',1,'plate opening',f'Opaque print; mechanical/rev{REVISION}/case/Logo-light-well.stl'],
+        ['Logo insert',1,'captured beneath cover','Translucent print or custom two-color badge; 50.8x25.4mm body / 53.8x28.4mm flange']])
     (OUT/'assembly-bottom.svg').write_text(drawing(board))
     fab=OUT/'fabrication';fab.mkdir(exist_ok=True)
     subprocess.run(['kicad-cli','pcb','export','gerbers','--use-drill-file-origin','--layers',

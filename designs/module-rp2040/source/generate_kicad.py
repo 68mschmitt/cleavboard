@@ -653,7 +653,7 @@ def generate_firmware(keys, leds):
     info = dict(keyboard_name="Cleaver", manufacturer="Cleaver keyboard project", maintainer="cleaver",
                 processor="RP2040", bootloader="rp2040", diode_direction="ROW2COL",
                 matrix_pins=dict(rows=ROW_GPIOS, cols=COL_GPIOS),
-                usb=dict(vid="0xFEED", pid="0xC1EA", device_version="0.8.0", max_power=500),
+                usb=dict(vid="0xFEED", pid="0xC1EA", device_version=REVISION+".0", max_power=500),
                 features=dict(bootmagic=True, extrakey=True, nkro=True, rgb_matrix=True),
                 ws2812=dict(driver="vendor", pin=RGB_GPIO),
                 rgb_matrix=dict(driver="ws2812", max_brightness=8, sleep=True,

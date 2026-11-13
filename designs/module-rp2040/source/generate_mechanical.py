@@ -12,9 +12,10 @@ from html import escape
 from shapely import Point, box, unary_union
 from shapely.affinity import rotate, translate
 from design import ROOT, BOARD_W, BOARD_H, MOUNTING_HOLES, read_keys
-from logo_interface import APERTURE, square
+from logo_interface import APERTURE, FRONT_EXTENSION, rectangle
 
 OUT = ROOT/'mechanical'
+PLATE_H = BOARD_H+FRONT_EXTENSION
 
 
 def stabilizer_cutout(size):
@@ -50,13 +51,13 @@ def geometry(*, top_capacitor_opening=True):
     cuts.append(box(398,-1,BOARD_W+1,25.5))
     if top_capacitor_opening:
         cuts.append(Point(377,6).buffer(5,quad_segs=64))
-    cuts.append(square(APERTURE))
+    cuts.append(rectangle(APERTURE))
     for index,(x,y) in enumerate(MOUNTING_HOLES,1):
         reserve = Point(x,y).buffer(3,quad_segs=64)
         for cut in cuts:
             assert not reserve.intersects(cut), f'H{index}: screw/standoff overlaps plate opening'
     holes=[Point(x,y).buffer(1.1,quad_segs=64) for x,y in MOUNTING_HOLES]
-    plate=box(0,0,BOARD_W,BOARD_H).difference(unary_union(cuts+holes))
+    plate=box(0,0,BOARD_W,PLATE_H).difference(unary_union(cuts+holes))
     assert plate.is_valid and plate.geom_type=='Polygon', 'Plate is disconnected or invalid'
     assert len(stabs)==8
     return plate,cuts,stabs
@@ -87,7 +88,7 @@ def export_dxf(path,poly):
 def main():
     OUT.mkdir(exist_ok=True)
     plate,cuts,stabs=geometry()
-    export_svg(OUT/'Cleaver-plate.svg',plate,BOARD_W,BOARD_H)
+    export_svg(OUT/'Cleaver-plate.svg',plate,BOARD_W,PLATE_H)
     export_dxf(OUT/'Cleaver-plate.dxf',plate)
     labels=''
     for i,(x,y) in enumerate(MOUNTING_HOLES,1):
@@ -95,7 +96,7 @@ def main():
         anchor='start' if side==1 else 'end'
         labels+=f'<circle cx="{x}" cy="{y}" r="3" fill="none" stroke="#2266bb" stroke-width=".15"/>'
         labels+=f'<text x="{x+side*3.5}" y="{y}" text-anchor="{anchor}" font-size="1.8" fill="#2266bb">H{i}</text>'
-    export_svg(OUT/'mounting-plan.svg',plate,BOARD_W,BOARD_H,labels)
+    export_svg(OUT/'mounting-plan.svg',plate,BOARD_W,PLATE_H,labels)
     with (OUT/'mounting-holes.csv').open('w',newline='') as f:
         writer=csv.writer(f,lineterminator='\n')
         writer.writerow(['reference','x_mm','y_mm','drill_mm','reserved_diameter_mm'])

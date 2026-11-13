@@ -24,9 +24,9 @@ import trimesh
 
 from build_3d_models import freecad
 from design import BOARD_H, BOARD_W, MODULE_X, MODULE_Y, MOUNTING_HOLES, ROOT, U, read_keys, REVISION, CONTROLLER_SOCKETS
-from generate_mechanical import geometry, svg_path
+from generate_mechanical import PLATE_H, geometry, svg_path
 from generate_top_plate import top_surface, validate_pcb
-from logo_interface import APERTURE, INSERT, FLANGE, LIGHT_BORE, LOGO_X, LOGO_Y, logo_leds, square
+from logo_interface import APERTURE, INSERT, FLANGE, LIGHT_BORE, FRONT_EXTENSION, LOGO_X, LOGO_Y, logo_leds, rectangle
 
 OUT = ROOT/f'mechanical/rev{REVISION}/case'
 PCB_THICKNESS = 1.6
@@ -61,6 +61,7 @@ class Parameters:
     usb_opening_height_mm: float = 7.2
     usb_center_above_pcb_mm: float = 5.74
     socket_support_gap_mm: float = .7
+    front_extension_mm: float = FRONT_EXTENSION
 
     @property
     def margin(self):
@@ -89,6 +90,7 @@ class Parameters:
 
     def validate(self):
         assert all(math.isfinite(v) and v > 0 for v in asdict(self).values())
+        assert self.front_extension_mm == FRONT_EXTENSION, 'Case must match the extended plate'
         assert 2 <= self.typing_angle_deg <= 10, 'Supported typing angle is 2–10 degrees'
         assert self.cover_underside_above_pcb_mm >= 8.4, 'Socketed module needs its headroom'
         assert .7 <= self.socket_support_gap_mm <= 1.0, 'Unshimmed backstops must clear the full socket height tolerance'
@@ -106,22 +108,22 @@ def digest(path):
 
 
 def cover_screws(p):
-    return [(x, y) for y in (-p.cover_screw_offset, BOARD_H+p.cover_screw_offset)
+    return [(x, y) for y in (-p.cover_screw_offset, PLATE_H+p.cover_screw_offset)
             for x in (10, 145, 300, BOARD_W-10)]
 
 
 def outlines(p):
     """Plan geometry in PCB top-view coordinates (+Y towards the user)."""
     m, r = p.margin, p.outer_corner_radius_mm
-    outer = box(-m+r, -m+r, BOARD_W+m-r, BOARD_H+m-r).buffer(r, quad_segs=16)
+    outer = box(-m+r, -m+r, BOARD_W+m-r, PLATE_H+m-r).buffer(r, quad_segs=16)
     pocket = box(-p.pcb_edge_clearance_mm, -p.pcb_edge_clearance_mm,
-                 BOARD_W+p.pcb_edge_clearance_mm, BOARD_H+p.pcb_edge_clearance_mm)
+                 BOARD_W+p.pcb_edge_clearance_mm, PLATE_H+p.pcb_edge_clearance_mm)
     keys, _ = read_keys()
     e = p.key_aperture_extra_per_side_mm
     # Unite neighbours: no fragile ~0.5 mm webs between individual keycaps.
     apertures = unary_union([box(k['x']-k['w']*U/2-e, k['y']-k['h']*U/2-e,
                                 k['x']+k['w']*U/2+e, k['y']+k['h']*U/2+e) for k in keys])
-    deck = outer.difference(apertures.union(square(APERTURE)))
+    deck = outer.difference(apertures.union(rectangle(APERTURE)))
     assert deck.is_valid and deck.geom_type == 'Polygon', 'Disconnected bezel'
     return outer, pocket, apertures, deck
 
@@ -176,18 +178,18 @@ def badge_shapes(p):
     """Captive underside flange; lift the cover to exchange a printed badge.
 
     The opaque carrier rests on the switch plate, with a sleeve through its
-    square opening. A hollow translucent cap rests on the carrier and is
+    rectangular opening. A hollow translucent cap rests on the carrier and is
     retained by the cover. The carrier never bears on the PCB or emitters.
     """
     flange_top = p.cover_underside_above_pcb_mm-.2
     flange_bottom = flange_top-.8
     assert flange_bottom > PLATE_TOP+1
-    carrier = prism(square(INSERT).difference(square(LIGHT_BORE)), .8, flange_bottom-.8)
-    carrier = carrier.fuse(prism(square(FLANGE).difference(square(LIGHT_BORE)),
+    carrier = prism(rectangle(INSERT).difference(rectangle(LIGHT_BORE)), .8, flange_bottom-.8)
+    carrier = carrier.fuse(prism(rectangle(FLANGE).difference(rectangle(LIGHT_BORE)),
                                  PLATE_TOP, flange_bottom-PLATE_TOP)).removeSplitter()
-    cap = prism(square(INSERT), flange_top, p.cover_top-flange_top).fuse(
-        prism(square(FLANGE), flange_bottom, .8))
-    cap = cap.cut(prism(square(LIGHT_BORE), flange_bottom-.1,
+    cap = prism(rectangle(INSERT), flange_top, p.cover_top-flange_top).fuse(
+        prism(rectangle(FLANGE), flange_bottom, .8))
+    cap = cap.cut(prism(rectangle(LIGHT_BORE), flange_bottom-.1,
                         p.cover_top-1.0-flange_bottom+.1)).removeSplitter()
     return carrier, cap
 
@@ -226,14 +228,14 @@ def build(p):
     tray = tray.cut(assembled(part.makeCompound(insert_holes), p))
 
     rebate = box(-p.rebate_offset, -p.rebate_offset,
-                 BOARD_W+p.rebate_offset, BOARD_H+p.rebate_offset)
+                 BOARD_W+p.rebate_offset, PLATE_H+p.rebate_offset)
     tray = tray.cut(assembled(prism(rebate, ztop-p.cover_lip_depth_mm-.2,
                                    p.cover_lip_depth_mm+1), p))
     tray = tray.cut(assembled(usb_tool(p), p)).removeSplitter()
 
     lip_out, lip_in = p.lip_outer_offset, p.cover_lip_inner_offset_mm
-    lip = box(-lip_out, -lip_out, BOARD_W+lip_out, BOARD_H+lip_out).difference(
-        box(-lip_in, -lip_in, BOARD_W+lip_in, BOARD_H+lip_in))
+    lip = box(-lip_out, -lip_out, BOARD_W+lip_out, PLATE_H+lip_out).difference(
+        box(-lip_in, -lip_in, BOARD_W+lip_in, PLATE_H+lip_in))
     cover = prism(deck, ztop, p.cover_thickness_mm).fuse(
         prism(lip, ztop-p.cover_lip_depth_mm, p.cover_lip_depth_mm))
     screw_cuts = []
@@ -265,9 +267,9 @@ def validate_source(p, plate):
     assert math.isclose(fps['U1'].GetOrientationDegrees(), -90), 'USB orientation changed'
     saved_plate = trimesh.load_mesh(ROOT/f'mechanical/rev{REVISION}/Cleaver-top-plate-rev{REVISION}.stl')
     assert saved_plate.is_watertight and saved_plate.is_volume, 'Invalid existing plate STL'
-    assert np.allclose(saved_plate.extents, [BOARD_W, BOARD_H, PLATE_THICKNESS], rtol=0, atol=2e-5)
+    assert np.allclose(saved_plate.extents, [BOARD_W, PLATE_H, PLATE_THICKNESS], rtol=0, atol=2e-5)
     actual_plate = affine_transform(top_surface(saved_plate, PLATE_THICKNESS),
-                                    [1, 0, 0, -1, 0, BOARD_H])
+                                    [1, 0, 0, -1, 0, PLATE_H])
     assert actual_plate.boundary.hausdorff_distance(plate.boundary) < 2e-5, 'Existing plate STL is stale'
     assert actual_plate.symmetric_difference(plate).area < plate.length*2e-5
     result.update(pcb_thickness_mm=PCB_THICKNESS, capacitor_position_matches=True,
@@ -340,8 +342,10 @@ def validate_fit(p, shapes, plate):
                                .4, p.cover_top-1.0-.4), p)
         for obstacle in [cover, plate_shape, *badge_parts.values()]:
             assert beam.common(obstacle).Volume < 1e-6, f"{led['led_ref']}: optical path blocked"
-    assert square(FLANGE).distance(shapes['apertures']) > .5, 'Badge flange near a keycap'
-    assert BOARD_H-LOGO_Y-APERTURE/2 > 1.3, 'Plate front web is too thin'
+    assert rectangle(FLANGE).distance(shapes['apertures']) > .5, 'Badge flange near a keycap'
+    assert PLATE_H-LOGO_Y-APERTURE[1]/2 > 3, 'Plate front web is too thin'
+    for x, y in MOUNTING_HOLES:
+        assert rectangle(FLANGE).distance(Point(x, y)) > STANDOFF_DIAMETER/2+.5
 
     mounts = []
     for index, (x, y) in enumerate(MOUNTING_HOLES, 1):
@@ -364,7 +368,8 @@ def validate_fit(p, shapes, plate):
                           optical_bore_mm=LIGHT_BORE, four_optical_paths_clear=True,
                           intersection_volumes_mm3=badge_checks,
                           pcb_clearance_mm=.8, retaining_flange_vertical_clearance_mm=.2,
-                          plate_front_web_mm=round(BOARD_H-LOGO_Y-APERTURE/2, 4),
+                          plate_front_web_mm=round(PLATE_H-LOGO_Y-APERTURE[1]/2, 4),
+                          key_aperture_clearance_mm=round(rectangle(FLANGE).distance(shapes['apertures']), 4),
                           removal='Lift cover, lift insert from light well; no adhesive'),
                 standoff_outer_diameter_mm=STANDOFF_DIAMETER,
                 standoff_axes_normal_to_pcb=True, keycap_sweeps_clear=117,
@@ -450,7 +455,7 @@ def save_assembly(out, p, shapes, plate):
     add('Cover', 'PRINT: removable key bezel (assembled)', assembled(shapes['cover'], p), (.75, .78, .81))
     add('LogoLightWell', 'PRINT OPAQUE: logo light well / plate-supported carrier',
         assembled(shapes['logo_carrier'], p), (.08, .08, .08))
-    add('LogoInsert', 'PRINT TRANSLUCENT: replaceable 16 mm logo blank / 1 mm diffuser',
+    add('LogoInsert', 'PRINT TRANSLUCENT: replaceable 50.8 x 25.4 mm logo / 1 mm diffuser',
         assembled(shapes['logo_insert'], p), (.25, .75, .95), 35)
     pcb = box(0, 0, BOARD_W, BOARD_H).difference(unary_union(
         [Point(x, y).buffer(1.1, quad_segs=16) for x, y in MOUNTING_HOLES]))
@@ -494,16 +499,16 @@ def preview(out, p, shapes):
     """Lightweight, true-plan CAD drawing; no external rendering dependencies."""
     outer, _, _, _ = outlines(p)
     m = p.margin
-    head = f'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="870" viewBox="{-m-8} {-m-18} {BOARD_W+2*m+16} 335">'
+    head = f'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="920" viewBox="{-m-8} {-m-18} {BOARD_W+2*m+16} 375">'
     content = [head, '<rect x="-20" y="-30" width="510" height="390" fill="#f5f7fa"/>',
                '<g font-family="sans-serif" fill="#243244">',
                 f'<text x="0" y="-13" font-size="6">Cleaver rev{REVISION} — replaceable illuminated badge</text>',
                 f'<path d="{svg_path(shapes["deck"])}" fill="#aebac6" stroke="#34465a" stroke-width=".4" fill-rule="evenodd"/>']
-    content.extend([f'<path d="{svg_path(square(INSERT))}" fill="#6ad4e8" stroke="#247d91" stroke-width=".4"/>',
+    content.extend([f'<path d="{svg_path(rectangle(INSERT))}" fill="#6ad4e8" stroke="#247d91" stroke-width=".4"/>',
                     f'<text x="{LOGO_X}" y="{LOGO_Y+1}" text-anchor="middle" font-size="3">LOGO</text>'])
     for x, y in cover_screws(p):
         content.append(f'<circle cx="{x}" cy="{y}" r="2.1" fill="#34465a"/>')
-    content.extend(['<g transform="translate(0 168)">',
+    content.extend(['<g transform="translate(0 178)">',
                     f'<path d="{svg_path(outer)}" fill="#e0e7ee" stroke="#34465a" stroke-width=".5"/>',
                     f'<rect width="{BOARD_W}" height="{BOARD_H}" fill="none" stroke="#548567" stroke-width=".4" stroke-dasharray="2 1"/>'])
     for i, (x, y) in enumerate(MOUNTING_HOLES, 1):
@@ -512,7 +517,7 @@ def preview(out, p, shapes):
                         f'<text x="{x+4 if x<BOARD_W-20 else x-14}" y="{y+1}" font-size="3">H{i}</text>'])
     content.extend([f'<rect x="{BOARD_W-3}" y="{MODULE_Y-p.usb_opening_width_mm/2}" width="{p.margin+3}" height="{p.usb_opening_width_mm}" fill="#659fc1"/>',
                     '<circle cx="377" cy="6" r="5.5" fill="none" stroke="#b66b53" stroke-width=".4"/>',
-                    '<text x="0" y="158" font-size="4">11 x 6 mm standoffs / 5 degree tilt / right-side USB-C / 0.25 mm edge clearance per side</text>',
+                    '<text x="0" y="168" font-size="4">11 x 6 mm standoffs / 5 degree tilt / right-side USB-C / 8 mm deeper front bezel</text>',
                     '</g></g></svg>'])
     (out/'case-plan.svg').write_text('\n'.join(content)+'\n')
 
@@ -543,7 +548,7 @@ def render_preview(out, p, records):
     badge = [cad_mesh(next(r for r in records if r['file'] == name), tilt=True)
              for name in ('Logo-light-well.stl', 'Logo-insert-blank.stl')]
     plate = trimesh.load_mesh(ROOT/f'mechanical/rev{REVISION}/Cleaver-top-plate-rev{REVISION}.stl')
-    plate.apply_translation([0, 0, SPACER_HEIGHT])
+    plate.apply_translation([0, -FRONT_EXTENSION, SPACER_HEIGHT])
     plate.apply_transform(rotation)
     plate.apply_translation([0, 0, p.front_pcb_top])
     keys, _ = read_keys()
@@ -578,12 +583,12 @@ def render_preview(out, p, records):
             colors.extend(brightness[:, None]*np.array(color))
         ax.add_collection3d(Poly3DCollection(triangles, facecolors=colors, edgecolors='none',
                                             antialiaseds=False, clip_on=False))
-        ax.set(xlim=(-15, BOARD_W+15), ylim=(-15, BOARD_H+15), zlim=(0, 47))
+        ax.set(xlim=(-15, BOARD_W+15), ylim=(-15-FRONT_EXTENSION, BOARD_H+15), zlim=(0, 47))
         ax.set_box_aspect((BOARD_W+30, BOARD_H+30, 70), zoom=1.55)
         ax.view_init(elev=42, azim=-68)
         ax.set_axis_off()
         ax.set_title('Base interior — 11 PCB standoffs' if index == 1 else
-                     'Assembled — replaceable 16 mm badge between front trios', loc='left',
+                     'Assembled — replaceable 50.8 x 25.4 mm badge between front trios', loc='left',
                      fontsize=16, color='#273747', pad=-6)
     fig.text(.05, .03, f'Rev {REVISION}  /  {p.typing_angle_deg:g}° rear-raised  /  right-side USB-C  /  reference keycaps are simplified envelopes',
              fontsize=11, color='#526375')
@@ -598,19 +603,19 @@ def write_badge_template(out, p):
     text = f'''// Cleaver rev{REVISION}: replaceable badge, millimetres, face down.
 // Render "blank" for a translucent insert. For two-colour printing, export
 // "mask" and "diffuser" separately and load them together at the SAME origin.
-// Edit mark() or import a centred SVG sized to fit inside the 14 mm light bore.
-// The 19 mm retaining flange and 16 mm body are the mechanical interface.
+// Edit mark() or import a centred SVG inside the 47.8 x 22.4 mm design area.
+// The 53.8 x 28.4 mm flange and 50.8 x 25.4 mm body are the mechanical interface.
 part = "blank"; // [blank,mask,diffuser]
-face = {INSERT};
-flange = {FLANGE};
-bore = {LIGHT_BORE};
+face = {list(INSERT)};
+flange = {list(FLANGE)};
+bore = {list(LIGHT_BORE)};
 flange_z = {p.cover_thickness_mm+.2:.5f};
 flange_thickness = 0.8;
 diffuser_thickness = 1.0;
 mask_thickness = 0.4;
 
-module sq(size) {{ square([size,size],center=true); }}
-module mark() {{ text("C",size=10,halign="center",valign="center",font="Liberation Sans:style=Bold"); }}
+module sq(size) {{ square(size,center=true); }}
+module mark() {{ text("C",size=18,halign="center",valign="center",font="Liberation Sans:style=Bold"); }}
 module blank() {{
     difference() {{
         union() {{
@@ -623,10 +628,10 @@ module blank() {{
 }}
 module mask() {{
     linear_extrude(mask_thickness)
-        difference() {{ sq(face); intersection() {{ sq(bore-1); mirror([0,1,0]) mark(); }} }}
+        difference() {{ sq(face); intersection() {{ sq(bore-[1,1]); mirror([0,1,0]) mark(); }} }}
 }}
 // The Y mirror keeps lettering readable after turning the face-down print over.
-translate([flange/2,flange/2,0]) {{
+translate([flange[0]/2,flange[1]/2,0]) {{
     if (part == "blank") blank();
     else if (part == "mask") mask();
     else if (part == "diffuser") difference() {{ blank(); mask(); }}
@@ -666,8 +671,9 @@ def main():
         parts.append(export_part(out,f'controller-socket-shim-{thickness:.1f}mm',shim))
     parts.extend([export_part(out, 'Logo-light-well', shapes['logo_carrier'], face_down=True),
                   export_part(out, 'Logo-insert-blank', shapes['logo_insert'], face_down=True)])
-    # A small real section checks both square openings and the captive stack.
-    crop = box(LOGO_X-15, LOGO_Y-12, LOGO_X+15, BOARD_H+p.margin+1)
+    # A real section checks both rectangular openings and the captive stack.
+    crop = box(LOGO_X-FLANGE[0]/2-3, LOGO_Y-APERTURE[1]/2-1,
+               LOGO_X+FLANGE[0]/2+3, PLATE_H+p.margin+1)
     parts.extend([export_part(out, 'Logo-fit-coupon-cover',
                               shapes['cover'].common(prism(crop, -20, 60)).removeSplitter(), face_down=True),
                   export_part(out, 'Logo-fit-coupon-plate',

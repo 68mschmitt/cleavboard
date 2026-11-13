@@ -22,8 +22,8 @@ class LogoTests(unittest.TestCase):
         board = pcbnew.LoadBoard(str(ROOT/'Cleaver.kicad_pcb'))
         fps = {f.GetReference(): f for f in board.GetFootprints()}
         previous = fps['LED112'].FindPadByNumber('4')
-        for index, (x, y) in enumerate([(223.3975, 135.6125), (231.8975, 135.6125),
-                                       (231.8975, 140.6125), (223.3975, 140.6125)], 118):
+        for index, (x, y) in enumerate([(208.1475, 140.6125), (221.1475, 140.6125),
+                                       (234.1475, 140.6125), (247.1475, 140.6125)], 118):
             led = fps[f'LED{index}']
             np.testing.assert_allclose(pcbnew.ToMM(led.GetPosition()), [x, y], atol=1e-6, rtol=0)
             self.assertEqual(previous.GetNetname(), led.FindPadByNumber('2').GetNetname())
@@ -35,24 +35,37 @@ class LogoTests(unittest.TestCase):
             self.assertEqual(cap.FindPadByNumber('2').GetNetname(), '/GND')
             previous = led.FindPadByNumber('4')
         self.assertTrue(previous.GetNetname().startswith('unconnected-'))
-        self.assertEqual(tuple(pcbnew.ToMM(fps['H9'].GetPosition())), (250., 138.))
+        self.assertEqual(tuple(pcbnew.ToMM(fps['H9'].GetPosition())), (263., 138.))
 
     def test_serialized_aperture_is_centered_between_the_two_trios(self):
         board = pcbnew.LoadBoard(str(ROOT/'Cleaver.kicad_pcb'))
         fps = {f.GetReference(): f for f in board.GetFootprints()}
         left = pcbnew.ToMM(fps['SW114'].GetPosition())  # M8
         right = pcbnew.ToMM(fps['SW115'].GetPosition())  # M9
-        center = ((left[0]+right[0])/2, BOARD_H-left[1])
+        center = ((left[0]+right[0])/2, BOARD_H+8-(left[1]+1))
         plate = trimesh.load_mesh(ROOT/f'mechanical/rev{REVISION}/Cleaver-top-plate-rev{REVISION}.stl')
         holes = [Polygon(r) for r in top_surface(plate, 1.5).interiors]
         hole = next(h for h in holes if h.contains(Point(*center)))
-        np.testing.assert_allclose(hole.bounds, [center[0]-8.2, center[1]-8.2,
-                                               center[0]+8.2, center[1]+8.2], rtol=0, atol=2e-5)
-        self.assertGreater(hole.bounds[1], 1.3)
+        np.testing.assert_allclose(hole.bounds, [center[0]-25.6, center[1]-12.9,
+                                               center[0]+25.6, center[1]+12.9], rtol=0, atol=2e-5)
+        self.assertGreater(hole.bounds[1], 3)
         _, part = freecad()
         cover = part.read(str(ROOT/f'mechanical/rev{REVISION}/case/Cleaver-case-top-cover-rev{REVISION}.step'))
-        gauge = prism(box(center[0]-8.199, left[1]-8.199, center[0]+8.199, left[1]+8.199), 8.4, 2.4)
+        gauge = prism(box(center[0]-25.599, left[1]+1-12.899,
+                          center[0]+25.599, left[1]+1+12.899), 8.4, 2.4)
         self.assertLess(cover.common(gauge).Volume, 1e-6)
+
+    def test_printed_face_is_two_by_one_inches_and_clears_keys(self):
+        out = ROOT/f'mechanical/rev{REVISION}/case'
+        mesh = trimesh.load_mesh(out/'Logo-insert-blank.stl')
+        face = top_surface(mesh, 0)
+        x0, y0, x1, y1 = face.bounds
+        np.testing.assert_allclose([x1-x0, y1-y0], [50.8, 25.4], atol=2e-5, rtol=0)
+        np.testing.assert_allclose(mesh.extents, [53.8, 28.4, 3.4], atol=2e-5, rtol=0)
+        report = json.loads((out/'validation.json').read_text())
+        self.assertEqual(report['parameters']['front_extension_mm'], 8)
+        self.assertGreater(report['fit_checks']['logo']['key_aperture_clearance_mm'], .5)
+        self.assertTrue(all(v < 1e-6 for v in report['fit_checks']['logo']['intersection_volumes_mm3'].values()))
 
     def test_insert_cannot_escape_up_or_down_with_cover_installed(self):
         app, part = freecad()

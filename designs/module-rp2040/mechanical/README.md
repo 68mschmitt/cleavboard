@@ -1,12 +1,13 @@
 # Cleaver — case and plate interface
 
-## Revision 0.8 enclosure and badge
+## Revision 0.9 enclosure and badge
 
-Use the **[rev0.8 base, cover, light well and replaceable logo insert](rev0.8/case/README.md)**
-with the **[rev0.8 plate](rev0.8/README.md)**. The plate and cover have aligned
-16.4 mm square openings; H9's PCB/plate hole and case boss move to `(250,138)` mm.
+Use the **[rev0.9 base, cover, light well and replaceable logo insert](rev0.9/case/README.md)**
+with the **[rev0.9 plate](rev0.9/README.md)**. The **50.8 × 25.4 mm** badge fits
+aligned **51.2 × 25.8 mm** openings. The plate and bezel extend 8 mm forward;
+H9's PCB/plate hole and case boss move to `(263,138)` mm. Key positions are retained.
 [Badge dimensions, printing and customization](../LOGO.md).
-Use `rev0.8/validation.json` and the manufacturing revision's mounting-hole table
+Use `rev0.9/validation.json` and the manufacturing revision's mounting-hole table
 for the current geometry. The unversioned references below are historical.
 
 ## Historical revision 0.7 enclosure

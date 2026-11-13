@@ -1,6 +1,6 @@
 (kicad_sch (version 20250114) (generator "eeschema") (generator_version "10.0")
       (uuid 9bf9709e-b808-598c-84d6-7311e44fab35) (paper "A0")
-      (title_block (title "Cleaver - socketed RP2040-Plus / bottom SMT") (date "2026-11-12") (rev "0.8"))
+      (title_block (title "Cleaver - socketed RP2040-Plus / bottom SMT") (date "2026-11-12") (rev "0.9"))
       (lib_symbols (symbol "Cleaver:Waveshare_RP2040_Plus" (pin_names (offset 0.7)) (in_bom yes) (on_board yes)
       (property "Reference" "U" (at 0 5 0) (effects (font (size 1 1))))
       (property "Value" "Waveshare_RP2040_Plus" (at 0 -5 0) (effects (font (size 1 1))))

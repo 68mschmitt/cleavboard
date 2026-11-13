@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the complete rev0.6 hardware assembly using Blender/Cycles.
+"""Render the current hardware assembly using Blender/Cycles.
 
 Run with Blender's Python, not KiCad's Python. See case/renderings/README.md
 for the read-only KiCad GLB export and the reproducible render command.
@@ -20,9 +20,10 @@ from mathutils import Matrix, Vector
 from mathutils.bvhtree import BVHTree
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from design import BOARD_H, BOARD_W, INPUT, MOUNTING_HOLES, ROOT, U, read_keys
+from design import BOARD_H, BOARD_W, INPUT, MOUNTING_HOLES, REVISION, ROOT, U, read_keys
+from logo_interface import INSERT, LIGHT_BORE, FRONT_EXTENSION, LOGO_X, LOGO_Y, logo_leds
 
-CASE = ROOT/'mechanical/rev0.6/case'
+CASE = ROOT/f'mechanical/rev{REVISION}/case'
 MM = .001
 
 
@@ -136,7 +137,7 @@ def import_print_part(filename, report, target, parent, mat):
     return obj
 
 
-def import_pcb(path, target, stack):
+def import_pcb(path, target, stack, validation):
     existing = set(bpy.data.objects)
     bpy.ops.import_scene.gltf(filepath=str(path), loglevel=40)
     added = set(bpy.data.objects)-existing
@@ -162,12 +163,56 @@ def import_pcb(path, target, stack):
         obj.matrix_local = world
     for obj in added:
         move_to(obj, target)
-    # The saved rev0.6 board has 597 component-model instances + 6 PCB meshes.
-    assert len(meshes) == 603, f'Missing PCB/component models: {len(meshes)} meshes'
+    # KiCad adds six board/pad/mask/silkscreen meshes to the component instances.
+    models = validation['models_3d']
+    assert len(meshes) == models['model_instances']+6, f'Missing PCB/component models: {len(meshes)} meshes'
     switch_assemblies = [obj for obj in added if obj.name.startswith('SW') and obj.type == 'EMPTY']
-    return dict(meshes=len(meshes), model_instances=597, populated_footprints=480,
-                switch_models=117, switch_socket_models=117,
+    led_assemblies = [obj for obj in added if obj.name.startswith('LED') and obj.type == 'EMPTY']
+    assert len(switch_assemblies) == 2*validation['unique_switches']
+    assert len(led_assemblies) == validation['rgb_leds']
+    assert all(any(obj.name == led['led_ref'] for obj in led_assemblies) for led in logo_leds())
+    return dict(meshes=len(meshes), model_instances=models['model_instances'],
+                populated_footprints=models['populated_footprints'],
+                switch_models=validation['unique_switches'], switch_socket_models=validation['unique_switches'],
+                rgb_led_models=len(led_assemblies), logo_led_models=len(logo_leds()),
                 source_glb_sha256=sha(path), switch_assembly_nodes=len(switch_assemblies))
+
+
+def add_logo(report, target, stack, mats):
+    """Exact badge parts with an illustrative luminous C-mask surface treatment."""
+    import_print_part('Logo-light-well.stl', report, target, stack, mats['stab'])
+    insert = import_print_part('Logo-insert-blank.stl', report, target, stack, mats['ink'])
+    top = report['stack_mm']['cover_top']
+    assert abs(max(vertex.co.z for vertex in insert.data.vertices)-top*MM) < 1e-6
+    # Match the editable template's sample mark. A flush emissive glyph represents
+    # the exposed diffuser in a dark mask, rather than a calibrated optical solve.
+    font_path = next(path for path in [
+        Path('/usr/share/fonts/liberation/LiberationSans-Bold.ttf'),
+        Path('/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf'),
+        Path('/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf'),
+    ] if path.is_file())
+    text = bpy.data.curves.new('Replaceable badge — sample C mask', 'FONT')
+    text.body, text.align_x, text.align_y = 'C', 'CENTER', 'CENTER'
+    text.font = bpy.data.fonts.load(str(font_path))
+    text.size, text.resolution_u = 18*MM, 16
+    glyph = bpy.data.objects.new('Illuminated C diffuser surface', text)
+    target.objects.link(glyph)
+    glyph.parent = stack
+    glyph.location = (LOGO_X*MM, (BOARD_H-LOGO_Y)*MM, (top+.015)*MM)
+    bpy.context.view_layer.update()
+    glyph.scale *= 18*MM/glyph.dimensions.y
+    bpy.context.view_layer.update()
+    assert glyph.dimensions.x < (LIGHT_BORE[0]-1)*MM and glyph.dimensions.y < (LIGHT_BORE[1]-1)*MM
+    glow = material('Cyan logo diffuser — illustrative RGB', '57dce7', .38)
+    bsdf = glow.node_tree.nodes.get('Principled BSDF')
+    bsdf.inputs['Emission Color'].default_value = (*color('57dce7'), 1)
+    bsdf.inputs['Emission Strength'].default_value = 18
+    text.materials.append(glow)
+    return dict(light_wells=1, removable_inserts=1, face_mm=INSERT,
+                center_pcb_xy_mm=[LOGO_X, LOGO_Y], led_references=[led['led_ref'] for led in logo_leds()],
+                sample_mark='C', font=font_path.name, font_sha256=sha(font_path),
+                appearance='Cyan emissive C-mask surface on the actual insert; per-key RGB off',
+                emission_strength=18, photometrically_calibrated=False)
 
 
 def rounded_ring(w, h, radius, count=8):
@@ -373,16 +418,27 @@ def main():
     parser.add_argument('--save-scene', type=Path)
     args = parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
     report = json.loads((CASE/'validation.json').read_text())
+    pcb_validation_path = ROOT/f'manufacturing/rev{REVISION}/checks/validation.json'
+    pcb_validation = json.loads(pcb_validation_path.read_text())
     p = report['parameters']
+    assert report['revision'] == pcb_validation['revision'] == REVISION
     assert sha(ROOT/'Cleaver.kicad_pcb') == report['source_sha256'], 'Case references a stale PCB'
-    inputs = [ROOT/'Cleaver.kicad_pcb', CASE/'parameters.json', CASE/'validation.json',
-              CASE.parent/'Cleaver-top-plate-rev0.6.stl']
+    assert sha(ROOT/'Cleaver.kicad_pcb') == pcb_validation['pcb_sha256'], 'Stale PCB validation'
+    plate_path = CASE.parent/f'Cleaver-top-plate-rev{REVISION}.stl'
+    assert sha(plate_path) == report['matching_plate_sha256'], 'Case references a stale plate'
+    inputs = [ROOT/'Cleaver.kicad_pcb', pcb_validation_path, CASE/'parameters.json', CASE/'validation.json',
+              CASE.parent/'validation.json', plate_path,
+              CASE/f'Cleaver-case-base-rev{REVISION}.stl', CASE/f'Cleaver-case-top-cover-rev{REVISION}.stl',
+              CASE/'Logo-light-well.stl', CASE/'Logo-insert-blank.stl']
     input_hashes = {str(path.relative_to(ROOT)): sha(path) for path in inputs}
+    recipe_inputs = [Path(__file__).resolve(), ROOT/'source/design.py', ROOT/'source/logo_interface.py',
+                     CASE/'Logo-insert-template.scad', INPUT/'keyboard-layout.json']
+    recipe_hashes = {str(path.relative_to(ROOT.parents[1])): sha(path) for path in recipe_inputs}
     bpy.ops.object.select_all(action='SELECT')
     bpy.ops.object.delete(use_global=False)
-    enclosure, electronics = collection('01 — exact printed enclosure'), collection('02 — actual populated rev0.6 PCB')
+    enclosure, electronics = collection('01 — exact printed enclosure'), collection(f'02 — actual populated rev{REVISION} PCB')
     cap_collection, hardware = collection('03 — 117 visual keycaps and legends'), collection('04 — assembly hardware')
-    environment = collection('05 — studio and camera')
+    badge, environment = collection('05 — replaceable illuminated logo'), collection('06 — studio and camera')
     center = empty('Assembly desk datum', enclosure)
     center.location = (-BOARD_W*MM/2, -BOARD_H*MM/2, 0)
     stack = empty('5 degree PCB plane', enclosure, center)
@@ -399,24 +455,26 @@ def main():
                 brass=material('Brass inserts', 'bb8d39', .3, metallic=.8),
                 steel=material('Stainless hardware', '969da3', .25, metallic=.85),
                 stab=material('Black stabilizer nylon', '28292b', .45))
-    base = import_print_part('Cleaver-case-base-rev0.6.stl', report, enclosure, center, mats['case'])
-    cover = import_print_part('Cleaver-case-top-cover-rev0.6.stl', report, enclosure, stack, mats['case'])
+    base = import_print_part(f'Cleaver-case-base-rev{REVISION}.stl', report, enclosure, center, mats['case'])
+    cover = import_print_part(f'Cleaver-case-top-cover-rev{REVISION}.stl', report, enclosure, stack, mats['case'])
     # Tiny render-only edge rounds catch the light without changing saved CAD.
     for obj in (base, cover):
         bevel = obj.modifiers.new('Render-only edge highlight', 'BEVEL')
         bevel.width, bevel.segments, bevel.limit_method = .10*MM, 2, 'ANGLE'
-    pcb_counts = import_pcb(args.pcb, electronics, stack)
-    bpy.ops.wm.stl_import(filepath=str(CASE.parent/'Cleaver-top-plate-rev0.6.stl'), forward_axis='Y', up_axis='Z')
+    pcb_counts = import_pcb(args.pcb, electronics, stack, pcb_validation)
+    bpy.ops.wm.stl_import(filepath=str(plate_path), forward_axis='Y', up_axis='Z')
     plate = bpy.context.object
-    plate.name = 'Exact 1.5 mm rev0.6 switch plate'
+    plate.name = f'Exact 1.5 mm rev{REVISION} switch plate'
     for vertex in plate.data.vertices:
         vertex.co *= MM
+        vertex.co.y -= FRONT_EXTENSION*MM
     plate.parent = stack
     plate.location.z = 3.5*MM
     plate.data.materials.append(mats['plate'])
     move_to(plate, enclosure)
     cap_counts = add_caps(cap_collection, stack, mats)
     hardware_counts = add_hardware(report, hardware, stack, mats)
+    logo_counts = add_logo(report, badge, stack, mats)
     studio(environment)
     scene = bpy.context.scene
     scene.unit_settings.system, scene.unit_settings.scale_length = 'METRIC', 1
@@ -433,23 +491,26 @@ def main():
     scene.view_settings.exposure = -3
     scene.render.film_transparent = False
     args.output.mkdir(parents=True, exist_ok=True)
-    output = args.output/('Cleaver-rev0.6-assembled-draft.png' if args.draft else 'Cleaver-rev0.6-assembled.png')
+    output = args.output/f'Cleaver-rev{REVISION}-assembled{"-draft" if args.draft else ""}.png'
     scene.render.filepath = str(output)
     if args.save_scene:
         args.save_scene.parent.mkdir(parents=True, exist_ok=True)
         bpy.context.preferences.filepaths.save_version = 0
         bpy.ops.file.pack_all()
         bpy.ops.wm.save_as_mainfile(filepath=str(args.save_scene), compress=True)
-    print('ASSEMBLY CONTENTS:', json.dumps(dict(pcb=pcb_counts, caps=cap_counts, hardware=hardware_counts)), flush=True)
+    geometry = dict(pcb=pcb_counts, caps=cap_counts, hardware=hardware_counts, logo=logo_counts)
+    print('ASSEMBLY CONTENTS:', json.dumps(geometry), flush=True)
     bpy.ops.render.render(write_still=True)
     assert all(sha(ROOT/path) == before for path, before in input_hashes.items()), 'A CAD input changed'
-    metadata = dict(render=output.name, blender=bpy.app.version_string, engine='Cycles CPU',
+    assert all(sha(ROOT.parents[1]/path) == before for path, before in recipe_hashes.items()), 'A render input changed'
+    metadata = dict(render=output.name, revision=REVISION, blender=bpy.app.version_string, engine='Cycles CPU',
                     resolution_px=[scene.render.resolution_x, scene.render.resolution_y],
                     samples=scene.cycles.samples, exact_cad_inputs_sha256=input_hashes,
-                    geometry=dict(pcb=pcb_counts, caps=cap_counts, hardware=hardware_counts),
-                    appearance='Illustrative charcoal enclosure, ivory/stone keycaps and muted red accents; unpowered RGB',
+                    render_recipe_sha256=recipe_hashes, geometry=geometry,
+                    appearance='Illustrative charcoal enclosure, ivory/stone keycaps and muted red accents; cyan C badge, per-key RGB off',
                     limitations=['Keycap profiles and materials are illustrative, not purchased-part CAD',
                                  'Stabilizers and threaded hardware are visual approximations',
+                                 'Logo mask and emitted brightness are illustrative, not a calibrated optical simulation',
                                  'Bundled PCB component model approximations still apply',
                                  'Internal parts are present in the scene but normally hidden by the opaque closed case'],
                     image_sha256=sha(output))

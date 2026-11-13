@@ -1,4 +1,4 @@
-# Cleaver rev0.8 — Waveshare RP2040-Plus / RGB badge
+# Cleaver rev0.9 — Waveshare RP2040-Plus / RGB badge
 
 Copy this directory to `keyboards/cleaver/` in a vial-qmk checkout, then run:
 
@@ -8,7 +8,7 @@ make cleaver:vial -j4
 ```
 
 Ready-to-flash images and build provenance are in
-[`../manufacturing/rev0.8/firmware/`](../manufacturing/rev0.8/firmware/).
+[`../manufacturing/rev0.9/firmware/`](../manufacturing/rev0.9/firmware/).
 Hold BOOT while connecting USB, or hold BOOT, press/release RESET, then release
 BOOT. Copy the Vial UF2 to the `RPI-RP2` drive. Open Vial and use **Esc + main
 Enter** to unlock when requested.
@@ -34,7 +34,7 @@ W25Q080-compatible boot stage, compatible with the Waveshare W25Q32JV (4MB)
 and W25Q128JV (16MB). `WEAR_LEVELING_RP2040_FLASH_SIZE` is explicitly 2MB:
 firmware and Vial's persistent settings fit within both variants, with EEPROM
 at the same address as the earlier generic-RP2040 builds. The USB device
-version is now 0.8.0. A new physical module starts with its own EEPROM contents;
+version is now 0.9.0. A new physical module starts with its own EEPROM contents;
 export/import your Vial layout to transfer remaps from another module.
 
 ## Illuminated badge

@@ -10,7 +10,7 @@ from pathlib import Path
 from logo_interface import logo_leds
 
 ROOT = Path(__file__).resolve().parents[1]
-REVISION = '0.8'
+REVISION = '0.9'
 INPUT = ROOT.parents[1] / "assets/layout"
 U = 19.05
 BOARD_W, BOARD_H = 452.4375, 147.6375
@@ -28,7 +28,7 @@ CONTROLLER_SOCKETS = [('J1', MODULE_Y-8.89, list(range(1,21))),
 # Coordinates are top-view millimetres from the PCB's upper-left corner.
 MOUNTING_HOLES = [(4, 4), (110, 23.8), (220, 23.8), (330, 23.8),
                   (395, 26), (313, 70), (4, 143), (90, 138),
-                  (250, 138), (365, 138), (448, 138)]
+                  (263, 138), (365, 138), (448, 138)]
 FIDUCIALS = [(20, 24), (360, 138), (395, 2)]
 TEST_POINTS = [('TP2', 'GND', 410, 27), ('TP3', 'RAW_USB_5V', 418, 27),
                ('TP4', 'LED_5V', 426, 27), ('TP5', 'LED_EN', 434, 27),
@@ -138,7 +138,7 @@ def components(keys, leds):
     for led in logo_leds():
         add(led['led_ref'], 'MINI_E', 'SK6812MINI-E C5149201', led['x'], led['y'],
             {3: 'LED_5V', 4: led['rgb_out'], 1: 'GND', 2: led['rgb_in']}, back=True)
-        add(led['cap_ref'], 'C_0805', '100nF 50V X7R', led['cap_x'], led['y'],
+        add(led['cap_ref'], 'C_0805', '100nF 50V X7R', led['cap_x'], led['cap_y'],
             {1: 'LED_5V', 2: 'GND'}, back=True)
     # Pin 40 feeds F1 through carrier copper. Retain TP1 as a bare VBUS probe pad.
     add("TP1", "WirePad", "USB VBUS TEST +5V", 446, 27, {1: "RAW_USB_5V"}, back=True)

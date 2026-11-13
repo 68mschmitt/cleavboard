@@ -1,0 +1,103 @@
+{
+  "revision": "0.9",
+  "baseline_revision": "0.8",
+  "baseline_pcb_sha256": "4a5e244fae2fb5acae58779bff73701be771b0b7f6d85f98efe5a1baa8a691ae",
+  "key_routing_baseline_sha256": "c3fc62a6c67d5bb2ccf690aa6f937d139ce1a54bff259a238a39aefbe3f1ca06",
+  "pcb_sha256": "46b3962cf9f798c2da7ab25e7bbf7a1b922444d307171be02871dab5283cfff1",
+  "retained_pre_badge_copper_items": 5356,
+  "removed_old_badge_copper_items": 161,
+  "added_badge_copper_items": 172,
+  "unchanged_footprint_positions": 502,
+  "moved_positions": {
+    "LED118": {
+      "before_mm": [
+        223.3975,
+        135.6125
+      ],
+      "after_mm": [
+        208.1475,
+        140.6125
+      ]
+    },
+    "C218": {
+      "before_mm": [
+        216.1475,
+        135.6125
+      ],
+      "after_mm": [
+        208.1475,
+        135.6125
+      ]
+    },
+    "LED119": {
+      "before_mm": [
+        231.8975,
+        135.6125
+      ],
+      "after_mm": [
+        221.1475,
+        140.6125
+      ]
+    },
+    "C219": {
+      "before_mm": [
+        239.1475,
+        135.6125
+      ],
+      "after_mm": [
+        221.1475,
+        135.6125
+      ]
+    },
+    "LED120": {
+      "before_mm": [
+        231.8975,
+        140.6125
+      ],
+      "after_mm": [
+        234.1475,
+        140.6125
+      ]
+    },
+    "C220": {
+      "before_mm": [
+        239.1475,
+        140.6125
+      ],
+      "after_mm": [
+        234.1475,
+        135.6125
+      ]
+    },
+    "LED121": {
+      "before_mm": [
+        223.3975,
+        140.6125
+      ],
+      "after_mm": [
+        247.1475,
+        140.6125
+      ]
+    },
+    "C221": {
+      "before_mm": [
+        216.1475,
+        140.6125
+      ],
+      "after_mm": [
+        247.1475,
+        135.6125
+      ]
+    },
+    "H9": {
+      "before_mm": [
+        250.0,
+        138.0
+      ],
+      "after_mm": [
+        263.0,
+        138.0
+      ]
+    }
+  }
+}

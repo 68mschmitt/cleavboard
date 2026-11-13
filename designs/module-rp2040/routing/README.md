@@ -1,10 +1,11 @@
-# Accepted revision 0.8 routing
+# Accepted revision 0.9 routing
 
 `Cleaver.ses` contains **all routed copper**, including the power/ground fanouts,
 SMD bulk-capacitor, VBUS test pads, **J1/J2 socket escapes and J2.1 VBUS feed**,
 and **LED118–LED121 / C218–C221 badge connections**. It carries no placement
 instructions; the schematic/shared design is authoritative for placement.
-Use the matching revision: the prior rev0.7 archive lacks badge connections,
+Use the matching revision: rev0.8 has the earlier, clustered badge positions;
+the prior rev0.7 archive lacks badge connections,
 and rev0.6 targets plated U1 holes instead of the staggered SMT lands. Historical
 sessions are retained in `archive/`.
 
@@ -27,7 +28,14 @@ zero unconnected items and zero schematic/PCB parity issues.
 
 ## Provenance
 
-Revision 0.8 adds four badge pixels after LED112, with separate bypass capacitors
+Revision 0.9 spreads the four badge pixels across a 39 mm-wide row, moves their
+bypass capacitors and relocates H9 and its rule area to `(263,138)` mm. All
+**5,356 pre-badge copper items** retain exact identities, geometry and nets;
+the old 161 badge items are replaced by **172** routed items.
+`upgrade_rev09_routing.py` records the migration from explicit rev0.8 and rev0.7
+backups. See [rev0.9 migration and round-trip evidence](../manufacturing/rev0.9/checks/).
+
+Historical revision 0.8 adds four badge pixels after LED112, with separate bypass capacitors
 and off-pad plane access. H9 and its rule area move to `(250,138)` mm. All
 **5,356 prior copper items** retain exact identities/geometry/nets; **161** are
 added. The result has **4,793 tracks / 724 vias**. `upgrade_rev08_routing.py`
