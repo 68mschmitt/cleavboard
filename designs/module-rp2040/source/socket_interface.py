@@ -10,7 +10,7 @@ from pathlib import Path
 
 import pcbnew
 
-from design import ROOT
+from design import ROOT, REVISION
 
 
 def validate_interface(board):
@@ -89,4 +89,4 @@ def write_outputs(board,out):
 
 
 if __name__=='__main__':
-    write_outputs(pcbnew.LoadBoard(str(ROOT/'Cleaver.kicad_pcb')),ROOT/'manufacturing/rev0.7')
+    write_outputs(pcbnew.LoadBoard(str(ROOT/'Cleaver.kicad_pcb')),ROOT/f'manufacturing/rev{REVISION}')

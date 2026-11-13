@@ -1,0 +1,506 @@
+{
+  "revision": "0.8",
+  "controller": "socketed Waveshare RP2040-Plus",
+  "matrix": "8x16",
+  "unique_switches": 117,
+  "rgb_leds": 121,
+  "logo_leds": [
+    {
+      "led_ref": "LED118",
+      "cap_ref": "C218",
+      "x": 223.3975,
+      "y": 135.6125,
+      "cap_x": 216.1475,
+      "led_index": 117,
+      "rgb_in": "RGB_117",
+      "rgb_out": "RGB_118"
+    },
+    {
+      "led_ref": "LED119",
+      "cap_ref": "C219",
+      "x": 231.8975,
+      "y": 135.6125,
+      "cap_x": 239.1475,
+      "led_index": 118,
+      "rgb_in": "RGB_118",
+      "rgb_out": "RGB_119"
+    },
+    {
+      "led_ref": "LED120",
+      "cap_ref": "C220",
+      "x": 231.8975,
+      "y": 140.6125,
+      "cap_x": 239.1475,
+      "led_index": 119,
+      "rgb_in": "RGB_119",
+      "rgb_out": "RGB_120"
+    },
+    {
+      "led_ref": "LED121",
+      "cap_ref": "C221",
+      "x": 223.3975,
+      "y": 140.6125,
+      "cap_x": 216.1475,
+      "led_index": 120,
+      "rgb_in": "RGB_120",
+      "rgb_out": null
+    }
+  ],
+  "bottom_factory_placements": 489,
+  "pth_pads": 0,
+  "controller_pin_entry_npth": 40,
+  "front_paste_pads": 0,
+  "pcb_sha256": "eb566f9610c159f96141dac292a86400c97fd9a7d74f65e2fb6447cb1dedeeca",
+  "schematic_sha256": "7f5208b24194f4e572e2c7992e987e4bc618df87d8f4ab40ead9e7a2dec6f058",
+  "erc": "pass",
+  "drc": "pass",
+  "schematic_pcb_firmware_mapping": "pass",
+  "models_3d": {
+    "populated_footprints": 490,
+    "model_instances": 607,
+    "unique_models": 12,
+    "intentionally_unmodeled": [
+      "TP1: VBUS test pad",
+      "TP2-TP6: probe pads",
+      "H*: mounting holes",
+      "FID*: bare copper fiducials",
+      "LOGO1: silkscreen artwork"
+    ]
+  },
+  "controller_interface": {
+    "socket_mpn": "M20-7862042",
+    "socket_quantity": 2,
+    "lcsc": "C5379059",
+    "mating_header_mpn": "TSW-120-14-G-S",
+    "mating_header_quantity": 2,
+    "header_orientation": "8.13mm gold posts DOWN; solder 2.79mm tails to module only",
+    "board_thickness_mm": 1.6,
+    "male_post_length_mm": 8.13,
+    "tolerance_assumptions_mm": {
+      "male_post": 0.13,
+      "board_thickness": 0.16,
+      "seating_gap_max": 0.2,
+      "socket_height": 0.5,
+      "contact_position": 0.1
+    },
+    "minimum_insertion_from_socket_entry_mm": 6.04,
+    "maximum_insertion_from_socket_entry_mm": 6.82,
+    "minimum_depth_beyond_contact_point_mm": 1.6,
+    "minimum_pin_tip_to_socket_far_end_mm": 0.18,
+    "module_header_insulator_height_mm": 2.54,
+    "nominal_module_top_envelope_mm": 7.64,
+    "case_checked_module_top_envelope_mm": 8.2,
+    "nominal_socket_height_below_carrier_mm": 7.5,
+    "maximum_socket_height_below_carrier_mm": 8.0,
+    "nominal_npth_to_solder_land_clearance_mm": 0.3,
+    "npth_drill_mm": 1,
+    "required_drill_tolerance_mm": 0.05,
+    "maximum_insertion_force_all_40_contacts_N": 80,
+    "preheadered_waveshare_20808_qualified": false,
+    "physical_mating_tested": false,
+    "jlc_order_preview_approved": false,
+    "supplier_dfm_approved": false,
+    "pin_map": [
+      {
+        "socket": "J1",
+        "socket_pin": 1,
+        "module_pin": 1,
+        "entry_x_mm": 449.8975,
+        "entry_y_mm": 4.5,
+        "solder_x_mm": 449.8975,
+        "solder_y_mm": 2.8,
+        "net": "/ROW0"
+      },
+      {
+        "socket": "J1",
+        "socket_pin": 2,
+        "module_pin": 2,
+        "entry_x_mm": 447.3575,
+        "entry_y_mm": 4.5,
+        "solder_x_mm": 447.3575,
+        "solder_y_mm": 6.2,
+        "net": "/ROW1"
+      },
+      {
+        "socket": "J1",
+        "socket_pin": 3,
+        "module_pin": 3,
+        "entry_x_mm": 444.8175,
+        "entry_y_mm": 4.5,
+        "solder_x_mm": 444.8175,
+        "solder_y_mm": 2.8,
+        "net": "/GND"
+      },
+      {
+        "socket": "J1",
+        "socket_pin": 4,
+        "module_pin": 4,
+        "entry_x_mm": 442.2775,
+        "entry_y_mm": 4.5,
+        "solder_x_mm": 442.2775,
+        "solder_y_mm": 6.2,
+        "net": "/ROW2"
+      },
+      {
+        "socket": "J1",
+        "socket_pin": 5,
+        "module_pin": 5,
+        "entry_x_mm": 439.7375,
+        "entry_y_mm": 4.5,
+        "solder_x_mm": 439.7375,
+        "solder_y_mm": 2.8,
+        "net": "/ROW3"
+      },
+      {
+        "socket": "J1",
+        "socket_pin": 6,
+        "module_pin": 6,
+        "entry_x_mm": 437.1975,
+        "entry_y_mm": 4.5,
+        "solder_x_mm": 437.1975,
+        "solder_y_mm": 6.2,
+        "net": "/ROW4"
+      },
+      {
+        "socket": "J1",
+        "socket_pin": 7,
+        "module_pin": 7,
+        "entry_x_mm": 434.6575,
+        "entry_y_mm": 4.5,
+        "solder_x_mm": 434.6575,
+        "solder_y_mm": 2.8,
+        "net": "/ROW5"
+      },
+      {
+        "socket": "J1",
+        "socket_pin": 8,
+        "module_pin": 8,
+        "entry_x_mm": 432.1175,
+        "entry_y_mm": 4.5,
+        "solder_x_mm": 432.1175,
+        "solder_y_mm": 6.2,
+        "net": "/GND"
+      },
+      {
+        "socket": "J1",
+        "socket_pin": 9,
+        "module_pin": 9,
+        "entry_x_mm": 429.5775,
+        "entry_y_mm": 4.5,
+        "solder_x_mm": 429.5775,
+        "solder_y_mm": 2.8,
+        "net": "/ROW6"
+      },
+      {
+        "socket": "J1",
+        "socket_pin": 10,
+        "module_pin": 10,
+        "entry_x_mm": 427.0375,
+        "entry_y_mm": 4.5,
+        "solder_x_mm": 427.0375,
+        "solder_y_mm": 6.2,
+        "net": "/ROW7"
+      },
+      {
+        "socket": "J1",
+        "socket_pin": 11,
+        "module_pin": 11,
+        "entry_x_mm": 424.4975,
+        "entry_y_mm": 4.5,
+        "solder_x_mm": 424.4975,
+        "solder_y_mm": 2.8,
+        "net": "/COL00"
+      },
+      {
+        "socket": "J1",
+        "socket_pin": 12,
+        "module_pin": 12,
+        "entry_x_mm": 421.9575,
+        "entry_y_mm": 4.5,
+        "solder_x_mm": 421.9575,
+        "solder_y_mm": 6.2,
+        "net": "/COL01"
+      },
+      {
+        "socket": "J1",
+        "socket_pin": 13,
+        "module_pin": 13,
+        "entry_x_mm": 419.4175,
+        "entry_y_mm": 4.5,
+        "solder_x_mm": 419.4175,
+        "solder_y_mm": 2.8,
+        "net": "/GND"
+      },
+      {
+        "socket": "J1",
+        "socket_pin": 14,
+        "module_pin": 14,
+        "entry_x_mm": 416.8775,
+        "entry_y_mm": 4.5,
+        "solder_x_mm": 416.8775,
+        "solder_y_mm": 6.2,
+        "net": "/COL02"
+      },
+      {
+        "socket": "J1",
+        "socket_pin": 15,
+        "module_pin": 15,
+        "entry_x_mm": 414.3375,
+        "entry_y_mm": 4.5,
+        "solder_x_mm": 414.3375,
+        "solder_y_mm": 2.8,
+        "net": "/COL03"
+      },
+      {
+        "socket": "J1",
+        "socket_pin": 16,
+        "module_pin": 16,
+        "entry_x_mm": 411.7975,
+        "entry_y_mm": 4.5,
+        "solder_x_mm": 411.7975,
+        "solder_y_mm": 6.2,
+        "net": "/COL04"
+      },
+      {
+        "socket": "J1",
+        "socket_pin": 17,
+        "module_pin": 17,
+        "entry_x_mm": 409.2575,
+        "entry_y_mm": 4.5,
+        "solder_x_mm": 409.2575,
+        "solder_y_mm": 2.8,
+        "net": "/COL05"
+      },
+      {
+        "socket": "J1",
+        "socket_pin": 18,
+        "module_pin": 18,
+        "entry_x_mm": 406.7175,
+        "entry_y_mm": 4.5,
+        "solder_x_mm": 406.7175,
+        "solder_y_mm": 6.2,
+        "net": "/GND"
+      },
+      {
+        "socket": "J1",
+        "socket_pin": 19,
+        "module_pin": 19,
+        "entry_x_mm": 404.1775,
+        "entry_y_mm": 4.5,
+        "solder_x_mm": 404.1775,
+        "solder_y_mm": 2.8,
+        "net": "/COL06"
+      },
+      {
+        "socket": "J1",
+        "socket_pin": 20,
+        "module_pin": 20,
+        "entry_x_mm": 401.6375,
+        "entry_y_mm": 4.5,
+        "solder_x_mm": 401.6375,
+        "solder_y_mm": 6.2,
+        "net": "/COL07"
+      },
+      {
+        "socket": "J2",
+        "socket_pin": 1,
+        "module_pin": 40,
+        "entry_x_mm": 449.8975,
+        "entry_y_mm": 22.28,
+        "solder_x_mm": 449.8975,
+        "solder_y_mm": 20.58,
+        "net": "/RAW_USB_5V"
+      },
+      {
+        "socket": "J2",
+        "socket_pin": 2,
+        "module_pin": 39,
+        "entry_x_mm": 447.3575,
+        "entry_y_mm": 22.28,
+        "solder_x_mm": 447.3575,
+        "solder_y_mm": 23.98,
+        "net": "/MODULE_VSYS"
+      },
+      {
+        "socket": "J2",
+        "socket_pin": 3,
+        "module_pin": 38,
+        "entry_x_mm": 444.8175,
+        "entry_y_mm": 22.28,
+        "solder_x_mm": 444.8175,
+        "solder_y_mm": 20.58,
+        "net": "/GND"
+      },
+      {
+        "socket": "J2",
+        "socket_pin": 4,
+        "module_pin": 37,
+        "entry_x_mm": 442.2775,
+        "entry_y_mm": 22.28,
+        "solder_x_mm": 442.2775,
+        "solder_y_mm": 23.98,
+        "net": "/MODULE_3V3_EN"
+      },
+      {
+        "socket": "J2",
+        "socket_pin": 5,
+        "module_pin": 36,
+        "entry_x_mm": 439.7375,
+        "entry_y_mm": 22.28,
+        "solder_x_mm": 439.7375,
+        "solder_y_mm": 20.58,
+        "net": "/MODULE_3V3_OUT"
+      },
+      {
+        "socket": "J2",
+        "socket_pin": 6,
+        "module_pin": 35,
+        "entry_x_mm": 437.1975,
+        "entry_y_mm": 22.28,
+        "solder_x_mm": 437.1975,
+        "solder_y_mm": 23.98,
+        "net": "/MODULE_ADC_VREF"
+      },
+      {
+        "socket": "J2",
+        "socket_pin": 7,
+        "module_pin": 34,
+        "entry_x_mm": 434.6575,
+        "entry_y_mm": 22.28,
+        "solder_x_mm": 434.6575,
+        "solder_y_mm": 20.58,
+        "net": "/LED_EN"
+      },
+      {
+        "socket": "J2",
+        "socket_pin": 8,
+        "module_pin": 33,
+        "entry_x_mm": 432.1175,
+        "entry_y_mm": 22.28,
+        "solder_x_mm": 432.1175,
+        "solder_y_mm": 23.98,
+        "net": "/GND"
+      },
+      {
+        "socket": "J2",
+        "socket_pin": 9,
+        "module_pin": 32,
+        "entry_x_mm": 429.5775,
+        "entry_y_mm": 22.28,
+        "solder_x_mm": 429.5775,
+        "solder_y_mm": 20.58,
+        "net": "/RGB_DATA"
+      },
+      {
+        "socket": "J2",
+        "socket_pin": 10,
+        "module_pin": 31,
+        "entry_x_mm": 427.0375,
+        "entry_y_mm": 22.28,
+        "solder_x_mm": 427.0375,
+        "solder_y_mm": 23.98,
+        "net": "/COL15"
+      },
+      {
+        "socket": "J2",
+        "socket_pin": 11,
+        "module_pin": 30,
+        "entry_x_mm": 424.4975,
+        "entry_y_mm": 22.28,
+        "solder_x_mm": 424.4975,
+        "solder_y_mm": 20.58,
+        "net": "/MODULE_RUN"
+      },
+      {
+        "socket": "J2",
+        "socket_pin": 12,
+        "module_pin": 29,
+        "entry_x_mm": 421.9575,
+        "entry_y_mm": 22.28,
+        "solder_x_mm": 421.9575,
+        "solder_y_mm": 23.98,
+        "net": "/COL14"
+      },
+      {
+        "socket": "J2",
+        "socket_pin": 13,
+        "module_pin": 28,
+        "entry_x_mm": 419.4175,
+        "entry_y_mm": 22.28,
+        "solder_x_mm": 419.4175,
+        "solder_y_mm": 20.58,
+        "net": "/GND"
+      },
+      {
+        "socket": "J2",
+        "socket_pin": 14,
+        "module_pin": 27,
+        "entry_x_mm": 416.8775,
+        "entry_y_mm": 22.28,
+        "solder_x_mm": 416.8775,
+        "solder_y_mm": 23.98,
+        "net": "/COL13"
+      },
+      {
+        "socket": "J2",
+        "socket_pin": 15,
+        "module_pin": 26,
+        "entry_x_mm": 414.3375,
+        "entry_y_mm": 22.28,
+        "solder_x_mm": 414.3375,
+        "solder_y_mm": 20.58,
+        "net": "/COL12"
+      },
+      {
+        "socket": "J2",
+        "socket_pin": 16,
+        "module_pin": 25,
+        "entry_x_mm": 411.7975,
+        "entry_y_mm": 22.28,
+        "solder_x_mm": 411.7975,
+        "solder_y_mm": 23.98,
+        "net": "/COL11"
+      },
+      {
+        "socket": "J2",
+        "socket_pin": 17,
+        "module_pin": 24,
+        "entry_x_mm": 409.2575,
+        "entry_y_mm": 22.28,
+        "solder_x_mm": 409.2575,
+        "solder_y_mm": 20.58,
+        "net": "/COL10"
+      },
+      {
+        "socket": "J2",
+        "socket_pin": 18,
+        "module_pin": 23,
+        "entry_x_mm": 406.7175,
+        "entry_y_mm": 22.28,
+        "solder_x_mm": 406.7175,
+        "solder_y_mm": 23.98,
+        "net": "/GND"
+      },
+      {
+        "socket": "J2",
+        "socket_pin": 19,
+        "module_pin": 22,
+        "entry_x_mm": 404.1775,
+        "entry_y_mm": 22.28,
+        "solder_x_mm": 404.1775,
+        "solder_y_mm": 20.58,
+        "net": "/COL09"
+      },
+      {
+        "socket": "J2",
+        "socket_pin": 20,
+        "module_pin": 21,
+        "entry_x_mm": 401.6375,
+        "entry_y_mm": 22.28,
+        "solder_x_mm": 401.6375,
+        "solder_y_mm": 23.98,
+        "net": "/COL08"
+      }
+    ]
+  }
+}

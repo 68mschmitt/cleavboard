@@ -1,0 +1,10 @@
+{
+  "tests": 59,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "command": "python3 -B -m unittest discover -s designs/module-rp2040/source -p 'test_*.py'",
+  "log_sha256": "520d14e49eb392fdf17e92d38f7285d1de9d267d68f872b8fcc4168dda835bc6",
+  "pcb_sha256": "4a5e244fae2fb5acae58779bff73701be771b0b7f6d85f98efe5a1baa8a691ae",
+  "firmware_callback_source_sha256": "c1fa46fb370fe034c2b17186fe2c81abdc9307043a4733c34c66703486bad862"
+}

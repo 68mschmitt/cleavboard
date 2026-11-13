@@ -38,7 +38,7 @@
   "usb": {
     "vid": "0xFEED",
     "pid": "0xC1EA",
-    "device_version": "0.6.0",
+    "device_version": "0.8.0",
     "max_power": 500
   },
   "features": {
@@ -1108,6 +1108,26 @@
         "x": 67,
         "y": 60,
         "flags": 4
+      },
+      {
+        "x": 111,
+        "y": 59,
+        "flags": 2
+      },
+      {
+        "x": 115,
+        "y": 59,
+        "flags": 2
+      },
+      {
+        "x": 115,
+        "y": 61,
+        "flags": 2
+      },
+      {
+        "x": 111,
+        "y": 61,
+        "flags": 2
       }
     ]
   },

@@ -1,0 +1,13 @@
+{
+  "revision": "0.8",
+  "pcb_sha256": "4a5e244fae2fb5acae58779bff73701be771b0b7f6d85f98efe5a1baa8a691ae",
+  "session_sha256": "2d8715d238c7dab2aad9b0b206580f5908e59275bf2ad9740281b4f3d615c6ed",
+  "canonical_copper_exact_match": true,
+  "archive_coordinate_resolution_mm": 0.0001,
+  "regenerated_erc_violations": 0,
+  "regenerated_drc_violations": 0,
+  "regenerated_unconnected_items": 0,
+  "regenerated_parity_issues": 0,
+  "firmware_unchanged": true,
+  "active_pcb_unchanged": true
+}

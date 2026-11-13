@@ -1,6 +1,15 @@
 # Cleaver — case and plate interface
 
-## Revision 0.7 enclosure
+## Revision 0.8 enclosure and badge
+
+Use the **[rev0.8 base, cover, light well and replaceable logo insert](rev0.8/case/README.md)**
+with the **[rev0.8 plate](rev0.8/README.md)**. The plate and cover have aligned
+16.4 mm square openings; H9's PCB/plate hole and case boss move to `(250,138)` mm.
+[Badge dimensions, printing and customization](../LOGO.md).
+Use `rev0.8/validation.json` and the manufacturing revision's mounting-hole table
+for the current geometry. The unversioned references below are historical.
+
+## Historical revision 0.7 enclosure
 
 [Case and removable top cover](rev0.7/case/README.md): a **5° rear-raised tray**
 with 11 matching PCB standoffs, separate key-cluster bezel, right-side USB-C
@@ -10,10 +19,10 @@ parts need approximately a **466 × 164 mm** bed plus brim allowance; physical
 fit testing is still required. The new base adds two backstops beneath the
 controller sockets. The rev0.6 base does **not** have these insertion supports.
 
-## Print-ready revision 0.7 top plate
+## Historical revision 0.7 top plate
 
 Use **[Cleaver-top-plate-rev0.7.stl](rev0.7/Cleaver-top-plate-rev0.7.stl)** for the
-current PCB: 117 MX switch openings, seven 2u and one 6.25u plate-mount stabilizer
+rev0.7 PCB: 117 MX switch openings, seven 2u and one 6.25u plate-mount stabilizer
 sets, and all 11 matching M2 through-holes. It is **452.4375 × 147.6375 × 1.5 mm**.
 [Printing/assembly instructions and fit-test STLs](rev0.7/README.md) include both
 stabilizer sizes. The rev0.6 plate omits the unused top capacitor hole; the
@@ -42,7 +51,7 @@ together they reproduce the board outline, mechanical holes and 1.6 mm thickness
 ## Mounting
 
 - **11 × 2.2 mm non-plated holes for M2 hardware**, shared by PCB and plate.
-- `mounting-holes.csv`: authoritative coordinates, PCB **top view**, origin at
+- `mounting-holes.csv`: historical coordinates, PCB **top view**, origin at
   upper-left, X right, Y down, millimetres.
 - A **6 mm diameter cylinder** around each axis is reserved for screw heads,
   washers and case/plate standoffs. All PCB copper layers exclude this area.

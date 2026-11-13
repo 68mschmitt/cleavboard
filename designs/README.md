@@ -2,7 +2,7 @@
 
 | Directory | Controller | Lighting | Revision |
 | --- | --- | --- | --- |
-| [module-rp2040](module-rp2040/README.md) | Plug-in Waveshare RP2040-Plus; underside SMT sockets | 117 addressable RGB LEDs; VBUS through header pin 40 | 0.7 |
+| [module-rp2040](module-rp2040/README.md) | Plug-in Waveshare RP2040-Plus; underside SMT sockets | 117 key + 4 badge RGB LEDs; VBUS through header pin 40 | 0.8 |
 | [embedded-rp2040](embedded-rp2040/README.md) | Onboard RP2040, flash and USB-C | 117 addressable RGB LEDs | embedded-0.2 |
 | [single-color-devboard](single-color-devboard/README.md) | Top-mounted YD-RP2040 module | 117 white LEDs; low-current module Vout supply | white-0.1 |
 

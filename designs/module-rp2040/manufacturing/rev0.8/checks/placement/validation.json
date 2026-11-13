@@ -1,0 +1,7 @@
+{
+  "placement_only": true,
+  "geometric_violations": 0,
+  "expected_unconnected_items": 499,
+  "led_apertures": 121,
+  "ds_interface_generated": true
+}

@@ -16,6 +16,7 @@ from design import ROOT, MODULE_X, MODULE_Y, ROW_GPIOS, COL_GPIOS, read_keys, co
 from models_3d import validate_models
 from assembly_parts import fields, purchase
 from socket_interface import validate_interface
+from logo_interface import RGB_LED_COUNT, logo_leds
 
 
 def main():
@@ -80,10 +81,10 @@ def main():
     assert str(u1.GetFPID().GetLibItemName())=='Waveshare_RP2040_Plus'
     assert pads['40'].GetNetname()==footprints['F1'].FindPadByNumber('1').GetNetname()=='/RAW_USB_5V'
     openings = sum(item.GetLayer()==pcbnew.Edge_Cuts for fp in board.GetFootprints() for item in fp.GraphicalItems())
-    assert openings==117, 'Expected one actual LED opening per key'
+    assert openings==RGB_LED_COUNT, 'Expected one actual opening per key/logo LED'
     # Check the real reverse-mounted pad geometry, not just net names. In top
     # (emitter) view Rev02 is VDD/DOUT on the left, DIN/GND on the right.
-    for key in keys:
+    for key in [dict(k, y=k['y']+5.08) for k in keys] + logo_leds():
         fp = footprints[key['led_ref']]
         assert fp.GetLayer()==pcbnew.B_Cu, 'LED solder lands must be on the back'
         pads = {p.GetNumber():p for p in fp.Pads()}
@@ -91,7 +92,7 @@ def main():
                                 '1':(3.05,.75),'2':(3.05,-.75)}.items():
             point = pads[number].GetPosition()
             assert abs(pcbnew.ToMM(point.x)-key['x']-dx)<.001, f'{key["led_ref"]}.{number} reverse-mount X'
-            assert abs(pcbnew.ToMM(point.y)-key['y']-5.08-dy)<.001, f'{key["led_ref"]}.{number} reverse-mount Y'
+            assert abs(pcbnew.ToMM(point.y)-key['y']-dy)<.001, f'{key["led_ref"]}.{number} reverse-mount Y'
     assert board.GetCopperLayerCount()==4, 'Incorrect stackup'
     assert any(pcbnew.In1_Cu in list(z.GetLayerSet().Seq()) and z.GetNetname()=='/GND'
                 and z.HasFilledPolysForLayer(pcbnew.In1_Cu) for z in board.Zones()), 'Missing filled inner ground plane'
@@ -121,7 +122,8 @@ def main():
     assert info['diode_direction']=='ROW2COL'
     expected = [[k['matrix_row'],k['matrix_col']] for k in keys]
     assert [k['matrix'] for k in info['layouts']['LAYOUT']['layout']]==expected
-    assert [k['matrix'] for k in info['rgb_matrix']['layout']]==[[k['matrix_row'],k['matrix_col']] for k in leds]
+    assert [k.get('matrix') for k in info['rgb_matrix']['layout']]==[[k['matrix_row'],k['matrix_col']] for k in leds]+[None]*4
+    assert all(k['flags']==2 for k in info['rgb_matrix']['layout'][117:])
     assert info['rgb_matrix']['max_brightness']==8
     vial = json.loads((fw/'keymaps/vial/vial.json').read_text())
     actual = [list(map(int,item.split(','))) for row in vial['layouts']['keymap'] for item in row if isinstance(item,str)]
@@ -143,14 +145,14 @@ def main():
             assert not data['violations'] and not data['unconnected_items'] and not data.get('schematic_parity',[]), 'DRC report is not clean'
         else:
             assert not any(sheet['violations'] for sheet in data['sheets']), 'ERC report is not clean'
-    report = dict(revision=REVISION,controller='socketed Waveshare RP2040-Plus',matrix='8x16',unique_switches=len(keys),rgb_leds=len(leds),
-                  bottom_factory_placements=481,pth_pads=0,controller_pin_entry_npth=40,front_paste_pads=0,
+    report = dict(revision=REVISION,controller='socketed Waveshare RP2040-Plus',matrix='8x16',unique_switches=len(keys),rgb_leds=RGB_LED_COUNT,
+                  logo_leds=logo_leds(), bottom_factory_placements=489,pth_pads=0,controller_pin_entry_npth=40,front_paste_pads=0,
                   pcb_sha256=hashlib.sha256(pcb.read_bytes()).hexdigest(),
                   schematic_sha256=hashlib.sha256(sch.read_bytes()).hexdigest(),
                   erc='pass',drc='pass',schematic_pcb_firmware_mapping='pass',models_3d=models,
                   controller_interface=interface)
     (args.reports/'validation.json').write_text(json.dumps(report,indent=2)+'\n')
-    print('PASS: 117 unique keys, 117 RGB LEDs, bottom-entry RP2040-Plus sockets/VBUS, netlist/PCB/Vial parity, 599 local 3D models, ERC and DRC.')
+    print('PASS: 117 unique keys, 121 RGB LEDs, bottom-entry RP2040-Plus sockets/VBUS, netlist/PCB/Vial parity, 607 local 3D models, ERC and DRC.')
 
 
 if __name__=='__main__':

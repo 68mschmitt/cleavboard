@@ -52,7 +52,7 @@ def assembly_rows(board):
             px,py=pcbnew.ToMM(pad.GetPosition())
             pad_rows.append([ref,pad.GetNumber(),pad.GetNetname(),f'{px:.6f}',f'{BOARD_H-py:.6f}',
                              f'{px-x:.6f}',f'{y-py:.6f}'])
-    assert len(placements)==481
+    assert len(placements)==489
     return groups,placements,pad_rows
 
 
@@ -93,13 +93,17 @@ def main():
     write_csv(OUT/'pad-orientation-reference.csv',['Designator','Pad','Net','X_mm','Y_mm','DX_from_centroid_mm','DY_from_centroid_mm'],pads)
     write_csv(OUT/'fiducials.csv',['Designator','X_mm','Y_mm','Side','Copper_diameter_mm','Mask_opening_mm'],
               [[f'FID{i}',x,BOARD_H-y,'bottom',1,3] for i,(x,y) in enumerate(FIDUCIALS,1)])
+    write_csv(OUT/'mounting-holes.csv', ['reference','pcb_x_mm','pcb_y_mm','drill_mm','reserved_diameter_mm'],
+              [[f'H{i}',x,y,2.2,6] for i,(x,y) in enumerate(MOUNTING_HOLES,1)])
     write_csv(OUT/'user-installed.csv',['Item','Quantity','Mounting','Description'],[
         ['U1',1,'top plug-in','Waveshare RP2040-Plus 4MB USB-C bare module SKU 20290; pre-headered 20808 NOT qualified'],
         ['U1 headers',2,'solder to module ONLY','Samtec TSW-120-14-G-S; 8.13mm gold posts DOWN, 2.79mm tails through module; 17.78mm row spacing'],
         ['MX switches',117,'top','Plate-mounted MX-compatible switches'],
         ['2u stabilizers',7,'plate','Cherry-style plate mount, 23.8mm stem spacing'],
         ['6.25u stabilizer',1,'plate','Cherry-style plate mount, 100mm stem spacing'],
-        ['Mounting screws',len(MOUNTING_HOLES),'case/plate','M2; choose lengths for your printed case; 6mm reserved diameter']])
+        ['Mounting screws',len(MOUNTING_HOLES),'case/plate','M2; choose lengths for your printed case; 6mm reserved diameter'],
+        ['Logo light well',1,'plate opening','Opaque print; mechanical/rev0.8/case/Logo-light-well.stl'],
+        ['Logo insert',1,'captured beneath cover','Translucent print or custom two-color badge; 16mm body / 19mm flange']])
     (OUT/'assembly-bottom.svg').write_text(drawing(board))
     fab=OUT/'fabrication';fab.mkdir(exist_ok=True)
     subprocess.run(['kicad-cli','pcb','export','gerbers','--use-drill-file-origin','--layers',
@@ -110,7 +114,8 @@ def main():
     with zipfile.ZipFile(OUT/f'Cleaver-rev{REVISION}-fabrication.zip','w',zipfile.ZIP_DEFLATED) as z:
         for path in sorted(fab.iterdir()):z.write(path,path.name)
     inputs=[pcb,ROOT/'Cleaver.kicad_sch',ROOT/'Cleaver.kicad_pro',ROOT/'routing/Cleaver.ses',
-            ROOT/'VALIDATION.md',ROOT/'README.md',ROOT/'routing/README.md',
+            ROOT/'VALIDATION.md',ROOT/'README.md',ROOT/'LOGO.md',ROOT/'routing/README.md',
+            ROOT/'manufacturing/BOM.csv', *sorted((ROOT/'firmware').rglob('*')),
             ROOT/'Cleaver.pretty/Harwin_M20_7862042.kicad_mod',ROOT/'Cleaver.pretty/Waveshare_RP2040_Plus.kicad_mod',
             ROOT/'references/CONTROLLER-SOCKETS-0.7.md',ROOT/'references/Harwin-M20-786.pdf',
             ROOT/'references/Samtec-TSW.pdf',ROOT/'references/JLCPCB-2026-11-12.json',
@@ -124,7 +129,7 @@ def main():
               for p in [*inputs,
                          *sorted(OUT.rglob('*'))] if p.is_file() and p.name!='SHA256.json'}
     (OUT/'SHA256.json').write_text(json.dumps(manifest,indent=2)+'\n')
-    print('Exported 481 bottom placements, 14 purchasing groups, fabrication/drill files and manifest.')
+    print('Exported 489 bottom placements, 14 purchasing groups, fabrication/drill files and manifest.')
 
 
 if __name__=='__main__':main()

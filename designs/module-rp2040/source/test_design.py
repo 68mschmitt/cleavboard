@@ -7,6 +7,7 @@ import unittest
 
 from design import (ROOT, MODULE_PINS, ROW_GPIOS, COL_GPIOS, GPIO_PIN,
                     read_keys, validate_keys, components, default_keycodes)
+from logo_interface import logo_leds
 
 
 class DesignTests(unittest.TestCase):
@@ -39,9 +40,9 @@ class DesignTests(unittest.TestCase):
         self.assertEqual(parts['U1']['pins']['38'], 'GND')
 
     def test_rgb_chain(self):
-        for i,k in enumerate(self.leds):
+        for i,k in enumerate(self.leds+logo_leds()):
             self.assertEqual(k['rgb_in'], f'RGB_{i:03d}')
-            self.assertEqual(k['rgb_out'], f'RGB_{i+1:03d}' if i<116 else None)
+            self.assertEqual(k['rgb_out'], f'RGB_{i+1:03d}' if i<120 else None)
 
     def test_vbus_header_feeds_protected_led_branch(self):
         parts = {p['ref']:p for p in components(self.keys,self.leds)}
@@ -53,7 +54,7 @@ class DesignTests(unittest.TestCase):
         self.assertEqual(parts['U3']['pins']['1'], 'FUSED_5V')
         self.assertEqual(parts['U3']['pins']['6'], 'LED_5V')
         self.assertEqual(parts['R4']['value'], '75k 1%')
-        self.assertEqual(sum(p['kind']=='C_0805' for p in parts.values()), 120)
+        self.assertEqual(sum(p['kind']=='C_0805' for p in parts.values()), 124)
 
     def test_generated_firmware_and_csv(self):
         fw = ROOT/'firmware'
@@ -61,7 +62,7 @@ class DesignTests(unittest.TestCase):
         layout = info['layouts']['LAYOUT']['layout']
         self.assertEqual([v['matrix'] for v in layout], [[k['matrix_row'],k['matrix_col']] for k in self.keys])
         rgb = info['rgb_matrix']['layout']
-        self.assertEqual([v['matrix'] for v in rgb], [[k['matrix_row'],k['matrix_col']] for k in self.leds])
+        self.assertEqual([v.get('matrix') for v in rgb], [[k['matrix_row'],k['matrix_col']] for k in self.leds]+[None]*4)
         with (fw/'key_matrix.csv').open(newline='') as f:
             rows = list(csv.DictReader(f))
         self.assertEqual(len(rows),117)

@@ -1,8 +1,14 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 #include QMK_KEYBOARD_H
+#include "color.h"
 #include "usb_device_state.h"
 
 static bool led_powered;
+
+#if defined(VIALRGB_ENABLE) && !defined(VIALRGB_NO_DIRECT)
+// Vial's direct effect stores one HSV value per physical pixel.
+extern HSV g_direct_mode_colors[RGB_MATRIX_LED_COUNT];
+#endif
 
 void keyboard_pre_init_kb(void) {
     // R2 keeps the supply off even before firmware starts or in the bootloader.
@@ -43,6 +49,24 @@ void suspend_wakeup_init_kb(void) {
 bool rgb_matrix_indicators_advanced_kb(uint8_t led_min, uint8_t led_max) {
     if (!rgb_matrix_indicators_advanced_user(led_min, led_max)) {
         return false;
+    }
+    // A steady badge follows the user's hue/saturation/brightness even during
+    // reactive key effects. Only these four pixels receive the 4x gain; key
+    // brightness and the protected supply's USB/suspend gating are unchanged.
+    for (uint8_t i = CLEAVER_LOGO_FIRST_LED; i < RGB_MATRIX_LED_COUNT; ++i) {
+        if (i < led_min || i >= led_max) {
+            continue;
+        }
+        HSV hsv = rgb_matrix_get_hsv();
+#if defined(VIALRGB_ENABLE) && !defined(VIALRGB_NO_DIRECT)
+        if (rgb_matrix_get_mode() == RGB_MATRIX_VIALRGB_DIRECT) {
+            hsv = g_direct_mode_colors[i];
+        }
+#endif
+        const uint8_t value = hsv.v > RGB_MATRIX_MAXIMUM_BRIGHTNESS ? RGB_MATRIX_MAXIMUM_BRIGHTNESS : hsv.v;
+        hsv.v = (uint16_t)value * CLEAVER_LOGO_MAX_BRIGHTNESS / RGB_MATRIX_MAXIMUM_BRIGHTNESS;
+        const RGB rgb = hsv_to_rgb(hsv);
+        rgb_matrix_set_color(i, rgb.r, rgb.g, rgb.b);
     }
     // Reuse the actual lock keys' LEDs; no extra LEDs beneath the MCU module.
     const led_t state = host_keyboard_led_state();

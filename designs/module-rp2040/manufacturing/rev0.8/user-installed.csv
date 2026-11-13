@@ -1,0 +1,9 @@
+Item,Quantity,Mounting,Description
+U1,1,top plug-in,Waveshare RP2040-Plus 4MB USB-C bare module SKU 20290; pre-headered 20808 NOT qualified
+U1 headers,2,solder to module ONLY,"Samtec TSW-120-14-G-S; 8.13mm gold posts DOWN, 2.79mm tails through module; 17.78mm row spacing"
+MX switches,117,top,Plate-mounted MX-compatible switches
+2u stabilizers,7,plate,"Cherry-style plate mount, 23.8mm stem spacing"
+6.25u stabilizer,1,plate,"Cherry-style plate mount, 100mm stem spacing"
+Mounting screws,11,case/plate,M2; choose lengths for your printed case; 6mm reserved diameter
+Logo light well,1,plate opening,Opaque print; mechanical/rev0.8/case/Logo-light-well.stl
+Logo insert,1,captured beneath cover,Translucent print or custom two-color badge; 16mm body / 19mm flange

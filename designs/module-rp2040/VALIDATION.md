@@ -1,4 +1,53 @@
-# Revision 0.7 validation — bottom-entry controller sockets
+# Revision 0.8 validation — illuminated replaceable badge
+
+Recorded **2026-11-12 local / 2026-11-13 UTC**, KiCad 10.0.8, FreeCAD 1.1.4,
+Shapely 2.2.0 and Trimesh 5.2.0. This revision adds a four-pixel RGB badge,
+matching plate/cover openings, printable light well/insert, and moves H9.
+
+| Check | Result |
+| --- | --- |
+| Unit / serialized mesh / CAD / firmware callback tests | **59 passed, none skipped** |
+| Schematic ERC / routed PCB DRC, all severities | **0 / 0 violations** |
+| Unconnected copper / schematic parity issues | **0 / 0** |
+| Keys / RGB chain | **117 / 121**; badge indices 117–120 |
+| Factory assembly | **489 bottom SMT placements, 14 purchasing groups** |
+| Local 3D coverage | **607 model instances / 490 modelled footprints** |
+| Rev0.7 migration audit | All **5,356 existing copper items exactly retained**; 161 added |
+| Footprint migration | 501 existing footprints/pad nets unchanged; H9 moved, LED112.4 feeds badge; eight new parts |
+| Final routed copper | **4,793 tracks / 724 vias** |
+| Project rules / exclusions | Unchanged |
+| Complete-copper archive regeneration | Exact canonical match; regenerated ERC/DRC/parity pass |
+| Badge geometry | Matching 16.4 mm plate/cover openings; 16 mm insert / 19 mm retaining flange |
+| Mechanical fit | Four clear optical paths, zero badge/PCB/plate/cover intersections; captive retention checked |
+| Mesh exports | 14 case/badge/coupon/shim STLs plus plate and two stabilizer coupons; single watertight bodies |
+| Firmware | Default and Vial target builds pass; executable callback tests cover brightness/ranges/direct mode/USB gating |
+
+The four logo pixels use the existing protected LED_5V branch. Key brightness
+stays at 8/255; badge pixels have a 4× gain capped at 32/255, approximately
+18.1 mA maximum full-white color current plus their idle current. GPIO mapping,
+Vial UID/unlock and key pixel indices are retained; USB device version is 0.8.0.
+See [badge dimensions and operating behavior](LOGO.md).
+
+Use [`manufacturing/rev0.8/`](manufacturing/rev0.8/README.md),
+[`mechanical/rev0.8/`](mechanical/rev0.8/README.md), and
+[`manufacturing/rev0.8/firmware/`](manufacturing/rev0.8/firmware/README.md).
+Fresh build logs, UF2 validation and exact input/output hashes accompany both
+firmware images. Builds use vial-qmk
+`dd43959ae5c08d8a28d38a1acf7b04e86b14a344` and arm-none-eabi-gcc 16.2.0.
+
+Reproduce with the commands under **Evidence and reproduction** below, using
+the **rev0.8** complete-copper archive. The independent migration check takes a
+saved rev0.7 PCB and its adjacent project file:
+
+```sh
+python3 -B designs/module-rp2040/source/check_rev08_migration.py /path/to/rev07/Cleaver.kicad_pcb
+```
+
+**Physical fit, diffusion/brightness and hardware operation remain untested.**
+The supplied logo coupons exercise the actual openings and captive stack before
+printing the large case. Use the new base/plate together: H9 is now `(250,138)`.
+
+## Historical revision 0.7 record — bottom-entry controller sockets
 
 Recorded **2026-11-12 local / 2026-11-13 UTC**, KiCad **10.0.8**. Electrical,
 layout, regeneration and CAD checks pass. **Engineering/prototype handoff only**:
@@ -95,7 +144,7 @@ python3 -B designs/module-rp2040/source/check_kicad.py
 python3 -B designs/module-rp2040/source/check_routing_roundtrip.py
 ```
 
-To regenerate intentionally, import the matching **revision 0.7** archive:
+To regenerate the current design intentionally, import the matching **revision 0.8** archive:
 
 ```sh
 python3 -B designs/module-rp2040/source/generate_kicad.py --ses designs/module-rp2040/routing/Cleaver.ses

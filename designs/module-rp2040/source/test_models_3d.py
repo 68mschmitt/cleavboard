@@ -13,8 +13,8 @@ class ModelTests(unittest.TestCase):
     def test_board_model_coverage(self):
         board = pcbnew.LoadBoard(str(ROOT/'Cleaver.kicad_pcb'))
         result = validate_models(board)
-        self.assertEqual(result['model_instances'],599)
-        self.assertEqual(result['populated_footprints'],482)
+        self.assertEqual(result['model_instances'],607)
+        self.assertEqual(result['populated_footprints'],490)
 
     def test_library_model_coverage_and_mounting(self):
         for name,files in MODELS.items():

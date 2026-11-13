@@ -15,9 +15,9 @@ class AssemblyTests(unittest.TestCase):
 
     def test_all_populated_smd_bottom_with_socket_centroids(self):
         groups,rows,pads=assembly_rows(self.board)
-        self.assertEqual(len(rows),481)
+        self.assertEqual(len(rows),489)
         self.assertEqual(len(groups),14)
-        self.assertEqual(sum(len(refs) for refs in groups.values()),481)
+        self.assertEqual(sum(len(refs) for refs in groups.values()),489)
         byref={row[0]:row for row in rows}
         self.assertTrue(all(row[3]=='bottom' for row in rows))
         self.assertFalse(set(byref)&{'U1','TP1','TP2','TP3','TP4','TP5','TP6'})

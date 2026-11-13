@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Export the revision 0.6 switch/stabilizer plate and fit coupons as STL.
+"""Export the current switch/stabilizer/logo plate and fit coupons as STL.
 
 Requires KiCad's pcbnew, Shapely >=2.1 (GEOS >=3.10), numpy, scipy and trimesh.
 Checks the saved PCB without writing it; preserves historical mechanical exports.
@@ -15,7 +15,8 @@ from shapely import Point, Polygon, box, constrained_delaunay_triangles, unary_u
 from shapely.affinity import affine_transform, translate
 
 from design import ROOT, BOARD_W, BOARD_H, MOUNTING_HOLES, read_keys, REVISION
-from generate_mechanical import export_svg, geometry, stabilizer_cutout
+from generate_mechanical import export_dxf, export_svg, geometry, stabilizer_cutout
+from logo_interface import APERTURE, LOGO_X, LOGO_Y, logo_leds, square
 
 OUT = ROOT/f'mechanical/rev{REVISION}'
 THICKNESS = 1.5
@@ -55,6 +56,11 @@ def validate_pcb(path, plate):
         mounts.append(dict(reference=ref, x_mm=x, y_mm=y, drill_mm=2.2))
 
     assert footprints['C5'].GetLayer() == pcbnew.B_Cu, 'C5 is no longer underneath'
+    assert not plate.intersects(square(APERTURE).buffer(-.00001)), 'Logo light path blocked'
+    for led in logo_leds():
+        fp = footprints[led['led_ref']]
+        assert np.allclose(pcbnew.ToMM(fp.GetPosition()), [led['x'], led['y']],
+                           rtol=0, atol=1e-6), 'Logo LED/plate alignment changed'
     controller = footprints['U1']
     assert controller.GetLayer() == pcbnew.F_Cu
     body_checks = 0
@@ -127,10 +133,11 @@ def main():
     # The historical plate has a top capacitor hole. Rev0.6 C5 is below the PCB.
     plate, cuts, stabs = geometry(top_capacitor_opening=False)
     checks = validate_pcb(source, plate)
-    assert len(cuts) == 118 and len(plate.interiors) == 128
+    assert len(cuts) == 119 and len(plate.interiors) == 129
     OUT.mkdir(parents=True, exist_ok=True)
     parts = [export_stl(OUT/f'Cleaver-top-plate-rev{REVISION}.stl', plate)]
     export_svg(OUT/f'Cleaver-top-plate-rev{REVISION}.svg', plate, BOARD_W, BOARD_H)
+    export_dxf(OUT/f'Cleaver-top-plate-rev{REVISION}.dxf', plate)
     for size, label in [(2, '2u'), (6.25, '6.25u')]:
         coupon = fit_coupon(size)
         parts.append(export_stl(OUT/f'stabilizer-fit-coupon-{label}.stl', coupon))
@@ -143,6 +150,7 @@ def main():
         stabilizer_type='Cherry-compatible plate-mount', stabilizers=stabs,
         controller_notch_pcb_xy_mm=[398, 0, BOARD_W, 25.5],
         obsolete_top_capacitor_opening=False,
+        logo_aperture_mm=APERTURE, logo_center_pcb_xy_mm=[LOGO_X, LOGO_Y],
         stl_coordinates='millimetres; X right, Y up, Z=0 underside; PCB (x,y) maps to (x,147.6375-y)',
         physical_fit_tested=False,
         tools=dict(kicad=pcbnew.Version(), shapely=shapely.__version__,

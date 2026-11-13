@@ -1,11 +1,12 @@
-# Accepted revision 0.7 routing
+# Accepted revision 0.8 routing
 
 `Cleaver.ses` contains **all routed copper**, including the power/ground fanouts,
-SMD bulk-capacitor, VBUS test pads, and **J1/J2 socket escapes and J2.1 VBUS feed**. It carries no placement
+SMD bulk-capacitor, VBUS test pads, **J1/J2 socket escapes and J2.1 VBUS feed**,
+and **LED118–LED121 / C218–C221 badge connections**. It carries no placement
 instructions; the schematic/shared design is authoritative for placement.
-Do not apply older sessions to revision 0.7 placement: they target plated U1
-holes instead of the staggered SMT lands. The old rev0.6 session is retained
-as `archive/Cleaver-rev0.6.ses`; it is not compatible with this placement.
+Use the matching revision: the prior rev0.7 archive lacks badge connections,
+and rev0.6 targets plated U1 holes instead of the staggered SMT lands. Historical
+sessions are retained in `archive/`.
 
 ## Restore
 
@@ -26,7 +27,15 @@ zero unconnected items and zero schematic/PCB parity issues.
 
 ## Provenance
 
-Revision 0.7 replaces U1's 40 plated pads with 40 NPTH entries and J1/J2 SMT
+Revision 0.8 adds four badge pixels after LED112, with separate bypass capacitors
+and off-pad plane access. H9 and its rule area move to `(250,138)` mm. All
+**5,356 prior copper items** retain exact identities/geometry/nets; **161** are
+added. The result has **4,793 tracks / 724 vias**. `upgrade_rev08_routing.py`
+records the migration; `check_rev08_migration.py` checks it independently.
+The complete-copper archive round-trips exactly with zero ERC/DRC/parity issues.
+See [rev0.8 migration and round-trip evidence](../manufacturing/rev0.8/checks/).
+
+Historical revision 0.7 replaces U1's 40 plated pads with 40 NPTH entries and J1/J2 SMT
 lands. `source/upgrade_rev07_routing.py` and `source/finalize_rev07.py` record
 the one-time local migration. The accepted board has **4,652 tracks / 704 vias**,
 retaining 4,670 original copper identities. A geometric audit confirms copper
@@ -55,7 +64,8 @@ components, mounting-hole keepouts, test pads, fiducials and increased diode/
 socket body clearance. Completion used clearance-aware grid routing followed
 by KiCad's independent DRC and explicit same-net via/solder-land checks.
 Signals use F.Cu/In2.Cu/B.Cu; In1.Cu remains the ground plane. Power-input
-connections use 0.6 mm copper; local power branches use at least 0.4 mm.
+connections use 0.6 mm copper; key power branches use at least 0.4 mm. The badge's
+short individual power/ground escapes use 0.3 mm tracks and 0.6/0.3 mm vias.
 
 To archive a newly checked board:
 

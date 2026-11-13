@@ -12,6 +12,7 @@ from html import escape
 from shapely import Point, box, unary_union
 from shapely.affinity import rotate, translate
 from design import ROOT, BOARD_W, BOARD_H, MOUNTING_HOLES, read_keys
+from logo_interface import APERTURE, square
 
 OUT = ROOT/'mechanical'
 
@@ -49,6 +50,7 @@ def geometry(*, top_capacitor_opening=True):
     cuts.append(box(398,-1,BOARD_W+1,25.5))
     if top_capacitor_opening:
         cuts.append(Point(377,6).buffer(5,quad_segs=64))
+    cuts.append(square(APERTURE))
     for index,(x,y) in enumerate(MOUNTING_HOLES,1):
         reserve = Point(x,y).buffer(3,quad_segs=64)
         for cut in cuts:

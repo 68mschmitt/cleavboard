@@ -26,6 +26,7 @@ from build_3d_models import freecad
 from design import BOARD_H, BOARD_W, MODULE_X, MODULE_Y, MOUNTING_HOLES, ROOT, U, read_keys, REVISION, CONTROLLER_SOCKETS
 from generate_mechanical import geometry, svg_path
 from generate_top_plate import top_surface, validate_pcb
+from logo_interface import APERTURE, INSERT, FLANGE, LIGHT_BORE, LOGO_X, LOGO_Y, logo_leds, square
 
 OUT = ROOT/f'mechanical/rev{REVISION}/case'
 PCB_THICKNESS = 1.6
@@ -120,7 +121,7 @@ def outlines(p):
     # Unite neighbours: no fragile ~0.5 mm webs between individual keycaps.
     apertures = unary_union([box(k['x']-k['w']*U/2-e, k['y']-k['h']*U/2-e,
                                 k['x']+k['w']*U/2+e, k['y']+k['h']*U/2+e) for k in keys])
-    deck = outer.difference(apertures)
+    deck = outer.difference(apertures.union(square(APERTURE)))
     assert deck.is_valid and deck.geom_type == 'Polygon', 'Disconnected bezel'
     return outer, pocket, apertures, deck
 
@@ -169,6 +170,26 @@ def usb_tool(p):
                      BOARD_W+p.margin+2, MODULE_Y+p.usb_opening_width_mm/2),
                  p.usb_center_above_pcb_mm-p.usb_opening_height_mm/2,
                  p.usb_opening_height_mm)
+
+
+def badge_shapes(p):
+    """Captive underside flange; lift the cover to exchange a printed badge.
+
+    The opaque carrier rests on the switch plate, with a sleeve through its
+    square opening. A hollow translucent cap rests on the carrier and is
+    retained by the cover. The carrier never bears on the PCB or emitters.
+    """
+    flange_top = p.cover_underside_above_pcb_mm-.2
+    flange_bottom = flange_top-.8
+    assert flange_bottom > PLATE_TOP+1
+    carrier = prism(square(INSERT).difference(square(LIGHT_BORE)), .8, flange_bottom-.8)
+    carrier = carrier.fuse(prism(square(FLANGE).difference(square(LIGHT_BORE)),
+                                 PLATE_TOP, flange_bottom-PLATE_TOP)).removeSplitter()
+    cap = prism(square(INSERT), flange_top, p.cover_top-flange_top).fuse(
+        prism(square(FLANGE), flange_bottom, .8))
+    cap = cap.cut(prism(square(LIGHT_BORE), flange_bottom-.1,
+                        p.cover_top-1.0-flange_bottom+.1)).removeSplitter()
+    return carrier, cap
 
 
 def build(p):
@@ -224,10 +245,13 @@ def build(p):
     cover = cover.cut(part.makeCompound(screw_cuts)).cut(usb_tool(p)).removeSplitter()
     spacer = cylinder(0, 0, 0, STANDOFF_DIAMETER, SPACER_HEIGHT).cut(
         cylinder(0, 0, -.1, 2.2, SPACER_HEIGHT+.2))
-    for label, shape in [('tray', tray), ('cover', cover), ('spacer', spacer)]:
+    carrier, insert = badge_shapes(p)
+    for label, shape in [('tray', tray), ('cover', cover), ('spacer', spacer),
+                          ('logo carrier', carrier), ('logo insert', insert)]:
         assert not shape.isNull() and shape.isValid() and len(shape.Solids) == 1, label
         assert shape.Volume > 0, label
-    return dict(tray=tray, cover=cover, spacer=spacer, apertures=apertures, deck=deck)
+    return dict(tray=tray, cover=cover, spacer=spacer, apertures=apertures, deck=deck,
+                logo_carrier=carrier, logo_insert=insert)
 
 
 def validate_source(p, plate):
@@ -302,6 +326,23 @@ def validate_fit(p, shapes, plate):
         assert shapes['apertures'].covers(swept), key['ref']
         assert shapes['deck'].intersection(swept).area < 1e-8, key['ref']
 
+    badge_checks = {}
+    badge_parts = {name: assembled(shapes[name], p) for name in ('logo_carrier', 'logo_insert')}
+    for name, badge in badge_parts.items():
+        for obstacle_name, obstacle in [('tray', tray), ('cover', cover), ('plate', plate_shape), ('pcb', pcb)]:
+            volume = badge.common(obstacle).Volume
+            assert volume < 1e-6, f'{name}/{obstacle_name}: interference {volume} mm³'
+            badge_checks[f'{name}_{obstacle_name}'] = round(volume, 8)
+    assert badge_parts['logo_carrier'].common(badge_parts['logo_insert']).Volume < 1e-6
+    # Test the full emitter-to-diffuser prism, not just the centre ray.
+    for led in logo_leds():
+        beam = assembled(prism(box(led['x']-1.8, led['y']-1.6, led['x']+1.8, led['y']+1.6),
+                               .4, p.cover_top-1.0-.4), p)
+        for obstacle in [cover, plate_shape, *badge_parts.values()]:
+            assert beam.common(obstacle).Volume < 1e-6, f"{led['led_ref']}: optical path blocked"
+    assert square(FLANGE).distance(shapes['apertures']) > .5, 'Badge flange near a keycap'
+    assert BOARD_H-LOGO_Y-APERTURE/2 > 1.3, 'Plate front web is too thin'
+
     mounts = []
     for index, (x, y) in enumerate(MOUNTING_HOLES, 1):
         # At 0.1 mm below the support face: bore is empty, surrounding ring is solid.
@@ -318,6 +359,13 @@ def validate_fit(p, shapes, plate):
     cap_min_depth = min((world_point(x, y, -PCB_THICKNESS, p)[2]-p.floor_mm)/math.cos(theta)
                         for x in (371, 383) for y in (.5, 11.5))
     return dict(intersection_volumes_mm3=overlaps, mounting_standoffs=mounts,
+                logo=dict(center_pcb_xy_mm=[LOGO_X, LOGO_Y], aperture_mm=APERTURE,
+                          insert_mm=INSERT, flange_mm=FLANGE, diffuser_thickness_mm=1.0,
+                          optical_bore_mm=LIGHT_BORE, four_optical_paths_clear=True,
+                          intersection_volumes_mm3=badge_checks,
+                          pcb_clearance_mm=.8, retaining_flange_vertical_clearance_mm=.2,
+                          plate_front_web_mm=round(BOARD_H-LOGO_Y-APERTURE/2, 4),
+                          removal='Lift cover, lift insert from light well; no adhesive'),
                 standoff_outer_diameter_mm=STANDOFF_DIAMETER,
                 standoff_axes_normal_to_pcb=True, keycap_sweeps_clear=117,
                 keycap_envelope='each KLE width/height times 19.05 mm minus 1 mm; vertical swept prism',
@@ -380,7 +428,7 @@ def export_part(out, name, shape, *, face_down=False):
 
 def save_assembly(out, p, shapes, plate):
     app, part = freecad()
-    doc = app.newDocument('CleaverCaseRev07')
+    doc = app.newDocument('CleaverCaseRev'+REVISION.replace('.', ''))
     objects = []
 
     def add(name, label, shape, color, transparency=0):
@@ -400,6 +448,10 @@ def save_assembly(out, p, shapes, plate):
     base.addProperty('App::PropertyString', 'ParameterEditing').ParameterEditing = (
         'Informational snapshot. Edit parameters.json and rerun source/generate_case.py to rebuild.')
     add('Cover', 'PRINT: removable key bezel (assembled)', assembled(shapes['cover'], p), (.75, .78, .81))
+    add('LogoLightWell', 'PRINT OPAQUE: logo light well / plate-supported carrier',
+        assembled(shapes['logo_carrier'], p), (.08, .08, .08))
+    add('LogoInsert', 'PRINT TRANSLUCENT: replaceable 16 mm logo blank / 1 mm diffuser',
+        assembled(shapes['logo_insert'], p), (.25, .75, .95), 35)
     pcb = box(0, 0, BOARD_W, BOARD_H).difference(unary_union(
         [Point(x, y).buffer(1.1, quad_segs=16) for x, y in MOUNTING_HOLES]))
     add('PCBEnvelope', 'REFERENCE ONLY: PCB envelope + mounting holes',
@@ -445,8 +497,10 @@ def preview(out, p, shapes):
     head = f'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="870" viewBox="{-m-8} {-m-18} {BOARD_W+2*m+16} 335">'
     content = [head, '<rect x="-20" y="-30" width="510" height="390" fill="#f5f7fa"/>',
                '<g font-family="sans-serif" fill="#243244">',
-               f'<text x="0" y="-13" font-size="6">Cleaver rev{REVISION} — socket supports / removable bezel</text>',
-               f'<path d="{svg_path(shapes["deck"])}" fill="#aebac6" stroke="#34465a" stroke-width=".4" fill-rule="evenodd"/>']
+                f'<text x="0" y="-13" font-size="6">Cleaver rev{REVISION} — replaceable illuminated badge</text>',
+                f'<path d="{svg_path(shapes["deck"])}" fill="#aebac6" stroke="#34465a" stroke-width=".4" fill-rule="evenodd"/>']
+    content.extend([f'<path d="{svg_path(square(INSERT))}" fill="#6ad4e8" stroke="#247d91" stroke-width=".4"/>',
+                    f'<text x="{LOGO_X}" y="{LOGO_Y+1}" text-anchor="middle" font-size="3">LOGO</text>'])
     for x, y in cover_screws(p):
         content.append(f'<circle cx="{x}" cy="{y}" r="2.1" fill="#34465a"/>')
     content.extend(['<g transform="translate(0 168)">',
@@ -486,6 +540,8 @@ def render_preview(out, p, records):
         return mesh
 
     base, cover = cad_mesh(records[0]), cad_mesh(records[1], tilt=True)
+    badge = [cad_mesh(next(r for r in records if r['file'] == name), tilt=True)
+             for name in ('Logo-light-well.stl', 'Logo-insert-blank.stl')]
     plate = trimesh.load_mesh(ROOT/f'mechanical/rev{REVISION}/Cleaver-top-plate-rev{REVISION}.stl')
     plate.apply_translation([0, 0, SPACER_HEIGHT])
     plate.apply_transform(rotation)
@@ -502,7 +558,8 @@ def render_preview(out, p, records):
     fig = plt.figure(figsize=(16, 10), facecolor='#f4f6f9')
     views = [[(base, [.31, .40, .50])],
              [(base, [.31, .40, .50]), (plate, [.40, .45, .49]),
-              (cover, [.72, .78, .83]), (caps, [.24, .29, .35])]]
+               (cover, [.72, .78, .83]), (caps, [.24, .29, .35]),
+               (badge[0], [.08, .08, .08]), (badge[1], [.25, .78, .90])]]
     for index, objects in enumerate(views, 1):
         ax = fig.add_subplot(2, 1, index, projection='3d')
         ax.set_facecolor('#f4f6f9')
@@ -526,7 +583,7 @@ def render_preview(out, p, records):
         ax.view_init(elev=42, azim=-68)
         ax.set_axis_off()
         ax.set_title('Base interior — 11 PCB standoffs' if index == 1 else
-                     'Assembled — separate cover with 117 keycap clearances', loc='left',
+                     'Assembled — replaceable 16 mm badge between front trios', loc='left',
                      fontsize=16, color='#273747', pad=-6)
     fig.text(.05, .03, f'Rev {REVISION}  /  {p.typing_angle_deg:g}° rear-raised  /  right-side USB-C  /  reference keycaps are simplified envelopes',
              fontsize=11, color='#526375')
@@ -535,12 +592,55 @@ def render_preview(out, p, records):
     plt.close(fig)
 
 
+def write_badge_template(out, p):
+    # Face-down print coordinates match the blank STL: its top face is Z=0,
+    # with the retaining flange at Z=2.6..3.4 for the default cover stack.
+    text = f'''// Cleaver rev{REVISION}: replaceable badge, millimetres, face down.
+// Render "blank" for a translucent insert. For two-colour printing, export
+// "mask" and "diffuser" separately and load them together at the SAME origin.
+// Edit mark() or import a centred SVG sized to fit inside the 14 mm light bore.
+// The 19 mm retaining flange and 16 mm body are the mechanical interface.
+part = "blank"; // [blank,mask,diffuser]
+face = {INSERT};
+flange = {FLANGE};
+bore = {LIGHT_BORE};
+flange_z = {p.cover_thickness_mm+.2:.5f};
+flange_thickness = 0.8;
+diffuser_thickness = 1.0;
+mask_thickness = 0.4;
+
+module sq(size) {{ square([size,size],center=true); }}
+module mark() {{ text("C",size=10,halign="center",valign="center",font="Liberation Sans:style=Bold"); }}
+module blank() {{
+    difference() {{
+        union() {{
+            linear_extrude(flange_z) sq(face);
+            translate([0,0,flange_z]) linear_extrude(flange_thickness) sq(flange);
+        }}
+        translate([0,0,diffuser_thickness])
+            linear_extrude(flange_z+flange_thickness) sq(bore);
+    }}
+}}
+module mask() {{
+    linear_extrude(mask_thickness)
+        difference() {{ sq(face); intersection() {{ sq(bore-1); mirror([0,1,0]) mark(); }} }}
+}}
+// The Y mirror keeps lettering readable after turning the face-down print over.
+translate([flange/2,flange/2,0]) {{
+    if (part == "blank") blank();
+    else if (part == "mask") mask();
+    else if (part == "diffuser") difference() {{ blank(); mask(); }}
+}}
+'''
+    (out/'Logo-insert-template.scad').write_text(text)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--parameters', type=Path, default=OUT/'parameters.json')
     parser.add_argument('--output', type=Path, default=OUT)
     args = parser.parse_args()
-    p = Parameters(**json.loads(args.parameters.read_text()))
+    p = Parameters(**json.loads(args.parameters.read_text())) if args.parameters.is_file() else Parameters()
     p.validate()
     source, plate_file = ROOT/'Cleaver.kicad_pcb', ROOT/f'mechanical/rev{REVISION}/Cleaver-top-plate-rev{REVISION}.stl'
     original_hashes = {path: digest(path) for path in (source, plate_file)}
@@ -550,6 +650,7 @@ def main():
     fit = validate_fit(p, shapes, plate)
     out = args.output
     out.mkdir(parents=True, exist_ok=True)
+    (out/'parameters.json').write_text(json.dumps(asdict(p), indent=2)+'\n')
     parts = [export_part(out, f'Cleaver-case-base-rev{REVISION}', shapes['tray']),
              export_part(out, f'Cleaver-case-top-cover-rev{REVISION}', shapes['cover'], face_down=True),
              export_part(out, 'PCB-to-plate-spacer-3.5mm', shapes['spacer'])]
@@ -563,6 +664,15 @@ def main():
     for thickness in (.2,.4,.6,.8,1.0):
         shim=prism(box(0,0,49.6,2.0),0,thickness)
         parts.append(export_part(out,f'controller-socket-shim-{thickness:.1f}mm',shim))
+    parts.extend([export_part(out, 'Logo-light-well', shapes['logo_carrier'], face_down=True),
+                  export_part(out, 'Logo-insert-blank', shapes['logo_insert'], face_down=True)])
+    # A small real section checks both square openings and the captive stack.
+    crop = box(LOGO_X-15, LOGO_Y-12, LOGO_X+15, BOARD_H+p.margin+1)
+    parts.extend([export_part(out, 'Logo-fit-coupon-cover',
+                              shapes['cover'].common(prism(crop, -20, 60)).removeSplitter(), face_down=True),
+                  export_part(out, 'Logo-fit-coupon-plate',
+                              prism(plate.intersection(crop), SPACER_HEIGHT, PLATE_THICKNESS))])
+    write_badge_template(out, p)
     save_assembly(out, p, shapes, plate)
     preview(out, p, shapes)
     render_preview(out, p, parts)

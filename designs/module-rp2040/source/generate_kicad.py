@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build Cleaver revision 0.7; import a complete-copper Specctra routing session.
+"""Build Cleaver's current revision; import a complete-copper routing session.
 
 The electrical model is in design.py. No geometry-only wiring guesses are made:
 the PCB takes its pad nets from KiCad's exported schematic netlist. Project rules
@@ -25,6 +25,7 @@ from design import (ROOT, INPUT, U, BOARD_W, BOARD_H, ROW_GPIOS, COL_GPIOS,
                     MODULE_W, MODULE_H, REVISION)
 from models_3d import update_library_models
 from assembly_parts import fields
+from logo_interface import KEY_LED_COUNT, RGB_LED_COUNT, LOGO_MAX_BRIGHTNESS, logo_leds
 
 OUT = ROOT
 PRETTY = OUT / "Cleaver.pretty"
@@ -247,8 +248,8 @@ def generate_schematic(parts, keys, leds):
     positions = {}
     wired_pins = {('TP1','1'),('F1','1'),('F1','2'),('U3','1'),('U2','4'),('R1','1')}
     key_index = {k["ref"]: i for i,k in enumerate(keys)}
-    led_index = {k["led_ref"]: i for i,k in enumerate(leds)}
-    cap_index = {k["cap_ref"]: i for i,k in enumerate(leds)}
+    led_index = {k["led_ref"]: i for i,k in enumerate(leds + logo_leds())}
+    cap_index = {k["cap_ref"]: i for i,k in enumerate(leds + logo_leds())}
     corner_index = 0
     all_parts = parts + [dict(ref="#FLG01", kind="PowerFlag", value="PWR_FLAG", pins={"1":"GND"}),
                          dict(ref="#FLG02", kind="PowerFlag", value="PWR_FLAG", pins={"1":"FUSED_5V"})]
@@ -319,7 +320,7 @@ def generate_schematic(parts, keys, leds):
       (lib_symbols {' '.join(symbol_definition(k, True) for k in PINS)})
       (text "117 UNIQUE KEYS - 8x16 ROW2COL - USB POWER ONLY - NO POWER SWITCH" (at 30 20 0)
         (effects (font (size 2 2)) (justify left)))
-      (text "RP2040-Plus pin40 VBUS -> F1 -> U3 -> LED_5V. TP1: VBUS test pad. RGB enable GP28; data GP27; brightness 8/255." (at 30 30 0)
+      (text "RP2040-Plus pin40 VBUS -> F1 -> U3 -> LED_5V. RGB: GP27; enable: GP28. 117 keys at 8/255 + 4 badge LEDs at 32/255." (at 30 30 0)
         (effects (font (size 1.2 1.2)) (justify left)))
       {' '.join(body)}
       (sheet_instances (path "/" (page "1"))) (symbol_instances {' '.join(instances)})
@@ -425,8 +426,8 @@ def prepare_dsn(path):
         coords = f'{x0:g} {y0:g} {x1:g} {y0:g} {x1:g} {y1:g} {x0:g} {y1:g} {x0:g} {y0:g}'
         return '(keepout "" (polygon signal 0 ' + coords + '))'
     text, count = re.subn(r'\(keepout "" \(polygon signal 0\s+([\d.\s-]+)\)\)', polygon, text)
-    if led_count != 117:
-        raise ValueError(f"Expected 117 DSN LED opening keepouts, got {led_count}")
+    if led_count != RGB_LED_COUNT:
+        raise ValueError(f"Expected {RGB_LED_COUNT} DSN LED opening keepouts, got {led_count}")
     def boundary(match):
         points = [float(n) for n in match.group(1).split()]
         xs,ys = points[0::2],points[1::2]
@@ -620,6 +621,15 @@ def generate_board(parts, keys, nets, report_dir, ses=None):
     if not ses:
         ground_fanout(board, keys, parts, ni["/GND"])
     led_power_distribution(board, keys, fanout=not ses)
+    if not ses:
+        # The existing local router provides off-pad plane access for the four
+        # additional pixels too. Complete-copper SES imports already contain it.
+        from upgrade_rev07_routing import escape
+        fps = {fp.GetReference(): fp for fp in board.GetFootprints()}
+        for led in logo_leds():
+            for ref, numbers in [(led['led_ref'], ('1', '3')), (led['cap_ref'], ('1', '2'))]:
+                for number in numbers:
+                    escape(board, fps[ref].FindPadByNumber(number), None, pcbnew.F_Cu, .3)
     path = OUT / "Cleaver.kicad_pcb"
     pcbnew.SaveBoard(str(path), board)
     # Reload to apply the preserved project's fabrication rules and netclasses.
@@ -643,12 +653,14 @@ def generate_firmware(keys, leds):
     info = dict(keyboard_name="Cleaver", manufacturer="Cleaver keyboard project", maintainer="cleaver",
                 processor="RP2040", bootloader="rp2040", diode_direction="ROW2COL",
                 matrix_pins=dict(rows=ROW_GPIOS, cols=COL_GPIOS),
-                usb=dict(vid="0xFEED", pid="0xC1EA", device_version="0.6.0", max_power=500),
+                usb=dict(vid="0xFEED", pid="0xC1EA", device_version="0.8.0", max_power=500),
                 features=dict(bootmagic=True, extrakey=True, nkro=True, rgb_matrix=True),
                 ws2812=dict(driver="vendor", pin=RGB_GPIO),
                 rgb_matrix=dict(driver="ws2812", max_brightness=8, sleep=True,
                     layout=[dict(matrix=[k["matrix_row"], k["matrix_col"]],
-                                 x=round(k["x"] / BOARD_W * 224), y=round(k["y"] / BOARD_H * 64), flags=4) for k in leds]),
+                                  x=round(k["x"] / BOARD_W * 224), y=round(k["y"] / BOARD_H * 64), flags=4) for k in leds]
+                     + [dict(x=round(k['x']/BOARD_W*224), y=round(k['y']/BOARD_H*64), flags=2)
+                        for k in logo_leds()]),
                 layouts=dict(LAYOUT=dict(layout=[dict(label=k["legend"], matrix=[k["matrix_row"], k["matrix_col"]],
                     x=round(k["x"] / U - k["w"] / 2,4), y=round(k["y"] / U - k["h"] / 2,4),
                     w=k["w"],h=k["h"]) for k in keys])))
@@ -664,7 +676,9 @@ def generate_firmware(keys, leds):
 #define WEAR_LEVELING_RP2040_FLASH_SIZE (2 * 1024 * 1024)
 // Keep the 8/255 cap until total current and rail voltage are measured.
 #define RGB_MATRIX_DEFAULT_VAL 8
-#define RGB_MATRIX_LED_COUNT 117
+#define RGB_MATRIX_LED_COUNT @LED_COUNT@
+#define CLEAVER_LOGO_FIRST_LED @LOGO_FIRST@
+#define CLEAVER_LOGO_MAX_BRIGHTNESS @LOGO_MAX@
 #define ENABLE_RGB_MATRIX_CYCLE_LEFT_RIGHT
 #define ENABLE_RGB_MATRIX_SOLID_REACTIVE_SIMPLE
 #define RGB_MATRIX_KEYPRESSES
@@ -673,14 +687,16 @@ def generate_firmware(keys, leds):
 #define WS2812_T1H 700
 #define WS2812_TRST_US 280
 #define LED_POWER_PIN GP28
-''' + ''.join(f'#define CLEAVER_{name}_LED {index}\n' for name,index in indicators.items()))
+'''.replace('@LED_COUNT@', str(RGB_LED_COUNT)).replace('@LOGO_FIRST@', str(KEY_LED_COUNT))
+        .replace('@LOGO_MAX@', str(LOGO_MAX_BRIGHTNESS))
+        + ''.join(f'#define CLEAVER_{name}_LED {index}\n' for name,index in indicators.items()))
     (fw / "rules.mk").write_text("BOARD = GENERIC_RP_RP2040\nBOOTLOADER = rp2040\n")
     codes = default_keycodes(keys)
     keymap = '#include QMK_KEYBOARD_H\n\nconst uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {\n    [0] = LAYOUT(\n'
     keymap += ",\n".join("        " + ", ".join(codes[i:i+8]) for i in range(0,len(codes),8)) + "\n    )\n};\n"
     for name in ("default", "vial"):
         (fw / f"keymaps/{name}/keymap.c").write_text(keymap)
-    # Stable protocol identity: the matrix, RGB chain and unlock keys are unchanged.
+    # Stable keyboard identity: matrix/unlock keys and the first 117 pixels retain their indices.
     uid = uuid.uuid5(uuid.NAMESPACE_URL, "cleaver:YD-RP2040:0.3:vial").bytes[:8]
     unlock = [keys[0], next(k for k,c in zip(keys,codes) if c == "KC_ENT")]
     (fw / "keymaps/vial/config.h").write_text("#pragma once\n\n#define VIAL_KEYBOARD_UID { " +
@@ -711,6 +727,17 @@ def generate_firmware(keys, leds):
             writer.writerow([k["ref"],k["legend"],k["matrix_row"],k["matrix_col"],f"{k['x']:.4f}",f"{k['y']:.4f}",k["led_index"]])
 
 
+def write_bom(parts):
+    (OUT / "manufacturing").mkdir(exist_ok=True)
+    with (OUT / "manufacturing/BOM.csv").open("w", newline="") as file:
+        writer = csv.writer(file, lineterminator="\n")
+        writer.writerow(["reference","value","footprint","x_mm","y_mm","side","Manufacturer","MPN","LCSC","Key"])
+        for p in parts:
+            data = fields(p)
+            writer.writerow([p["ref"],p["value"],FP_NAMES.get(p["kind"],p["kind"]),p["x"],p["y"],"B" if p["back"] else "F",
+                             *[data.get(k,'') for k in ('Manufacturer','MPN','LCSC','Key')]])
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--placement-only", action="store_true", help="Explicitly generate an unrouted board and DSN")
@@ -730,15 +757,8 @@ def main():
     nets = schematic_nets(args.reports)
     generate_board(parts, keys, nets, args.reports, args.ses)
     generate_firmware(keys, leds)
-    (OUT / "manufacturing").mkdir(exist_ok=True)
-    with (OUT / "manufacturing/BOM.csv").open("w",newline="") as file:
-        writer = csv.writer(file, lineterminator="\n"); writer.writerow(["reference","value","footprint","x_mm","y_mm","side","Manufacturer","MPN","LCSC","Key"])
-        for p in parts:
-            side = "B" if p["back"] else "F"
-            data = fields(p)
-            writer.writerow([p["ref"],p["value"],FP_NAMES.get(p["kind"],p["kind"]),p["x"],p["y"],side,
-                             *[data.get(k,'') for k in ('Manufacturer','MPN','LCSC','Key')]])
-    print(f"Generated revision {REVISION}: {len(keys)} unique keys, 8x16, 117 LEDs; " + ("session imported" if args.ses else "UNROUTED placement/DSN only"))
+    write_bom(parts)
+    print(f"Generated revision {REVISION}: {len(keys)} unique keys, 8x16, {RGB_LED_COUNT} LEDs; " + ("session imported" if args.ses else "UNROUTED placement/DSN only"))
 
 
 if __name__ == "__main__":

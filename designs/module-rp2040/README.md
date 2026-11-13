@@ -1,9 +1,15 @@
-# Cleaver PCB — revision 0.7
+# Cleaver PCB — revision 0.8
+
+**New: [replaceable illuminated logo](LOGO.md)** between M6–M8 and M9–M11.
+Four RGB LEDs illuminate a 16 mm printed badge through matching 16.4 mm square
+plate/cover openings. The supplied light well and flanged insert lift out when
+the cover is removed. H9 moved to `(250,138)` mm: use the **rev0.8 PCB, base,
+plate and cover together**, plus the new 121-pixel firmware.
 
 **Taviana Tactical artwork:** the active PCB includes a 34 mm-wide top-side logo.
-Use the current [revision 0.7 fabrication files](manufacturing/rev0.7/).
+Use the current [revision 0.8 fabrication files](manufacturing/rev0.8/).
 
-117 MX hot-swap switches, 117 reverse-mount RGB LEDs, and the **Waveshare
+117 MX hot-swap switches, 121 reverse-mount RGB LEDs, and the **Waveshare
 RP2040-Plus 4MB USB-C module** (bare SKU 20290), plugged into underside SMT
 bottom-entry sockets. The keyboard is
 USB-powered, with **no mechanical power switch** and no separate power supply.
@@ -13,7 +19,7 @@ tests. The old [DESIGN_REVIEW.md](DESIGN_REVIEW.md) describes revision 0.2, not 
 replacement design. Electrical checks do not substitute for a physical prototype
 or final plate/case checks.
 
-**Revision 0.7 manufacturing:** all **481 factory-populated parts are underside
+**Revision 0.8 manufacturing:** all **489 factory-populated parts are underside
 SMD**, including C5, the HanElectricity hot-swap sockets and **J1/J2 Harwin
 M20-7862042 controller sockets**. U1 plugs in from above through 40 **NPTH**
 holes. Solder two **Samtec TSW-120-14-G-S** strips to the module only: 8.13 mm
@@ -22,11 +28,11 @@ posts down, 2.79 mm tails through the module. Stock pre-headered SKU 20808 is
 TP1 is a bare underside VBUS test pad.
 There are 11 M2
 mounting holes, five labelled underside probe pads and three bottom fiducials.
-Use [`manufacturing/rev0.7/`](manufacturing/rev0.7/) for the purchasing BOM,
+Use [`manufacturing/rev0.8/`](manufacturing/rev0.8/) for the purchasing BOM,
 corrected socket placement data and fabrication package; use
 [`mechanical/`](mechanical/) for the matching stabilizer/switch plate and
 case mounting references. **Allow 11 mm clearance under C5**; the old case-depth
-assumption no longer applies there. Use the [rev0.7 case base](mechanical/rev0.7/case/README.md)
+assumption no longer applies there. Use the [rev0.8 case base](mechanical/rev0.8/case/README.md)
 with socket-insertion backstops. Older Gerbers and placement exports are not
 this revision. Original-part evidence remains in the [component review](references/COMPONENT-REVIEW.md);
 new socket evidence is linked above. Supplier DFM and physical mating remain open.
@@ -54,8 +60,9 @@ Module GPIO27 → U2 level translator → R1 (330 Ω) → first LED DIN
 - U3's **75 kΩ, 1%** current-limit resistor gives approximately **353 mA nominal**
   LED-branch current limiting (about **311–401 mA** using the datasheet bounds and
   resistor tolerance). This is separate from the module's own consumption.
-- Firmware caps brightness at **8/255**. For 12 mA/colour LEDs, full-white colour
-  current is approximately 132 mA at this setting, plus LED idle current and MCU
+- Firmware caps key brightness at **8/255**, with four badge pixels capped at
+  **32/255**. For 12 mA/colour LEDs, combined full-white colour current is
+  approximately **150.2 mA**, plus LED idle current and MCU
   consumption. Measure the actual total; a brightness setting or USB descriptor is
   not itself a current measurement. Do not raise the cap casually.
 - RGB power stays off until USB is configured, and is removed on suspend and when
@@ -132,6 +139,8 @@ through the switch to the diode anode; the cathode connects to the column.
 - The chain begins at the function-row Pause key near the MCU circuitry, runs
   left across that row, and then snakes across subsequent physical rows. Firmware
   entries are in **actual chain order**, not switch-reference order.
+  LED118–LED121 append after LED112 (M6), at indices 117–120, and illuminate the
+  badge. C218–C221 are their bypass capacitors. [Badge circuit and controls](LOGO.md#rgb-and-power).
 - `firmware/key_matrix.csv` gives switch, matrix cell, position, and RGB index.
   `manufacturing/BOM.csv` lists exact references, values, board side, and placement coordinates.
   SWxxx, Dxxx, and LEDxxx refer to the same physical key; C101 belongs to SW001.
@@ -169,14 +178,14 @@ plate spacing, clip thickness, controller/capacitor openings and a fit coupon.
 ## Populated 3D view
 
 Open **Cleaver.kicad_pcb → View → 3D Viewer (Alt+3)**. The project includes local
-models for **all 482 populated/modelled footprints**, including front-side MX switches,
+models for **all 490 populated/modelled footprints**, including front-side MX switches,
 back-side sockets, LEDs/passives, and a simplified RP2040-Plus with long headers/USB-C.
 The controller sockets have nominal supplier-dimensioned STEP/VRML models.
 No extra model-library installation is needed. Flip the view with **F** to see
 the underside. TP1–TP6, mounting holes and fiducials intentionally have no models.
 
-- [Top-side preview](previews/Cleaver-rev0.7-top.png)
-- [Bottom-side preview](previews/Cleaver-rev0.7-bottom.png)
+- [Historical rev0.7 top-side preview](previews/Cleaver-rev0.7-top.png)
+- [Historical rev0.7 bottom-side preview](previews/Cleaver-rev0.7-bottom.png)
 - [Model coverage, approximations, licensing, and STEP export](Cleaver.3dshapes/README.md)
 
 The module/header stack and some package details are approximations; keycaps,
@@ -185,8 +194,8 @@ physical fit checks above. Model assignments are preserved by the generator.
 
 ## Vial-QMK firmware
 
-Pin assignments are unchanged; compatible revision 0.6 builds and instructions are in
-[`manufacturing/rev0.6/firmware/`](manufacturing/rev0.6/firmware/).
+Pin assignments are unchanged; revision 0.8 builds drive all 121 LEDs. Images and
+instructions are in [`manufacturing/rev0.8/firmware/`](manufacturing/rev0.8/firmware/).
 
 Copy `firmware/` to `keyboards/cleaver/` in a **vial-qmk** checkout. From that
 checkout run:
@@ -199,12 +208,13 @@ make cleaver:vial
 The Vial keymap includes its own UID, physical `vial.json`, VIA/Vial/VialRGB rules,
 and a secure **Esc + main Enter** unlock combination. No insecure-unlock option is
 enabled. The RP2040 vendor/PIO WS2812 driver uses GRB data and explicit timings.
-The module's onboard GP25 status LED is not included in the keyboard's 117-LED chain.
+The module's onboard GP25 status LED is not included in the keyboard's 121-LED chain.
 Default macro-key assignments can be changed in Vial.
 
 All 26 carrier GPIOs retain their physical pin numbers. The Vial UID, VID/PID,
-layout, unlock combination, RGB chain and USB-aware GP28 power control are
-retained. QMK's default W25Q080-compatible boot stage supports the module's
+layout, unlock combination, first 117 RGB indices and USB-aware GP28 power control
+are retained. Four non-key badge pixels extend the chain. QMK's default
+W25Q080-compatible boot stage supports the module's
 W25Q32JV flash. EEPROM remains explicitly within the first 2MB, also valid on
 the 16MB RP2040-Plus variant. See [`firmware/README.md`](firmware/README.md).
 

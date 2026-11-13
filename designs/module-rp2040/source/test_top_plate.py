@@ -111,8 +111,8 @@ class TopPlateTests(unittest.TestCase):
     def test_controller_notch_and_no_obsolete_capacitor_hole(self):
         self.assertFalse(self.surface.intersects(box(398.01, BOARD_H-25.49, BOARD_W, BOARD_H)))
         self.assertTrue(self.surface.covers(Point(377, BOARD_H-6)))
-        self.assertEqual(len(self.surface.interiors), 128)
-        self.assertEqual(self.mesh.euler_number, 2-2*128)
+        self.assertEqual(len(self.surface.interiors), 129)
+        self.assertEqual(self.mesh.euler_number, 2-2*129)
 
     def test_all_stls_and_report_agree(self):
         expected_sizes = [[BOARD_W, BOARD_H, THICKNESS], [40, 24, THICKNESS], [120, 24, THICKNESS]]

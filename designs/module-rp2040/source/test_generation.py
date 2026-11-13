@@ -25,7 +25,7 @@ class GenerationTests(unittest.TestCase):
             self.assertTrue(pad.IsOnLayer(pcbnew.B_Cu))
         self.assertEqual(sum(p.GetLayer()==pcbnew.Edge_Cuts for p in fp.GraphicalItems()),1)
 
-    def dsn(self, existing_power_class=False, count=117):
+    def dsn(self, existing_power_class=False, count=121):
         power = '/GND /LED_5V /FUSED_5V /RAW_USB_5V'
         text = '''(pcb test (structure
     (boundary (path pcb 0 0 0 100000 0 100000 -100000 0 -100000 0 0))
@@ -68,8 +68,8 @@ class GenerationTests(unittest.TestCase):
         self.assertEqual(text.count('(class usb_led_power'),1)
 
     def test_dsn_rejects_missing_opening(self):
-        with self.assertRaisesRegex(ValueError,'Expected 117'):
-            self.prepare(self.dsn(count=116))
+        with self.assertRaisesRegex(ValueError,'Expected 121'):
+            self.prepare(self.dsn(count=120))
 
 
 if __name__=='__main__':

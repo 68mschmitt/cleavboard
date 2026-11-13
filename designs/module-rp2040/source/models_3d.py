@@ -147,7 +147,7 @@ def validate_models(board):
         count += len(actual)
         populated += bool(actual)
     assert len(list(board.GetFootprints()))==len(components(*read_keys())) + len(MOUNTING_HOLES) + len(FIDUCIALS) + 1
-    assert (populated,count)==(482,599), (populated,count)
+    assert (populated,count)==(490,607), (populated,count)
     return dict(populated_footprints=populated,model_instances=count,
                 unique_models=len(used_models),
                 intentionally_unmodeled=['TP1: VBUS test pad', 'TP2-TP6: probe pads',

@@ -1,0 +1,34 @@
+{
+  "baseline_revision": "0.7",
+  "revision": "0.8",
+  "baseline_pcb_sha256": "c3fc62a6c67d5bb2ccf690aa6f937d139ce1a54bff259a238a39aefbe3f1ca06",
+  "pcb_sha256": "4a5e244fae2fb5acae58779bff73701be771b0b7f6d85f98efe5a1baa8a691ae",
+  "project_rules_settings_and_exclusions_unchanged": true,
+  "existing_copper_items_exactly_retained": 5356,
+  "added_copper_items": 161,
+  "unchanged_footprints_and_pad_nets": 501,
+  "moved_mount": {
+    "reference": "H9",
+    "before_mm": [
+      220,
+      138
+    ],
+    "after_mm": [
+      250,
+      138
+    ]
+  },
+  "changed_key_led_pin": "LED112.4: no-connect -> RGB_117",
+  "new_references": [
+    "C218",
+    "C219",
+    "C220",
+    "C221",
+    "LED118",
+    "LED119",
+    "LED120",
+    "LED121"
+  ],
+  "tracks": 4793,
+  "vias": 724
+}

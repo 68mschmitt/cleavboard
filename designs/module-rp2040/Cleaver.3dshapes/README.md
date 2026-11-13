@@ -4,7 +4,7 @@ Open `../Cleaver.kicad_pcb` in KiCad PCB Editor and press **Alt+3**
 (**View → 3D Viewer**). No extra library installation or path configuration is
 needed: all assignments use `${KIPRJMOD}/Cleaver.3dshapes/`.
 
-The rev0.7 board includes **599 model placements across 482 populated/modelled footprints**.
+The rev0.8 board includes **607 model placements across 490 populated/modelled footprints**.
 Each switch footprint has both a front-side switch and a back-side socket.
 **TP1–TP6, mounting holes and fiducials are intentionally bare**. TP1 is a
 VBUS test pad, not a connector. LED power is routed through header pin 40.
@@ -19,9 +19,9 @@ reload it from disk after preserving any intentional unsaved edits.
 | Footprint(s) | Model | Limitations |
 | --- | --- | --- |
 | SW001–SW117 | KiSwitch MX switch + socket envelope normalized to bottom anchor | Socket envelope approximates HanElectricity CPG151101S11-16; not a supplier-qualified model |
-| LED001–LED117 | Marbastlib SK6812MINI-E, recentered for reverse mounting | Package/lead geometry; installed height and solder fillets remain approximate |
+| LED001–LED121 | Marbastlib SK6812MINI-E, recentered for reverse mounting | Last four illuminate the badge; installed height and solder fillets remain approximate |
 | D001–D117 | KiCad SOD-123 | Generic package, with cathode band |
-| C101–C217 and C1–C3 | KiCad 0805 capacitor | Generic body height/material, not value-specific |
+| C101–C221 and C1–C3 | KiCad 0805 capacitor | Generic body height/material, not value-specific |
 | R1–R4 | KiCad 0805 resistor | Generic package |
 | F1 | KiCad 1206 fuse | Representative 3.2 × 1.6 × 0.55 mm PTC body |
 | U2 / U3 | KiCad SOT-23-5 / SOT-23-6 | Generic package, not manufacturer marking |

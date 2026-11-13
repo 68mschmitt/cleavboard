@@ -1,0 +1,238 @@
+{
+  "source_pcb": "../../Cleaver.kicad_pcb",
+  "source_sha256": "4a5e244fae2fb5acae58779bff73701be771b0b7f6d85f98efe5a1baa8a691ae",
+  "source_checks": {
+    "revision": "0.8",
+    "outline_matches": true,
+    "switch_centres_matched": 117,
+    "mounting_holes": [
+      {
+        "reference": "H1",
+        "x_mm": 4,
+        "y_mm": 4,
+        "drill_mm": 2.2
+      },
+      {
+        "reference": "H2",
+        "x_mm": 110,
+        "y_mm": 23.8,
+        "drill_mm": 2.2
+      },
+      {
+        "reference": "H3",
+        "x_mm": 220,
+        "y_mm": 23.8,
+        "drill_mm": 2.2
+      },
+      {
+        "reference": "H4",
+        "x_mm": 330,
+        "y_mm": 23.8,
+        "drill_mm": 2.2
+      },
+      {
+        "reference": "H5",
+        "x_mm": 395,
+        "y_mm": 26,
+        "drill_mm": 2.2
+      },
+      {
+        "reference": "H6",
+        "x_mm": 313,
+        "y_mm": 70,
+        "drill_mm": 2.2
+      },
+      {
+        "reference": "H7",
+        "x_mm": 4,
+        "y_mm": 143,
+        "drill_mm": 2.2
+      },
+      {
+        "reference": "H8",
+        "x_mm": 90,
+        "y_mm": 138,
+        "drill_mm": 2.2
+      },
+      {
+        "reference": "H9",
+        "x_mm": 250,
+        "y_mm": 138,
+        "drill_mm": 2.2
+      },
+      {
+        "reference": "H10",
+        "x_mm": 365,
+        "y_mm": 138,
+        "drill_mm": 2.2
+      },
+      {
+        "reference": "H11",
+        "x_mm": 448,
+        "y_mm": 138,
+        "drill_mm": 2.2
+      }
+    ],
+    "controller_body_clear": true,
+    "capacitor_on_underside": true
+  },
+  "switch_opening_mm": [
+    14,
+    14
+  ],
+  "plate_thickness_mm": 1.5,
+  "pcb_to_plate_top_nominal_mm": 5,
+  "pcb_to_plate_underside_nominal_mm": 3.5,
+  "hardware_reserved_diameter_mm": 6,
+  "stabilizer_type": "Cherry-compatible plate-mount",
+  "stabilizers": [
+    {
+      "ref": "SW031",
+      "legend": "Backspace",
+      "size": "2u",
+      "x_mm": 290.5125,
+      "y_mm": 38.1,
+      "rotation_deg": 0,
+      "stem_spacing_mm": 23.8
+    },
+    {
+      "ref": "SW060",
+      "legend": "+",
+      "size": "2u",
+      "x_mm": 442.9125,
+      "y_mm": 66.675,
+      "rotation_deg": 90,
+      "stem_spacing_mm": 23.8
+    },
+    {
+      "ref": "SW074",
+      "legend": "Enter",
+      "size": "2u",
+      "x_mm": 288.13125,
+      "y_mm": 76.2,
+      "rotation_deg": 0,
+      "stem_spacing_mm": 23.8
+    },
+    {
+      "ref": "SW079",
+      "legend": "Shift",
+      "size": "2u",
+      "x_mm": 45.24375,
+      "y_mm": 95.25,
+      "rotation_deg": 0,
+      "stem_spacing_mm": 23.8
+    },
+    {
+      "ref": "SW090",
+      "legend": "Shift",
+      "size": "2u",
+      "x_mm": 283.36875000000003,
+      "y_mm": 95.25,
+      "rotation_deg": 0,
+      "stem_spacing_mm": 23.8
+    },
+    {
+      "ref": "SW097",
+      "legend": "Enter",
+      "size": "2u",
+      "x_mm": 442.9125,
+      "y_mm": 104.775,
+      "rotation_deg": 90,
+      "stem_spacing_mm": 23.8
+    },
+    {
+      "ref": "SW102",
+      "legend": "Space",
+      "size": "6.25u",
+      "x_mm": 154.78125,
+      "y_mm": 114.30000000000001,
+      "rotation_deg": 0,
+      "stem_spacing_mm": 100
+    },
+    {
+      "ref": "SW110",
+      "legend": "0/Ins",
+      "size": "2u",
+      "x_mm": 395.2875,
+      "y_mm": 114.30000000000001,
+      "rotation_deg": 0,
+      "stem_spacing_mm": 23.8
+    }
+  ],
+  "controller_notch_pcb_xy_mm": [
+    398,
+    0,
+    452.4375,
+    25.5
+  ],
+  "obsolete_top_capacitor_opening": false,
+  "logo_aperture_mm": 16.4,
+  "logo_center_pcb_xy_mm": [
+    227.6475,
+    138.1125
+  ],
+  "stl_coordinates": "millimetres; X right, Y up, Z=0 underside; PCB (x,y) maps to (x,147.6375-y)",
+  "physical_fit_tested": false,
+  "tools": {
+    "kicad": "10.0.8",
+    "shapely": "2.2.0",
+    "geos": "3.14.1",
+    "trimesh": "5.2.0"
+  },
+  "parts": [
+    {
+      "file": "Cleaver-top-plate-rev0.8.stl",
+      "size_mm": [
+        452.4375,
+        147.6375,
+        1.5
+      ],
+      "triangles": 14712,
+      "through_openings": 129,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "volume_mm3": 60411.4993,
+      "xy_roundtrip_difference_mm2": 0.0230674,
+      "xy_max_boundary_deviation_mm": 1.51e-05,
+      "sha256": "749e9dabc4557515ec487f53018fe0afc3240588c7ece747785d4d3fbeccc3ab"
+    },
+    {
+      "file": "stabilizer-fit-coupon-2u.stl",
+      "size_mm": [
+        40.0,
+        24.0,
+        1.5
+      ],
+      "triangles": 1188,
+      "through_openings": 2,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "volume_mm3": 851.3685,
+      "xy_roundtrip_difference_mm2": 4.093e-05,
+      "xy_max_boundary_deviation_mm": 1.67e-06,
+      "sha256": "9635d94801a77477e59a5d82e01658dd6b79459d1a25950c5210f1cf2d749ca3"
+    },
+    {
+      "file": "stabilizer-fit-coupon-6.25u.stl",
+      "size_mm": [
+        120.0,
+        24.0,
+        1.5
+      ],
+      "triangles": 1188,
+      "through_openings": 2,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "volume_mm3": 3205.5885,
+      "xy_roundtrip_difference_mm2": 5.669e-05,
+      "xy_max_boundary_deviation_mm": 3.05e-06,
+      "sha256": "eb069356fe4ff3a5731e47ef1041f8041544668357bb75b6553a8748b896bd6c"
+    }
+  ]
+}

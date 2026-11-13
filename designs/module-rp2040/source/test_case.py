@@ -97,7 +97,7 @@ class CaseTests(unittest.TestCase):
                                                quad_segs=64) for x, y in cover_screws(self.p)])
         expected = deck.difference(holes)
         self.assertEqual(actual.geom_type, 'Polygon')
-        self.assertEqual(len(actual.interiors), 20)  # 12 key clusters + 8 cover screws
+        self.assertEqual(len(actual.interiors), 21)  # 12 key clusters + logo + 8 screws
         self.assertLess(actual.symmetric_difference(expected).area, .15)
         self.assertLess(actual.boundary.hausdorff_distance(expected.boundary), .005)
         keys, _ = read_keys()
@@ -136,7 +136,7 @@ class CaseTests(unittest.TestCase):
         self.assertGreater(self.report['fit_checks']['minimum_c5_clear_depth_normal_to_pcb_mm'], 11)
 
     def test_all_exported_stls_are_single_watertight_parts(self):
-        self.assertEqual(len(self.records), 10)
+        self.assertEqual(len(self.records), 14)
         for name, item in self.records.items():
             mesh = trimesh.load_mesh(OUT/name)
             self.assertEqual(digest(OUT/name), item['sha256'])
