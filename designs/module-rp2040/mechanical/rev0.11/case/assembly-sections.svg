@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 240 130">
+<rect width="240" height="130" fill="#f5f7fa"/>
+<g font-family="sans-serif" fill="#243244" font-size="3.4">
+<text x="8" y="9" font-size="5">rev0.11 cartridge sections / schematic, dimensions normal to PCB</text>
+<text x="8" y="20" font-size="4">1. PCB screws upward into plate bosses</text>
+<rect x="12" y="28" width="65" height="6" fill="#aebac6"/>
+<rect x="32" y="34" width="25" height="14" fill="#aebac6"/>
+<rect x="39" y="38" width="11" height="10" fill="#aa8247"/>
+<rect x="12" y="48" width="65" height="6" fill="#59976b"/>
+<path d="M42 40h5v16h5v7H37v-7h5Z" fill="#56616c"/>
+<text x="85" y="32">Switch plate Z=3.5–5.0, thickness 1.5</text>
+<text x="85" y="40">Integral boss Z=0–3.5 / short M2 insert length 2.5</text>
+<text x="85" y="48">PCB top Z=0 / underside -1.6 / hole diameter 2.2</text>
+<text x="85" y="56">M2 x 4 + 0.3 washer / engagement 2.1</text>
+<text x="8" y="77" font-size="4">2. Cartridge drops over base posts; plate screws down</text>
+<rect x="12" y="84" width="65" height="6" fill="#aebac6"/>
+<path d="M12 105h18v6H12Z M59 105h18v6H59Z" fill="#59976b"/>
+<rect x="33" y="90" width="23" height="30" fill="#d8c29c"/>
+<rect x="39" y="90" width="11" height="16" fill="#aa8247"/>
+<path d="M37 78h15v6h-5v20h-5V84h-5Z" fill="#56616c"/>
+<text x="85" y="88">M2 x 5 through plate diameter 2.8 / engagement 3.5</text>
+<text x="85" y="97">Post top Z=3.5 bears directly on plate</text>
+<text x="85" y="106">Base post diameter 6 passes through PCB diameter 7</text>
+<text x="85" y="115">PCB is not clamped by this screw / 0.5 radial clearance</text>
+</g></svg>

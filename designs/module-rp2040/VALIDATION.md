@@ -1,4 +1,101 @@
-# Revision 0.9 validation — 2 × 1 inch illuminated badge
+# Validation
+
+## Revision 0.11 — PCB/plate cartridge and replaceable USB bezel
+
+Recorded **2026-11-15**, KiCad 10.0.8, FreeCAD 1.1.4, Shapely 2.2.0 and
+Trimesh 5.2.1.
+
+| Check | Result |
+| --- | --- |
+| Full module regression suite | **76 passed, none skipped** |
+| PCB mounting | Twelve Ø7 mm NPTH passages + twelve Ø2.2 mm attachment holes |
+| Electrical migration | All 5,528 tracks/vias retained by identity, geometry and net; electrical footprint/pad placement retained |
+| ERC / DRC, all severities | **0 / 0 violations** |
+| Unconnected items / schematic parity | **0 / 0** |
+| Fresh complete-copper regeneration | Exact canonical match; regenerated ERC/DRC/parity pass; firmware bytes unchanged |
+| Mounting-site clearances | New holes/keepouts clear routed copper, pads, physical bodies and plate openings |
+| Mechanical stack | Twelve posts reach plate underside through PCB; twelve downward plate bosses support PCB at 3.5 mm spacing |
+| Fastener engagement | 3.5 mm plate-to-base; 2.1 mm PCB-to-plate with 0.3 mm washer |
+| Assembly path | Cartridge lowers along PCB normal without interference at checked lift positions |
+| USB insert | Open-top removal path clear with PCB installed; flange and cover positively capture it when closed |
+| Keys / logo | All 117 cover sweeps and plate screw-head sweeps clear; four logo optical paths clear |
+| Export integrity | 25 single-solid, watertight STL/STEP pairs; volume and CAD round trips pass |
+
+Print files are organized into
+[test prints and assembly aids](mechanical/rev0.11/case/test-prints/README.md)
+and [final installed parts](mechanical/rev0.11/case/final-prints/README.md).
+The generator and per-part validation paths follow these folders.
+After this reorganization, all nine cartridge checks passed
+([log](manufacturing/rev0.11/checks/print-layout-tests.log)); all 25 STL files
+remained byte-identical to the preceding flat-folder exports.
+
+The subsequent labeled-coupon update adds embossed fit-set IDs to all 14 test
+models, with external tabs clear of the original mating envelopes. All 25
+STL/STEP pairs regenerated successfully. Ten cartridge checks passed, including
+assembled label/tab clearances and cartridge/USB-blank removal paths
+([log](manufacturing/rev0.11/checks/labeled-coupon-tests.log)).
+See the [fit-set label key](mechanical/rev0.11/case/test-prints/README.md#embossed-fit-set-labels).
+
+Evidence:
+[PCB checks and mounting migration](manufacturing/rev0.11/checks/),
+[unit-test log](manufacturing/rev0.11/checks/unit-tests.log),
+[round-trip result](manufacturing/rev0.11/checks/roundtrip/roundtrip.json),
+[mechanical checks and source/export hashes](mechanical/rev0.11/case/validation.json).
+The release includes a two-stage mounting coupon, USB receiver coupon,
+parameterized bezel/blank, controller support jig and assembly sections.
+
+**Physical fits and durability remain untested.** The USB opening is nominal
+until the assembled PCB/MCU and actual cable have been measured. Coupon checks
+include insert fit, repeated service cycles, post passage clearance, socket
+support, badge preload, plate stiffness and key/stabilizer operation.
+See the [assembly and USB measurement guide](mechanical/rev0.11/case/README.md).
+
+```sh
+python3 -B designs/module-rp2040/source/generate_cartridge_case.py
+python3 -B -m unittest discover -s designs/module-rp2040/source -p 'test_*.py'
+python3 -B designs/module-rp2040/source/check_kicad.py --reports designs/module-rp2040/manufacturing/rev0.11/checks
+python3 -B designs/module-rp2040/source/check_routing_roundtrip.py
+```
+
+## Mechanical revision 0.10 — compatible with PCB rev0.9
+
+Recorded **2026-11-15**, using KiCad 10.0.8, FreeCAD 1.1.4 / OCC 7.9.3,
+Shapely 2.2.0 and Trimesh 5.2.1. This enclosure release adds bottom-access
+fasteners, reinforced blind insert pillars, a gasket-captured badge and a
+lower 3° profile.
+
+| Check | Result |
+| --- | --- |
+| Case, service-case, plate, logo and socket regression tests | **33 passed, none skipped** |
+| Saved PCB / rev0.9 plate | Input hashes retained; 117 switch centers and 11 mounting holes matched |
+| Case/PCB/plate and badge intersections | Zero unintended CAD overlap |
+| Cover fasteners | Eight underside M2 × 8 paths, flat head seats and hard stops; continuous top skin |
+| Fastener access / engagement | Ø4.4 mm driver clearance; 3.5 mm nominal thread engagement |
+| Keycap sweeps | All 117 clear of actual cover solid, including new pillars and badge shoulders |
+| Controller / sockets / USB | Existing envelopes clear; socket backstops present |
+| C5 underside clearance | 12.7423 mm normal to PCB, exceeding the 11 mm allowance |
+| Badge | Four optical paths clear; 0.8 mm PCB clearance; 0.8 mm foam in 0.6 mm installed gap |
+| Height reduction | Front edge 1.7592 mm; home-row reference cap top 3.4348 mm; rear cover 6.2409 mm |
+| Export integrity | 20 STL/STEP part pairs, single watertight solids; CAD/mesh volume and STEP round trips pass |
+
+Evidence: [parameters, fit checks, source/artifact hashes](mechanical/rev0.10/case/validation.json),
+[print/assembly instructions and physical acceptance checks](mechanical/rev0.10/case/README.md).
+Heights are from the bare case bottom; the keycap measurement is a common
+Z=20 mm reference, not a physical keycap measurement. Physical insert durability,
+gasket preload/rattle, floor stiffness and actual hardware fit remain untested.
+
+Reproduce the mechanical release and its serialized-part regressions:
+
+```sh
+python3 -B designs/module-rp2040/source/generate_case_service.py
+python3 -B -m unittest discover -s designs/module-rp2040/source -p 'test_case*.py'
+```
+
+The 33-test run also includes `test_top_plate`, `test_logo` and
+`test_socket_interface`; reproduce from `designs/module-rp2040/source/` with
+`python3 -B -m unittest test_case test_case_service test_top_plate test_logo test_socket_interface`.
+
+## Revision 0.9 validation — 2 × 1 inch illuminated badge
 
 Recorded **2026-11-12 local / 2026-11-13 UTC**, using KiCad 10.0.8, FreeCAD 1.1.4,
 Shapely 2.2.0 and Trimesh 5.2.0. The visible badge is **50.8 × 25.4 mm**, with

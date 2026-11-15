@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 240 124">
+<rect width="240" height="124" fill="#f5f7fa"/>
+<g font-family="sans-serif" fill="#243244" font-size="3">
+<text x="8" y="8" font-size="5">rev0.10 assembly sections — dimensions normal to PCB (mm)</text>
+<text x="8" y="17" font-size="4">Cover fastener / schematic section</text>
+<path d="M10 22h66v7H10Z M28 29h30v15H28Z" fill="#aebac6"/>
+<path d="M10 30h16v16h34V30h16v44H10Z" fill="#d8c29c"/>
+<rect x="38" y="32" width="10" height="12" fill="#aa8247"/>
+<path d="M40 35h6v25h4v6H36v-6h4Z" fill="#56616c"/>
+<path d="M36 66v10 M50 66v10" stroke="#56616c" stroke-width=".3"/>
+<text x="80" y="26">Continuous 2.4 mm exterior</text>
+<text x="80" y="34">M2 insert: OD ~3.2 x 4</text>
+<text x="80" y="41">Blind pilot: diameter 3.0 x 4.5</text>
+<text x="80" y="48">Boss meets hard stop at Z=3.4</text>
+<text x="80" y="55">Grip 4.5 / engagement 3.5</text>
+<text x="80" y="62">M2 x 8 socket-head screw</text>
+<text x="80" y="69">Flat seat Z=-1.1; bore diameter 4.6</text>
+<text x="8" y="86" font-size="4">Badge stack / section through retaining flange</text>
+<rect x="10" y="92" width="66" height="5" fill="#aebac6"/>
+<rect x="22" y="97" width="42" height="3" fill="#666"/>
+<rect x="22" y="100" width="42" height="4" fill="#6ad4e8"/>
+<rect x="22" y="104" width="42" height="9" fill="#333"/>
+<rect x="10" y="113" width="66" height="4" fill="#c7ba98"/>
+<text x="80" y="95">Cover underside 8.4; recess roof 8.8</text>
+<text x="80" y="102">Soft foam: 0.8 stock -&gt; 0.6 installed</text>
+<text x="80" y="109">Badge flange Z=7.4–8.2; well top 7.4</text>
+<text x="80" y="116">Plate top 5.0; well bottom 0.8 above PCB</text>
+</g></svg>

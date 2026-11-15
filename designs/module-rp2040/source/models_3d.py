@@ -29,6 +29,7 @@ MODELS = {
     'WirePad': (),
     'TestPad': (),
     'MountingHole_M2': (),
+    'MountingHole_Post7': (),
     'Fiducial': (),
     'TavianaTactical_34mm': (),
 }

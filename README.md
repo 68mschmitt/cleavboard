@@ -3,9 +3,20 @@
 A keyboard for my best tantrum buddy Cleaver: 117 hot-swap MX keys, with RGB and
 single-color lighting variants.
 
-## Revision 0.9 showcase
+## Current revision: 0.11
 
-**Current PCB: [rev0.9](designs/module-rp2040/manufacturing/rev0.9/README.md)** has a
+**[PCB fabrication package](designs/module-rp2040/manufacturing/rev0.11/README.md)** ·
+**[Case, switch plate and assembly guide](designs/module-rp2040/mechanical/rev0.11/README.md)**
+
+The PCB screws to the underside of the switch plate, then the combined assembly
+slides over tall base posts and screws into the base. A replaceable USB-C bezel
+lets the cable opening be fitted after assembling the actual controller.
+The case retains its lower 3° profile, hidden cover screws and captured badge.
+Use the **rev0.11 PCB, plate, base and cover together**.
+
+## Revision 0.9 showcase (historical)
+
+The earlier **[rev0.9](designs/module-rp2040/manufacturing/rev0.9/README.md)** introduced a
 **2 × 1 inch [replaceable illuminated logo](designs/module-rp2040/LOGO.md)** between
 the front three-key clusters, with matching rectangular plate/cover openings
 and an 8 mm deeper front bezel.
@@ -31,28 +42,29 @@ glows cyan while per-key RGB is off.
 
 ### Build and explore
 
+- **Current mechanics:** [rev0.11 cartridge and USB bezel](designs/module-rp2040/mechanical/rev0.11/README.md),
+  including STL/STEP, FreeCAD assembly, mounting plan and fit coupons.
 - **Electronics:** [design and assembly guide](designs/module-rp2040/README.md),
-  [rev0.9 fabrication package, BOM and placement files](designs/module-rp2040/manufacturing/rev0.9/README.md).
-- **Case and plate:** [STL, STEP, FreeCAD assembly and fit coupons](designs/module-rp2040/mechanical/rev0.9/case/README.md),
-  [matching switch/stabilizer/logo plate](designs/module-rp2040/mechanical/rev0.9/README.md).
+  [rev0.11 fabrication package, BOM and placement files](designs/module-rp2040/manufacturing/rev0.11/README.md).
+- **Earlier mechanics:** [rev0.10 case for the rev0.9 PCB](designs/module-rp2040/mechanical/rev0.10/README.md).
 - **Firmware:** [ready-to-flash UF2 files and instructions](designs/module-rp2040/manufacturing/rev0.9/firmware/README.md),
   [firmware source and configuration](designs/module-rp2040/firmware/README.md).
 - **Look inside:** [populated PCB previews](designs/module-rp2040/previews/README.md),
-  [case interior and mounting plan](designs/module-rp2040/mechanical/rev0.9/case/case-plan.svg),
+  [current mounting plan](designs/module-rp2040/mechanical/rev0.11/case/mounting-plan.svg),
   [recorded validation and remaining prototype checks](designs/module-rp2040/VALIDATION.md).
 
 > **Prototype status:** Electrical/layout checks and firmware builds have recorded
 > passing results; physical hardware operation and case fit remain unverified.
 > Print the fit coupons first. The case and plate are full-size, unsplit parts;
-> the case needs approximately a 466 × 172 mm print area **plus brim clearance**.
-> Use the specified long module headers and matching rev0.9 base/plate/cover. JLCPCB
+> the case needs approximately a 466 × 175 mm print area **plus brim clearance**.
+> Use the specified long module headers and matching rev0.11 PCB/base/plate/cover. JLCPCB
 > engineering/placement approval and physical socket mating remain required.
 
 ## Choose a hardware design
 
 | Design | Open in KiCad | Documentation |
 | --- | --- | --- |
-| **Module RP2040 — rev0.9:** socketed Waveshare RP2040-Plus, per-key RGB and 2 × 1 inch illuminated badge | [Cleaver.kicad_pro](designs/module-rp2040/Cleaver.kicad_pro) | [Design and assembly](designs/module-rp2040/README.md), [manufacturing](designs/module-rp2040/manufacturing/README.md) |
+| **Module RP2040 — rev0.11:** socketed RP2040-Plus, removable PCB/plate cartridge, adjustable USB bezel and illuminated badge | [Cleaver.kicad_pro](designs/module-rp2040/Cleaver.kicad_pro) | [Design and assembly](designs/module-rp2040/README.md), [manufacturing](designs/module-rp2040/manufacturing/README.md) |
 | **Embedded RP2040 — embedded-0.2:** onboard RP2040 and USB-C, per-key RGB | [Cleaver-Embedded.kicad_pro](designs/embedded-rp2040/Cleaver-Embedded.kicad_pro) | [Design and status](designs/embedded-rp2040/README.md), [handoff](designs/embedded-rp2040/HANDOFF.md) |
 | **Single-color devboard — white-0.1:** YD-RP2040 module, white backlight | [Cleaver-White.kicad_pro](designs/single-color-devboard/Cleaver-White.kicad_pro) | [Design and status](designs/single-color-devboard/README.md), [manufacturing](designs/single-color-devboard/manufacturing/README.md) |
 

@@ -4,6 +4,7 @@ import json
 import unittest
 import pcbnew
 from design import ROOT, BOARD_H, MOUNTING_HOLES, TEST_POINTS, read_keys
+from mounting_interface import mounting_specs
 from export_manufacturing import assembly_rows
 
 
@@ -105,11 +106,13 @@ class AssemblyTests(unittest.TestCase):
 
     def test_mounting_holes_and_reserved_copper(self):
         self.assertEqual(sum(z.GetIsRuleArea() for z in self.board.Zones()),len(MOUNTING_HOLES))
-        for i,(x,y) in enumerate(MOUNTING_HOLES,1):
-            fp=self.footprints[f'H{i}'];pad=list(fp.Pads())[0]
+        for spec in mounting_specs():
+            x,y=spec['x'],spec['y']
+            ref=spec['reference']
+            fp=self.footprints[ref];pad=list(fp.Pads())[0]
             self.assertEqual(tuple(pcbnew.ToMM(fp.GetPosition())),(x,y))
             self.assertEqual(pad.GetAttribute(),pcbnew.PAD_ATTRIB_NPTH)
-            self.assertAlmostEqual(pcbnew.ToMM(pad.GetDrillSize().x),2.2)
+            self.assertAlmostEqual(pcbnew.ToMM(pad.GetDrillSize().x),spec['drill_mm'])
             for other in self.board.GetFootprints():
                 if other.GetReference()==fp.GetReference():continue
                 for other_pad in other.Pads():
@@ -117,7 +120,7 @@ class AssemblyTests(unittest.TestCase):
                     x0,y0=pcbnew.ToMM(bounds.GetPosition())
                     x1,y1=pcbnew.ToMM(bounds.GetEnd())
                     dx=max(x0-x,0,x-x1);dy=max(y0-y,0,y-y1)
-                    self.assertGreaterEqual(math.hypot(dx,dy),3,f'H{i}: hardware overlaps {other.GetReference()} pad')
+                    self.assertGreaterEqual(math.hypot(dx,dy),spec['reserve_radius_mm'],f'{ref}: hardware overlaps {other.GetReference()} pad')
             # Independently test actual track/via distance, not just rule-area count.
             for item in self.board.GetTracks():
                 a=pcbnew.ToMM(item.GetStart());b=pcbnew.ToMM(item.GetEnd())
@@ -125,7 +128,7 @@ class AssemblyTests(unittest.TestCase):
                 t=max(0,min(1,((x-a[0])*dx+(y-a[1])*dy)/(dx*dx+dy*dy))) if dx or dy else 0
                 dist=math.hypot(x-a[0]-t*dx,y-a[1]-t*dy)
                 width=item.GetWidth(pcbnew.F_Cu) if item.GetClass()=='PCB_VIA' else item.GetWidth()
-                self.assertGreaterEqual(dist-pcbnew.ToMM(width)/2,2.995,f'H{i}: screw copper clearance')
+                self.assertGreaterEqual(dist-pcbnew.ToMM(width)/2,spec['reserve_radius_mm']-.005,f'{ref}: screw copper clearance')
 
     def test_probe_pads_are_connected_bare_copper(self):
         for ref,net,x,y in TEST_POINTS:

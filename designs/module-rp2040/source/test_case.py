@@ -7,7 +7,8 @@ from unittest.mock import patch
 
 import pcbnew
 
-from design import BOARD_H, BOARD_W, MOUNTING_HOLES, ROOT, read_keys, REVISION
+from design import BOARD_H, BOARD_W, ROOT, read_keys
+from generate_case import MOUNTING_HOLES, REVISION, SOURCE_PCB
 
 HAS_CASE_TOOLS = all(importlib.util.find_spec(name) is not None
                      for name in ['numpy', 'scipy', 'shapely', 'trimesh'])
@@ -19,7 +20,7 @@ if HAS_CASE_TOOLS:
     from build_3d_models import freecad
     from generate_case import (OUT, Parameters, assembled, cover_screws, digest,
                                outlines, prism, validate_source, world_point)
-    from generate_mechanical import geometry
+    from generate_case import geometry
     from generate_top_plate import top_surface
 
 
@@ -50,7 +51,7 @@ class CaseTests(unittest.TestCase):
     def test_parameters_source_and_matching_plate(self):
         self.p.validate()
         self.assertEqual(self.report['parameters'], json.loads((OUT/'parameters.json').read_text()))
-        self.assertEqual(self.report['source_sha256'], digest(ROOT/'Cleaver.kicad_pcb'))
+        self.assertEqual(self.report['source_sha256'], digest(SOURCE_PCB))
         self.assertEqual(self.report['matching_plate_sha256'],
                          digest(ROOT/f'mechanical/rev{REVISION}/Cleaver-top-plate-rev{REVISION}.stl'))
         plate, _, _ = geometry(top_capacitor_opening=False)
@@ -59,7 +60,7 @@ class CaseTests(unittest.TestCase):
         self.assertEqual(len(checks['mounting_holes']), 11)
 
     def test_rejects_changed_capacitor_location(self):
-        board = pcbnew.LoadBoard(str(ROOT/'Cleaver.kicad_pcb'))
+        board = pcbnew.LoadBoard(str(SOURCE_PCB))
         cap = next(fp for fp in board.GetFootprints() if fp.GetReference() == 'C5')
         cap.Move(pcbnew.VECTOR2I(pcbnew.FromMM(.1), 0))
         plate, _, _ = geometry(top_capacitor_opening=False)

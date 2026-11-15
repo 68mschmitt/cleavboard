@@ -44,3 +44,18 @@ python3 -B designs/module-rp2040/source/check_kicad.py
 ```
 
 Use Python with KiCad's `pcbnew` and the dependencies described by each design.
+
+For the current coordinated rev0.11 PCB/plate cartridge and USB bezel:
+
+```sh
+python3 -B designs/module-rp2040/source/generate_cartridge_case.py
+python3 -B -m unittest discover -s designs/module-rp2040/source -p 'test_*.py'
+```
+
+This generator needs FreeCAD, Shapely ≥2.1, NumPy, SciPy and Trimesh. It exports
+the new case, fit coupons and validation into
+[`mechanical/rev0.11/case/`](../designs/module-rp2040/mechanical/rev0.11/case/README.md).
+Use `--usb-only` with measured offsets to export a fitted bezel independently.
+`generate_mechanical.py` and `generate_top_plate.py` also delegate to this
+coordinated generator. The older `generate_case.py` / `generate_case_service.py`
+target rev0.9 / mechanical rev0.10 and read the frozen rev0.9 PCB.

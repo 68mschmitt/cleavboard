@@ -1,14 +1,20 @@
-# Cleaver PCB — revision 0.9
+# Cleaver PCB — revision 0.11
 
 **New: [replaceable illuminated logo](LOGO.md)** between M6–M8 and M9–M11.
 Four RGB LEDs illuminate a **50.8 × 25.4 mm (2 × 1 inch)** printed badge through
 matching **51.2 × 25.8 mm** plate/cover openings. The front bezel and plate extend
 8 mm forward, preserving key positions. The light well and flanged insert lift
-out when the cover is removed. H9 moved to `(263,138)` mm: use the **rev0.9 PCB,
-base, plate and cover together**, plus the 121-pixel firmware.
+out when the cover is removed. The 121-pixel rev0.9 firmware remains compatible.
+
+**New mounting arrangement:** use the [rev0.11 PCB, switch plate, base and cover](mechanical/rev0.11/README.md)
+together. Twelve large PCB holes pass over tall base posts; twelve separate
+underside screws attach the PCB to downward plate bosses. The assembled cartridge
+then screws to the base from above. A replaceable USB bezel is fitted after
+measuring the actual controller. The lower 3° profile, hidden cover screws and
+anti-rattle badge retention carry forward.
 
 **Taviana Tactical artwork:** the active PCB includes a 34 mm-wide top-side logo.
-Use the current [revision 0.9 fabrication files](manufacturing/rev0.9/).
+Use the current [revision 0.11 fabrication files](manufacturing/rev0.11/).
 
 117 MX hot-swap switches, 121 reverse-mount RGB LEDs, and the **Waveshare
 RP2040-Plus 4MB USB-C module** (bare SKU 20290), plugged into underside SMT
@@ -20,21 +26,21 @@ tests. The old [DESIGN_REVIEW.md](DESIGN_REVIEW.md) describes revision 0.2, not 
 replacement design. Electrical checks do not substitute for a physical prototype
 or final plate/case checks.
 
-**Revision 0.9 manufacturing:** all **489 factory-populated parts are underside
+**Revision 0.11 manufacturing:** all **489 factory-populated parts are underside
 SMD**, including C5, the HanElectricity hot-swap sockets and **J1/J2 Harwin
 M20-7862042 controller sockets**. U1 plugs in from above through 40 **NPTH**
 holes. Solder two **Samtec TSW-120-14-G-S** strips to the module only: 8.13 mm
 posts down, 2.79 mm tails through the module. Stock pre-headered SKU 20808 is
 **not qualified**. See the [socket drawing, pin budget and production gates](references/CONTROLLER-SOCKETS-0.7.md).
 TP1 is a bare underside VBUS test pad.
-There are 11 M2
-mounting holes, five labelled underside probe pads and three bottom fiducials.
-Use [`manufacturing/rev0.9/`](manufacturing/rev0.9/) for the purchasing BOM,
+There are **twelve Ø7 mm post passages and twelve Ø2.2 mm attachment holes**,
+five labelled underside probe pads and three bottom fiducials.
+Use [`manufacturing/rev0.11/`](manufacturing/rev0.11/) for the purchasing BOM,
 corrected socket placement data and fabrication package; use
 [`mechanical/`](mechanical/) for the matching stabilizer/switch plate and
 case mounting references. **Allow 11 mm clearance under C5**; the old case-depth
-assumption no longer applies there. Use the [rev0.9 case base](mechanical/rev0.9/case/README.md)
-with socket-insertion backstops. Older Gerbers and placement exports are not
+assumption no longer applies there. The [rev0.11 case base](mechanical/rev0.11/case/README.md)
+includes socket-insertion backstops. Older Gerbers and placement exports are not
 this revision. Original-part evidence remains in the [component review](references/COMPONENT-REVIEW.md);
 new socket evidence is linked above. Supplier DFM and physical mating remain open.
 

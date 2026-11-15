@@ -20,9 +20,12 @@ from mathutils import Matrix, Vector
 from mathutils.bvhtree import BVHTree
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from design import BOARD_H, BOARD_W, INPUT, MOUNTING_HOLES, REVISION, ROOT, U, read_keys
+from design import BOARD_H, BOARD_W, INPUT, ROOT, U, read_keys
+from mounting_interface import LEGACY_MOUNTING_HOLES as MOUNTING_HOLES
 from logo_interface import INSERT, LIGHT_BORE, FRONT_EXTENSION, LOGO_X, LOGO_Y, logo_leds
 
+REVISION = '0.9'  # Historical showcase recipe; current assembly is supplied as CAD.
+SOURCE_PCB = ROOT/'source/baselines/rev0.9/Cleaver.kicad_pcb'
 CASE = ROOT/f'mechanical/rev{REVISION}/case'
 MM = .001
 
@@ -422,11 +425,11 @@ def main():
     pcb_validation = json.loads(pcb_validation_path.read_text())
     p = report['parameters']
     assert report['revision'] == pcb_validation['revision'] == REVISION
-    assert sha(ROOT/'Cleaver.kicad_pcb') == report['source_sha256'], 'Case references a stale PCB'
-    assert sha(ROOT/'Cleaver.kicad_pcb') == pcb_validation['pcb_sha256'], 'Stale PCB validation'
+    assert sha(SOURCE_PCB) == report['source_sha256'], 'Case references a stale PCB'
+    assert sha(SOURCE_PCB) == pcb_validation['pcb_sha256'], 'Stale PCB validation'
     plate_path = CASE.parent/f'Cleaver-top-plate-rev{REVISION}.stl'
     assert sha(plate_path) == report['matching_plate_sha256'], 'Case references a stale plate'
-    inputs = [ROOT/'Cleaver.kicad_pcb', pcb_validation_path, CASE/'parameters.json', CASE/'validation.json',
+    inputs = [SOURCE_PCB, pcb_validation_path, CASE/'parameters.json', CASE/'validation.json',
               CASE.parent/'validation.json', plate_path,
               CASE/f'Cleaver-case-base-rev{REVISION}.stl', CASE/f'Cleaver-case-top-cover-rev{REVISION}.stl',
               CASE/'Logo-light-well.stl', CASE/'Logo-insert-blank.stl']

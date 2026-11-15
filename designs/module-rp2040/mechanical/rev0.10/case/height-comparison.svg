@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="350" viewBox="-15 -50 230 75">
+<rect x="-15" y="-50" width="230" height="75" fill="#f5f7fa"/>
+<g font-family="sans-serif" font-size="3.5" fill="#243244">
+<text x="-8" y="-42" font-size="5">Bare-case profile comparison / actual CAD heights</text>
+<path d="M-15.6352 0 V-19.8673 L-15.6352 -19.8673 L152.8587 -34.6086 V0Z" fill="none" stroke="#b66b53" stroke-width=".5"/>
+<path d="M-17.2295 0 V-18.1080 L-15.2950 -19.4111 L155.6079 -28.3677 V0Z" fill="none" stroke="#247d91" stroke-width=".5"/>
+<text x="0" y="10">Front edge 19.87 → 18.11 mm</text>
+<text x="0" y="17">Home-row reference key top 36.54 → 33.11 mm (same caps)</text>
+<text x="145" y="10" fill="#b66b53">rev0.9 / 5°</text>
+<text x="145" y="17" fill="#247d91">rev0.10 / 3°</text>
+</g></svg>

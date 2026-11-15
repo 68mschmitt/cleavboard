@@ -1,4 +1,4 @@
-(session Cleaver_rev0.9_complete_copper (base_design Cleaver) (placement (resolution um 10))
+(session Cleaver_rev0.11_complete_copper (base_design Cleaver) (placement (resolution um 10))
 (routes (resolution um 10) (parser (host_cad "KiCad's Pcbnew") (host_version 10.0.8))
 (library_out
 (padstack "Via[0-3]_600:300_um" (shape (circle F.Cu 6000 0 0))(shape (circle In1.Cu 6000 0 0))(shape (circle In2.Cu 6000 0 0))(shape (circle B.Cu 6000 0 0)) (attach off))

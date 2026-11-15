@@ -1,5 +1,10 @@
 # Rev0.9 — case with 2 × 1 inch illuminated logo
 
+**Newer compatible enclosure:** [mechanical rev0.10](../../rev0.10/case/README.md)
+uses this same rev0.9 PCB/plate with underside fasteners, reinforced mounts,
+anti-rattle badge retention and a lower 3° profile. Use its matching base/cover
+pair and hardware instructions.
+
 The visible removable badge is **50.8 mm wide × 25.4 mm tall**. The front bezel,
 plate and tray are **8 mm deeper** to accommodate it, retaining all 117 key
 positions, the 5° typing angle and right-side USB-C opening. H9 moves to

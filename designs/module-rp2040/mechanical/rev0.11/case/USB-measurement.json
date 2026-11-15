@@ -1,0 +1,19 @@
+{
+  "coordinates": "PCB top-view Y toward user, Z normal to PCB; measure opening center after assembly",
+  "nominal_center_yz_mm": [
+    13.39,
+    5.74
+  ],
+  "selected_center_yz_mm": [
+    13.39,
+    5.74
+  ],
+  "opening_mm": [
+    16.0,
+    7.2
+  ],
+  "offset_formula": "offset = measured center - nominal center",
+  "minimum_edge_web_mm": 1,
+  "minimum_capture_ear_overlap_mm": 1.75,
+  "physical_measurement_complete": false
+}

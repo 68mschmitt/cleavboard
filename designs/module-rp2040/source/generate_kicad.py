@@ -22,7 +22,8 @@ import pcbnew
 from design import (ROOT, INPUT, U, BOARD_W, BOARD_H, ROW_GPIOS, COL_GPIOS,
                     MODULE_PINS, RGB_GPIO, POWER_GPIO, read_keys, components,
                     default_keycodes, MOUNTING_HOLES, FIDUCIALS, TEST_POINTS,
-                    MODULE_W, MODULE_H, REVISION)
+                    MODULE_W, MODULE_H, REVISION, FIRMWARE_REVISION)
+from mounting_interface import mounting_specs
 from models_3d import update_library_models
 from assembly_parts import fields
 from logo_interface import KEY_LED_COUNT, RGB_LED_COUNT, LOGO_MAX_BRIGHTNESS, logo_leds
@@ -184,6 +185,9 @@ def write_footprints():
     definitions['MountingHole_M2'] = footprint('MountingHole_M2',
         '(pad "" np_thru_hole circle (at 0 0) (size 2.2 2.2) (drill 2.2) (layers *.Cu *.Mask))',
         (3,3), '(fp_circle (center 0 0) (end 3 0) (layer Dwgs.User) (width 0.1))', through=True)
+    definitions['MountingHole_Post7'] = footprint('MountingHole_Post7',
+        '(pad "" np_thru_hole circle (at 0 0) (size 7 7) (drill 7) (layers *.Cu *.Mask))',
+        (4,4), '(fp_circle (center 0 0) (end 4 0) (layer Dwgs.User) (width 0.1))', through=True)
     definitions['Fiducial'] = footprint('Fiducial',
         '(pad "" smd circle (at 0 0) (size 1 1) (layers F.Cu F.Mask) (solder_mask_margin 1))', (.5,.5))
     # Nichicon polymer D10 recommendation: 4 x 2 lands, 4 mm inner gap.
@@ -511,34 +515,38 @@ def led_power_distribution(board, keys, fanout=True):
             via.SetNet(net); via.SetLocked(True); board.Add(via)
 
 
-def add_mechanics(board):
+def add_mechanics(board, *, include_fiducials=True):
     """Non-BOM holes/fiducials, with real all-copper screw-head keepouts."""
-    for kind, prefix, points in [('MountingHole_M2', 'H', MOUNTING_HOLES),
-                                  ('Fiducial', 'FID', FIDUCIALS)]:
-        for index, (x, y) in enumerate(points, 1):
-            fp = pcbnew.FootprintLoad(str(PRETTY), kind)
-            fp.SetFPID(pcbnew.LIB_ID('Cleaver', kind))
-            fp.SetReference(f'{prefix}{index}'); fp.SetPosition(mm(x,y))
-            fp.SetAttributes(fp.GetAttributes() | pcbnew.FP_BOARD_ONLY | pcbnew.FP_EXCLUDE_FROM_BOM | pcbnew.FP_EXCLUDE_FROM_POS_FILES)
-            board.Add(fp)
-            if kind == 'Fiducial':
-                fp.Flip(fp.GetPosition(), pcbnew.FLIP_DIRECTION_TOP_BOTTOM)
-            fp.Reference().SetVisible(False); fp.Value().SetVisible(False)
-            if kind != 'MountingHole_M2':
-                continue
-            zone = pcbnew.ZONE(board)
-            zone.SetIsRuleArea(True)
-            zone.SetLayerSet(pcbnew.LSET.AllCuMask())
-            zone.SetDoNotAllowTracks(True); zone.SetDoNotAllowVias(True)
-            zone.SetDoNotAllowZoneFills(True)
-            # NPTH itself is allowed; pads are checked separately by the mechanical checker.
-            zone.SetDoNotAllowPads(False)
-            zone.SetDoNotAllowFootprints(False)
-            outline = zone.Outline(); outline.NewOutline()
-            for i in range(64):
-                a = i * math.tau / 64
-                outline.Append(*mm(x+3*math.cos(a), y+3*math.sin(a)))
-            board.Add(zone)
+    specs = mounting_specs()
+    if include_fiducials:
+        specs += [dict(footprint='Fiducial', reference=f'FID{i}', x=x, y=y)
+                  for i, (x, y) in enumerate(FIDUCIALS, 1)]
+    for spec in specs:
+        kind, x, y = spec['footprint'], spec['x'], spec['y']
+        fp = pcbnew.FootprintLoad(str(PRETTY), kind)
+        fp.SetFPID(pcbnew.LIB_ID('Cleaver', kind))
+        fp.SetReference(spec['reference']); fp.SetPosition(mm(x,y))
+        fp.SetAttributes(fp.GetAttributes() | pcbnew.FP_BOARD_ONLY | pcbnew.FP_EXCLUDE_FROM_BOM | pcbnew.FP_EXCLUDE_FROM_POS_FILES)
+        board.Add(fp)
+        if kind == 'Fiducial':
+            fp.Flip(fp.GetPosition(), pcbnew.FLIP_DIRECTION_TOP_BOTTOM)
+        fp.Reference().SetVisible(False); fp.Value().SetVisible(False)
+        if kind == 'Fiducial':
+            continue
+        zone = pcbnew.ZONE(board)
+        zone.SetIsRuleArea(True)
+        zone.SetLayerSet(pcbnew.LSET.AllCuMask())
+        zone.SetDoNotAllowTracks(True); zone.SetDoNotAllowVias(True)
+        zone.SetDoNotAllowZoneFills(True)
+        # NPTH itself is allowed; pads are checked separately by the mechanical checker.
+        zone.SetDoNotAllowPads(False)
+        zone.SetDoNotAllowFootprints(False)
+        outline = zone.Outline(); outline.NewOutline()
+        for i in range(64):
+            a = i * math.tau / 64
+            radius = spec['reserve_radius_mm']
+            outline.Append(*mm(x+radius*math.cos(a), y+radius*math.sin(a)))
+        board.Add(zone)
 
 
 def generate_board(parts, keys, nets, report_dir, ses=None):
@@ -653,7 +661,7 @@ def generate_firmware(keys, leds):
     info = dict(keyboard_name="Cleaver", manufacturer="Cleaver keyboard project", maintainer="cleaver",
                 processor="RP2040", bootloader="rp2040", diode_direction="ROW2COL",
                 matrix_pins=dict(rows=ROW_GPIOS, cols=COL_GPIOS),
-                usb=dict(vid="0xFEED", pid="0xC1EA", device_version=REVISION+".0", max_power=500),
+                usb=dict(vid="0xFEED", pid="0xC1EA", device_version=FIRMWARE_REVISION+".0", max_power=500),
                 features=dict(bootmagic=True, extrakey=True, nkro=True, rgb_matrix=True),
                 ws2812=dict(driver="vendor", pin=RGB_GPIO),
                 rgb_matrix=dict(driver="ws2812", max_brightness=8, sleep=True,

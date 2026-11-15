@@ -13,7 +13,7 @@ The front bezel is 8 mm deeper, with all 117 key positions retained.
 
 - Validated **5° case base and removable cover**, restored from their independent
   print-bed orientations, including H9's support at (263,138) mm.
-- Current **populated PCB** exported by KiCad: **607 component-model instances
+- Historical rev0.9 **populated PCB** exported by KiCad: **607 component-model instances
   across 490 footprints**, plus six board/pad/mask/silkscreen meshes. Includes
   the socketed Waveshare RP2040-Plus, 117 MX switches, 117 hot-swap sockets,
   **117 per-key + four badge RGB LEDs**, and the populated passives.
@@ -42,13 +42,14 @@ Requires KiCad 10, Blender with Cycles, DejaVu Sans, Liberation Sans Bold and th
 committed rev0.9 mechanics. Run from the repository root:
 
 ```sh
-kicad-cli pcb export glb --subst-models --include-pads --include-silkscreen --include-soldermask --user-origin 0x0mm --output /tmp/opencode/Cleaver-rev09-render-pcb.glb designs/module-rp2040/Cleaver.kicad_pcb
+kicad-cli pcb export glb --define-var "KIPRJMOD=$PWD/designs/module-rp2040" --subst-models --include-pads --include-silkscreen --include-soldermask --user-origin 0x0mm --output /tmp/opencode/Cleaver-rev09-render-pcb.glb designs/module-rp2040/source/baselines/rev0.9/Cleaver.kicad_pcb
 blender --background --factory-startup --python-exit-code 1 --python designs/module-rp2040/source/render_assembly.py -- --pcb /tmp/opencode/Cleaver-rev09-render-pcb.glb
 ```
 
 The intermediate GLB can be placed anywhere; create the temporary directory if
-needed. The renderer follows `REVISION` in `source/design.py`, verifying the PCB,
-plate and imported case-part hashes against the validation reports.
+needed. This historical renderer is fixed to rev0.9 and its frozen PCB snapshot,
+verifying the PCB, plate and imported case-part hashes against those reports.
+The rev0.11 cartridge assembly is supplied separately as STEP/FreeCAD.
 
 Use `--draft --output /tmp/opencode/cleaver-rev09-render-draft` for a smaller
 preview, or `--save-scene /tmp/opencode/Cleaver-rev0.9-assembled.blend` to retain a

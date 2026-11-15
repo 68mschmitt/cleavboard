@@ -17,7 +17,8 @@ from pathlib import Path
 import pcbnew
 from shapely import LineString, Point, STRtree, box
 
-from design import BOARD_H, BOARD_W, MOUNTING_HOLES
+from design import BOARD_H, BOARD_W
+from mounting_interface import mounting_specs
 
 LAYERS = (pcbnew.F_Cu, pcbnew.In2_Cu, pcbnew.B_Cu)
 CLEARANCE = .205  # 0.2 mm design minimum plus numerical allowance.
@@ -135,8 +136,8 @@ class Obstacles:
                 add(Point(xy(item.GetPosition())), item.GetWidth(pcbnew.F_Cu)/2e6 + CLEARANCE)
             elif item.GetLayer() == layer:
                 add(LineString([xy(item.GetStart()), xy(item.GetEnd())]), item.GetWidth()/2e6 + CLEARANCE)
-        for x, y in MOUNTING_HOLES:
-            add(Point(x, y), 3.005)
+        for spec in mounting_specs():
+            add(Point(spec['x'], spec['y']), spec['reserve_radius_mm']+.005)
         self.shapes, self.margins = shapes, margins
         self.tree = STRtree(shapes)
         self.maximum = max(margins)

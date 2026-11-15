@@ -1,0 +1,1549 @@
+{
+  "revision": "0.11",
+  "source_pcb": "../../../Cleaver.kicad_pcb",
+  "source_sha256": "ceacf56a5954d4f6f0affd13c12f0b8587feec79d44a68589e135e23e4bd2ca1",
+  "parameters": {
+    "typing_angle_deg": 3.0,
+    "pcb_edge_clearance_mm": 0.25,
+    "wall_mm": 6.5,
+    "floor_mm": 2.2,
+    "front_under_pcb_clearance_mm": 5.6,
+    "outer_corner_radius_mm": 4.0,
+    "cover_underside_above_pcb_mm": 8.4,
+    "cover_thickness_mm": 2.4,
+    "cover_lip_depth_mm": 2.0,
+    "cover_lip_wall_mm": 1.0,
+    "cover_lip_inner_offset_mm": 0.5,
+    "cover_lip_clearance_mm": 0.25,
+    "key_aperture_extra_per_side_mm": 0.15,
+    "insert_bore_mm": 3.0,
+    "insert_pocket_depth_mm": 4.5,
+    "cover_insert_pocket_depth_mm": 5.0,
+    "cover_screw_clearance_mm": 2.2,
+    "cover_head_recess_diameter_mm": 4.2,
+    "cover_head_recess_depth_mm": 1.0,
+    "usb_opening_width_mm": 16.0,
+    "usb_opening_height_mm": 7.2,
+    "usb_center_above_pcb_mm": 5.74,
+    "socket_support_gap_mm": 0.7,
+    "front_extension_mm": 8.0,
+    "end_wall_extra_mm": 2.0,
+    "boss_width_mm": 12.0,
+    "boss_depth_mm": 6.0,
+    "boss_drop_mm": 5.0,
+    "boss_root_extra_mm": 2.0,
+    "boss_socket_clearance_mm": 0.25,
+    "underside_head_bore_mm": 4.6,
+    "screw_grip_mm": 4.5,
+    "screw_length_mm": 8.0,
+    "blind_insert_depth_mm": 4.5,
+    "front_bevel_width_mm": 2.0,
+    "front_bevel_height_mm": 1.2,
+    "gasket_recess_mm": 0.4,
+    "gasket_stock_mm": 0.8,
+    "usb_bezel_center_y_mm": 14.5,
+    "usb_bezel_width_mm": 24.0,
+    "usb_bezel_flange_width_mm": 28.0,
+    "usb_bezel_depth_mm": 2.0,
+    "usb_bezel_flange_depth_mm": 1.8,
+    "usb_bezel_bottom_mm": -2.0,
+    "usb_bezel_flange_bottom_mm": -1.0,
+    "usb_bezel_clearance_mm": 0.25,
+    "usb_port_y_offset_mm": 0.0,
+    "usb_port_z_offset_mm": 0.0
+  },
+  "mounting_sites": [
+    {
+      "reference": "H1",
+      "role": "base_post_pass_through",
+      "x": 8.25,
+      "y": 19.0,
+      "drill_mm": 7.0,
+      "reserve_radius_mm": 4.0,
+      "footprint": "MountingHole_Post7"
+    },
+    {
+      "reference": "H2",
+      "role": "base_post_pass_through",
+      "x": 78.0,
+      "y": 22.5,
+      "drill_mm": 7.0,
+      "reserve_radius_mm": 4.0,
+      "footprint": "MountingHole_Post7"
+    },
+    {
+      "reference": "H3",
+      "role": "base_post_pass_through",
+      "x": 160.0,
+      "y": 22.5,
+      "drill_mm": 7.0,
+      "reserve_radius_mm": 4.0,
+      "footprint": "MountingHole_Post7"
+    },
+    {
+      "reference": "H4",
+      "role": "base_post_pass_through",
+      "x": 237.0,
+      "y": 24.75,
+      "drill_mm": 7.0,
+      "reserve_radius_mm": 4.0,
+      "footprint": "MountingHole_Post7"
+    },
+    {
+      "reference": "H5",
+      "role": "base_post_pass_through",
+      "x": 324.0,
+      "y": 23.0,
+      "drill_mm": 7.0,
+      "reserve_radius_mm": 4.0,
+      "footprint": "MountingHole_Post7"
+    },
+    {
+      "reference": "H6",
+      "role": "base_post_pass_through",
+      "x": 112.0,
+      "y": 134.25,
+      "drill_mm": 7.0,
+      "reserve_radius_mm": 4.0,
+      "footprint": "MountingHole_Post7"
+    },
+    {
+      "reference": "H7",
+      "role": "base_post_pass_through",
+      "x": 311.75,
+      "y": 104.0,
+      "drill_mm": 7.0,
+      "reserve_radius_mm": 4.0,
+      "footprint": "MountingHole_Post7"
+    },
+    {
+      "reference": "H8",
+      "role": "base_post_pass_through",
+      "x": 349.25,
+      "y": 83.25,
+      "drill_mm": 7.0,
+      "reserve_radius_mm": 4.0,
+      "footprint": "MountingHole_Post7"
+    },
+    {
+      "reference": "H9",
+      "role": "base_post_pass_through",
+      "x": 373.0,
+      "y": 84.0,
+      "drill_mm": 7.0,
+      "reserve_radius_mm": 4.0,
+      "footprint": "MountingHole_Post7"
+    },
+    {
+      "reference": "H10",
+      "role": "base_post_pass_through",
+      "x": 40.0,
+      "y": 134.5,
+      "drill_mm": 7.0,
+      "reserve_radius_mm": 4.0,
+      "footprint": "MountingHole_Post7"
+    },
+    {
+      "reference": "H11",
+      "role": "base_post_pass_through",
+      "x": 266.25,
+      "y": 137.0,
+      "drill_mm": 7.0,
+      "reserve_radius_mm": 4.0,
+      "footprint": "MountingHole_Post7"
+    },
+    {
+      "reference": "H12",
+      "role": "base_post_pass_through",
+      "x": 436.5,
+      "y": 134.0,
+      "drill_mm": 7.0,
+      "reserve_radius_mm": 4.0,
+      "footprint": "MountingHole_Post7"
+    },
+    {
+      "reference": "H13",
+      "role": "pcb_to_plate",
+      "x": 48.0,
+      "y": 23.0,
+      "drill_mm": 2.2,
+      "reserve_radius_mm": 3.2,
+      "footprint": "MountingHole_M2"
+    },
+    {
+      "reference": "H14",
+      "role": "pcb_to_plate",
+      "x": 108.75,
+      "y": 22.5,
+      "drill_mm": 2.2,
+      "reserve_radius_mm": 3.2,
+      "footprint": "MountingHole_M2"
+    },
+    {
+      "reference": "H15",
+      "role": "pcb_to_plate",
+      "x": 199.0,
+      "y": 23.25,
+      "drill_mm": 2.2,
+      "reserve_radius_mm": 3.2,
+      "footprint": "MountingHole_M2"
+    },
+    {
+      "reference": "H16",
+      "role": "pcb_to_plate",
+      "x": 286.0,
+      "y": 22.75,
+      "drill_mm": 2.2,
+      "reserve_radius_mm": 3.2,
+      "footprint": "MountingHole_M2"
+    },
+    {
+      "reference": "H17",
+      "role": "pcb_to_plate",
+      "x": 359.0,
+      "y": 23.5,
+      "drill_mm": 2.2,
+      "reserve_radius_mm": 3.2,
+      "footprint": "MountingHole_M2"
+    },
+    {
+      "reference": "H18",
+      "role": "pcb_to_plate",
+      "x": 24.75,
+      "y": 91.5,
+      "drill_mm": 2.2,
+      "reserve_radius_mm": 3.2,
+      "footprint": "MountingHole_M2"
+    },
+    {
+      "reference": "H19",
+      "role": "pcb_to_plate",
+      "x": 190.0,
+      "y": 107.5,
+      "drill_mm": 2.2,
+      "reserve_radius_mm": 3.2,
+      "footprint": "MountingHole_M2"
+    },
+    {
+      "reference": "H20",
+      "role": "pcb_to_plate",
+      "x": 318.0,
+      "y": 78.25,
+      "drill_mm": 2.2,
+      "reserve_radius_mm": 3.2,
+      "footprint": "MountingHole_M2"
+    },
+    {
+      "reference": "H21",
+      "role": "pcb_to_plate",
+      "x": 374.75,
+      "y": 109.75,
+      "drill_mm": 2.2,
+      "reserve_radius_mm": 3.2,
+      "footprint": "MountingHole_M2"
+    },
+    {
+      "reference": "H22",
+      "role": "pcb_to_plate",
+      "x": 90.0,
+      "y": 134.25,
+      "drill_mm": 2.2,
+      "reserve_radius_mm": 3.2,
+      "footprint": "MountingHole_M2"
+    },
+    {
+      "reference": "H23",
+      "role": "pcb_to_plate",
+      "x": 286.0,
+      "y": 124.25,
+      "drill_mm": 2.2,
+      "reserve_radius_mm": 3.2,
+      "footprint": "MountingHole_M2"
+    },
+    {
+      "reference": "H24",
+      "role": "pcb_to_plate",
+      "x": 390.0,
+      "y": 134.5,
+      "drill_mm": 2.2,
+      "reserve_radius_mm": 3.2,
+      "footprint": "MountingHole_M2"
+    }
+  ],
+  "fit_checks": {
+    "source_checks": {
+      "revision": "0.11",
+      "outline_matches": true,
+      "switch_centres_matched": 117,
+      "mounting_holes": [
+        {
+          "reference": "H1",
+          "x_mm": 8.25,
+          "y_mm": 19.0,
+          "drill_mm": 7.0
+        },
+        {
+          "reference": "H2",
+          "x_mm": 78.0,
+          "y_mm": 22.5,
+          "drill_mm": 7.0
+        },
+        {
+          "reference": "H3",
+          "x_mm": 160.0,
+          "y_mm": 22.5,
+          "drill_mm": 7.0
+        },
+        {
+          "reference": "H4",
+          "x_mm": 237.0,
+          "y_mm": 24.75,
+          "drill_mm": 7.0
+        },
+        {
+          "reference": "H5",
+          "x_mm": 324.0,
+          "y_mm": 23.0,
+          "drill_mm": 7.0
+        },
+        {
+          "reference": "H6",
+          "x_mm": 112.0,
+          "y_mm": 134.25,
+          "drill_mm": 7.0
+        },
+        {
+          "reference": "H7",
+          "x_mm": 311.75,
+          "y_mm": 104.0,
+          "drill_mm": 7.0
+        },
+        {
+          "reference": "H8",
+          "x_mm": 349.25,
+          "y_mm": 83.25,
+          "drill_mm": 7.0
+        },
+        {
+          "reference": "H9",
+          "x_mm": 373.0,
+          "y_mm": 84.0,
+          "drill_mm": 7.0
+        },
+        {
+          "reference": "H10",
+          "x_mm": 40.0,
+          "y_mm": 134.5,
+          "drill_mm": 7.0
+        },
+        {
+          "reference": "H11",
+          "x_mm": 266.25,
+          "y_mm": 137.0,
+          "drill_mm": 7.0
+        },
+        {
+          "reference": "H12",
+          "x_mm": 436.5,
+          "y_mm": 134.0,
+          "drill_mm": 7.0
+        },
+        {
+          "reference": "H13",
+          "x_mm": 48.0,
+          "y_mm": 23.0,
+          "drill_mm": 2.2
+        },
+        {
+          "reference": "H14",
+          "x_mm": 108.75,
+          "y_mm": 22.5,
+          "drill_mm": 2.2
+        },
+        {
+          "reference": "H15",
+          "x_mm": 199.0,
+          "y_mm": 23.25,
+          "drill_mm": 2.2
+        },
+        {
+          "reference": "H16",
+          "x_mm": 286.0,
+          "y_mm": 22.75,
+          "drill_mm": 2.2
+        },
+        {
+          "reference": "H17",
+          "x_mm": 359.0,
+          "y_mm": 23.5,
+          "drill_mm": 2.2
+        },
+        {
+          "reference": "H18",
+          "x_mm": 24.75,
+          "y_mm": 91.5,
+          "drill_mm": 2.2
+        },
+        {
+          "reference": "H19",
+          "x_mm": 190.0,
+          "y_mm": 107.5,
+          "drill_mm": 2.2
+        },
+        {
+          "reference": "H20",
+          "x_mm": 318.0,
+          "y_mm": 78.25,
+          "drill_mm": 2.2
+        },
+        {
+          "reference": "H21",
+          "x_mm": 374.75,
+          "y_mm": 109.75,
+          "drill_mm": 2.2
+        },
+        {
+          "reference": "H22",
+          "x_mm": 90.0,
+          "y_mm": 134.25,
+          "drill_mm": 2.2
+        },
+        {
+          "reference": "H23",
+          "x_mm": 286.0,
+          "y_mm": 124.25,
+          "drill_mm": 2.2
+        },
+        {
+          "reference": "H24",
+          "x_mm": 390.0,
+          "y_mm": 134.5,
+          "drill_mm": 2.2
+        }
+      ],
+      "controller_body_clear": true,
+      "capacitor_on_underside": true
+    },
+    "intersection_volumes_mm3": {
+      "cover/plate": 0.0,
+      "cover/pcb": 0.0,
+      "cover/usb_bezel": 0.0,
+      "cover/logo_carrier": 0.0,
+      "cover/logo_insert": 0.0,
+      "cover/logo_gasket": 0.0,
+      "cover/tray": 0.0,
+      "plate/pcb": 0.0,
+      "plate/usb_bezel": 0.0,
+      "plate/logo_carrier": 0.0,
+      "plate/logo_insert": 0.0,
+      "plate/logo_gasket": 0.0,
+      "plate/tray": 0.0,
+      "pcb/usb_bezel": 0.0,
+      "pcb/logo_carrier": 0.0,
+      "pcb/logo_insert": 0.0,
+      "pcb/logo_gasket": 0.0,
+      "pcb/tray": 0.0,
+      "usb_bezel/logo_carrier": 0.0,
+      "usb_bezel/logo_insert": 0.0,
+      "usb_bezel/logo_gasket": 0.0,
+      "usb_bezel/tray": 0.0,
+      "logo_carrier/logo_insert": 0.0,
+      "logo_carrier/logo_gasket": 0.0,
+      "logo_carrier/tray": 0.0,
+      "logo_insert/logo_gasket": 0.0,
+      "logo_insert/tray": 0.0,
+      "logo_gasket/tray": 0.0
+    },
+    "base_posts": 12,
+    "pcb_to_plate_bosses": 12,
+    "pass_through_radial_clearance_mm": 0.5,
+    "pcb_to_plate_gap_mm": 3.5,
+    "plate_screw_engagement_mm": 3.5,
+    "pcb_screw_engagement_with_washer_mm": 2.1,
+    "short_insert_tip_clearance_mm": 0.7,
+    "cartridge_insertion_axis": "PCB normal",
+    "cartridge_lift_checks_mm": [
+      0.05,
+      0.5,
+      2,
+      5,
+      10,
+      25
+    ],
+    "usb_insert_replacement_with_pcb_installed": true,
+    "usb_insert_positive_capture": true,
+    "usb_port_center_pcb_yz_mm": [
+      13.39,
+      5.74
+    ],
+    "usb_port_size_mm": [
+      16.0,
+      7.2
+    ],
+    "controller_and_socket_envelopes_clear": true,
+    "c5_11mm_keepout_clear": true,
+    "keycap_sweeps_clear": 117,
+    "plate_screw_heads_clear_of_key_sweeps": true,
+    "four_logo_optical_paths_clear": true,
+    "height_comparison": {
+      "baseline_revision": "0.9",
+      "datum": "bare case bottom, no feet; keycap reference Z=20, not a measured cap",
+      "home_row_reference_pcb_xy_mm": [
+        66.675,
+        76.2
+      ],
+      "before": {
+        "front_edge_mm": 19.8673,
+        "front_bezel_full_height_mm": 20.4556,
+        "home_row_pcb_top_mm": 16.6201,
+        "home_row_keycap_reference_top_mm": 36.544,
+        "rear_cover_top_mm": 34.6086
+      },
+      "after": {
+        "front_edge_mm": 18.108,
+        "front_bezel_full_height_mm": 19.7643,
+        "home_row_pcb_top_mm": 13.1366,
+        "home_row_keycap_reference_top_mm": 33.1091,
+        "rear_cover_top_mm": 28.3677
+      },
+      "reduction": {
+        "front_edge_mm": 1.7592,
+        "front_bezel_full_height_mm": 0.6912,
+        "home_row_pcb_top_mm": 3.4835,
+        "home_row_keycap_reference_top_mm": 3.4348,
+        "rear_cover_top_mm": 6.2409
+      }
+    }
+  },
+  "stabilizers": [
+    {
+      "ref": "SW031",
+      "legend": "Backspace",
+      "size": "2u",
+      "x_mm": 290.5125,
+      "y_mm": 38.1,
+      "rotation_deg": 0,
+      "stem_spacing_mm": 23.8
+    },
+    {
+      "ref": "SW060",
+      "legend": "+",
+      "size": "2u",
+      "x_mm": 442.9125,
+      "y_mm": 66.675,
+      "rotation_deg": 90,
+      "stem_spacing_mm": 23.8
+    },
+    {
+      "ref": "SW074",
+      "legend": "Enter",
+      "size": "2u",
+      "x_mm": 288.13125,
+      "y_mm": 76.2,
+      "rotation_deg": 0,
+      "stem_spacing_mm": 23.8
+    },
+    {
+      "ref": "SW079",
+      "legend": "Shift",
+      "size": "2u",
+      "x_mm": 45.24375,
+      "y_mm": 95.25,
+      "rotation_deg": 0,
+      "stem_spacing_mm": 23.8
+    },
+    {
+      "ref": "SW090",
+      "legend": "Shift",
+      "size": "2u",
+      "x_mm": 283.36875000000003,
+      "y_mm": 95.25,
+      "rotation_deg": 0,
+      "stem_spacing_mm": 23.8
+    },
+    {
+      "ref": "SW097",
+      "legend": "Enter",
+      "size": "2u",
+      "x_mm": 442.9125,
+      "y_mm": 104.775,
+      "rotation_deg": 90,
+      "stem_spacing_mm": 23.8
+    },
+    {
+      "ref": "SW102",
+      "legend": "Space",
+      "size": "6.25u",
+      "x_mm": 154.78125,
+      "y_mm": 114.30000000000001,
+      "rotation_deg": 0,
+      "stem_spacing_mm": 100
+    },
+    {
+      "ref": "SW110",
+      "legend": "0/Ins",
+      "size": "2u",
+      "x_mm": 395.2875,
+      "y_mm": 114.30000000000001,
+      "rotation_deg": 0,
+      "stem_spacing_mm": 23.8
+    }
+  ],
+  "hardware": {
+    "plate_to_base": "12 x M2x5 socket head",
+    "pcb_to_plate": "12 x M2x4 socket head",
+    "cover": "8 x M2x8 socket head",
+    "washers": "12 x insulating OD5 / ID2.2 / thickness 0.3",
+    "long_inserts": "20 x M2 OD3.2 x 4 (12 base + 8 cover)",
+    "short_inserts": "12 x M2 OD3.2 x 2.5 (plate bosses)",
+    "loose_pcb_plate_spacers": 0
+  },
+  "source_files": {
+    "source/generate_cartridge_case.py": "7467c4d58e40ae53f5c2e4f6db0b35158a597b8d1e58d08290156f27b95f9bbc",
+    "source/coupon_labels.py": "17a2209aa51998f8fa54d99aea608afe58d7a0b3c7696210c93d932d74fea0f8",
+    "source/mounting_interface.py": "418a253cce807fb754aaa02f9a5710744ebe9cbb1bd03e1d5846dcb6ea6d082a",
+    "source/generate_case.py": "f9e2096af67341b768adf049e175b1968c818ceb7df267cc0e651e56657b8228",
+    "source/generate_case_service.py": "9a5b744595322cb9ae03559df3ee4cd7754256ed5ed63a92a3a8eac7c0b9968b",
+    "source/generate_mechanical.py": "df685f7d2b09eab816b8daf75e8d358347c79286fbada833a73f058f6901b4eb",
+    "source/generate_top_plate.py": "438f41bf8b8a5b1a0c08180b1c11c932cf1a6c32ca9fa739e9d5435f4431ccbf",
+    "source/design.py": "25b1202b0f973e4d133a193a64433e20d60c4cb9c3450e5862c823b8ca7e5108"
+  },
+  "physical_fit_tested": false,
+  "coordinates": "PCB top Z=0, plate 3.5..5; STEP base desk-flat, other parts PCB-frame; assembly all desk-flat; STL bed-oriented per record",
+  "tools": {
+    "freecad": "1.1.4",
+    "kicad": "10.0.8",
+    "trimesh": "5.2.1"
+  },
+  "parts": [
+    {
+      "file": "final-prints/Cleaver-case-base-rev0.11.stl",
+      "step_file": "final-prints/Cleaver-case-base-rev0.11.step",
+      "size_mm": [
+        465.9375,
+        174.2613,
+        25.971
+      ],
+      "triangles": 21768,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 361586.8107,
+      "stl_volume_mm3": 361585.971,
+      "step_roundtrip_valid": true,
+      "stl_face_down": false,
+      "stl_rotation_axis_angle": null,
+      "stl_translation_after_optional_x_flip_mm": [
+        6.750000000000001,
+        17.166666739579842,
+        0.2650364348467307
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -8.881784197001252e-16,
+        -3.552713678800501e-15,
+        -0.2650364339351654
+      ],
+      "sha256": "43570d9a3acc158996bfa6824c360db753ac255a74e73f6a80fbcb713be7f80d",
+      "step_sha256": "aab4135c4574109a9c6bd490018b1441080c2ffad5f05548e220dc51a769fa79"
+    },
+    {
+      "file": "final-prints/Cleaver-case-top-cover-rev0.11.stl",
+      "step_file": "final-prints/Cleaver-case-top-cover-rev0.11.step",
+      "size_mm": [
+        465.9375,
+        173.1375,
+        7.4
+      ],
+      "triangles": 6708,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 76649.3379,
+      "stl_volume_mm3": 76649.4796,
+      "step_roundtrip_valid": true,
+      "stl_face_down": true,
+      "stl_rotation_axis_angle": null,
+      "stl_translation_after_optional_x_flip_mm": [
+        6.75,
+        156.3875,
+        10.800000000000011
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -0.0,
+        -8.881784197001252e-15
+      ],
+      "sha256": "2393aca0fb8602bf83075cef5f36e7ced78e8d4ad28bd935adbcc79bfc5a4a55",
+      "step_sha256": "06d6a5c122c101427642ba438b20519acee4817fd77068c6c1cf84eeea772495"
+    },
+    {
+      "file": "final-prints/Cleaver-switch-plate-rev0.11.stl",
+      "step_file": "final-prints/Cleaver-switch-plate-rev0.11.step",
+      "size_mm": [
+        452.4375,
+        155.6375,
+        5.0
+      ],
+      "triangles": 29612,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 65374.4189,
+      "stl_volume_mm3": 65373.5523,
+      "step_roundtrip_valid": true,
+      "stl_face_down": true,
+      "stl_rotation_axis_angle": null,
+      "stl_translation_after_optional_x_flip_mm": [
+        -0.0,
+        147.6375,
+        5.000000000000001
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "sha256": "3692b3f711cce98654dc193a478c0d1dbbabe07809db34d5dbad24aed10c5550",
+      "step_sha256": "e8894a33c3cc63eaa4d60187e37c1474ae4e1de7b147ef819e9c0b4fa20680a5"
+    },
+    {
+      "file": "final-prints/Logo-light-well.stl",
+      "step_file": "final-prints/Logo-light-well.step",
+      "size_mm": [
+        53.8,
+        28.4,
+        6.6
+      ],
+      "triangles": 48,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 1549.68,
+      "stl_volume_mm3": 1549.68,
+      "step_roundtrip_valid": true,
+      "stl_face_down": true,
+      "stl_rotation_axis_angle": null,
+      "stl_translation_after_optional_x_flip_mm": [
+        -200.7475,
+        22.72499999999998,
+        7.400000000000002
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "sha256": "1ba888e8017ad3d8e0f853d9cc03a6ec09b939d05489009ff81e02ec37691f8f",
+      "step_sha256": "c817ee8ea931381b3fa91361e5da9c9303890e954117d526b79a0a5a79dfdf92"
+    },
+    {
+      "file": "final-prints/Logo-insert-blank.stl",
+      "step_file": "final-prints/Logo-insert-blank.step",
+      "size_mm": [
+        53.8,
+        28.4,
+        3.4
+      ],
+      "triangles": 44,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 1836.56,
+      "stl_volume_mm3": 1836.56,
+      "step_roundtrip_valid": true,
+      "stl_face_down": true,
+      "stl_rotation_axis_angle": null,
+      "stl_translation_after_optional_x_flip_mm": [
+        -200.7475,
+        22.72499999999998,
+        10.800000000000002
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -0.0,
+        -1.7763568394002505e-15
+      ],
+      "sha256": "80ddbf4e4d23d09b7c5fbcd2a423b97a19067fe1f1c104786dba4f369b471718",
+      "step_sha256": "236f1710fdc7a99abfa4be3bff8d75ee49cf9fc132e417e98e3bad62dd671011"
+    },
+    {
+      "file": "test-prints/Controller-insertion-support-jig.stl",
+      "step_file": "test-prints/Controller-insertion-support-jig.step",
+      "size_mm": [
+        67.0,
+        24.0,
+        5.0
+      ],
+      "triangles": 148,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 3410.6981,
+      "stl_volume_mm3": 3410.6982,
+      "step_roundtrip_valid": true,
+      "stl_face_down": false,
+      "stl_rotation_axis_angle": null,
+      "stl_translation_after_optional_x_flip_mm": [
+        12.0,
+        -123.63749999999999,
+        -0.0
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "sha256": "067b5cdb69e46c696e39f2fdece0b71b6b9f44a30450b94bfea416f5a31db744",
+      "step_sha256": "053cc1ad3d1edb2814f66e2418ca99a38b45fd24500a95092ae8809fd14661f4",
+      "fit_label": {
+        "id": "G1",
+        "raised_mm": 0.6,
+        "stroke_mm": 0.8,
+        "tab_mm": [
+          12,
+          7,
+          2
+        ]
+      }
+    },
+    {
+      "file": "final-prints/USB-bezel-nominal.stl",
+      "step_file": "final-prints/USB-bezel-nominal.step",
+      "size_mm": [
+        12.8,
+        28.0,
+        3.8
+      ],
+      "triangles": 64,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 677.472,
+      "stl_volume_mm3": 677.472,
+      "step_roundtrip_valid": true,
+      "stl_face_down": false,
+      "stl_rotation_axis_angle": [
+        0,
+        1,
+        0,
+        90
+      ],
+      "stl_translation_after_optional_x_flip_mm": [
+        1.9999999999999492,
+        -119.13749999999999,
+        459.1875
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -2.220446049250313e-16,
+        -0.0,
+        -0.0
+      ],
+      "sha256": "19277e773f21ff3e6d466f1ac948aaf55bc0aac3f6172aa03a459a41f4fcf2e4",
+      "step_sha256": "f1238aaaa14ee400cc7a2ff9c98344ffb5a3db652bb90722a6d0a0d63c18e58c"
+    },
+    {
+      "file": "test-prints/USB-bezel-blank.stl",
+      "step_file": "test-prints/USB-bezel-blank.step",
+      "size_mm": [
+        12.8,
+        28.0,
+        15.8
+      ],
+      "triangles": 212,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 1220.928,
+      "stl_volume_mm3": 1220.928,
+      "step_roundtrip_valid": true,
+      "stl_face_down": false,
+      "stl_rotation_axis_angle": [
+        0,
+        1,
+        0,
+        90
+      ],
+      "stl_translation_after_optional_x_flip_mm": [
+        1.9999999999999492,
+        -119.13749999999999,
+        471.1875
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -2.220446049250313e-16,
+        -0.0,
+        -0.0
+      ],
+      "sha256": "5615371d8c4ba673f0528dac619188ef46401484afb55193885a76af1a4253b7",
+      "step_sha256": "6c129f68bf66a68ce33e3331535b15339e2aa56b3892df126a8c46859ddae9d0",
+      "fit_label": {
+        "id": "B3",
+        "raised_mm": 0.6,
+        "stroke_mm": 0.8,
+        "tab_mm": [
+          12,
+          7,
+          1.5
+        ]
+      }
+    },
+    {
+      "file": "test-prints/Logo-gasket-cutting-pattern-0.8mm.stl",
+      "step_file": "test-prints/Logo-gasket-cutting-pattern-0.8mm.step",
+      "size_mm": [
+        65.8,
+        28.4,
+        1.4
+      ],
+      "triangles": 176,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 239.5266,
+      "stl_volume_mm3": 239.5267,
+      "step_roundtrip_valid": true,
+      "stl_face_down": false,
+      "stl_rotation_axis_angle": null,
+      "stl_translation_after_optional_x_flip_mm": [
+        -188.7475,
+        5.675000000000011,
+        -0.0
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "sha256": "8f00fea0ec8d0e7017c21d6e9da2406e57b0e567b662605700cb14fec60c8613",
+      "step_sha256": "d1435eedb01ffde6ffe59d97a927c34e3104c4775d4fa00263045d99eb72c70e",
+      "fit_label": {
+        "id": "D3",
+        "raised_mm": 0.6,
+        "stroke_mm": 0.8,
+        "tab_mm": [
+          12,
+          7,
+          0.8
+        ]
+      }
+    },
+    {
+      "file": "test-prints/Cartridge-stack-coupon-base.stl",
+      "step_file": "test-prints/Cartridge-stack-coupon-base.step",
+      "size_mm": [
+        63.0,
+        15.1359,
+        19.5992
+      ],
+      "triangles": 1046,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 2274.7957,
+      "stl_volume_mm3": 2274.6229,
+      "step_roundtrip_valid": true,
+      "stl_face_down": false,
+      "stl_rotation_axis_angle": null,
+      "stl_translation_after_optional_x_flip_mm": [
+        -56.0,
+        -118.17616044630415,
+        -0.0
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "sha256": "c0f0a43cb85da14f6c08765a2c4a9974487e2f031c7ed2a2fd03f677f0ccd3ef",
+      "step_sha256": "c0c3199688f324ad9f300a3b048feaa112ffa8e74b3f0a3687db4d6db3713875",
+      "fit_label": {
+        "id": "A1",
+        "raised_mm": 0.6,
+        "stroke_mm": 0.8,
+        "tab_mm": [
+          12,
+          7,
+          1.5
+        ]
+      }
+    },
+    {
+      "file": "test-prints/Cartridge-stack-coupon-plate.stl",
+      "step_file": "test-prints/Cartridge-stack-coupon-plate.step",
+      "size_mm": [
+        63.0,
+        15.0,
+        5.0
+      ],
+      "triangles": 2388,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 1280.1295,
+      "stl_volume_mm3": 1280.0573,
+      "step_roundtrip_valid": true,
+      "stl_face_down": true,
+      "stl_rotation_axis_angle": null,
+      "stl_translation_after_optional_x_flip_mm": [
+        -68.0,
+        132.6375,
+        5.000000000000497
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "sha256": "46f7de961d7d641d48e204b64f3862060d0fbdd7753eeb3bbed939e79c538de4",
+      "step_sha256": "aa6e9d0dd02c6f121f4428a91f6fc170efa53411e31b61c89030ed2784af4d48",
+      "fit_label": {
+        "id": "A2",
+        "raised_mm": 0.6,
+        "stroke_mm": 0.8,
+        "tab_mm": [
+          12,
+          7,
+          1.5
+        ]
+      }
+    },
+    {
+      "file": "test-prints/Cartridge-stack-coupon-dummy-PCB.stl",
+      "step_file": "test-prints/Cartridge-stack-coupon-dummy-PCB.step",
+      "size_mm": [
+        63.0,
+        15.0,
+        2.2
+      ],
+      "triangles": 2228,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 1297.5081,
+      "stl_volume_mm3": 1297.5081,
+      "step_roundtrip_valid": true,
+      "stl_face_down": false,
+      "stl_rotation_axis_angle": null,
+      "stl_translation_after_optional_x_flip_mm": [
+        -56.0,
+        -117.63749999999999,
+        1.6
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "sha256": "e05faa37f0cd6b95906f4c00bd58326edbd6109a5767cc4e72660d4eca98e5af",
+      "step_sha256": "e7e297190e6c60289f72e33b95df78919e93fb7140fc3f2292674d57eb3725d8",
+      "fit_label": {
+        "id": "A3",
+        "raised_mm": 0.6,
+        "stroke_mm": 0.8,
+        "tab_mm": [
+          12,
+          7,
+          1.6
+        ]
+      }
+    },
+    {
+      "file": "test-prints/USB-bezel-fit-coupon-base.stl",
+      "step_file": "test-prints/USB-bezel-fit-coupon-base.step",
+      "size_mm": [
+        83.75,
+        50.0443,
+        26.236
+      ],
+      "triangles": 1676,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 25992.4759,
+      "stl_volume_mm3": 25992.6009,
+      "step_roundtrip_valid": true,
+      "stl_face_down": false,
+      "stl_rotation_axis_angle": null,
+      "stl_translation_after_optional_x_flip_mm": [
+        -375.4375,
+        -107.0503645147047,
+        0.26503643482483175
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "sha256": "d9d02511d91088e23701edb9d36029245e9852da9db839a808c946f96e039712",
+      "step_sha256": "b63b489b032a3da060287fb4f37d70835855a954858191f53bbc5ff2ad89df4d",
+      "fit_label": {
+        "id": "B1",
+        "raised_mm": 0.6,
+        "stroke_mm": 0.8,
+        "tab_mm": [
+          12,
+          7,
+          1.5
+        ]
+      }
+    },
+    {
+      "file": "test-prints/USB-bezel-fit-coupon-cover.stl",
+      "step_file": "test-prints/USB-bezel-fit-coupon-cover.step",
+      "size_mm": [
+        83.75,
+        48.75,
+        7.4
+      ],
+      "triangles": 1064,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 6635.1994,
+      "stl_volume_mm3": 6635.2185,
+      "step_roundtrip_valid": true,
+      "stl_face_down": true,
+      "stl_rotation_axis_angle": null,
+      "stl_translation_after_optional_x_flip_mm": [
+        -375.4375,
+        156.3875,
+        10.79999999999999
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "sha256": "78d8d868eabee6d5132afa573db220c5fc94549be4772e290404aa9753152da9",
+      "step_sha256": "b05008d7fd0258b64bbd7fbea79fa5eb48a6c1dec5c95bfb095fbee1e85fd118",
+      "fit_label": {
+        "id": "B2",
+        "raised_mm": 0.6,
+        "stroke_mm": 0.8,
+        "tab_mm": [
+          12,
+          7,
+          1.5
+        ]
+      }
+    },
+    {
+      "file": "test-prints/Front-fastener-fit-coupon-base.stl",
+      "step_file": "test-prints/Front-fastener-fit-coupon-base.step",
+      "size_mm": [
+        42.0,
+        14.6551,
+        17.5411
+      ],
+      "triangles": 1444,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 4059.2746,
+      "stl_volume_mm3": 4059.3403,
+      "step_roundtrip_valid": true,
+      "stl_face_down": false,
+      "stl_rotation_axis_angle": null,
+      "stl_translation_after_optional_x_flip_mm": [
+        -118.0,
+        17.166666739579856,
+        0.2650364348467307
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -1.7763568394002505e-14,
+        -0.0
+      ],
+      "sha256": "519ddc5add80020e4bf3c67682d9949e80419a7505c3a9893ac738ad7b8513de",
+      "step_sha256": "7e25e29abb05b0968301fc817fa55b2a4797cc0780b59c353b61cb7f03ed8d16",
+      "fit_label": {
+        "id": "C1",
+        "raised_mm": 0.6,
+        "stroke_mm": 0.8,
+        "tab_mm": [
+          12,
+          7,
+          1.5
+        ]
+      }
+    },
+    {
+      "file": "test-prints/Front-fastener-fit-coupon-cover.stl",
+      "step_file": "test-prints/Front-fastener-fit-coupon-cover.step",
+      "size_mm": [
+        42.0,
+        13.75,
+        7.4
+      ],
+      "triangles": 908,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 1480.4932,
+      "stl_volume_mm3": 1480.5122,
+      "step_roundtrip_valid": true,
+      "stl_face_down": true,
+      "stl_rotation_axis_angle": null,
+      "stl_translation_after_optional_x_flip_mm": [
+        -130.0,
+        -2.9999999999999987,
+        10.80000000000001
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -0.0,
+        -5.329070518200751e-15
+      ],
+      "sha256": "fcd1bcc3c4094784b5d8fb1cc639dccb28b8fbbb732fca3c993973d5ca8399d4",
+      "step_sha256": "fab610f5b36749162ed4b08e9adb1a865c7c25aa3a4921033cabbc7d9479d407",
+      "fit_label": {
+        "id": "C2",
+        "raised_mm": 0.6,
+        "stroke_mm": 0.8,
+        "tab_mm": [
+          12,
+          7,
+          1.5
+        ]
+      }
+    },
+    {
+      "file": "test-prints/Logo-fit-coupon-cover.stl",
+      "step_file": "test-prints/Logo-fit-coupon-cover.step",
+      "size_mm": [
+        73.8,
+        39.175,
+        4.4
+      ],
+      "triangles": 228,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 2860.6458,
+      "stl_volume_mm3": 2860.6459,
+      "step_roundtrip_valid": true,
+      "stl_face_down": true,
+      "stl_rotation_axis_angle": null,
+      "stl_translation_after_optional_x_flip_mm": [
+        -196.7475,
+        22.424999999999986,
+        10.800000000000008
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -3.552713678800501e-15,
+        -5.329070518200751e-15
+      ],
+      "sha256": "5182b4b71d80c1755784d6f3f9b3de3620afaeae43de8c60116c3280f4235037",
+      "step_sha256": "dfd8d8ba78882dd94ed8664383f347de33c2fe632295dd74f638e9792c06c580",
+      "fit_label": {
+        "id": "D1",
+        "raised_mm": 0.6,
+        "stroke_mm": 0.8,
+        "tab_mm": [
+          12,
+          7,
+          1.5
+        ]
+      }
+    },
+    {
+      "file": "test-prints/Logo-fit-coupon-plate-with-height-gauges.stl",
+      "step_file": "test-prints/Logo-fit-coupon-plate-with-height-gauges.step",
+      "size_mm": [
+        73.8,
+        30.425,
+        4.9
+      ],
+      "triangles": 200,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 1080.9001,
+      "stl_volume_mm3": 1080.9002,
+      "step_roundtrip_valid": true,
+      "stl_face_down": false,
+      "stl_rotation_axis_angle": null,
+      "stl_translation_after_optional_x_flip_mm": [
+        -184.7475,
+        8.0,
+        -3.5
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "sha256": "7dec1539f29a32bbb053ea8483af68b08c3383c5d9a7c862b4c0671e01ede5d8",
+      "step_sha256": "51609d4dfc48e78e614c4c9536be5b5ae65fbacdbca91835ddb1f7fe2102bad5",
+      "fit_label": {
+        "id": "D2",
+        "raised_mm": 0.6,
+        "stroke_mm": 0.8,
+        "tab_mm": [
+          12,
+          7,
+          1.5
+        ]
+      }
+    },
+    {
+      "file": "final-prints/controller-socket-shim-0.2mm.stl",
+      "step_file": "final-prints/controller-socket-shim-0.2mm.step",
+      "size_mm": [
+        49.6,
+        2.0,
+        0.2
+      ],
+      "triangles": 12,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 19.84,
+      "stl_volume_mm3": 19.84,
+      "step_roundtrip_valid": true,
+      "stl_face_down": false,
+      "stl_rotation_axis_angle": null,
+      "stl_translation_after_optional_x_flip_mm": [
+        -0.0,
+        -145.6375,
+        -0.0
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "sha256": "ca80b2523b9b253ebda529115658c687f2696348dea589b50e58261571b65aa2",
+      "step_sha256": "79dbb04effc2ade7c798e2a9d8705976a7f02caa207e59cf9490ec9e7c743bf3"
+    },
+    {
+      "file": "final-prints/controller-socket-shim-0.4mm.stl",
+      "step_file": "final-prints/controller-socket-shim-0.4mm.step",
+      "size_mm": [
+        49.6,
+        2.0,
+        0.4
+      ],
+      "triangles": 12,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 39.68,
+      "stl_volume_mm3": 39.68,
+      "step_roundtrip_valid": true,
+      "stl_face_down": false,
+      "stl_rotation_axis_angle": null,
+      "stl_translation_after_optional_x_flip_mm": [
+        -0.0,
+        -145.6375,
+        -0.0
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "sha256": "130a410c440eb9d586a6672655d4c210540dec62e0dec35d21e816ee0d9401b6",
+      "step_sha256": "099956a07d75f4ca7a3faadbc4a00d4e271b5a47301f0f1a13842835620a4934"
+    },
+    {
+      "file": "final-prints/controller-socket-shim-0.6mm.stl",
+      "step_file": "final-prints/controller-socket-shim-0.6mm.step",
+      "size_mm": [
+        49.6,
+        2.0,
+        0.6
+      ],
+      "triangles": 12,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 59.52,
+      "stl_volume_mm3": 59.52,
+      "step_roundtrip_valid": true,
+      "stl_face_down": false,
+      "stl_rotation_axis_angle": null,
+      "stl_translation_after_optional_x_flip_mm": [
+        -0.0,
+        -145.6375,
+        -0.0
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "sha256": "9cbfde428b96f995133219ea9dbdc847b1dde66f8d979958560396d3e01638d5",
+      "step_sha256": "da0aca749c8810174b1602709b2d7161fe98d5ce326882f1604b1e74fc665fb7"
+    },
+    {
+      "file": "final-prints/controller-socket-shim-0.8mm.stl",
+      "step_file": "final-prints/controller-socket-shim-0.8mm.step",
+      "size_mm": [
+        49.6,
+        2.0,
+        0.8
+      ],
+      "triangles": 12,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 79.36,
+      "stl_volume_mm3": 79.36,
+      "step_roundtrip_valid": true,
+      "stl_face_down": false,
+      "stl_rotation_axis_angle": null,
+      "stl_translation_after_optional_x_flip_mm": [
+        -0.0,
+        -145.6375,
+        -0.0
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "sha256": "d41b100085480b927096d13bc4d08c61a6c6d69de9375ea09306cc8dddd7a277",
+      "step_sha256": "f84e3e8e787bb886852c74ff0615c9b93ff55120e5f879d473f5d5d9f110a394"
+    },
+    {
+      "file": "final-prints/controller-socket-shim-1.0mm.stl",
+      "step_file": "final-prints/controller-socket-shim-1.0mm.step",
+      "size_mm": [
+        49.6,
+        2.0,
+        1.0
+      ],
+      "triangles": 12,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 99.2,
+      "stl_volume_mm3": 99.2,
+      "step_roundtrip_valid": true,
+      "stl_face_down": false,
+      "stl_rotation_axis_angle": null,
+      "stl_translation_after_optional_x_flip_mm": [
+        -0.0,
+        -145.6375,
+        -0.0
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "sha256": "9df20d41f4ae078ca6f98a6a12424ef0304e303251015b9ffdb095b90908ed08",
+      "step_sha256": "eebda4f2da2567a28d8a5c7124be0c6cd36bbd0e52b8cfecbdb1814e50b190af"
+    },
+    {
+      "file": "test-prints/Stabilizer-fit-coupon-2u.stl",
+      "step_file": "test-prints/Stabilizer-fit-coupon-2u.step",
+      "size_mm": [
+        52.0,
+        24.0,
+        2.1
+      ],
+      "triangles": 1300,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 984.4731,
+      "stl_volume_mm3": 984.4731,
+      "step_roundtrip_valid": true,
+      "stl_face_down": false,
+      "stl_rotation_axis_angle": null,
+      "stl_translation_after_optional_x_flip_mm": [
+        12.0,
+        -123.63749999999999,
+        -0.0
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "sha256": "45f4c97046c611259f0f786709bec6053e6bf522ea6f9942fbbc2d925d97c3a1",
+      "step_sha256": "52e53fbadd2f83746010de183d48e4506e4cffbe678c9c91cf585626e2190abd",
+      "fit_label": {
+        "id": "E1",
+        "raised_mm": 0.6,
+        "stroke_mm": 0.8,
+        "tab_mm": [
+          12,
+          7,
+          1.5
+        ]
+      }
+    },
+    {
+      "file": "test-prints/Stabilizer-fit-coupon-6.25u.stl",
+      "step_file": "test-prints/Stabilizer-fit-coupon-6.25u.step",
+      "size_mm": [
+        132.0,
+        24.0,
+        2.1
+      ],
+      "triangles": 1292,
+      "connected_bodies": 1,
+      "watertight": true,
+      "consistent_winding": true,
+      "positive_volume": true,
+      "cad_volume_mm3": 3337.9059,
+      "stl_volume_mm3": 3337.9058,
+      "step_roundtrip_valid": true,
+      "stl_face_down": false,
+      "stl_rotation_axis_angle": null,
+      "stl_translation_after_optional_x_flip_mm": [
+        12.0,
+        -123.63749999999999,
+        -0.0
+      ],
+      "stl_additional_mesh_translation_mm": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "sha256": "6ceba44e84b05ffbcbb47f77369836fe1d681dabe5c71df89a53c5053b2394a7",
+      "step_sha256": "bfcfa5bcafa8556d28ccfa4d0b2c433fa2e985aca8cbb849728a0210f8f54e66",
+      "fit_label": {
+        "id": "F1",
+        "raised_mm": 0.6,
+        "stroke_mm": 0.8,
+        "tab_mm": [
+          12,
+          7,
+          1.5
+        ]
+      }
+    }
+  ],
+  "assembly_sha256": {
+    "Cleaver-case-assembly-rev0.11.FCStd": "0f345b17d5c45730f5d04932a901ae7326795063aeaaf612cc83312f8354bfd5",
+    "Cleaver-case-assembly-rev0.11.step": "dbe7b12cc6afeaee06ec11d473a004ee66590bf3d172bde5e3a0b461c4820716"
+  }
+}

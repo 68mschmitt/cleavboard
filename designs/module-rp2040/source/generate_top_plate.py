@@ -17,15 +17,17 @@ from shapely.affinity import affine_transform, translate
 from design import ROOT, BOARD_W, BOARD_H, MOUNTING_HOLES, read_keys, REVISION
 from generate_mechanical import PLATE_H, export_dxf, export_svg, geometry, stabilizer_cutout
 from logo_interface import APERTURE, LOGO_X, LOGO_Y, logo_leds, rectangle
+from mounting_interface import mounting_specs
 
 OUT = ROOT/f'mechanical/rev{REVISION}'
 THICKNESS = 1.5
 
 
-def validate_pcb(path, plate):
+def validate_pcb(path, plate, *, revision=REVISION, mounts=None):
     """Reject a stale plate definition rather than silently misaligning hardware."""
     board = pcbnew.LoadBoard(str(path))
-    assert board.GetTitleBlock().GetRevision() == REVISION, f'Expected revision {REVISION} PCB'
+    assert board.GetTitleBlock().GetRevision() == revision, f'Expected revision {revision} PCB'
+    specs = mounting_specs() if mounts is None else mounts
     outlines = pcbnew.SHAPE_POLY_SET()
     assert board.GetBoardPolygonOutlines(outlines, False), 'Invalid PCB outline'
     assert outlines.OutlineCount() == 1, 'Expected one PCB outline'
@@ -42,18 +44,18 @@ def validate_pcb(path, plate):
                            rtol=0, atol=1e-6), f"{key['ref']}: switch centre changed"
         assert fp.GetOrientationDegrees() == 0, f"{key['ref']}: switch rotation changed"
 
-    expected_mounts = {f'H{i}' for i in range(1, len(MOUNTING_HOLES)+1)}
+    expected_mounts = {spec['reference'] for spec in specs}
     assert {ref for ref in footprints if ref.startswith('H') and ref[1:].isdigit()} == expected_mounts
     mounts = []
-    for index, (x, y) in enumerate(MOUNTING_HOLES, 1):
-        ref = f'H{index}'
+    for spec in specs:
+        ref, x, y = spec['reference'], spec['x'], spec['y']
         pads = list(footprints[ref].Pads())
         assert len(pads) == 1, f'{ref}: unexpected mounting footprint'
         pad = pads[0]
         assert pad.GetAttribute() == pcbnew.PAD_ATTRIB_NPTH, f'{ref}: not an NPTH'
         assert np.allclose(pcbnew.ToMM(pad.GetPosition()), [x, y], rtol=0, atol=1e-6), ref
-        assert np.allclose(pcbnew.ToMM(pad.GetDrillSize()), [2.2, 2.2], rtol=0, atol=1e-6), ref
-        mounts.append(dict(reference=ref, x_mm=x, y_mm=y, drill_mm=2.2))
+        assert np.allclose(pcbnew.ToMM(pad.GetDrillSize()), [spec['drill_mm']]*2, rtol=0, atol=1e-6), ref
+        mounts.append(dict(reference=ref, x_mm=x, y_mm=y, drill_mm=spec['drill_mm']))
 
     assert footprints['C5'].GetLayer() == pcbnew.B_Cu, 'C5 is no longer underneath'
     assert not plate.intersects(rectangle(APERTURE).buffer(-.00001)), 'Logo light path blocked'
@@ -72,7 +74,7 @@ def validate_pcb(path, plate):
             assert not plate.intersects(box(x0, y0, x1, y1)), 'Plate overlaps controller/USB body'
             body_checks += 1
     assert body_checks >= 2, 'Missing controller/USB body geometry'
-    return dict(revision=REVISION, outline_matches=True, switch_centres_matched=len(keys),
+    return dict(revision=revision, outline_matches=True, switch_centres_matched=len(keys),
                 mounting_holes=mounts, controller_body_clear=True, capacitor_on_underside=True)
 
 
@@ -129,38 +131,10 @@ def export_stl(path, polygon):
 
 
 def main():
-    source = ROOT/'Cleaver.kicad_pcb'
-    # The historical plate has a top capacitor hole. Rev0.6 C5 is below the PCB.
-    plate, cuts, stabs = geometry(top_capacitor_opening=False)
-    checks = validate_pcb(source, plate)
-    assert len(cuts) == 119 and len(plate.interiors) == 129
-    OUT.mkdir(parents=True, exist_ok=True)
-    parts = [export_stl(OUT/f'Cleaver-top-plate-rev{REVISION}.stl', plate)]
-    export_svg(OUT/f'Cleaver-top-plate-rev{REVISION}.svg', plate, BOARD_W, PLATE_H)
-    export_dxf(OUT/f'Cleaver-top-plate-rev{REVISION}.dxf', plate)
-    for size, label in [(2, '2u'), (6.25, '6.25u')]:
-        coupon = fit_coupon(size)
-        parts.append(export_stl(OUT/f'stabilizer-fit-coupon-{label}.stl', coupon))
-    report = dict(
-        source_pcb='../../Cleaver.kicad_pcb',
-        source_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),
-        source_checks=checks, switch_opening_mm=[14, 14],
-        plate_thickness_mm=THICKNESS, pcb_to_plate_top_nominal_mm=5,
-        pcb_to_plate_underside_nominal_mm=3.5, hardware_reserved_diameter_mm=6,
-        stabilizer_type='Cherry-compatible plate-mount', stabilizers=stabs,
-        controller_notch_pcb_xy_mm=[398, 0, BOARD_W, 25.5],
-        obsolete_top_capacitor_opening=False,
-        logo_aperture_mm=APERTURE, logo_center_pcb_xy_mm=[LOGO_X, LOGO_Y],
-        stl_coordinates=f'millimetres; X right, Y up, Z=0 underside; PCB (x,y) maps to (x,{PLATE_H}-y)',
-        plate_front_extension_mm=PLATE_H-BOARD_H,
-        physical_fit_tested=False,
-        tools=dict(kicad=pcbnew.Version(), shapely=shapely.__version__,
-                   geos=shapely.geos_version_string, trimesh=trimesh.__version__),
-        parts=parts)
-    (OUT/'validation.json').write_text(json.dumps(report, indent=2)+'\n')
-    for part in parts:
-        print(f'{part["file"]}: {part["size_mm"]} mm, watertight, {part["through_openings"]} openings')
-    print(f'Matched rev{REVISION} PCB: 117 switches, 11 M2 through-holes, 7 x 2u + 1 x 6.25u stabilizers.')
+    # The current printable plate has integral downward bosses, not a flat
+    # laser-cut sheet. Keep a single exporter for the coordinated assembly.
+    from generate_cartridge_case import main as cartridge_main
+    cartridge_main()
 
 
 if __name__ == '__main__':

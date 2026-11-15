@@ -3,11 +3,14 @@ import hashlib
 import importlib.util
 import json
 import unittest
+from functools import partial
 from unittest.mock import patch
 
 import pcbnew
 
-from design import ROOT, BOARD_W, BOARD_H, REVISION
+from design import ROOT, BOARD_W, BOARD_H
+from generate_case import REVISION, SOURCE_PCB
+from mounting_interface import LEGACY_MOUNTING_HOLES, legacy_mounting_specs
 
 HAS_MESH_TOOLS = all(importlib.util.find_spec(name) is not None
                      for name in ['numpy', 'scipy', 'shapely', 'trimesh'])
@@ -15,15 +18,18 @@ if HAS_MESH_TOOLS:
     import numpy as np
     import trimesh
     from shapely import Point, Polygon, box
-    from generate_mechanical import PLATE_H, geometry
-    from generate_top_plate import OUT, THICKNESS, fit_coupon, top_surface, validate_pcb
+    from generate_mechanical import PLATE_H, geometry as current_geometry
+    from generate_top_plate import THICKNESS, fit_coupon, top_surface, validate_pcb as current_validate_pcb
+    OUT = ROOT/'mechanical/rev0.9'
+    geometry = partial(current_geometry, mounts=LEGACY_MOUNTING_HOLES, mounting_drill=2.2)
+    validate_pcb = partial(current_validate_pcb, revision='0.9', mounts=legacy_mounting_specs())
 
 
 @unittest.skipUnless(HAS_MESH_TOOLS, 'Top-plate tests require Shapely >=2.1, NumPy, SciPy and Trimesh')
 class TopPlateTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.source = ROOT/'Cleaver.kicad_pcb'
+        cls.source = SOURCE_PCB
         cls.board = pcbnew.LoadBoard(str(cls.source))
         cls.plate, _, cls.stabs = geometry(top_capacitor_opening=False)
         cls.report = json.loads((OUT/'validation.json').read_text())

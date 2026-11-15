@@ -2,7 +2,8 @@
 
 | Location | Contents |
 | --- | --- |
-| [rev0.9/](rev0.9/README.md) | Current 50.8 × 25.4 mm badge, deeper front bezel, 489 bottom-SMT placements and 121 RGB pixels |
+| [rev0.11/](rev0.11/README.md) | Current removable-cartridge mounting: twelve Ø7 mm post passages and twelve Ø2.2 mm attachment holes |
+| [rev0.9/](rev0.9/README.md) | Earlier mounting layout; compatible firmware for the 50.8 × 25.4 mm badge and 121 RGB pixels |
 | [rev0.8/](rev0.8/README.md) | Historical 16 mm square illuminated badge |
 | [rev0.7/](rev0.7/README.md) | Historical socketed RP2040-Plus: 481 bottom-SMT placements, pin map, prototype/engineering handoff |
 | [rev0.6/](rev0.6/README.md) | Historical direct-soldered RP2040-Plus; firmware builds remain compatible with rev0.7 |
@@ -15,6 +16,6 @@
 
 Use the [design README](../README.md) and
 [component review](../references/COMPONENT-REVIEW.md) for current assembly details.
-Revision 0.6–0.9 `SHA256.json` paths are relative to the module design directory.
+Revision 0.6 onward `SHA256.json` paths are relative to the module design directory.
 Older manifests retain their historical paths and hashes; see the
 [repository migration guide](../../../docs/REPOSITORY.md#recorded-evidence).

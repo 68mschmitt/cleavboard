@@ -57,6 +57,14 @@ class RoutingCleanupTests(unittest.TestCase):
         for a, b in zip(result, result[1:]):
             self.assertGreater(LineString([a, b]).distance(obstacle), .3)
 
+    def test_new_pass_through_hardware_keepout_exceeds_drill_clearance(self):
+        from clean_routing import Obstacles
+        obstacles = Obstacles(self.board, 0, pcbnew.F_Cu, .2)
+        # H2 is (78,22.5): this segment clears a 7 mm drill + 0.25 mm,
+        # but enters its 8 mm hardware keepout after allowing trace width.
+        self.assertFalse(obstacles.clear((77, 26.5), (79, 26.5)))
+        self.assertTrue(obstacles.clear((77, 27), (79, 27)))
+
 
 if __name__ == '__main__':
     unittest.main()

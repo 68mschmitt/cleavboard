@@ -6,13 +6,11 @@ Stabilizer cutout dimensions follow swill/kad key.go DrawCherryStab:
 https://github.com/swill/kad/blob/master/key.go
 They are the builder's practical Cherry-compatible cutout, not PCB-mount holes.
 """
-import csv
-import json
-from html import escape
 from shapely import Point, box, unary_union
 from shapely.affinity import rotate, translate
-from design import ROOT, BOARD_W, BOARD_H, MOUNTING_HOLES, read_keys
+from design import ROOT, BOARD_W, BOARD_H, read_keys
 from logo_interface import APERTURE, FRONT_EXTENSION, rectangle
+from mounting_interface import BASE_POSTS, PLATE_SCREW_DRILL
 
 OUT = ROOT/'mechanical'
 PLATE_H = BOARD_H+FRONT_EXTENSION
@@ -29,7 +27,9 @@ def stabilizer_cutout(size):
     return unary_union(shapes)
 
 
-def geometry(*, top_capacitor_opening=True):
+def geometry(*, top_capacitor_opening=True, mounts=None, mounting_drill=None):
+    mounts = BASE_POSTS if mounts is None else mounts
+    mounting_drill = PLATE_SCREW_DRILL if mounting_drill is None else mounting_drill
     keys,_ = read_keys()
     cuts, stabs = [], []
     for key in keys:
@@ -52,11 +52,11 @@ def geometry(*, top_capacitor_opening=True):
     if top_capacitor_opening:
         cuts.append(Point(377,6).buffer(5,quad_segs=64))
     cuts.append(rectangle(APERTURE))
-    for index,(x,y) in enumerate(MOUNTING_HOLES,1):
+    for index,(x,y) in enumerate(mounts,1):
         reserve = Point(x,y).buffer(3,quad_segs=64)
         for cut in cuts:
             assert not reserve.intersects(cut), f'H{index}: screw/standoff overlaps plate opening'
-    holes=[Point(x,y).buffer(1.1,quad_segs=64) for x,y in MOUNTING_HOLES]
+    holes=[Point(x,y).buffer(mounting_drill/2,quad_segs=64) for x,y in mounts]
     plate=box(0,0,BOARD_W,PLATE_H).difference(unary_union(cuts+holes))
     assert plate.is_valid and plate.geom_type=='Polygon', 'Plate is disconnected or invalid'
     assert len(stabs)==8
@@ -86,49 +86,8 @@ def export_dxf(path,poly):
 
 
 def main():
-    OUT.mkdir(exist_ok=True)
-    plate,cuts,stabs=geometry()
-    export_svg(OUT/'Cleaver-plate.svg',plate,BOARD_W,PLATE_H)
-    export_dxf(OUT/'Cleaver-plate.dxf',plate)
-    labels=''
-    for i,(x,y) in enumerate(MOUNTING_HOLES,1):
-        side=1 if x<BOARD_W/2 else -1
-        anchor='start' if side==1 else 'end'
-        labels+=f'<circle cx="{x}" cy="{y}" r="3" fill="none" stroke="#2266bb" stroke-width=".15"/>'
-        labels+=f'<text x="{x+side*3.5}" y="{y}" text-anchor="{anchor}" font-size="1.8" fill="#2266bb">H{i}</text>'
-    export_svg(OUT/'mounting-plan.svg',plate,BOARD_W,PLATE_H,labels)
-    with (OUT/'mounting-holes.csv').open('w',newline='') as f:
-        writer=csv.writer(f,lineterminator='\n')
-        writer.writerow(['reference','x_mm','y_mm','drill_mm','reserved_diameter_mm'])
-        for i,(x,y) in enumerate(MOUNTING_HOLES,1):writer.writerow([f'H{i}',x,y,2.2,6])
-    with (OUT/'stabilizers.csv').open('w',newline='') as f:
-        writer=csv.DictWriter(f,fieldnames=list(stabs[0]),lineterminator='\n');writer.writeheader();writer.writerows(stabs)
-    rings=[list(r.coords)[:-1] for r in [plate.exterior,*plate.interiors]]
-    points=[];paths=[]
-    for ring in rings:
-        paths.append(list(range(len(points),len(points)+len(ring))))
-        points.extend([[round(x,5),round(-y,5)] for x,y in ring])
-    (OUT/'Cleaver-plate.scad').write_text('// Nominal clip-in plate. Units mm; PCB top view, Y up.\n'
-        '// Plate top sits nominally 5 mm above PCB top. Print a fit coupon first.\n'
-        'plate_thickness = 1.5;\nlinear_extrude(height=plate_thickness)\n'
-        f'polygon(points={json.dumps(points)}, paths={json.dumps(paths)}, convexity=10);\n')
-    (OUT/'mounting-reference.scad').write_text('// Import into your case design. PCB top is Z=0, bottom Z=-1.6.\n'
-        '// XY origin is upper-left; Y is negative toward the keyboard front.\n'
-        f'pcb_size = [{BOARD_W}, {BOARD_H}, 1.6];\n'
-        f'mounts = {json.dumps([[x,-y] for x,y in MOUNTING_HOLES])};\n'
-        'module mounting_axes(height=20) { for(p=mounts) translate([p[0],p[1],-10]) cylinder(d=2.2,h=height,$fn=48); }\n'
-        'module standoff_envelopes(height=3.5) { for(p=mounts) translate([p[0],p[1],0]) cylinder(d=6,h=height,$fn=48); }\n'
-        'mounting_axes();\n')
-    # Small combined switch/stabilizer coupon for checking printed tolerances.
-    coupon=box(-20,-12,20,12).difference(box(-7,-7,7,7).union(stabilizer_cutout(2)))
-    coupon=translate(coupon,20,12)
-    export_svg(OUT/'stabilizer-fit-coupon.svg',coupon,40,24)
-    export_dxf(OUT/'stabilizer-fit-coupon.dxf',coupon)
-    (OUT/'stabilizer-fit-coupon.scad').write_text('linear_extrude(height=1.5) import("stabilizer-fit-coupon.svg");\n')
-    (OUT/'validation.json').write_text(json.dumps(dict(mounting_holes=len(MOUNTING_HOLES),
-        plate_connected=True,plate_geometry_valid=True,stabilizers=stabs,
-        plate_thickness_mm=1.5,pcb_to_plate_top_nominal_mm=5),indent=2)+'\n')
-    print('Generated connected plate, 11 matching mounting holes, 8 stabilizers and fit coupon.')
+    from generate_cartridge_case import main as cartridge_main
+    cartridge_main()
 
 
 if __name__=='__main__':main()

@@ -1,4 +1,4 @@
-# Accepted revision 0.9 routing
+# Accepted revision 0.11 routing
 
 `Cleaver.ses` contains **all routed copper**, including the power/ground fanouts,
 SMD bulk-capacitor, VBUS test pads, **J1/J2 socket escapes and J2.1 VBUS feed**,
@@ -27,6 +27,13 @@ fanouts after import. Round-trip validation requires zero ERC/DRC violations,
 zero unconnected items and zero schematic/PCB parity issues.
 
 ## Provenance
+
+Revision 0.11 replaces the mounting holes and their keepouts for the removable
+PCB/plate cartridge. All **5,528 rev0.9 tracks/vias** and electrical footprint
+positions/pad nets are retained. `upgrade_rev11_mounting.py` migrates from the
+frozen `source/baselines/rev0.9/` board; normal regeneration reconstructs the new
+hole families from `mounting_interface.py`. See
+[migration and round-trip evidence](../manufacturing/rev0.11/checks/).
 
 Revision 0.9 spreads the four badge pixels across a 39 mm-wide row, moves their
 bypass capacitors and relocates H9 and its rule area to `(263,138)` mm. All

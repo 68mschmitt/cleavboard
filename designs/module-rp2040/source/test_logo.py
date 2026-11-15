@@ -12,8 +12,8 @@ import trimesh
 from shapely import Point, Polygon, box
 
 from build_3d_models import freecad
-from design import BOARD_H, ROOT, REVISION
-from generate_case import Parameters, badge_shapes, prism
+from design import BOARD_H, ROOT
+from generate_case import Parameters, badge_shapes, prism, REVISION
 from generate_top_plate import top_surface
 
 
@@ -35,7 +35,7 @@ class LogoTests(unittest.TestCase):
             self.assertEqual(cap.FindPadByNumber('2').GetNetname(), '/GND')
             previous = led.FindPadByNumber('4')
         self.assertTrue(previous.GetNetname().startswith('unconnected-'))
-        self.assertEqual(tuple(pcbnew.ToMM(fps['H9'].GetPosition())), (263., 138.))
+        self.assertEqual(board.GetTitleBlock().GetRevision(), '0.11')
 
     def test_serialized_aperture_is_centered_between_the_two_trios(self):
         board = pcbnew.LoadBoard(str(ROOT/'Cleaver.kicad_pcb'))

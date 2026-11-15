@@ -8,9 +8,11 @@ from __future__ import annotations
 import json
 from pathlib import Path
 from logo_interface import logo_leds
+from mounting_interface import BASE_POSTS, PCB_ATTACHMENTS
 
 ROOT = Path(__file__).resolve().parents[1]
-REVISION = '0.9'
+REVISION = '0.11'
+FIRMWARE_REVISION = '0.9'  # Mounting changes do not alter the electrical/firmware interface.
 INPUT = ROOT.parents[1] / "assets/layout"
 U = 19.05
 BOARD_W, BOARD_H = 452.4375, 147.6375
@@ -24,11 +26,10 @@ MODULE_W, MODULE_H = 21.0, 51.0
 # Bottom-entry sockets: local socket pin 1 is at the USB end on BOTH rows.
 CONTROLLER_SOCKETS = [('J1', MODULE_Y-8.89, list(range(1,21))),
                       ('J2', MODULE_Y+8.89, list(range(40,20,-1)))]
-# M2 clearance holes; reserve a 6 mm diameter for heads, washers and standoffs.
+# Two mounting families: 7 mm post passages and 2.2 mm PCB-to-plate holes.
+# Per-site all-copper keepouts and roles are defined in mounting_interface.py.
 # Coordinates are top-view millimetres from the PCB's upper-left corner.
-MOUNTING_HOLES = [(4, 4), (110, 23.8), (220, 23.8), (330, 23.8),
-                  (395, 26), (313, 70), (4, 143), (90, 138),
-                  (263, 138), (365, 138), (448, 138)]
+MOUNTING_HOLES = BASE_POSTS+PCB_ATTACHMENTS
 FIDUCIALS = [(20, 24), (360, 138), (395, 2)]
 TEST_POINTS = [('TP2', 'GND', 410, 27), ('TP3', 'RAW_USB_5V', 418, 27),
                ('TP4', 'LED_5V', 426, 27), ('TP5', 'LED_EN', 434, 27),

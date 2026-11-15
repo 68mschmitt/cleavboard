@@ -23,17 +23,26 @@ from shapely.affinity import affine_transform
 import trimesh
 
 from build_3d_models import freecad
-from design import BOARD_H, BOARD_W, MODULE_X, MODULE_Y, MOUNTING_HOLES, ROOT, U, read_keys, REVISION, CONTROLLER_SOCKETS
-from generate_mechanical import PLATE_H, geometry, svg_path
+from design import BOARD_H, BOARD_W, MODULE_X, MODULE_Y, ROOT, U, read_keys, CONTROLLER_SOCKETS
+from mounting_interface import LEGACY_MOUNTING_HOLES as MOUNTING_HOLES, legacy_mounting_specs
+from generate_mechanical import PLATE_H, geometry as plate_geometry, svg_path
 from generate_top_plate import top_surface, validate_pcb
 from logo_interface import APERTURE, INSERT, FLANGE, LIGHT_BORE, FRONT_EXTENSION, LOGO_X, LOGO_Y, logo_leds, rectangle
 
+REVISION = '0.9'
+SOURCE_PCB = ROOT/'source/baselines/rev0.9/Cleaver.kicad_pcb'
 OUT = ROOT/f'mechanical/rev{REVISION}/case'
 PCB_THICKNESS = 1.6
 PLATE_TOP = 5.0
 PLATE_THICKNESS = 1.5
 SPACER_HEIGHT = PLATE_TOP-PLATE_THICKNESS
 STANDOFF_DIAMETER = 6.0
+
+
+def geometry(*, top_capacitor_opening=True):
+    """Historical plate geometry; current cartridge uses generate_mechanical."""
+    return plate_geometry(top_capacitor_opening=top_capacitor_opening,
+                          mounts=MOUNTING_HOLES, mounting_drill=2.2)
 
 
 @dataclass(frozen=True)
@@ -257,8 +266,8 @@ def build(p):
 
 
 def validate_source(p, plate):
-    source = ROOT/'Cleaver.kicad_pcb'
-    result = validate_pcb(source, plate)
+    source = SOURCE_PCB
+    result = validate_pcb(source, plate, revision=REVISION, mounts=legacy_mounting_specs())
     board = pcbnew.LoadBoard(str(source))
     assert math.isclose(pcbnew.ToMM(board.GetDesignSettings().GetBoardThickness()), PCB_THICKNESS)
     fps = {fp.GetReference(): fp for fp in board.GetFootprints()}
@@ -382,9 +391,11 @@ def validate_fit(p, shapes, plate):
                 cover_lip_clearance_per_side_mm=p.cover_lip_clearance_mm)
 
 
-def print_shape(shape, *, face_down=False):
+def print_shape(shape, *, face_down=False, rotation=None):
     app, _ = freecad()
     result = shape.copy()
+    if rotation is not None:
+        result.rotate(app.Vector(), app.Vector(*rotation[:3]), rotation[3])
     if face_down:
         result.rotate(app.Vector(), app.Vector(1, 0, 0), 180)
     bounds = result.BoundBox
@@ -393,8 +404,8 @@ def print_shape(shape, *, face_down=False):
     return result, shift
 
 
-def export_part(out, name, shape, *, face_down=False):
-    printable, shift = print_shape(shape, face_down=face_down)
+def export_part(out, name, shape, *, face_down=False, print_rotation=None):
+    printable, shift = print_shape(shape, face_down=face_down, rotation=print_rotation)
     step = out/(name+'.step')
     shape.exportStep(str(step))
     # MeshPart's angular limit also prevents coarse triangulation of small bores.
@@ -425,15 +436,17 @@ def export_part(out, name, shape, *, face_down=False):
                 triangles=len(loaded.faces), connected_bodies=loaded.body_count,
                 watertight=True, consistent_winding=True, positive_volume=True,
                 cad_volume_mm3=round(shape.Volume, 4), stl_volume_mm3=round(float(loaded.volume), 4),
-                step_roundtrip_valid=True, stl_face_down=face_down,
+                 step_roundtrip_valid=True, stl_face_down=face_down,
+                 stl_rotation_axis_angle=print_rotation,
                 stl_translation_after_optional_x_flip_mm=shift,
                 stl_additional_mesh_translation_mm=mesh_shift.tolist(),
                 sha256=digest(out/(name+'.stl')), step_sha256=digest(step))
 
 
-def save_assembly(out, p, shapes, plate):
+def save_assembly(out, p, shapes, plate, *, mechanical_revision=REVISION,
+                  generator_script='source/generate_case.py'):
     app, part = freecad()
-    doc = app.newDocument('CleaverCaseRev'+REVISION.replace('.', ''))
+    doc = app.newDocument('CleaverCaseRev'+mechanical_revision.replace('.', '').replace('-', '_'))
     objects = []
 
     def add(name, label, shape, color, transparency=0):
@@ -451,12 +464,18 @@ def save_assembly(out, p, shapes, plate):
         base.addProperty('App::PropertyFloat', key, 'Generation parameters')
         setattr(base, key, value)
     base.addProperty('App::PropertyString', 'ParameterEditing').ParameterEditing = (
-        'Informational snapshot. Edit parameters.json and rerun source/generate_case.py to rebuild.')
+        f'Informational snapshot. Edit parameters.json and rerun {generator_script} to rebuild.')
     add('Cover', 'PRINT: removable key bezel (assembled)', assembled(shapes['cover'], p), (.75, .78, .81))
     add('LogoLightWell', 'PRINT OPAQUE: logo light well / plate-supported carrier',
         assembled(shapes['logo_carrier'], p), (.08, .08, .08))
     add('LogoInsert', 'PRINT TRANSLUCENT: replaceable 50.8 x 25.4 mm logo / 1 mm diffuser',
         assembled(shapes['logo_insert'], p), (.25, .75, .95), 35)
+    if 'logo_gasket' in shapes:
+        add('LogoGasket', 'CUT FOAM: badge gasket, shown compressed',
+            assembled(shapes['logo_gasket'], p), (.35, .35, .35))
+    if 'cover_hardware' in shapes:
+        add('CoverHardware', 'REFERENCE: eight underside M2 x 8 screws and cover inserts',
+            assembled(shapes['cover_hardware'], p), (.6, .6, .62))
     pcb = box(0, 0, BOARD_W, BOARD_H).difference(unary_union(
         [Point(x, y).buffer(1.1, quad_segs=16) for x, y in MOUNTING_HOLES]))
     add('PCBEnvelope', 'REFERENCE ONLY: PCB envelope + mounting holes',
@@ -488,10 +507,10 @@ def save_assembly(out, p, shapes, plate):
     doc.recompute()
     # Avoid creating timestamped FCBak files in this generated artifact folder.
     with tempfile.TemporaryDirectory(prefix='.case-export-', dir=out) as directory:
-        saved = Path(directory)/f'Cleaver-case-assembly-rev{REVISION}.FCStd'
+        saved = Path(directory)/f'Cleaver-case-assembly-rev{mechanical_revision}.FCStd'
         doc.saveAs(str(saved))
         saved.replace(out/saved.name)
-    part.export(objects, str(out/f'Cleaver-case-assembly-rev{REVISION}.step'))
+    part.export(objects, str(out/f'Cleaver-case-assembly-rev{mechanical_revision}.step'))
     app.closeDocument(doc.Name)
 
 
@@ -647,7 +666,7 @@ def main():
     args = parser.parse_args()
     p = Parameters(**json.loads(args.parameters.read_text())) if args.parameters.is_file() else Parameters()
     p.validate()
-    source, plate_file = ROOT/'Cleaver.kicad_pcb', ROOT/f'mechanical/rev{REVISION}/Cleaver-top-plate-rev{REVISION}.stl'
+    source, plate_file = SOURCE_PCB, ROOT/f'mechanical/rev{REVISION}/Cleaver-top-plate-rev{REVISION}.stl'
     original_hashes = {path: digest(path) for path in (source, plate_file)}
     plate, _, _ = geometry(top_capacitor_opening=False)
     source_checks = validate_source(p, plate)
@@ -684,7 +703,7 @@ def main():
     render_preview(out, p, parts)
     assert all(digest(path) == before for path, before in original_hashes.items()), 'An input was modified'
     app, part = freecad()
-    report = dict(revision=REVISION, source_pcb='../../../Cleaver.kicad_pcb',
+    report = dict(revision=REVISION, source_pcb='../../../source/baselines/rev0.9/Cleaver.kicad_pcb',
                   source_sha256=original_hashes[source],
                   matching_plate=f'../Cleaver-top-plate-rev{REVISION}.stl',
                   matching_plate_sha256=original_hashes[plate_file], parameters=asdict(p),

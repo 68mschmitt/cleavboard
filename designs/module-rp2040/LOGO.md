@@ -1,5 +1,15 @@
 # Replaceable illuminated logo — rev0.9
 
+The **[rev0.11 cartridge case](mechanical/rev0.11/case/README.md)** retains this
+badge/well interface and the soft gasket introduced in mechanical rev0.10.
+Its new PCB mounting pattern requires the matching rev0.11 PCB and switch plate.
+
+For the **[mechanical rev0.10 case](mechanical/rev0.10/case/README.md)**, the same
+badge/well geometry now uses locating shoulders and a 0.8 mm soft foam gasket.
+Service access is through eight **underside M2 × 8 screws**. Use that case's
+stack coupons and assembly instructions; the original rev0.9 instructions below
+describe its top-fastened cover.
+
 One **50.8 mm wide × 25.4 mm tall (2 × 1 inch) printed badge** sits between the
 front **M6–M8 / M9–M11** clusters. Four controllable RGB LEDs illuminate it through
 aligned rectangular openings. The plate and case extend **8 mm forward**;
