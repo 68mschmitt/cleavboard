@@ -36,6 +36,11 @@ assembled label/tab clearances and cartridge/USB-blank removal paths
 ([log](manufacturing/rev0.11/checks/labeled-coupon-tests.log)).
 See the [fit-set label key](mechanical/rev0.11/case/test-prints/README.md#embossed-fit-set-labels).
 
+B3's label tab was subsequently moved above the installed bezel, with its outer
+face coplanar with the bezel's print-bed face. Eleven cartridge checks passed,
+including full body/tab bed contact and assembled clearance/removal paths
+([log](manufacturing/rev0.11/checks/usb-tab-tests.log)).
+
 Evidence:
 [PCB checks and mounting migration](manufacturing/rev0.11/checks/),
 [unit-test log](manufacturing/rev0.11/checks/unit-tests.log),

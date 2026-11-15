@@ -9,7 +9,7 @@ LABELS = {
     'Cartridge-stack-coupon-dummy-PCB': ('A3', -1, -1.6, 1.6, False),
     'USB-bezel-fit-coupon-base': ('B1', -1, None, 1.5, False),
     'USB-bezel-fit-coupon-cover': ('B2', -1, 9.3, 1.5, True),
-    'USB-bezel-blank': ('B3', 1, -2, 1.5, False),
+    'USB-bezel-blank': ('B3', -1, None, 2, True),
     'Front-fastener-fit-coupon-base': ('C1', -1, None, 1.5, False),
     'Front-fastener-fit-coupon-cover': ('C2', 1, 9.3, 1.5, True),
     'Logo-fit-coupon-cover': ('D1', 1, 9.3, 1.5, True),
@@ -42,6 +42,14 @@ def label_coupon(name, original):
     """
     app, part = freecad()
     code, side, z, thickness, underside = LABELS[name]
+    # The bezel prints outer-face-down (rotation +90 about Y). Work in a
+    # rotated frame so its tab extends above the installed bezel, not outward
+    # past that bed face. Emboss on the inward face, above the cover roof.
+    bezel = name == 'USB-bezel-blank'
+    if bezel:
+        original = original.copy()
+        original.rotate(app.Vector(), app.Vector(0, 1, 0), -90)
+        z = original.BoundBox.ZMax-thickness
     bounds = original.BoundBox
     z = bounds.ZMin if z is None else z
     edge = bounds.XMin if side < 0 else bounds.XMax
@@ -76,4 +84,6 @@ def label_coupon(name, original):
     # No added material inside the original envelope: the anchor is wholly
     # embedded in a solid edge. This protects holes and mating surfaces.
     assert result.cut(original).common(envelope).Volume < 1e-6, (name, 'anchor intrusion')
+    if bezel:
+        result.rotate(app.Vector(), app.Vector(0, 1, 0), 90)
     return result, dict(id=code, raised_mm=.6, stroke_mm=.8, tab_mm=[12, 7, thickness])

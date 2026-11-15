@@ -27,6 +27,10 @@ Tabs extend 12 mm beyond the part edge and avoid the mating geometry. Keep them
 attached during testing. Their text faces away from the supplied print bed
 orientation (including the upside-down plate/cover exports).
 
+The **B3 USB blank** tab extends above the installed bezel. Its outer face and
+the tab share the print bed; the raised label is on the upward-facing inner
+side. Use the supplied orientation.
+
 | Files | Purpose |
 | --- | --- |
 | `Cartridge-stack-coupon-{base,plate,dummy-PCB}` | Test both mounting stages, pass-through clearance, short inserts and screw lengths |

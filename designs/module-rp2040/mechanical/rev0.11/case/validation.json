@@ -600,7 +600,7 @@
   },
   "source_files": {
     "source/generate_cartridge_case.py": "7467c4d58e40ae53f5c2e4f6db0b35158a597b8d1e58d08290156f27b95f9bbc",
-    "source/coupon_labels.py": "17a2209aa51998f8fa54d99aea608afe58d7a0b3c7696210c93d932d74fea0f8",
+    "source/coupon_labels.py": "4466215675124bbf40e737d838707cb99a345213845a66eb738eef0301db116d",
     "source/mounting_interface.py": "418a253cce807fb754aaa02f9a5710744ebe9cbb1bd03e1d5846dcb6ea6d082a",
     "source/generate_case.py": "f9e2096af67341b768adf049e175b1968c818ceb7df267cc0e651e56657b8228",
     "source/generate_case_service.py": "9a5b744595322cb9ae03559df3ee4cd7754256ed5ed63a92a3a8eac7c0b9968b",
@@ -852,17 +852,17 @@
       "file": "test-prints/USB-bezel-blank.stl",
       "step_file": "test-prints/USB-bezel-blank.step",
       "size_mm": [
-        12.8,
+        24.8,
         28.0,
-        15.8
+        3.8
       ],
       "triangles": 212,
       "connected_bodies": 1,
       "watertight": true,
       "consistent_winding": true,
       "positive_volume": true,
-      "cad_volume_mm3": 1220.928,
-      "stl_volume_mm3": 1220.928,
+      "cad_volume_mm3": 1262.928,
+      "stl_volume_mm3": 1262.928,
       "step_roundtrip_valid": true,
       "stl_face_down": false,
       "stl_rotation_axis_angle": [
@@ -874,15 +874,15 @@
       "stl_translation_after_optional_x_flip_mm": [
         1.9999999999999492,
         -119.13749999999999,
-        471.1875
+        459.1875
       ],
       "stl_additional_mesh_translation_mm": [
         -2.220446049250313e-16,
         -0.0,
         -0.0
       ],
-      "sha256": "5615371d8c4ba673f0528dac619188ef46401484afb55193885a76af1a4253b7",
-      "step_sha256": "6c129f68bf66a68ce33e3331535b15339e2aa56b3892df126a8c46859ddae9d0",
+      "sha256": "a94ad7b511c31b2216e1e44cfd6aaa8cf482f46cabc6b732dd2dd2ed08870e9e",
+      "step_sha256": "d8f493bc4b574c595bb2a0f9cd5c587ec7b7dba4599dc25e59b3e0ae8f9edd76",
       "fit_label": {
         "id": "B3",
         "raised_mm": 0.6,
@@ -890,7 +890,7 @@
         "tab_mm": [
           12,
           7,
-          1.5
+          2
         ]
       }
     },

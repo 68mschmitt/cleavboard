@@ -215,6 +215,15 @@ class CartridgeTests(unittest.TestCase):
                 self.assertLess(local[base].common(assembled(lifted, self.p)).Volume,
                                 1e-6, f'{moving}: tab blocks removal at {lift} mm')
 
+    def test_usb_blank_body_and_label_tab_share_print_bed(self):
+        record = self.records['USB-bezel-blank.stl']
+        mesh = trimesh.load_mesh(OUT/record['file'])
+        bottom = ((np.abs(mesh.triangles[:, :, 2]).max(axis=1) < 1e-5)
+                  & (mesh.face_normals[:, 2] < -.99))
+        # Entire 24 x 12.8 outer face plus the 12 x 7 label extension must
+        # contact the bed, rather than standing the body on the label tab.
+        self.assertAlmostEqual(mesh.area_faces[bottom].sum(), 24*12.8+12*7, places=2)
+
 
 if __name__ == '__main__':
     unittest.main()
